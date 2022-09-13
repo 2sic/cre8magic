@@ -13,7 +13,7 @@ public static class StringExtensions
 
     internal static string? EmptyAsNull(this string? value) => string.IsNullOrWhiteSpace(value) ? null : value;
 
-    internal static string? ConditionalReplace(this string? value, string oldValue, Func<string> newValueGenerator)
+    internal static string? Replace(this string? value, string oldValue, Func<string> newValueGenerator)
     {
         if (!value.HasValue() || !value!.Contains(oldValue) || !oldValue.HasValue())
             return value;

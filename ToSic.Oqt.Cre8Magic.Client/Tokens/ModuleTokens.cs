@@ -24,8 +24,8 @@ namespace ToSic.Oqt.Cre8Magic.Client.Tokens
             if (!value.HasValue()) return value;
             var mod = value!
                     .Replace(ModuleId, $"{_module.ModuleId}")
-                    .ConditionalReplace(ModuleControlName, () => NamespaceParts[^1])
-                    .ConditionalReplace(ModuleNamespace, () => string.Join('.', NamespaceParts[..^1]))
+                    .Replace(ModuleControlName, () => NamespaceParts[^1])
+                    .Replace(ModuleNamespace, () => string.Join('.', NamespaceParts[..^1]))
                 ;
 
             return mod!.Contains(PlaceholderMarker) 
