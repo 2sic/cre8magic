@@ -37,7 +37,7 @@ public abstract class MagicMenuRoot: MagicMenuBase, IMagicMenuSettings
     {
         await base.OnParametersSetAsync();
         MenuTreeService!.InitSettings(Settings);
-        MenuTree = MenuTreeService?.GetTree(new MagicMenuSettings(this), PageState, MenuPages.ToList());
+        MenuTree = MenuTreeService?.GetTree(new(this), MenuPages.ToList());
     }
 
 }

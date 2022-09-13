@@ -29,7 +29,7 @@ public class MagicSettingsJsonService : IHasSettingsExceptions
             Exceptions.Add(new($"Error loading json configuration file '{themeConfig.SettingsJsonFile}'. {ex.Message}"));
             //throw;//wip
             // probably no json file found?
-            return new MagicSettingsCatalog();
+            return new();
         }
     }
 

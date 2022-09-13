@@ -90,7 +90,7 @@ public class LanguageService: MagicServiceWithSettingsBase
         if (culture == CultureInfo.CurrentUICulture.Name) return;
 
         var interop = new Interop(_jsRuntime);
-        var localizationCookieValue = MakeCookieValue(new RequestCulture(culture));
+        var localizationCookieValue = MakeCookieValue(new(culture));
         await interop.SetCookie(DefaultCookieName, localizationCookieValue, 360);
 
         _navigationManager.NavigateTo(_navigationManager.Uri, forceLoad: true);

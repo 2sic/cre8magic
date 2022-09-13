@@ -11,7 +11,7 @@ public class MagicMenuDesigner
     {
         MenuSettings = menuConfig as MagicMenuSettings ?? throw new ArgumentException("MenuConfig must be real", nameof(MenuSettings));
 
-        DesignSettingsList = new List<MagicMenuDesignSettings> { MenuSettings.DesignSettings! };
+        DesignSettingsList = new() { MenuSettings.DesignSettings! };
     }
     private MagicMenuSettings MenuSettings { get; }
     internal List<MagicMenuDesignSettings> DesignSettingsList { get; }

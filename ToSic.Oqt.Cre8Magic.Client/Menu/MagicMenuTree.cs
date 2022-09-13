@@ -10,12 +10,13 @@ public class MagicMenuTree : MagicMenuBranch
 {
     public const char PageForced = '!';
 
-    public MagicMenuTree(IMagicMenuSettings config, PageState pageState, List<Page> menuPages, string? debug, IHasSettingsExceptions exceptions)
-        : base(null! /* root must be null, as `Tree` is handled in this class */, 0, pageState.Page)
+    public MagicMenuTree(MagicSettings settings, IMagicMenuSettings config, List<Page> menuPages, string? debug, IHasSettingsExceptions exceptions)
+        : base(null! /* root must be null, as `Tree` is handled in this class */, 0, settings.PageState.Page)
     {
-        PageState = pageState;
+        Settings = settings;
+        PageState = settings.PageState;
         Config = config;
-        AllPages = pageState.Pages;
+        AllPages = settings.PageState.Pages;
         MenuPages = menuPages;
         _exceptions = exceptions;
         Debug = debug;
@@ -26,10 +27,16 @@ public class MagicMenuTree : MagicMenuBranch
     }
 
     internal IMagicMenuSettings Config { get; }
+    public MagicSettings Settings { get; }
     public PageState PageState { get; }
 
-    internal PageTokens PageReplacer => _pageReplacer ??= new(PageState, null, menuId: MenuId);
-    private PageTokens? _pageReplacer;
+    internal TokenEngine PageReplacer2(Page page)
+    {
+        var te = Settings.Tokens;
+        var originalPage = (PageTokens)Settings.Tokens.Parsers.First(p => p.NameId == PageTokens.NameIdConstant);
+        originalPage = originalPage.Modified(page, menuId: MenuId);
+        return te.Replaced(originalPage.NameId, originalPage);
+    }
 
     /// <summary>
     /// List of all pages - even these which would currently not be shown in the menu.
@@ -47,7 +54,7 @@ public class MagicMenuTree : MagicMenuBranch
 
     protected override MagicMenuTree Tree => this;
 
-    internal MagicMenuDesigner Design => _menuCss ??= new MagicMenuDesigner(Config);
+    internal MagicMenuDesigner Design => _menuCss ??= new(Config);
     private MagicMenuDesigner? _menuCss;
 
     internal List<Page> Breadcrumb => _breadcrumb ??= AllPages.Breadcrumb(Page).ToList();
@@ -106,7 +113,7 @@ public class MagicMenuTree : MagicMenuBranch
         if (anchors == null && n.From == MagicMenuSettings.StartPageCurrent)
             // Level 0 means current level / current page
             if (n.Level == 0)
-                anchors = new List<Page> { Page };
+                anchors = new() { Page };
             // Level 1 means top-level pages. If we don't want the level1 children, we want the top-level items
             // TODO: CHECK WHAT LEVEL Oqtane actually gives us, is 1 the top?
             else if (n.Level == 1 && !n.Children)
@@ -120,7 +127,7 @@ public class MagicMenuTree : MagicMenuBranch
                 anchors = ancestors.Skip(level).ToList();
             }
 
-        anchors ??= new List<Page>();
+        anchors ??= new();
 
         return n.Children
             ? anchors.SelectMany(p => GetRelatedPagesByLevel(p, 1)).ToList()
@@ -135,14 +142,13 @@ public class MagicMenuTree : MagicMenuBranch
             case -1:
                 return ChildrenOf(referencePage.ParentId ?? 0);
             case 0:
-                return new List<Page> { referencePage };
+                return new() { referencePage };
             case 1:
                 return ChildrenOf(referencePage.PageId);
             case > 1:
-                return new List<Page> { ErrPage(0, "Error: Create menu from current page but level > 1") };
+                return new() { ErrPage(0, "Error: Create menu from current page but level > 1") };
             default:
-                return new List<Page>
-                    { ErrPage(0, "Error: Create menu from current page but level < -1, not yet implemented") };
+                return new() { ErrPage(0, "Error: Create menu from current page but level < -1, not yet implemented") };
         }
     }
 

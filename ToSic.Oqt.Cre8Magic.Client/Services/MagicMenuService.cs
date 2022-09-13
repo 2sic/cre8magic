@@ -9,7 +9,7 @@ namespace ToSic.Oqt.Cre8Magic.Client.Services;
 // TODO: MAYBE NOT A SERVICE - DOESN'T NEED DI atm
 public class MagicMenuService: MagicServiceWithSettingsBase
 {
-    public MagicMenuTree GetTree(MagicMenuSettings config, PageState pageState, List<Page> menuPages)
+    public MagicMenuTree GetTree(MagicMenuSettings config, List<Page> menuPages)
     {
         var settingsSvc = Settings!.Service;
         var (configName, debugInfo) = settingsSvc.FindConfigName(config.ConfigName, Settings.Name);
@@ -46,14 +46,14 @@ public class MagicMenuService: MagicServiceWithSettingsBase
             var (designConfig, source) = settingsSvc.FindDesign(designName);
             debugInfo += $"; Design config loaded from '{source}'";
 
-            config = config.Overrule(new MagicMenuSettings(config) { DesignSettings = designConfig });
+            config = config.Overrule(new(config) { DesignSettings = designConfig });
         }
         else
             debugInfo += "; Design rules already set";
 
         // should be null if not admin, so the final razor doesn't even add the attribute
-        debugInfo = pageState.UserIsAdmin() ? debugInfo : null;
+        debugInfo = Settings.PageState.UserIsAdmin() ? debugInfo : null;
 
-        return new MagicMenuTree(config, pageState, menuPages, debugInfo, settingsSvc);
+        return new(Settings, config, menuPages, debugInfo, settingsSvc);
     }
 }

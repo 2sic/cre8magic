@@ -232,7 +232,7 @@ public class MagicSettingsService: IHasSettingsExceptions
             if (result != null) return (result, set.Name, $"found in '{set.Name}' ({set.Settings.Source})");
         }
 
-        throw new Exception($"Tried to find {nameof(TResult)} in the keys {string.Join(",", names)} but got nothing, not even a fallback/default.");
+        throw new($"Tried to find {nameof(TResult)} in the keys {string.Join(",", names)} but got nothing, not even a fallback/default.");
     }
 
     private List<MagicSettingsCatalog> ConfigurationSources

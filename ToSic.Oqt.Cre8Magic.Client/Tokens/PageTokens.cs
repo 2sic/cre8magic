@@ -22,7 +22,7 @@ internal class PageTokens: ITokenReplace
         _menuId = menuId;
     }
 
-    public PageTokens ForPage(Page page) => new(PageState, page, _bodyClasses, _menuId);
+    public PageTokens Modified(Page page, string? menuId = null) => new(PageState, page, _bodyClasses, menuId ?? _menuId);
 
     public string Parse(string classes)
     {

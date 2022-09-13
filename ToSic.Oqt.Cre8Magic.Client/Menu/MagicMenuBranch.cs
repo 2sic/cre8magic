@@ -11,7 +11,7 @@ public class MagicMenuBranch: IHasSettingsExceptions
     /// </summary>
     protected virtual MagicMenuTree Tree { get; }
 
-    private ITokenReplace NodeReplace  => _nodeReplace ??= Tree.PageReplacer.ForPage(Page);
+    private ITokenReplace NodeReplace => _nodeReplace ??= Tree.PageReplacer2(Page);
     private ITokenReplace? _nodeReplace;
 
     public string? Classes(string tag) => NodeReplace.Parse(Tree.Design.Classes(tag, this)).EmptyAsNull();
@@ -57,7 +57,7 @@ public class MagicMenuBranch: IHasSettingsExceptions
     {
         var levelsRemaining = (Tree.Config.Depth ?? MagicMenuSettings.LevelDepthDefault) - MenuLevel + 1;
         return levelsRemaining <= 0
-            ? new List<MagicMenuBranch>()
+            ? new()
             : GetChildPages()
                 .Select(page => new MagicMenuBranch(Tree, MenuLevel + 1, page))
                 .ToList();
@@ -65,7 +65,7 @@ public class MagicMenuBranch: IHasSettingsExceptions
 
 
     protected virtual List<Page> GetChildPages() => Page == null
-        ? new List<Page> { ErrPage(-1, "Error: No current page found") }
+        ? new() { ErrPage(-1, "Error: No current page found") }
         : ChildrenOf(Page.PageId);
 
     protected List<Page> ChildrenOf(int pageId)
