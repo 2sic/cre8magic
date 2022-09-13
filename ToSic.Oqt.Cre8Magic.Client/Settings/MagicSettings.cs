@@ -16,6 +16,7 @@ public class MagicSettings
         MagicPageDesign page, 
         MagicLanguagesSettings languages, 
         MagicLanguageDesignSettings languageDesign, 
+        MagicContainerSettings container,
         MagicContainerDesignSettings containerDesign)
     {
         Layout = layout;
@@ -23,6 +24,7 @@ public class MagicSettings
         Page = page;
         Languages = languages;
         LanguageDesign = languageDesign;
+        Container = container;
         ContainerDesign = containerDesign;
         Name = name;
         Service = service;
@@ -43,6 +45,8 @@ public class MagicSettings
     public MagicLanguagesSettings Languages { get; }
 
     public MagicLanguageDesignSettings LanguageDesign { get; set; }
+
+    public MagicContainerSettings Container { get; set; }
 
     public MagicContainerDesignSettings ContainerDesign { get; set; }
 

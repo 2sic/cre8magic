@@ -1,4 +1,8 @@
-# Cre8Magic for Oqtane - Design Automation
+<img width="100%" src="https://raw.githubusercontent.com/2sic/oqtane-cre8magic/main/docs/assets/logo.svg">
+
+TODO: REPLACE logo
+
+# Cre8Magic for Oqtane – Professional Theme Design
 
 > &nbsp;
 > 
@@ -13,7 +17,7 @@ So it's almost ready to create awesome websites and CMS solutions.
 
 But for that there were two missing pieces (☮️)...
 
-1. Real Content-Management features - which is now possible using [2sxc](https://2sxc.org)
+1. Real Content-Management features - which can be done with the extension [2sxc](https://2sxc.org)
 1. Tools to make designing themes fast and professional - enter: **Cre8Magic** 
 
 ## Make Oqtane Designer-Friendly
@@ -35,11 +39,28 @@ This means you can whatever you want, but there is a **lot of code** involved, a
 
 ## How it Works
 
+Cre8Magic combines very simple Razor code and lets you adjust everything through settings. 
+
+👉🏾 [Discover how it works](./docs/how-it-works.md)
+
 TODO
 
 ## What's in the Magic Box
 
-### 1. A Settings / Configuration Management System
+### 1. Magic Menu WIP/TODO:
+
+👉🏾 See [Magic Menu](./docs/magic-menu.md)
+
+
+### 2. Magic Classes WIP/TODO:
+
+👉🏾 See [Magic Classes](./docs/magic-classes.md)
+
+
+### 3. Magic Settings: A Settings / Configuration System WIP/TODO:
+
+👉🏾 See [Magic Settings](./docs/magic-settings.md)
+
 
 Most layouts have very similar HTML, but do vary a bit. 
 For example, it could have different CSS classes to give it the look you need or a different logo file. 
@@ -61,3 +82,23 @@ Settings Done
 
 1. Named settings for layouts, breadcrumbs, menus
 1. Named settings for the design of layouts, breadcrumbs, menus
+
+### 4. Magic Languages WIP/TODO:
+
+
+
+### 4. Magic Base Classes
+
+* MagicTheme
+* MagicContainer
+* MagicControl
+* MagicComponent
+
+## Getting Started 
+
+### How to Install Cre8Magic
+
+As of 2022-Q3 Cre8Magic is still beta, so you would need to get it from github and compile. 
+
+In 2022-Q4 we plan to release it on nuget.
+

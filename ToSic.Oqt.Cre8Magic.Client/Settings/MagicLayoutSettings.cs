@@ -12,7 +12,7 @@ public class MagicLayoutSettings
     /// <summary>
     /// The languages configuration which should be used
     /// </summary>
-    public string? Languages { get; set; } = null;
+    public string? Languages { get; set; }
 
     // TODO:
     // - probably add properties like BreadcrumbShow
@@ -23,6 +23,8 @@ public class MagicLayoutSettings
     public int LanguageMenuShowMin { get; set; } = 0;
 
     public string? LanguageMenuDesign { get; set; }
+
+    public string? Container { get; set; }
 
     /// <summary>
     /// The preferred container design to use. 
@@ -47,6 +49,7 @@ public class MagicLayoutSettings
     public static MagicLayoutSettings Defaults = new()
     {
         Logo = "unknown-logo.png",
+        Container = Inherit,
         ContainerDesign = Inherit,
         Languages = Inherit,
         LanguageMenuDesign = Inherit,

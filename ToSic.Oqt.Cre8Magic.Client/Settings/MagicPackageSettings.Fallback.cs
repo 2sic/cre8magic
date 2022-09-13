@@ -10,6 +10,10 @@ public partial class MagicPackageSettings
         Defaults = new()
         {
             Source = "Preset",
+            Containers = new()
+            {
+                { Default, MagicContainerSettings.Defaults }
+            },
             ContainerDesigns = new()
             {
                 { Default, MagicContainerDesignSettings.Defaults }

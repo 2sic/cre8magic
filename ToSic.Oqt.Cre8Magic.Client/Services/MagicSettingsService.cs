@@ -67,6 +67,10 @@ public class MagicSettingsService: IHasSettingsExceptions
             return found is { } && found.Any() ? found : null;
         }, langDesignNames);
 
+        // Containers
+        var containerNames = GetConfigNamesToCheck(layout.Container, name);
+        var container = FindInSources((s, n) => s.Containers?.GetInvariant(n), containerNames);
+
         // Container Design
         var containerDesignNames = GetConfigNamesToCheck(layout.ContainerDesign, name);
         var containerDesign = FindInSources((s, n) =>
@@ -79,13 +83,15 @@ public class MagicSettingsService: IHasSettingsExceptions
         var pageDesignNames = GetConfigNamesToCheck(layout.PageDesign, name);
         var pageDesign = FindInSources((s, n) => s.PageDesigns?.GetInvariant(n), pageDesignNames);
 
-        var current = new MagicSettings(name, this, layout, breadcrumb, pageDesign.Result, languages.Languages, langDesign.Result, containerDesign.Result);
+        var current = new MagicSettings(name, this, layout, breadcrumb, pageDesign.Result, languages.Languages, langDesign.Result, container.Result, containerDesign.Result);
         PageDesigner.InitSettings(current);
         current.MagicContext = PageDesigner.BodyClasses(pageState, bodyClasses);
-        current.DebugSources.Add("Name", configName.Source);
-        current.DebugSources.Add(nameof(current.Languages), languages.Source);
-        current.DebugSources.Add(nameof(current.LanguageDesign), langDesign.Source);
-        current.DebugSources.Add(nameof(current.ContainerDesign), containerDesign.Source);
+        var dbg = current.DebugSources;
+        dbg.Add("Name", configName.Source);
+        dbg.Add(nameof(current.Languages), languages.Source);
+        dbg.Add(nameof(current.LanguageDesign), langDesign.Source);
+        dbg.Add(nameof(current.Container), container.Name);
+        dbg.Add(nameof(current.ContainerDesign), containerDesign.Source);
 
         _currentSettingsCache[originalNameForCache] = current;
         return current;
@@ -109,6 +115,7 @@ public class MagicSettingsService: IHasSettingsExceptions
         var names = GetConfigNamesToCheck(name, name);
         var layoutSettings = new MagicLayoutSettings
         {
+            Container = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.Container, names),
             ContainerDesign = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.ContainerDesign, names),
             Languages = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.Languages, names),
             LanguageMenuShowMin = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.LanguageMenuShowMin, names) ?? 0,
@@ -136,7 +143,7 @@ public class MagicSettingsService: IHasSettingsExceptions
             = FindInSources((settings, n) =>
             {
                 var tryToFind = settings.Languages?.GetInvariant(n);
-                return tryToFind?.List?.Any() == true ? tryToFind : null;
+                return tryToFind?.Languages?.Any() == true ? tryToFind : null;
             }, languagesNames);
         if (config == null) throw new NullReferenceException($"{nameof(config)} should be a {nameof(MagicLanguage)}");
         return (config, sourceInfo);

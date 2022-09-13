@@ -6,12 +6,10 @@ namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 
 public class MagicContainerDesignSettings : NamedSettings<MagicContainerDesign>
 {
-    internal string Classes(Module module, string tag)
+    internal string? Classes(Module module, string tag)
     {
-        //if (module == null) return "";
-        if (/*Design == null ||*/ !this.Any()) return "";
-        var styles = this.FindInvariant(tag);
-        if (styles is null) return "";
+        var styles = this.FindInvariant(tag); // safe, also does null-check
+        if (styles is null) return null;
         return string.Join(" ", new[]
         {
             module.IsPublished() ? styles.IsPublished : styles.IsNotPublished, // Info-Class if not published

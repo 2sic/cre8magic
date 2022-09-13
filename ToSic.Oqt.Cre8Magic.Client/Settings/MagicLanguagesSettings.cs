@@ -17,26 +17,26 @@ public class MagicLanguagesSettings
     /// <summary>
     /// List of languages
     /// </summary>
-    public Dictionary<string, MagicLanguage>? List
+    public NamedSettings<MagicLanguage>? Languages
     {
-        get => _list;
-        set => _list = InitList(value);
+        get => _languages;
+        set => _languages = InitList(value);
     }
-    private Dictionary<string, MagicLanguage>? _list;
+    private NamedSettings<MagicLanguage>? _languages;
 
-    private Dictionary<string, MagicLanguage>? InitList(Dictionary<string, MagicLanguage>? dic)
+    private NamedSettings<MagicLanguage>? InitList(NamedSettings<MagicLanguage>? dic)
     {
         if (dic == null) return null;
         // Ensure each config knows what culture it's for, as 
         foreach (var set in dic)
             set.Value.Culture ??= set.Key;
-        return dic.ToInvariant();
+        return dic; //.ToInvariant();
     }
 
     public static MagicLanguagesSettings Defaults = new()
     {
         HideOthers = false,
-        List = new()
+        Languages = new()
         {
             { "en", new() { Culture = "en", Description = "English" } }
         },

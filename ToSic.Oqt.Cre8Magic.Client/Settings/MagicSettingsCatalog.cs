@@ -20,6 +20,8 @@ public class MagicSettingsCatalog
 
     public NamedSettings<MagicLayoutSettings> Layouts { get; set; } = new();
 
+    public NamedSettings<MagicContainerSettings> Containers { get; set; } = new();
+
     public NamedSettings<MagicContainerDesignSettings> ContainerDesigns { get; set; } = new();
 
     public NamedSettings<MagicLanguagesSettings> Languages { get; set; } = new();

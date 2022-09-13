@@ -46,7 +46,7 @@ public class LanguageService: MagicServiceWithSettingsBase
 
         var langSettings = Settings.Languages;
 
-        var customList = langSettings.List.Values;
+        var customList = langSettings.Languages.Values;
 
         var siteLanguageCodes = siteLanguages.Select(l => l.Code).ToList();
 
