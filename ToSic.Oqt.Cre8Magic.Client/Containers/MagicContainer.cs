@@ -13,7 +13,7 @@ public class MagicContainer: Oqtane.Themes.ContainerBase, IMagicControlWithSetti
 
     protected void CloseModal() => NavigationManager?.NavigateTo(NavigateUrl());
 
-    public string? Classes(string tag) => Settings.ContainerDesign.Classes(PageState, ModuleState, tag).EmptyAsNull();
+    public string? Classes(string tag) => Settings.ContainerDesign.Classes(Settings, ModuleState, tag).EmptyAsNull();
 
-    public string? Value(string key) => Settings.Container.Value(PageState, ModuleState, key).EmptyAsNull();
+    public string? Value(string key) => Settings.Container.Value(Settings, ModuleState, key).EmptyAsNull();
 }

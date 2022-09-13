@@ -1,5 +1,4 @@
 ﻿using Oqtane.Models;
-using Oqtane.UI;
 using ToSic.Oqt.Cre8Magic.Client.Styling;
 using ToSic.Oqt.Cre8Magic.Client.Tokens;
 using static ToSic.Oqt.Cre8Magic.Client.Styling.MagicPageDesign;
@@ -8,13 +7,14 @@ namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 
 public class MagicContainerDesignSettings : NamedSettings<MagicContainerDesign>
 {
-    internal string? Classes(PageState pageState, Module module, string tag)
+    internal string? Classes(MagicSettings settings, Module module, string tag)
     {
         var styles = this.FindInvariant(tag); // safe, also does null-check
         if (styles is null) return null;
 
-        var tokens = new ModuleTokens(pageState, module);
-        return tokens.Replace(styles);
+        var value = new ModuleStyler(module).GetClasses(styles);
+        var tokens = settings.Tokens.Expanded(new ModuleTokens(module));
+        return tokens.Parse(value);
     }
 
     public static MagicContainerDesignSettings Defaults = new()

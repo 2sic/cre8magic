@@ -1,6 +1,4 @@
-﻿using Oqtane.UI;
-
-namespace ToSic.Oqt.Cre8Magic.Client;
+﻿namespace ToSic.Oqt.Cre8Magic.Client;
 
 public class MagicPlaceholders
 {
@@ -36,7 +34,4 @@ public class MagicPlaceholders
     /// Special key to mark rules "ByLevel" which apply to all level which had not been defined
     /// </summary>
     internal const int ByLevelOtherKey = -1;
-
-    internal static string Replace(string classes, PageState pageState, string layoutVariation) 
-        => new PagePlaceholders(pageState, layoutVariation: layoutVariation).Replace(classes);
 }

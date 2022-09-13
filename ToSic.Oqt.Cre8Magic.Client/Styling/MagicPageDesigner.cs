@@ -1,4 +1,5 @@
 ﻿using Oqtane.UI;
+using ToSic.Oqt.Cre8Magic.Client.Tokens;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Styling;
 
@@ -7,7 +8,7 @@ namespace ToSic.Oqt.Cre8Magic.Client.Styling;
 /// </summary>
 public class MagicPageDesigner: MagicServiceWithSettingsBase
 {
-    public string BodyClasses(PageState pageState, string additionalBodyClasses)
+    internal string BodyClasses(PageState pageState, ITokenReplace tokens)
     {
         var css = Settings?.Page;
 
@@ -30,7 +31,8 @@ public class MagicPageDesigner: MagicServiceWithSettingsBase
         // do once lang is clear
 
         var bodyClasses = string.Join(" ", classes).Replace("  ", " ");
-        return MagicPlaceholders.Replace(bodyClasses, pageState, additionalBodyClasses);
+
+        return tokens.Parse(bodyClasses);
     }
 
 

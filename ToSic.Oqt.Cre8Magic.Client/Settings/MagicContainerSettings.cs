@@ -11,13 +11,13 @@ public class MagicContainerSettings
     private const string IdKey = "Id";
     private const string IdDefault = "module-[Module.Id]";
 
-    internal string? Value(PageState pageState, Module module, string key)
+    internal string? Value(MagicSettings settings, Module module, string key)
     {
         var value = Values.FindInvariant(key); // safe, also does null-check
         if (!value.HasValue()) return null;
 
-        var tokens = new ModuleTokens(pageState, module);
-        return tokens.Replace(value!);
+        var tokens = settings.Tokens.Expanded(new ModuleTokens(module));
+        return tokens.Parse(value!);
     }
 
     public static MagicContainerSettings Defaults = new()

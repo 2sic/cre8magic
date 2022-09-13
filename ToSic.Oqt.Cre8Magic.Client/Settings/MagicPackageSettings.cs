@@ -21,13 +21,13 @@ public partial class MagicPackageSettings
 
     public string PackageName { get; set; } = "todo: set theme package name in your constructor";
 
-    public string PathAssets
+    public string AssetsPath
     {
-        get => _assetsPath ??= PathTheme + "/Assets";
+        get => _assetsPath ??= Path + "/Assets";
         set => _assetsPath = value;
     }
 
-    public string PathTheme
+    public string Path
     {
         get => _themePath ??= "Themes/" + PackageName;
         set => _themePath = value;

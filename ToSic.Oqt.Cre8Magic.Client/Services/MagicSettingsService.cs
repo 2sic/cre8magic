@@ -1,5 +1,6 @@
 ﻿using Oqtane.UI;
 using ToSic.Oqt.Cre8Magic.Client.Styling;
+using ToSic.Oqt.Cre8Magic.Client.Tokens;
 using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
 using static ToSic.Oqt.Cre8Magic.Client.Settings.MagicPackageSettings;
 
@@ -32,11 +33,19 @@ public class MagicSettingsService: IHasSettingsExceptions
         get => _settings ?? throw new ArgumentException($"The {nameof(MagicSettingsService)} can't work without first calling {nameof(InitSettings)}", nameof(PackageSettings));
         set => _settings = value;
     }
+    private MagicPackageSettings _settings;
 
     private MagicSettingsJsonService Json { get; }
 
     public MagicSettings CurrentSettings(PageState pageState, string name, string bodyClasses)
     {
+        var tokens = new ThemeTokens(PackageSettings);
+        var tokensPro = new TokenEngine(new()
+        {
+            new PagePlaceholders(pageState, null, bodyClasses),
+            new ThemeTokens(PackageSettings)
+        });
+
         // Get a cache-id for this specific configuration, which can vary by page
         var originalNameForCache = (name ?? "prevent-error") + pageState.Page.PageId;
         var cached = _currentSettingsCache.FindInvariant(originalNameForCache);
@@ -44,7 +53,7 @@ public class MagicSettingsService: IHasSettingsExceptions
 
         var configName = FindConfigName(name, Default);
         name = configName.ConfigName;
-        var layout = FindLayout(name).Layout;
+        var layout = FindLayout(name, tokensPro).Layout;
 
         // BreadcrumbSettings
         var breadcrumbNames = GetConfigNamesToCheck(layout.Breadcrumbs, name);
@@ -83,9 +92,9 @@ public class MagicSettingsService: IHasSettingsExceptions
         var pageDesignNames = GetConfigNamesToCheck(layout.PageDesign, name);
         var pageDesign = FindInSources((s, n) => s.PageDesigns?.GetInvariant(n), pageDesignNames);
 
-        var current = new MagicSettings(name, this, layout, breadcrumb, pageDesign.Result, languages.Languages, langDesign.Result, container.Result, containerDesign.Result);
+        var current = new MagicSettings(name, this, layout, breadcrumb, pageDesign.Result, languages.Languages, langDesign.Result, container.Result, containerDesign.Result, tokensPro, pageState);
         PageDesigner.InitSettings(current);
-        current.MagicContext = PageDesigner.BodyClasses(pageState, bodyClasses);
+        current.MagicContext = PageDesigner.BodyClasses(pageState, tokensPro);
         var dbg = current.DebugSources;
         dbg.Add("Name", configName.Source);
         dbg.Add(nameof(current.Languages), languages.Source);
@@ -108,7 +117,7 @@ public class MagicSettingsService: IHasSettingsExceptions
             : new[] { configuredNameOrNull, Default }.Distinct().ToArray();
     }
 
-    public (MagicLayoutSettings Layout, string Source) FindLayout(string name)
+    private (MagicLayoutSettings Layout, string Source) FindLayout(string name, ITokenReplace tokens)
     {
         var cached = _layoutSettingsCache.FindInvariant(name);
         if (cached != null) return (cached, "cached");
@@ -122,7 +131,7 @@ public class MagicSettingsService: IHasSettingsExceptions
             LanguageMenuShow = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.LanguageMenuShow, names) ?? true,
             LanguageMenuDesign = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.LanguageMenuDesign, names),
             Breadcrumbs = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.Breadcrumbs, names),
-            Logo = ReplacePlaceholders(FindValue((s, n) => s.Layouts?.GetInvariant(n)?.Logo, names)!),
+            Logo = tokens.Parse(FindValue((s, n) => s.Layouts?.GetInvariant(n)?.Logo, names)!),
             // Check if we have a menu map
             Menus = FindValue((set, n) =>
             {
@@ -137,7 +146,7 @@ public class MagicSettingsService: IHasSettingsExceptions
 
     private readonly NamedSettings<MagicLayoutSettings> _layoutSettingsCache = new();
 
-    public (MagicLanguagesSettings Languages, string Source) FindLanguageSettings(string[] languagesNames)
+    private (MagicLanguagesSettings Languages, string Source) FindLanguageSettings(string[] languagesNames)
     {
         var (config, _, sourceInfo) 
             = FindInSources((settings, n) =>
@@ -149,7 +158,7 @@ public class MagicSettingsService: IHasSettingsExceptions
         return (config, sourceInfo);
     }
 
-    public (MagicMenuSettings MenuConfig, string Source) FindMenuConfig(string name)
+    internal (MagicMenuSettings MenuConfig, string Source) FindMenuConfig(string name)
     {
         // Only search multiple names if the name is not already default
         var names = name == Default ? new[] { name } : new[] { name, Default };
@@ -185,8 +194,8 @@ public class MagicSettingsService: IHasSettingsExceptions
     }
 
 
-    private string ReplacePlaceholders(string value) => value
-        .Replace(MagicPlaceholders.ThemeAssetsPath, PackageSettings.PathAssets);
+    //private string ReplacePlaceholders(string value) => value
+    //    .Replace(MagicPlaceholders.ThemeAssetsPath, PackageSettings.AssetsPath);
 
 
     private TResult FindValue<TResult>(Func<MagicSettingsCatalog, string, TResult> findFunc, params string[]? names)
@@ -250,5 +259,4 @@ public class MagicSettingsService: IHasSettingsExceptions
     public List<SettingsException> Exceptions => MyExceptions.Concat(Json.Exceptions).ToList();
     private List<SettingsException> MyExceptions => _myExceptions ??= new();
     private List<SettingsException>? _myExceptions;
-    private MagicPackageSettings _settings;
 }

@@ -9,10 +9,25 @@ public class MagicMenuTree : MagicMenuBranch
 {
     public const char PageForced = '!';
 
+    public MagicMenuTree(IMagicMenuSettings config, PageState pageState, List<Page> menuPages, string? debug, IHasSettingsExceptions exceptions)
+        : base(null! /* root must be null, as `Tree` is handled in this class */, 0, pageState.Page)
+    {
+        PageState = pageState;
+        Config = config;
+        AllPages = pageState.Pages;
+        MenuPages = menuPages;
+        _exceptions = exceptions;
+        Debug = debug;
+
+        // Bug in Oqtane 3.2 and before: Level isn't hydrated
+        if (AllPages.All(p => p.Level == 0))
+            MenuPatchCode.GetPagesHierarchy(AllPages);
+    }
+
     internal IMagicMenuSettings Config { get; }
     public PageState PageState { get; }
 
-    internal PagePlaceholders PageReplacer => _pageReplacer ??= new PagePlaceholders(PageState, null, menuId: MenuId);
+    internal PagePlaceholders PageReplacer => _pageReplacer ??= new(PageState, null, menuId: MenuId);
     private PagePlaceholders? _pageReplacer;
 
     /// <summary>
@@ -42,20 +57,6 @@ public class MagicMenuTree : MagicMenuBranch
 
     public override string? Debug { get; }
 
-    public MagicMenuTree(IMagicMenuSettings config, PageState pageState, List<Page> menuPages, string? debug, IHasSettingsExceptions exceptions)
-        : base(null! /* root must be null, as `Tree` is handled in this class */, 0, pageState.Page)
-    {
-        PageState = pageState;
-        Config = config;
-        AllPages = pageState.Pages;
-        MenuPages = menuPages;
-        _exceptions = exceptions;
-        Debug = debug;
-
-        // Bug in Oqtane 3.2 and before: Level isn't hydrated
-        if (AllPages.All(p => p.Level == 0))
-            MenuPatchCode.GetPagesHierarchy(AllPages);
-    }
 
     [return: NotNull]
     protected override List<Page> GetChildPages()

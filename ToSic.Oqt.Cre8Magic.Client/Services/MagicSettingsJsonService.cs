@@ -6,7 +6,7 @@ public class MagicSettingsJsonService : IHasSettingsExceptions
 {
     public MagicSettingsCatalog? LoadJson(MagicPackageSettings themeConfig)
     {
-        var jsonFileName = $"{themeConfig.WwwRoot}/{themeConfig.PathTheme}/{themeConfig.SettingsJsonFile}";
+        var jsonFileName = $"{themeConfig.WwwRoot}/{themeConfig.Path}/{themeConfig.SettingsJsonFile}";
         try
         {
             var jsonString = File.ReadAllText(jsonFileName);

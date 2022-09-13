@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Oqtane.Models;
+using ToSic.Oqt.Cre8Magic.Client.Tokens;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Menu;
 
@@ -10,9 +11,12 @@ public class MagicMenuBranch: IHasSettingsExceptions
     /// </summary>
     protected virtual MagicMenuTree Tree { get; }
 
-    public string? Classes(string tag) => Tree.PageReplacer.Replace(Tree.Design.Classes(tag, this), Page).EmptyAsNull();
+    private ITokenReplace NodeReplace  => _nodeReplace ??= Tree.PageReplacer.ForPage(Page);
+    private ITokenReplace? _nodeReplace;
 
-    public string? Value(string key) => Tree.PageReplacer.Replace(Tree.Design.Value(key, this), Page).EmptyAsNull();
+    public string? Classes(string tag) => NodeReplace.Parse(Tree.Design.Classes(tag, this)).EmptyAsNull();
+
+    public string? Value(string key) => NodeReplace.Parse(Tree.Design.Value(key, this)).EmptyAsNull();
 
     public virtual string? Debug => Tree.Debug;
 

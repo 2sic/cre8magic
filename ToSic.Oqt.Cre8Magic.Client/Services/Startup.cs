@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using ToSic.Oqt.Cre8Magic.Client.Tokens;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Services;
 
@@ -11,14 +13,14 @@ public class Startup : Oqtane.Services.IClientStartup
     public void ConfigureServices(IServiceCollection services)
     {
         // All these Settings etc. should be scoped, so they don't have to reload for each click
-        services.AddScoped<MagicSettingsJsonService>();
-        services.AddScoped<MagicSettingsService>();
-        services.AddTransient<LanguageService>();
+        services.TryAddScoped<MagicSettingsJsonService>();
+        services.TryAddScoped<MagicSettingsService>();
+        services.TryAddTransient<LanguageService>();
 
         //services.AddTransient<MenuTreeService>();
 
         //// Logic parts for Controls
-        services.AddTransient<MagicPageEditService>();
-
+        services.TryAddTransient<MagicPageEditService>();
+        
     }
 }

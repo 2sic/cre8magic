@@ -1,29 +1,34 @@
 ﻿using Oqtane.Models;
 using Oqtane.UI;
+using ToSic.Oqt.Cre8Magic.Client.Tokens;
 using static ToSic.Oqt.Cre8Magic.Client.MagicPlaceholders;
 using static System.StringComparison;
 
 namespace ToSic.Oqt.Cre8Magic.Client;
 
-internal class PagePlaceholders
+internal class PagePlaceholders: ITokenReplace
 {
-    private readonly PageState _pageState;
-    private readonly string? _layoutVariation;
+    public const string NameIdConstant = nameof(PagePlaceholders);
+    public PageState PageState { get; }
+    public Page? Page { get; }
+    private readonly string? _bodyClasses;
     private readonly string? _menuId;
-    private readonly Page _page;
+    public string NameId => NameIdConstant;
 
-    public PagePlaceholders(PageState pageState, string? layoutVariation = null, string? menuId = null)
+    public PagePlaceholders(PageState pageState, Page? page = null, string? bodyClasses = null, string? menuId = null)
     {
-        _pageState = pageState;
-        _layoutVariation = layoutVariation;
+        PageState = pageState;
+        Page = page;
+        _bodyClasses = bodyClasses;
         _menuId = menuId;
-        _page = pageState.Page;
     }
 
-    internal string Replace(string classes, Page? page = null)
+    public PagePlaceholders ForPage(Page page) => new(PageState, page, _bodyClasses, _menuId);
+
+    public string Parse(string classes)
     {
-        if (string.IsNullOrWhiteSpace(classes)) return classes;
-        page ??= _page;
+        if (!classes.HasValue()) return classes;
+        var page = Page ?? PageState.Page;
         var result = classes
             .Replace(PageId, $"{page.PageId}", InvariantCultureIgnoreCase);
 
@@ -33,7 +38,7 @@ internal class PagePlaceholders
         result = result
             .Replace(PageParentId, page.ParentId != null ? $"{page.ParentId}" : None)
             .Replace(SiteId, $"{page.SiteId}", InvariantCultureIgnoreCase)
-            .Replace(LayoutVariation, _layoutVariation ?? None)
+            .Replace(LayoutVariation, _bodyClasses ?? None)
             .Replace(MenuLevel, $"{page.Level + 1}")
             .Replace(MenuId, _menuId ?? None);
 
@@ -51,7 +56,7 @@ internal class PagePlaceholders
         {
             if (_pageRootAlreadyTried) return _pageRootId;
             _pageRootAlreadyTried = true;
-            _pageRootId = _pageState.Breadcrumb().FirstOrDefault()?.PageId;
+            _pageRootId = PageState.Breadcrumb().FirstOrDefault()?.PageId;
             return _pageRootId;
         }
     }

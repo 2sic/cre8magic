@@ -1,4 +1,6 @@
-﻿using ToSic.Oqt.Cre8Magic.Client.Styling;
+﻿using Oqtane.UI;
+using ToSic.Oqt.Cre8Magic.Client.Styling;
+using ToSic.Oqt.Cre8Magic.Client.Tokens;
 using static System.StringComparer;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Settings;
@@ -8,7 +10,7 @@ namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 /// </summary>
 public class MagicSettings
 {
-    public MagicSettings(
+    internal MagicSettings(
         string name,
         MagicSettingsService service,
         MagicLayoutSettings layout, 
@@ -17,7 +19,9 @@ public class MagicSettings
         MagicLanguagesSettings languages, 
         MagicLanguageDesignSettings languageDesign, 
         MagicContainerSettings container,
-        MagicContainerDesignSettings containerDesign)
+        MagicContainerDesignSettings containerDesign, 
+        TokenEngine tokens, 
+        PageState pageState)
     {
         Layout = layout;
         Breadcrumb = breadcrumb;
@@ -26,9 +30,15 @@ public class MagicSettings
         LanguageDesign = languageDesign;
         Container = container;
         ContainerDesign = containerDesign;
+        Tokens = tokens;
+        PageState = pageState;
         Name = name;
         Service = service;
     }
+
+    internal PageState PageState { get; }
+
+    internal TokenEngine Tokens { get; }
 
     public string MagicContext { get; set; } = "";
 
