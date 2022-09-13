@@ -2,6 +2,7 @@
 using Oqtane.Models;
 using Oqtane.UI;
 using ToSic.Oqt.Cre8Magic.Client.OqtanePatches;
+using ToSic.Oqt.Cre8Magic.Client.Tokens;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Menu;
 
@@ -27,8 +28,8 @@ public class MagicMenuTree : MagicMenuBranch
     internal IMagicMenuSettings Config { get; }
     public PageState PageState { get; }
 
-    internal PagePlaceholders PageReplacer => _pageReplacer ??= new(PageState, null, menuId: MenuId);
-    private PagePlaceholders? _pageReplacer;
+    internal PageTokens PageReplacer => _pageReplacer ??= new(PageState, null, menuId: MenuId);
+    private PageTokens? _pageReplacer;
 
     /// <summary>
     /// List of all pages - even these which would currently not be shown in the menu.

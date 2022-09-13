@@ -42,7 +42,7 @@ public class MagicSettingsService: IHasSettingsExceptions
         var tokens = new ThemeTokens(PackageSettings);
         var tokensPro = new TokenEngine(new()
         {
-            new PagePlaceholders(pageState, null, bodyClasses),
+            new PageTokens(pageState, null, bodyClasses),
             new ThemeTokens(PackageSettings)
         });
 

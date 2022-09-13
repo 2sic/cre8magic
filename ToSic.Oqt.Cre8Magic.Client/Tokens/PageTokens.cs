@@ -1,21 +1,20 @@
 ﻿using Oqtane.Models;
 using Oqtane.UI;
-using ToSic.Oqt.Cre8Magic.Client.Tokens;
 using static ToSic.Oqt.Cre8Magic.Client.MagicPlaceholders;
 using static System.StringComparison;
 
-namespace ToSic.Oqt.Cre8Magic.Client;
+namespace ToSic.Oqt.Cre8Magic.Client.Tokens;
 
-internal class PagePlaceholders: ITokenReplace
+internal class PageTokens: ITokenReplace
 {
-    public const string NameIdConstant = nameof(PagePlaceholders);
+    public const string NameIdConstant = nameof(PageTokens);
     public PageState PageState { get; }
     public Page? Page { get; }
     private readonly string? _bodyClasses;
     private readonly string? _menuId;
     public string NameId => NameIdConstant;
 
-    public PagePlaceholders(PageState pageState, Page? page = null, string? bodyClasses = null, string? menuId = null)
+    public PageTokens(PageState pageState, Page? page = null, string? bodyClasses = null, string? menuId = null)
     {
         PageState = pageState;
         Page = page;
@@ -23,7 +22,7 @@ internal class PagePlaceholders: ITokenReplace
         _menuId = menuId;
     }
 
-    public PagePlaceholders ForPage(Page page) => new(PageState, page, _bodyClasses, _menuId);
+    public PageTokens ForPage(Page page) => new(PageState, page, _bodyClasses, _menuId);
 
     public string Parse(string classes)
     {
