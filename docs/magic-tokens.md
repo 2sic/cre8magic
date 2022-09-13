@@ -25,7 +25,8 @@ As of now we have these assets tokens:
 
 ## Page Tokens
 
-Page tokens work everywhere. 
+Page tokens work everywhere.
+They are especially useful in creating menus. 
 As of now we have these page tokens:
 
 * `[Page.Id]` - ID of the current page
@@ -38,10 +39,24 @@ Module Tokens work on **Containers** only.
 As of now we have these module tokens:
 
 * `[Module.Id]` - ID of the current module
+* `[Module.Control]` - the control name like `Index` of the current module (from the namespace the final control name)
+* ~`[Module.Name]` - the name like `HtmlText` of the current module (from the namespace, without the final control name)~  
+  _we don't implement this on purpose, because each module will have different namespace implementations so finding the name isn't possible
+* `[Module.Namespace]` - the name like `Oqtane.Modules.HtmlText` of the current module  
+  ideal to add to containers where you wish to have special styling for special types of modules
+  _this uses the namespace, without the final control name_
 
-## 
+## Layout Tokens
+
 TODO:
 
+## Menu Tokens
+
+Menu Tokens work on **Menus** only. 
+As of now we have these menu tokens:
+
+* `[Menu.Id]` - ID of the menu which is normally randomly generated to ensure that each menu is unique for collapse/uncollapse
+* `[Menu.Level]` - level of the menu which can be different for the page level, as menus that start at level 2 still have the first items on menu level 1
 
 ## How it Works
 
