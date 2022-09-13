@@ -18,7 +18,9 @@ public class MagicPlaceholders
     public const string PageParentId = "[Page.ParentId]";
     public const string PageRootId = "[Page.RootId]";
 
-    public const string ModuleId = "[Module.Id]";
+    internal const string ModuleId = "[Module.Id]";
+    internal const string ModuleControlName = "[Module.ControlName]";
+    internal const string ModuleNamespace = "[Module.Namespace]";
 
     // TODO!
     public const string ThemePath = "[Theme.Path]";

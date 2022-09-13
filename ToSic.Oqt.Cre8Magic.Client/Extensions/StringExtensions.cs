@@ -12,4 +12,12 @@ public static class StringExtensions
         => !string.IsNullOrEmpty(value);
 
     internal static string? EmptyAsNull(this string? value) => string.IsNullOrWhiteSpace(value) ? null : value;
+
+    internal static string? ConditionalReplace(this string? value, string oldValue, Func<string> newValueGenerator)
+    {
+        if (!value.HasValue() || !value!.Contains(oldValue) || !oldValue.HasValue())
+            return value;
+        var newValue = newValueGenerator();
+        return value.Replace(oldValue, newValue);
+    }
 }

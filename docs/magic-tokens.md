@@ -40,8 +40,8 @@ As of now we have these module tokens:
 
 * `[Module.Id]` - ID of the current module
 * `[Module.Control]` - the control name like `Index` of the current module (from the namespace the final control name)
-* ~`[Module.Name]` - the name like `HtmlText` of the current module (from the namespace, without the final control name)~  
-  _we don't implement this on purpose, because each module will have different namespace implementations so finding the name isn't possible
+* ~`[Module.Name]`~ - the name like `HtmlText` of the current module (from the namespace, without the final control name)  
+  _impossible to implement because each module will have different namespace conventions, so finding the real name isn't possible_
 * `[Module.Namespace]` - the name like `Oqtane.Modules.HtmlText` of the current module  
   ideal to add to containers where you wish to have special styling for special types of modules
   _this uses the namespace, without the final control name_
