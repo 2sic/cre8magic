@@ -1,5 +1,6 @@
 ﻿using Oqtane.Models;
 using Oqtane.UI;
+using ToSic.Oqt.Cre8Magic.Client.Styling;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Tokens
 {
@@ -18,6 +19,20 @@ namespace ToSic.Oqt.Cre8Magic.Client.Tokens
             return mod.Contains(MagicPlaceholders.PlaceholderMarker) 
                 ? base.Replace(mod) 
                 : mod;
+        }
+
+        public string Replace(MagicContainerDesign styles)
+        {
+            var value =  string.Join(" ", new[]
+            {
+                styles.Classes,
+                _module.IsPublished() ? styles.IsPublished : styles.IsNotPublished, // Info-Class if not published
+                _module.UseAdminContainer ? styles.IsAdminModule : styles.IsNotAdminModule // Info-class if admin module
+            }.Where(s => s.HasValue()));
+
+            return value.Contains(MagicPlaceholders.PlaceholderMarker)
+                ? Replace(value)
+                : value;
         }
     }
 }

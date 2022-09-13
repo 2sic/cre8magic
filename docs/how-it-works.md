@@ -107,4 +107,4 @@ Cre8Magic will do a bunch of things in the background, such as:
 
 You got this far? Let's go back to home and start designing! 
 
-👉🏾 [Home](../)
+👉🏾 [Home](../readme.md)

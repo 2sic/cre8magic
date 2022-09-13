@@ -186,7 +186,7 @@ public class MagicSettingsService: IHasSettingsExceptions
 
 
     private string ReplacePlaceholders(string value) => value
-        .Replace(MagicPlaceholders.AssetsPath, PackageSettings.PathAssets);
+        .Replace(MagicPlaceholders.ThemeAssetsPath, PackageSettings.PathAssets);
 
 
     private TResult FindValue<TResult>(Func<MagicSettingsCatalog, string, TResult> findFunc, params string[]? names)

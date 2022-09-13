@@ -12,14 +12,22 @@ public class MagicPlaceholders
     public const string PlaceholderMarker = "[";
 
 
-    public const string PageId = "[Page.Id]";
     public const string SiteId = "[Site.Id]";
-    public const string ModuleId = "[Module.Id]";
+
+    public const string PageId = "[Page.Id]";
     public const string PageParentId = "[Page.ParentId]";
     public const string PageRootId = "[Page.RootId]";
-    public const string AssetsPath = "[Assets.Path]";
+
+    public const string ModuleId = "[Module.Id]";
+
+    // TODO!
+    public const string ThemePath = "[Theme.Path]";
+    public const string ThemeAssetsPath = "[Theme.AssetsPath]";
+
     public const string MenuId = "[Menu.Id]";
     public const string MenuLevel = "[Menu.Level]";
+
+    // TODO! naming
     public const string LayoutVariation = "[Layout.Variation]";
     
     /// <summary>

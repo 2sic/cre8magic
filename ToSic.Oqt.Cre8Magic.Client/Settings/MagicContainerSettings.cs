@@ -14,11 +14,10 @@ public class MagicContainerSettings
     internal string? Value(PageState pageState, Module module, string key)
     {
         var value = Values.FindInvariant(key); // safe, also does null-check
-        if (value is null) return null;
+        if (!value.HasValue()) return null;
 
         var tokens = new ModuleTokens(pageState, module);
-        return tokens.Replace(value);
-
+        return tokens.Replace(value!);
     }
 
     public static MagicContainerSettings Defaults = new()

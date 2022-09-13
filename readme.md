@@ -61,6 +61,12 @@ TODO
 
 👉🏾 See [Magic Settings](./docs/magic-settings.md)
 
+### 1b Magic Tokens
+
+👉🏾 See [Magic Tokens](./docs/magic-tokens.md)
+
+TODO:
+
 
 Most layouts have very similar HTML, but do vary a bit. 
 For example, it could have different CSS classes to give it the look you need or a different logo file. 
