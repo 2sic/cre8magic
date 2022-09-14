@@ -23,7 +23,8 @@ public class MagicSettingsJsonService : IHasSettingsExceptions
                 AddException(themeConfig,
                     new ArgumentException($"Json {nameof(result.Version)} must be set to 0.01", nameof(result.Version)));
 
-            if (!result.Source.HasValue()) result.Source = "JSON";
+            if (!result.Source.HasValue() || result.Source == MagicSettingsCatalog.SourceDefault) 
+                result.Source = "JSON";
 
             return result;
         }

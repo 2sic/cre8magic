@@ -36,6 +36,8 @@ public class MagicSettings: IHasSettingsExceptions
         Service = service;
     }
 
+    public bool Debug => Service.Debug;
+
     internal PageState PageState { get; }
 
     internal TokenEngine Tokens { get; }

@@ -8,15 +8,18 @@ namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 /// </summary>
 public class MagicSettingsCatalog
 {
+    public const string SourceDefault = "Unknown";
     /// <summary>
     /// Version number when loading from JSON to verify it's what we expect
     /// </summary>
     public float Version { get; set; }
+    
+    public bool Debug { get; set; }
 
     /// <summary>
     /// Source of these settings / where they came from, to ensure that we can see in debug where a value was picked up from
     /// </summary>
-    public string Source { get; set; } = "Unknown";
+    public string Source { get; set; } = SourceDefault;
 
     public NamedSettings<MagicLayoutSettings> Layouts { get; set; } = new();
 

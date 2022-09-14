@@ -5,7 +5,7 @@
 ///
 /// If you change these, you must also update the SCSS files. 
 /// </summary>
-public class MagicPageDesignSettings // : NamedSettings<string>
+public class MagicPageDesignSettings
 {
     private const string SitePrefixDefault = "site";
     private const string PagePrefixDefault = "page";
@@ -16,7 +16,7 @@ public class MagicPageDesignSettings // : NamedSettings<string>
 
     public const string SettingFromDefaults = $"{MainPrefix}-warning-this-is-from-defaults-you-should-set-your-own-value";
 
-    public string[] MagicClasses { get; set; } =
+    public string[] MagicContext { get; set; } =
     {
         //1.2 Set the page-### class
         $"{PagePrefixDefault}-{MagicTokens.PageId}",
@@ -31,10 +31,11 @@ public class MagicPageDesignSettings // : NamedSettings<string>
         //5.1 Set the to-shine-variation- class
         $"{MainPrefix}-variation-{MagicTokens.LayoutVariation}",
 
-        // TODO: FIND OUT IF we need this
-        // and where to put it
-        //5.2 Set the to-shine-mainnav-variation- class
+        //5.2 Set the to-shine-mainnav-variation- class to align the menu
         $"{MainPrefix}-mainnav-variation-right",
+
+        // Debug info so we know the defaults were used
+        SettingFromDefaults
     };
 
     public string PageIsHome { get; set; } = $"{PagePrefixDefault}-is-home";
@@ -43,6 +44,9 @@ public class MagicPageDesignSettings // : NamedSettings<string>
     public string PaneIsEmpty { get; set; } = $"{PanePrefixDefault}-is-empty";
 
     public string MagicContextTagId { get; set; } = BodyDivId;
+
+    // TODO:
+    public NamedSettings<string> Other { get; set; } = new();
 
     // TODO: initialize with real properties, so the defaults don't already contain something?
     public static MagicPageDesignSettings Defaults = new();

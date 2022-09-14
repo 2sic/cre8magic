@@ -25,6 +25,8 @@ public class MagicSettingsService: IHasSettingsExceptions
         return this;
     }
 
+    public bool Debug => ConfigurationSources.First().Debug;
+
     public MagicPageDesigner PageDesigner { get; } = new();
 
 
@@ -39,7 +41,6 @@ public class MagicSettingsService: IHasSettingsExceptions
 
     public MagicSettings CurrentSettings(PageState pageState, string name, string bodyClasses)
     {
-        var tokens = new ThemeTokens(PackageSettings);
         var tokensPro = new TokenEngine(new()
         {
             new PageTokens(pageState, null, bodyClasses),
@@ -69,28 +70,28 @@ public class MagicSettingsService: IHasSettingsExceptions
 
         // Get language design from configuration - keep the first which has any settings
         // This also means no partial inheritance, it's all or nothing
-        var langDesignNames = GetConfigNamesToCheck(layout.LanguageMenuDesign, name);
-        var langDesign = FindInSources((s, n) =>
-        {
-            var found = s.LanguageDesigns?.GetInvariant(n);
-            return found is { } && found.Any() ? found : null;
-        }, langDesignNames);
+        var langDesign = FindInSources(layout.LanguageMenuDesign, name,
+            (s, n) =>
+            {
+                var found = s.LanguageDesigns?.GetInvariant(n);
+                return found is { } && found.Any() ? found : null;
+            });
 
         // Containers
-        var containerNames = GetConfigNamesToCheck(layout.Container, name);
-        var container = FindInSources((s, n) => s.Containers?.GetInvariant(n), containerNames);
+        var container = FindInSources(layout.Container, name, 
+            (s, n) => s.Containers?.GetInvariant(n));
 
         // Container Design
-        var containerDesignNames = GetConfigNamesToCheck(layout.ContainerDesign, name);
-        var containerDesign = FindInSources((s, n) =>
-        {
-            var found = s.ContainerDesigns?.GetInvariant(n);
-            return found is { } && found.Any() ? found : null;
-        }, containerDesignNames);
+        var containerDesign = FindInSources(layout.ContainerDesign, name,
+            (s, n) =>
+            {
+                var found = s.ContainerDesigns?.GetInvariant(n);
+                return found is { } && found.Any() ? found : null;
+            });
 
         // Page Design
-        var pageDesignNames = GetConfigNamesToCheck(layout.PageDesign, name);
-        var pageDesign = FindInSources((s, n) => s.PageDesigns?.GetInvariant(n), pageDesignNames);
+        var pageDesign = FindInSources(layout.PageDesign, name,
+            (s, n) => s.PageDesigns?.GetInvariant(n));
 
         var current = new MagicSettings(name, this, layout, breadcrumb, pageDesign.Result, languages.Languages, langDesign.Result, container.Result, containerDesign.Result, tokensPro, pageState);
         PageDesigner.InitSettings(current);
@@ -99,7 +100,7 @@ public class MagicSettingsService: IHasSettingsExceptions
         dbg.Add("Name", configName.Source);
         dbg.Add(nameof(current.Languages), languages.Source);
         dbg.Add(nameof(current.LanguageDesign), langDesign.Source);
-        dbg.Add(nameof(current.Container), container.Name);
+        dbg.Add(nameof(current.Container), container.KeyUsed);
         dbg.Add(nameof(current.ContainerDesign), containerDesign.Source);
 
         _currentSettingsCache[originalNameForCache] = current;
@@ -194,20 +195,25 @@ public class MagicSettingsService: IHasSettingsExceptions
     }
 
 
-    //private string ReplacePlaceholders(string value) => value
-    //    .Replace(MagicPlaceholders.ThemeAssetsPath, PackageSettings.AssetsPath);
-
-
     private TResult FindValue<TResult>(Func<MagicSettingsCatalog, string, TResult> findFunc, params string[]? names)
     {
         var (showMin, _, _) = FindInSources(findFunc, names);
         return showMin;
     }
 
+    private (TResult Result, string KeyUsed, string Source) FindInSources<TResult>(
+        string? preferredName, string currentName,
+        Func<MagicSettingsCatalog, string, TResult> findFunc)
+    {
+        var names = GetConfigNamesToCheck(preferredName, currentName);
+        return FindInSources(findFunc, names);
+    }
+
+
     /// <summary>
     /// Loop through various sources of settings and check the keys in the preferred order to see if we get a hit.
     /// </summary>
-    private (TResult Result, string Name, string Source) FindInSources<TResult>(
+    private (TResult Result, string KeyUsed, string Source) FindInSources<TResult>(
         Func<MagicSettingsCatalog, string, TResult> findFunc,
         params string[]? names)
     {
@@ -257,6 +263,5 @@ public class MagicSettingsService: IHasSettingsExceptions
     private List<MagicSettingsCatalog>? _configurationSources;
 
     public List<Exception> Exceptions => MyExceptions.Concat(Json.Exceptions).ToList();
-    private List<SettingsException> MyExceptions => _myExceptions ??= new();
-    private List<SettingsException>? _myExceptions;
+    private List<SettingsException> MyExceptions { get; }= new();
 }
