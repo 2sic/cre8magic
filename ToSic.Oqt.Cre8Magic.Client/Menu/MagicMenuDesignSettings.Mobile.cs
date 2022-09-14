@@ -1,7 +1,7 @@
 ﻿using ToSic.Oqt.Cre8Magic.Client.Styling;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Menu;
-using static MagicPlaceholders;
+using static MagicTokens;
 
 public partial class MagicMenuDesignSettings
 {

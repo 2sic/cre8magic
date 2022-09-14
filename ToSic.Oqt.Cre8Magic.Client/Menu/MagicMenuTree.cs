@@ -30,12 +30,11 @@ public class MagicMenuTree : MagicMenuBranch
     public MagicSettings Settings { get; }
     public PageState PageState { get; }
 
-    internal TokenEngine PageReplacer2(Page page)
+    internal TokenEngine PageTokenEngine(Page page)
     {
-        var te = Settings.Tokens;
         var originalPage = (PageTokens)Settings.Tokens.Parsers.First(p => p.NameId == PageTokens.NameIdConstant);
         originalPage = originalPage.Modified(page, menuId: MenuId);
-        return te.Replaced(originalPage.NameId, originalPage);
+        return Settings.Tokens.SwapParser(originalPage);
     }
 
     /// <summary>

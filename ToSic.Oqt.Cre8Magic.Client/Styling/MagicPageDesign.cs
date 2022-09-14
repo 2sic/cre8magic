@@ -20,17 +20,17 @@ public class MagicPageDesign
     public string[] MagicClasses { get; set; } =
     {
         //1.2 Set the page-### class
-        $"{PagePrefixDefault}{MagicPlaceholders.PageId}",
+        $"{PagePrefixDefault}{MagicTokens.PageId}",
         //1.4 Set the page-root-### class
-        $"{PagePrefixDefault}root-{MagicPlaceholders.PageRootId}",
+        $"{PagePrefixDefault}root-{MagicTokens.PageRootId}",
         //1.3 Set the page-parent-### class
-        $"{PagePrefixDefault}parent-{MagicPlaceholders.PageParentId}",
+        $"{PagePrefixDefault}parent-{MagicTokens.PageParentId}",
         //2 Set site-### class
-        $"{SitePrefixDefault}{MagicPlaceholders.SiteId}",
+        $"{SitePrefixDefault}{MagicTokens.SiteId}",
         //3 Set the nav-level-### class
-        $"{MenuLevelPrefixDefault}{MagicPlaceholders.MenuLevel}",
+        $"{MenuLevelPrefixDefault}{MagicTokens.MenuLevel}",
         //5.1 Set the to-shine-variation- class
-        $"{MainPrefix}variation-{MagicPlaceholders.LayoutVariation}",
+        $"{MainPrefix}variation-{MagicTokens.LayoutVariation}",
 
         // TODO: FIND OUT IF we need this
         // and where to put it

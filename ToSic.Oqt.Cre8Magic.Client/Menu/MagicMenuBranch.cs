@@ -11,7 +11,7 @@ public class MagicMenuBranch: IHasSettingsExceptions
     /// </summary>
     protected virtual MagicMenuTree Tree { get; }
 
-    private ITokenReplace NodeReplace => _nodeReplace ??= Tree.PageReplacer2(Page);
+    private ITokenReplace NodeReplace => _nodeReplace ??= Tree.PageTokenEngine(Page);
     private ITokenReplace? _nodeReplace;
 
     public string? Classes(string tag) => NodeReplace.Parse(Tree.Design.Classes(tag, this)).EmptyAsNull();

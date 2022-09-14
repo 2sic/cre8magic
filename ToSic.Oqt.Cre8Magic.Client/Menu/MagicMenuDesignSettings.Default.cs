@@ -1,5 +1,5 @@
 ﻿namespace ToSic.Oqt.Cre8Magic.Client.Menu;
-using static MagicPlaceholders;
+using static MagicTokens;
 
 public partial class MagicMenuDesignSettings
 {
@@ -9,41 +9,38 @@ public partial class MagicMenuDesignSettings
     /// </summary>
     public static MagicMenuDesignSettings Defaults => new()
     {
-        //Design = new()
-        //{
+        {
+            "a", new()
             {
-                "a", new()
+                IsActive = "active",
+                HasChildren = "dropdown-toggle",
+                ByLevel = new()
                 {
-                    IsActive = "active",
-                    HasChildren = "dropdown-toggle",
-                    ByLevel = new()
-                    {
-                        { ByLevelOtherKey, "dropdown-item" },
-                        { 1, "nav-link" },
+                    { ByLevelOtherKey, "dropdown-item" },
+                    { 1, "nav-link" },
 
-                    }
-                }
-            },
-            {
-                "li", new()
-                {
-                    Classes = $"nav-item nav-{PageId}",
-                    HasChildren = "has-child dropdown",
-                    IsActive = "active",
-                    IsDisabled = "disabled",
-                }
-
-            },
-            {
-                "ul", new()
-                {
-                    ByLevel = new()
-                    {
-                        { ByLevelOtherKey, "dropdown-menu" },
-                        { 0, "navbar-nav" },
-                    },
                 }
             }
-        //},
+        },
+        {
+            "li", new()
+            {
+                Classes = $"nav-item nav-{PageId}",
+                HasChildren = "has-child dropdown",
+                IsActive = "active",
+                IsDisabled = "disabled",
+            }
+
+        },
+        {
+            "ul", new()
+            {
+                ByLevel = new()
+                {
+                    { ByLevelOtherKey, "dropdown-menu" },
+                    { 0, "navbar-nav" },
+                },
+            }
+        }
     };
 }

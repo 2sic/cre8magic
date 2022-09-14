@@ -1,6 +1,4 @@
-﻿using ToSic.Oqt.Cre8Magic.Client.Styling;
-
-namespace ToSic.Oqt.Cre8Magic.Client.Settings;
+﻿namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 
 /// <summary>
 /// Settings for a Theme Package.
@@ -21,17 +19,10 @@ public partial class MagicPackageSettings
 
     public string PackageName { get; set; } = "todo: set theme package name in your constructor";
 
-    public string AssetsPath
+    public string Url
     {
-        get => _assetsPath ??= Path + "/Assets";
-        set => _assetsPath = value;
+        get => _url ??= "Themes/" + PackageName;
+        set => _url = value;
     }
-
-    public string Path
-    {
-        get => _themePath ??= "Themes/" + PackageName;
-        set => _themePath = value;
-    }
-    private string? _assetsPath;
-    private string? _themePath;
+    private string? _url;
 }

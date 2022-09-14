@@ -1,6 +1,6 @@
 ﻿namespace ToSic.Oqt.Cre8Magic.Client;
 
-public class MagicPlaceholders
+public class MagicTokens
 {
     /// <summary>
     /// This will be used as value if a value is null/empty.
@@ -20,9 +20,7 @@ public class MagicPlaceholders
     internal const string ModuleControlName = "[Module.ControlName]";
     internal const string ModuleNamespace = "[Module.Namespace]";
 
-    // TODO!
-    internal const string ThemePath = "[Theme.Path]";
-    internal const string ThemeAssetsPath = "[Theme.AssetsPath]";
+    internal const string ThemeUrl = "[Theme.Url]";
 
     internal const string MenuId = "[Menu.Id]";
     internal const string MenuLevel = "[Menu.Level]";

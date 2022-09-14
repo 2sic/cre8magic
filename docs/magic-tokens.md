@@ -7,6 +7,15 @@ For example, when parsing settings at the page level, `[Page...]` tokens will wo
 
 _Note: The list of tokens is still work in progress_
 
+## Purpose of Cre8Magic Tokens
+
+The purpose of these tokens is for use in configurable values - such as classes on HTML tags.
+
+They are currently not going to give you all possible values, for eg. there is no `[Module.Title]` token
+since there is no good reason to use this in such scenarios. 
+
+If you need those values in your HTML (eg. to create special hover-labels) you would just do that in Razor code. 
+
 ## Site Tokens
 
 Site tokens work everythere. 
@@ -14,14 +23,14 @@ As of now we have these site tokens:
 
 * `[Site.Id]` - ID of the current site
 
-## Theme / Assets / Resources Tokens
+## Theme Tokens
 
 Assets tokens work everywhere.
 As of now we have these assets tokens:
 
-* `[Theme.Path]` - WIP!
-* `[Theme.AssetsPath]` - WIP! the path to the `wwwroot/theme-name/assets` for where your files should be  
-  note that it doesn't have a trailing slash, so you would use `[Theme.AssetsPath]/logo.svg`
+* `[Theme.Url]` - the  url like `Themes/your-theme-name` for where your files should be  
+  note: it doesn't have leading or trailing slash, so you would use `[Theme.Path]/Assets/logo.svg`  
+  note: it also doesn't have `wwwroot` as that is never in the public URL
 
 ## Page Tokens
 

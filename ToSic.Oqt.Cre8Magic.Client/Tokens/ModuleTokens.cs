@@ -1,5 +1,5 @@
 ﻿using Oqtane.Models;
-using static ToSic.Oqt.Cre8Magic.Client.MagicPlaceholders;
+using static ToSic.Oqt.Cre8Magic.Client.MagicTokens;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Tokens;
 

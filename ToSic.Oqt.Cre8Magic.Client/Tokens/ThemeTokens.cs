@@ -17,7 +17,6 @@ public class ThemeTokens: ITokenReplace
     public virtual string Parse(string value)
     {
         return value
-            .Replace(MagicPlaceholders.ThemeAssetsPath, PackageSettings.AssetsPath)
-            .Replace(MagicPlaceholders.ThemePath, PackageSettings.Path);
+            .Replace(MagicTokens.ThemeUrl, PackageSettings.Url);
     }
 }
