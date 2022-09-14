@@ -15,7 +15,7 @@ public class MagicSettings: IHasSettingsExceptions
         MagicSettingsService service,
         MagicLayoutSettings layout, 
         MagicBreadcrumbSettings breadcrumb, 
-        MagicPageDesign page, 
+        MagicPageDesignSettings page, 
         MagicLanguagesSettings languages, 
         MagicLanguageDesignSettings languageDesign, 
         MagicContainerSettings container,
@@ -50,7 +50,7 @@ public class MagicSettings: IHasSettingsExceptions
 
     public MagicBreadcrumbSettings Breadcrumb { get; }
 
-    public MagicPageDesign Page { get; }
+    public MagicPageDesignSettings Page { get; }
 
     public MagicLanguagesSettings Languages { get; }
 

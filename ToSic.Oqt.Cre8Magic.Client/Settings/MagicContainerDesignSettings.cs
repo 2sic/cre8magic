@@ -1,12 +1,14 @@
 ﻿using Oqtane.Models;
 using ToSic.Oqt.Cre8Magic.Client.Styling;
 using ToSic.Oqt.Cre8Magic.Client.Tokens;
-using static ToSic.Oqt.Cre8Magic.Client.Styling.MagicPageDesign;
+using static ToSic.Oqt.Cre8Magic.Client.Styling.MagicPageDesignSettings;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 
 public class MagicContainerDesignSettings : NamedSettings<MagicContainerDesign>
 {
+    private const string ModulePrefixDefault = "module";
+
     internal string? Classes(MagicSettings settings, Module module, string tag)
     {
         var styles = this.FindInvariant(tag); // safe, also does null-check
@@ -22,9 +24,9 @@ public class MagicContainerDesignSettings : NamedSettings<MagicContainerDesign>
         {
             "div", new()
             {
-                Classes = $"{MainPrefix}page-language {SettingFromDefaults}",
-                IsNotPublished = $"{ModulePrefixDefault}unpublished  {SettingFromDefaults}",
-                IsAdminModule = $"{MainPrefix}admin-container  {SettingFromDefaults}"
+                Classes = $"{MainPrefix}-page-language {SettingFromDefaults}",
+                IsNotPublished = $"{ModulePrefixDefault}-unpublished  {SettingFromDefaults}",
+                IsAdminModule = $"{MainPrefix}-admin-container  {SettingFromDefaults}"
             }
         },
     };

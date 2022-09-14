@@ -71,8 +71,8 @@ public class MagicMenuBranch: IHasSettingsExceptions
     protected List<Page> ChildrenOf(int pageId)
         => Tree.MenuPages.Where(p => p.ParentId == pageId).ToList();
 
-    protected List<Page> FindPages(int[] pageIds)
-        => Tree.MenuPages.Where(p => pageIds.Contains(p.PageId)).ToList();
+    //protected List<Page> FindPages(int[] pageIds)
+    //    => Tree.MenuPages.Where(p => pageIds.Contains(p.PageId)).ToList();
 
 
     protected static Page ErrPage(int id, string message) => new() { PageId = id, Name = message };

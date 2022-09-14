@@ -52,17 +52,17 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase
     [Inject]
     protected MagicSettingsService MagicSettingsService
     {
-        get => _magicSettingsService;
+        get => _magicSettingsService!;
         set => _magicSettingsService = value.InitSettings(ThemePackageSettings);
     }
-    private MagicSettingsService _magicSettingsService;
+    private MagicSettingsService? _magicSettingsService;
 
     private MagicPageDesigner PageDesigner => MagicSettingsService.PageDesigner;
 
     /// <summary>
     /// The settings of this layout, as loaded from the ThemePackageSettings + JSON
     /// </summary>
-    protected MagicSettings Settings { get; set; }
+    protected MagicSettings? Settings { get; set; }
 
     /// <summary>
     /// This contains the default settings which must be used in this theme.

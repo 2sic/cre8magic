@@ -18,7 +18,7 @@ public partial class MagicMenuDesignSettings
                 {
                     { 0, "navbar-nav" },
                     // todo: doc why collapse-PageId
-                    { ByLevelOtherKey, $"collapse {MagicPageDesign.MainPrefix}submenu-{MenuId}-{PageId}" },
+                    { ByLevelOtherKey, $"collapse {MagicPageDesignSettings.MainPrefix}submenu-{MenuId}-{PageId}" },
                 },
                 IsInBreadcrumb = "show",
             }

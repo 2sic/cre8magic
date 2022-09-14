@@ -49,7 +49,7 @@ public partial class MagicPackageSettings
             },
             PageDesigns = new()
             {
-                { Default, MagicPageDesign.Defaults }
+                { Default, MagicPageDesignSettings.Defaults }
             }
         },
     };

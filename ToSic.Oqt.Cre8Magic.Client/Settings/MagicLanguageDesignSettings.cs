@@ -1,5 +1,5 @@
 ﻿using ToSic.Oqt.Cre8Magic.Client.Styling;
-using static ToSic.Oqt.Cre8Magic.Client.Styling.MagicPageDesign;
+using static ToSic.Oqt.Cre8Magic.Client.Styling.MagicPageDesignSettings;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 
@@ -16,7 +16,7 @@ public class MagicLanguageDesignSettings: NamedSettings<MagicDesignWithActive>
 
     public static MagicLanguageDesignSettings Defaults = new()
     {
-        { "ul", new() { Classes = $"{MainPrefix}page-language {SettingFromDefaults}" } },
+        { "ul", new() { Classes = $"{MainPrefix}-page-language {SettingFromDefaults}" } },
         { "li", new() { IsActive = $"active {SettingFromDefaults}", IsNotActive = "" } }
     };
 }

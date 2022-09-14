@@ -32,7 +32,7 @@ public class MagicSettingsCatalog
 
     // TODO: For completeness, we may need BreadcrumbDesign
 
-    public NamedSettings<MagicPageDesign> PageDesigns { get; set; } = new();
+    public NamedSettings<MagicPageDesignSettings> PageDesigns { get; set; } = new();
 
     /// <summary>
     /// The menu definitions
