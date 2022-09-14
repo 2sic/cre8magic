@@ -256,7 +256,7 @@ public class MagicSettingsService: IHasSettingsExceptions
 
     private List<MagicSettingsCatalog>? _configurationSources;
 
-    public List<SettingsException> Exceptions => MyExceptions.Concat(Json.Exceptions).ToList();
+    public List<Exception> Exceptions => MyExceptions.Concat(Json.Exceptions).ToList();
     private List<SettingsException> MyExceptions => _myExceptions ??= new();
     private List<SettingsException>? _myExceptions;
 }

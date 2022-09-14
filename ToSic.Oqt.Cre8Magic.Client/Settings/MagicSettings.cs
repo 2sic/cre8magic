@@ -8,7 +8,7 @@ namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 /// <summary>
 /// The current settings of a page.
 /// </summary>
-public class MagicSettings
+public class MagicSettings: IHasSettingsExceptions
 {
     internal MagicSettings(
         string name,
@@ -61,4 +61,6 @@ public class MagicSettings
     public MagicContainerDesignSettings ContainerDesign { get; set; }
 
     public Dictionary<string, string> DebugSources { get; } = new(InvariantCultureIgnoreCase);
+
+    public List<Exception> Exceptions => Service.Exceptions;
 }

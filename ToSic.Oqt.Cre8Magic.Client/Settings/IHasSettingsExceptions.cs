@@ -4,5 +4,5 @@ public interface IHasSettingsExceptions
 {
     public bool HasExceptions => Exceptions?.Any() ?? false;
 
-    List<SettingsException> Exceptions { get; }
+    List<Exception> Exceptions { get; }
 }

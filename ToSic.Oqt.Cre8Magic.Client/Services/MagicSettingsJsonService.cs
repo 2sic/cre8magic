@@ -18,9 +18,10 @@ public class MagicSettingsJsonService : IHasSettingsExceptions
                 AllowTrailingCommas = true,
             })!;
 
-            // Ensure we have version set
-            if (Math.Abs(result.Version - 0.1) > 0.001) 
-                throw new ArgumentException($"{nameof(result.Version)} must be set to 0.01", nameof(result.Version));
+            // Ensure we have version set, ATM exactly 0.01
+            if (Math.Abs(result.Version - 0.01) > 0.001)
+                AddException(themeConfig,
+                    new ArgumentException($"Json {nameof(result.Version)} must be set to 0.01", nameof(result.Version)));
 
             if (!result.Source.HasValue()) result.Source = "JSON";
 
@@ -28,13 +29,16 @@ public class MagicSettingsJsonService : IHasSettingsExceptions
         }
         catch (Exception ex)
         {
-            Exceptions.Add(new($"Error loading json configuration file '{themeConfig.SettingsJsonFile}'. {ex.Message}"));
-            //throw;//wip
-            // probably no json file found?
+            AddException(themeConfig, ex);
             return new();
         }
     }
 
-    public List<SettingsException> Exceptions => _exceptions ??= new();
-    private List<SettingsException>? _exceptions;
+    public List<Exception> Exceptions => _exceptions ??= new();
+    private List<Exception>? _exceptions;
+
+    private void AddException(MagicPackageSettings themeConfig, Exception ex)
+    {
+        Exceptions.Add(new SettingsException($"Error loading json configuration file '{themeConfig.SettingsJsonFile}'. {ex.Message}"));
+    }
 }

@@ -48,7 +48,7 @@ public class MagicMenuTree : MagicMenuBranch
     /// </summary>
     internal List<Page> MenuPages;
 
-    public override List<SettingsException> Exceptions => _exceptions.Exceptions;
+    public override List<Exception> Exceptions => _exceptions.Exceptions;
     private readonly IHasSettingsExceptions _exceptions;
 
     protected override MagicMenuTree Tree => this;

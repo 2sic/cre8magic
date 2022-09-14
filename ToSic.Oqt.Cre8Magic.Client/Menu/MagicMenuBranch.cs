@@ -77,5 +77,5 @@ public class MagicMenuBranch: IHasSettingsExceptions
 
     protected static Page ErrPage(int id, string message) => new() { PageId = id, Name = message };
 
-    public virtual List<SettingsException> Exceptions => Tree.Exceptions;
+    public virtual List<Exception> Exceptions => Tree.Exceptions;
 }

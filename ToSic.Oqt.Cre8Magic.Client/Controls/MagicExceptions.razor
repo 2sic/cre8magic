@@ -1,0 +1,13 @@
+﻿@inherits MagicControl
+@if ((Settings as IHasSettingsExceptions)?.HasExceptions == true && PageState.UserIsAdmin())
+{
+    <div class="alert alert-danger" role="alert">
+        <strong>The Cre8Magic Design System reports some problems (visible to Admins only)</strong>
+        <ul>
+        @foreach (var ex in Settings.Exceptions)
+        {
+            <li>@ex.Message</li>
+        }
+        </ul>
+    </div>
+}
