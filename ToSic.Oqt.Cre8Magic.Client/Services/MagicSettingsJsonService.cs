@@ -4,7 +4,7 @@ namespace ToSic.Oqt.Cre8Magic.Client.Services;
 
 public class MagicSettingsJsonService : IHasSettingsExceptions
 {
-    public MagicSettingsCatalog? LoadJson(MagicPackageSettings themeConfig)
+    public MagicSettingsCatalog LoadJson(MagicPackageSettings themeConfig)
     {
         var jsonFileName = $"{themeConfig.WwwRoot}/{themeConfig.Url}/{themeConfig.SettingsJsonFile}";
         try
@@ -18,9 +18,11 @@ public class MagicSettingsJsonService : IHasSettingsExceptions
                 AllowTrailingCommas = true,
             })!;
 
-            // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
-            if (result != null && !result.Source.HasValue())
-                result.Source = "JSON";
+            // Ensure we have version set
+            if (Math.Abs(result.Version - 0.1) > 0.001) 
+                throw new ArgumentException($"{nameof(result.Version)} must be set to 0.01", nameof(result.Version));
+
+            if (!result.Source.HasValue()) result.Source = "JSON";
 
             return result;
         }

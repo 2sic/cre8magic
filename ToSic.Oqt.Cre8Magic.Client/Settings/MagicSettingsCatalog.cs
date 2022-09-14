@@ -8,10 +8,10 @@ namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 /// </summary>
 public class MagicSettingsCatalog
 {
-    ///// <summary>
-    ///// Version number when loading from JSON to verify it's what we expect
-    ///// </summary>
-    //public float Version { get; set; }
+    /// <summary>
+    /// Version number when loading from JSON to verify it's what we expect
+    /// </summary>
+    public float Version { get; set; }
 
     /// <summary>
     /// Source of these settings / where they came from, to ensure that we can see in debug where a value was picked up from

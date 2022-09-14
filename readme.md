@@ -52,7 +52,12 @@ TODO
 👉🏾 See [Magic Menu](./docs/magic-menu.md)
 
 
-### 2. Magic Classes WIP/TODO:
+### 2. Magic Conext WIP/TODO:
+
+👉🏾 See [Magic Classes](./docs/magic-classes.md)
+
+
+### 3. Magic Classes WIP/TODO:
 
 👉🏾 See [Magic Classes](./docs/magic-classes.md)
 
