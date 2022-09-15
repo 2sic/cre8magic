@@ -13,22 +13,18 @@ public class MagicSettings: IHasSettingsExceptions
         string name,
         MagicSettingsService service,
         MagicThemeSettings layout, 
-        MagicBreadcrumbSettings breadcrumb, 
-        MagicThemeDesignSettings themeDesign, 
-        MagicLanguagesSettings languages, 
-        MagicLanguageDesignSettings languageDesign, 
-        MagicContainerSettings container,
-        MagicContainerDesignSettings containerDesign, 
+        //MagicBreadcrumbSettings breadcrumbs, 
+        //MagicThemeDesignSettings themeDesign,
+        //MagicContainerSettings container,
+        //MagicContainerDesignSettings containerDesign, 
         TokenEngine tokens, 
         PageState pageState)
     {
         Layout = layout;
-        Breadcrumb = breadcrumb;
-        ThemeDesign = themeDesign;
-        Languages = languages;
-        LanguageDesign = languageDesign;
-        Container = container;
-        ContainerDesign = containerDesign;
+        //Breadcrumbs = breadcrumbs;
+        //ThemeDesign = themeDesign;
+        //Container = container;
+        //ContainerDesign = containerDesign;
         Tokens = tokens;
         PageState = pageState;
         Name = name;
@@ -49,17 +45,23 @@ public class MagicSettings: IHasSettingsExceptions
 
     public MagicThemeSettings Layout { get; }
 
-    public MagicBreadcrumbSettings Breadcrumb { get; }
+    public MagicBreadcrumbSettings Breadcrumbs => _b ??= Service.Breadcrumbs.Find(Layout.Breadcrumbs ?? Name, Name);
+    private MagicBreadcrumbSettings? _b;
 
-    public MagicThemeDesignSettings ThemeDesign { get; }
+    public MagicThemeDesignSettings ThemeDesign => _td ??= Service.ThemeDesign.Find(Layout.PageDesign ?? Name, Name);
+    private MagicThemeDesignSettings? _td;
 
-    public MagicLanguagesSettings Languages { get; }
+    public MagicLanguagesSettings Languages => _l ??= Service.Languages.Find(Layout.Languages ?? Name, Name);
+    private MagicLanguagesSettings? _l;
 
-    public MagicLanguageDesignSettings LanguageDesign { get; set; }
+    public MagicLanguageDesignSettings LanguageDesign => _ld ??= Service.LanguageDesign.Find(Layout.LanguageMenuDesign ?? Name, Name);
+    private MagicLanguageDesignSettings? _ld;
 
-    public MagicContainerSettings Container { get; set; }
+    public MagicContainerSettings Container => _c ??= Service.Containers.Find(Layout.Container ?? Name, Name);
+    private MagicContainerSettings? _c;
 
-    public MagicContainerDesignSettings ContainerDesign { get; set; }
+    public MagicContainerDesignSettings ContainerDesign => _cd ??= Service.ContainerDesign.Find(Layout.ContainerDesign ?? Name, Name);
+    private MagicContainerDesignSettings? _cd;
 
     public Dictionary<string, string> DebugSources { get; } = new(InvariantCultureIgnoreCase);
 

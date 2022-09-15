@@ -7,5 +7,5 @@ public abstract class MagicControl: ThemeControlBase, IMagicControlWithSettings
 {
     [CascadingParameter] public MagicSettings Settings { get; set; }
 
-    public string? Parse(string? value) => Settings.Tokens.Parse(value);
+    //public string? Parse(string? value) => Settings.Tokens.Parse(value);
 }

@@ -1,5 +1,7 @@
-﻿using Oqtane.UI;
+﻿using System.Text.Json;
+using Oqtane.UI;
 using ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
+using ToSic.Oqt.Cre8Magic.Client.Settings.JsonMerge;
 using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
 using static ToSic.Oqt.Cre8Magic.Client.Settings.MagicPackageSettings;
 
@@ -29,16 +31,16 @@ public class MagicSettingsService: IHasSettingsExceptions
     internal ThemeDesigner ThemeDesigner { get; } = new();
 
 
-    protected MagicPackageSettings PackageSettings
+    private MagicPackageSettings PackageSettings
     {
         get => _settings ?? throw new ArgumentException($"The {nameof(MagicSettingsService)} can't work without first calling {nameof(InitSettings)}", nameof(PackageSettings));
         set => _settings = value;
     }
     private MagicPackageSettings _settings;
 
-    protected MagicSettingsJsonService Json { get; }
+    private MagicSettingsJsonService Json { get; }
 
-    public virtual MagicSettings CurrentSettings(PageState pageState, string name, string bodyClasses)
+    public MagicSettings CurrentSettings(PageState pageState, string name, string bodyClasses)
     {
         var tokensPro = new TokenEngine(new()
         {
@@ -51,124 +53,87 @@ public class MagicSettingsService: IHasSettingsExceptions
         var cached = _currentSettingsCache.FindInvariant(originalNameForCache);
         if (cached != null) return cached;
 
+        // Figure out real config-name, and get the initial layout
         var configName = FindConfigName(name, Default);
         name = configName.ConfigName;
-        var layout = FindLayout(name, tokensPro).Layout;
+        var layout = Layout.Find(name).Parse(tokensPro);
 
-        // BreadcrumbSettings
-        var breadcrumbNames = GetConfigNamesToCheck(layout.Breadcrumbs, name);
-        var breadcrumb = new MagicBreadcrumbSettings
-        {
-            Separator = FindValue((s, n) => s.Breadcrumbs?.GetInvariant(n)?.Separator, breadcrumbNames)!,
-            Revealer = FindValue((s, n) => s.Breadcrumbs?.GetInvariant(n)?.Revealer, breadcrumbNames)!,
-        };
-
-        // Language Settings
-        var languagesNames = GetConfigNamesToCheck(layout.Languages, name);
-        var languages = FindLanguageSettings(languagesNames);
-
-        // Get language design from configuration - keep the first which has any settings
-        // This also means no partial inheritance, it's all or nothing
-        var langDesign = FindInSources(layout.LanguageMenuDesign, name,
-            (s, n) =>
-            {
-                var found = s.LanguageDesigns?.GetInvariant(n);
-                return found is { } && found.Any() ? found : null;
-            });
-
-        // Containers
-        var container = FindInSources(layout.Container, name, 
-            (s, n) => s.Containers?.GetInvariant(n));
-
-        // Container Design
-        var containerDesign = FindInSources(layout.ContainerDesign, name,
-            (s, n) =>
-            {
-                var found = s.ContainerDesigns?.GetInvariant(n);
-                return found is { } && found.Any() ? found : null;
-            });
-
-        // Page Design
-        var pageDesign = FindInSources(layout.PageDesign, name,
-            (s, n) => s.PageDesigns?.GetInvariant(n));
-
-        var current = new MagicSettings(name, this, layout, breadcrumb, pageDesign.Result, languages.Languages, langDesign.Result, container.Result, containerDesign.Result, tokensPro, pageState);
+        var current = new MagicSettings(name, this, layout, tokensPro, pageState);
         ThemeDesigner.InitSettings(current);
         current.MagicContext = ThemeDesigner.BodyClasses(pageState, tokensPro);
         var dbg = current.DebugSources;
         dbg.Add("Name", configName.Source);
-        dbg.Add(nameof(current.Languages), languages.Source);
-        dbg.Add(nameof(current.LanguageDesign), langDesign.Source);
-        dbg.Add(nameof(current.Container), container.KeyUsed);
-        dbg.Add(nameof(current.ContainerDesign), containerDesign.Source);
 
         _currentSettingsCache[originalNameForCache] = current;
         return current;
     }
 
+    private MagicSettingsCatalog MergedCatalog => _mergedCatalog ??= MergeCatalogs();
+    private MagicSettingsCatalog? _mergedCatalog;
+
+    private MagicSettingsCatalog MergeCatalogs()
+    {
+        var sources = ConfigurationSources;
+        var priority = JsonSerializer.Serialize(sources.First());
+        foreach (var source in sources.Skip(1))
+        {
+            // get new json
+            var lowerPriority = JsonSerializer.Serialize(source, JsonMerger.OptionsForPreMerge);
+            var merged = JsonMerger.Merge(lowerPriority, priority);
+            priority = merged;
+        }
+        var result = JsonSerializer.Deserialize<MagicSettingsCatalog>(priority);
+        return result!;
+    }
+
     private readonly NamedSettings<MagicSettings> _currentSettingsCache = new();
 
-    private static string[] GetConfigNamesToCheck(string? configuredNameOrNull, string currentName)
-    {
-        if (configuredNameOrNull == Inherit) configuredNameOrNull = currentName;
+    private NamedSettingsReader<MagicThemeSettings> Layout => _getLayout ??=
+        new(this, MagicThemeSettings.Defaults,
+            (set, n) => set.Layouts?.GetInvariant(n),
+            (name) => json => json.Replace("\"=\"", $"\"{name}\""));
+    private NamedSettingsReader<MagicThemeSettings>? _getLayout;
 
-        return string.IsNullOrWhiteSpace(configuredNameOrNull) 
-            ? new[] { Default }
-            : new[] { configuredNameOrNull, Default }.Distinct().ToArray();
-    }
+    internal NamedSettingsReader<MagicBreadcrumbSettings> Breadcrumbs => _getBreadcrumbs ??=
+        new(this, MagicBreadcrumbSettings.Defaults,
+            (set, n) => set.Breadcrumbs?.GetInvariant(n));
+    private NamedSettingsReader<MagicBreadcrumbSettings>? _getBreadcrumbs;
 
-    private (MagicThemeSettings Layout, string Source) FindLayout(string name, ITokenReplace tokens)
-    {
-        var cached = _layoutSettingsCache.FindInvariant(name);
-        if (cached != null) return (cached, "cached");
-        var names = GetConfigNamesToCheck(name, name);
-        var layoutSettings = new MagicThemeSettings
-        {
-            Container = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.Container, names),
-            ContainerDesign = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.ContainerDesign, names),
-            Languages = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.Languages, names),
-            LanguageMenuShowMin = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.LanguageMenuShowMin, names) ?? 0,
-            LanguageMenuShow = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.LanguageMenuShow, names) ?? true,
-            LanguageMenuDesign = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.LanguageMenuDesign, names),
-            Breadcrumbs = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.Breadcrumbs, names),
-            Logo = tokens.Parse(FindValue((s, n) => s.Layouts?.GetInvariant(n)?.Logo, names)!),
-            // Check if we have a menu map
-            Menus = FindValue((set, n) =>
-            {
-                var menu = set.Layouts?.GetInvariant(n)?.Menus;
-                return menu != null && menu.Any() ? menu : null;
-            }, names)!,
-            MagicContextInBody = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.MagicContextInBody, names) ?? false,
-        };
-        _layoutSettingsCache[name] = layoutSettings;
-        return (layoutSettings, "various");
-    }
 
-    private readonly NamedSettings<MagicThemeSettings> _layoutSettingsCache = new();
+    internal NamedSettingsReader<MagicMenuSettings> MenuSettings => _getMenuSettings ??=
+        new(this, MagicMenuSettings.Defaults,
+            (set, n) => set.Menus?.GetInvariant(n));
+    private NamedSettingsReader<MagicMenuSettings>? _getMenuSettings;
 
-    private (MagicLanguagesSettings Languages, string Source) FindLanguageSettings(string[] languagesNames)
-    {
-        var (config, _, sourceInfo) 
-            = FindInSources((settings, n) =>
-            {
-                var tryToFind = settings.Languages?.GetInvariant(n);
-                return tryToFind?.Languages?.Any() == true ? tryToFind : null;
-            }, languagesNames);
-        if (config == null) throw new NullReferenceException($"{nameof(config)} should be a {nameof(MagicLanguage)}");
-        return (config, sourceInfo);
-    }
+    internal NamedSettingsReader<MagicLanguagesSettings> Languages => _languages ??=
+        new(this, MagicLanguagesSettings.Defaults,
+            (set, n) => set.Languages?.GetInvariant(n));
+    private NamedSettingsReader<MagicLanguagesSettings>? _languages;
 
-    internal (MagicMenuSettings MenuConfig, string Source) FindMenuConfig(string name)
-    {
-        // Only search multiple names if the name is not already default
-        var names = name == Default ? new[] { name } : new[] { name, Default };
-        var (config, foundName, sourceInfo) 
-            = FindInSources((settings, n) => settings?.Menus?.GetInvariant(n), names);
-        
-        if (config == null) throw new NullReferenceException($"{nameof(config)} should be a {nameof(MagicMenuSettings)}");
-        if (config.ConfigName != foundName) config.ConfigName = foundName;
-        return (config, sourceInfo);
-    }
+    internal NamedSettingsReader<MagicLanguageDesignSettings> LanguageDesign => _languageDesign ??=
+        new(this, MagicLanguageDesignSettings.Defaults,
+            (set, n) => set.LanguageDesigns?.GetInvariant(n));
+    private NamedSettingsReader<MagicLanguageDesignSettings>? _languageDesign;
+
+    internal NamedSettingsReader<MagicContainerSettings> Containers => _containers ??=
+        new(this, MagicContainerSettings.Defaults,
+            (set, n) => set.Containers?.GetInvariant(n));
+    private NamedSettingsReader<MagicContainerSettings>? _containers;
+
+    internal NamedSettingsReader<MagicContainerDesignSettings> ContainerDesign => _containerDesign ??=
+        new(this, MagicContainerDesignSettings.Defaults,
+            (set, n) => set.ContainerDesigns?.GetInvariant(n));
+    private NamedSettingsReader<MagicContainerDesignSettings>? _containerDesign;
+
+    internal NamedSettingsReader<MagicThemeDesignSettings> ThemeDesign => _themeDesign ??=
+        new(this, MagicThemeDesignSettings.Defaults,
+            (set, n) => set.PageDesigns?.GetInvariant(n));
+    private NamedSettingsReader<MagicThemeDesignSettings>? _themeDesign;
+
+    internal NamedSettingsReader<MagicMenuDesignSettings> MenuDesigns => _menuDesigns ??=
+        new(this, MagicMenuDesignSettings.Defaults,
+            (set, n) => set.MenuDesigns?.GetInvariant(n));
+    private NamedSettingsReader<MagicMenuDesignSettings>? _menuDesigns;
 
 
     internal (string ConfigName, string Source) FindConfigName(string? configName, string inheritedName)
@@ -185,60 +150,27 @@ public class MagicSettingsService: IHasSettingsExceptions
         return (Default, debugInfo);
     }
 
-    internal (MagicMenuDesignSettings Design, string Source) FindDesign(string designName)
+
+    
+    internal TResult? FindInMerged<TResult>(Func<MagicSettingsCatalog, string, TResult> findFunc, params string[]? names)
     {
-        var (result, _, sourceInfo) 
-            = FindInSources((settings, n) => settings.MenuDesigns?.GetInvariant(n), designName, Default);
-        if (result == null) throw new NullReferenceException($"{nameof(result)} should be a {nameof(MagicMenuDesignSettings)}");
-        return (result, sourceInfo);
-    }
-
-
-    private TResult FindValue<TResult>(Func<MagicSettingsCatalog, string, TResult> findFunc, params string[]? names)
-    {
-        var (showMin, _, _) = FindInSources(findFunc, names);
-        return showMin;
-    }
-
-    private (TResult Result, string KeyUsed, string Source) FindInSources<TResult>(
-        string? preferredName, string currentName,
-        Func<MagicSettingsCatalog, string, TResult> findFunc)
-    {
-        var names = GetConfigNamesToCheck(preferredName, currentName);
-        return FindInSources(findFunc, names);
-    }
-
-
-    /// <summary>
-    /// Loop through various sources of settings and check the keys in the preferred order to see if we get a hit.
-    /// </summary>
-    private (TResult Result, string KeyUsed, string Source) FindInSources<TResult>(
-        Func<MagicSettingsCatalog, string, TResult> findFunc,
-        params string[]? names)
-    {
-
-        // TODO
-        // - After that work on making this less generic again, 
-        // Basically the tree service should get the settings or something from a non generic class
-        // Which the default.razor will prepare / hand through the stack
-        var sources = ConfigurationSources;
-
-        // Make sure we have at least on name
+        // Make sure we have at least one name
         if (names == null || names.Length == 0) names = new[] { Default };
 
         var allSourcesAndNames = names
             .Distinct()
-            .SelectMany(name => sources.Select(settings => (Settings: settings, Name: name)))
+            .Select(name => (Settings: MergedCatalog, Name: name))
             .ToList();
 
         foreach (var set in allSourcesAndNames)
         {
             var result = findFunc(set.Settings, set.Name);
-            if (result != null) return (result, set.Name, $"found in '{set.Name}' ({set.Settings.Source})");
+            if (result != null) return result;
         }
 
-        throw new($"Tried to find {nameof(TResult)} in the keys {string.Join(",", names)} but got nothing, not even a fallback/default.");
+        return default;
     }
+
 
     private List<MagicSettingsCatalog> ConfigurationSources
     {

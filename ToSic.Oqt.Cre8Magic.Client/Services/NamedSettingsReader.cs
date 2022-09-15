@@ -6,7 +6,7 @@ namespace ToSic.Oqt.Cre8Magic.Client.Services;
 internal class NamedSettingsReader<TPart> where TPart: class 
 {
     public NamedSettingsReader(
-        MagicSettingsServiceMerge parent,
+        MagicSettingsService parent,
         TPart fallback,
         Func<MagicSettingsCatalog, string, TPart> findFunc,
         Func<string, Func<string, string>>? optionalJsonProcessing = null)
@@ -16,7 +16,7 @@ internal class NamedSettingsReader<TPart> where TPart: class
         _findFunc = findFunc;
         _optionalJsonProcessing = optionalJsonProcessing;
     }
-    private readonly MagicSettingsServiceMerge _parent;
+    private readonly MagicSettingsService _parent;
     private readonly TPart _fallback;
     private readonly Func<MagicSettingsCatalog, string, TPart> _findFunc;
     private readonly Func<string, Func<string, string>>? _optionalJsonProcessing;
