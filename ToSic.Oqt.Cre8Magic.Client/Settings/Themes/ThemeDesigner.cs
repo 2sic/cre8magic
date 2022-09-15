@@ -1,12 +1,11 @@
 ﻿using Oqtane.UI;
-using ToSic.Oqt.Cre8Magic.Client.Tokens;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Styling;
+namespace ToSic.Oqt.Cre8Magic.Client.Settings.Themes;
 
 /// <summary>
 /// Special helper to figure out what classes should be applied to the page. 
 /// </summary>
-public class MagicPageDesigner: MagicServiceWithSettingsBase
+internal class ThemeDesigner : MagicServiceWithSettingsBase
 {
     internal string BodyClasses(PageState pageState, ITokenReplace tokens)
     {
@@ -47,5 +46,5 @@ public class MagicPageDesigner: MagicServiceWithSettingsBase
     }
 
     public string PaneIsEmptyClasses(PageState pageState, string paneName)
-        => PaneIsEmpty(pageState, paneName) ? Settings?.Page.PaneIsEmpty ?? "": "";
+        => PaneIsEmpty(pageState, paneName) ? Settings?.Page.PaneIsEmpty ?? "" : "";
 }

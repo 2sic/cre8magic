@@ -2,7 +2,6 @@
 using Oqtane.Models;
 using Oqtane.UI;
 using ToSic.Oqt.Cre8Magic.Client.OqtanePatches;
-using ToSic.Oqt.Cre8Magic.Client.Tokens;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Menu;
 

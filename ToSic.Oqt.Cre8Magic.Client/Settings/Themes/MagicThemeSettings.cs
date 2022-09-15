@@ -1,8 +1,8 @@
 ﻿using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Settings;
+namespace ToSic.Oqt.Cre8Magic.Client.Settings.Themes;
 
-public class MagicLayoutSettings
+public class MagicThemeSettings
 {
     /// <summary>
     /// The logo to show, should be located in the assets subfolder
@@ -46,7 +46,7 @@ public class MagicLayoutSettings
     /// </summary>
     public string? Breadcrumbs { get; set; }
 
-    public static MagicLayoutSettings Defaults = new()
+    public static MagicThemeSettings Defaults = new()
     {
         Logo = "unknown-logo.png",
         Container = Inherit,

@@ -1,6 +1,6 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Styling;
+﻿namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 
-public class MagicDesignWithActive: MagicDesignBase
+public class DesignSettingActive : DesignSettingClasses
 {
     /// <summary>
     /// These classes are applied if something (a page, language) is the active one. 

@@ -1,5 +1,4 @@
-﻿using ToSic.Oqt.Cre8Magic.Client.Styling;
-using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
+﻿using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 
@@ -21,7 +20,7 @@ public partial class MagicPackageSettings
 
             Layouts = new()
             {
-                { Default, MagicLayoutSettings.Defaults }
+                { Default, MagicThemeSettings.Defaults }
             },
 
             Languages = new()
@@ -49,7 +48,7 @@ public partial class MagicPackageSettings
             },
             PageDesigns = new()
             {
-                { Default, MagicPageDesignSettings.Defaults }
+                { Default, MagicThemeDesignSettings.Defaults }
             }
         },
     };

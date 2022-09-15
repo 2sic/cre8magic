@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using ToSic.Oqt.Cre8Magic.Client.DynComponents;
-using ToSic.Oqt.Cre8Magic.Client.Styling;
+using ToSic.Oqt.Cre8Magic.Client.Settings.Themes;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Themes;
 
@@ -57,7 +57,7 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase
     }
     private MagicSettingsService? _magicSettingsService;
 
-    private MagicPageDesigner PageDesigner => MagicSettingsService.PageDesigner;
+    private ThemeDesigner ThemeDesigner => MagicSettingsService.ThemeDesigner;
 
     /// <summary>
     /// The settings of this layout, as loaded from the ThemePackageSettings + JSON
@@ -79,5 +79,5 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase
     /// <summary>
     /// Special classes for divs surrounding panes pane, especially to indicate when it's empty
     /// </summary>
-    public string PaneClasses(string paneName) => PageDesigner.PaneIsEmptyClasses(PageState, paneName);
+    public string PaneClasses(string paneName) => ThemeDesigner.PaneIsEmptyClasses(PageState, paneName);
 }

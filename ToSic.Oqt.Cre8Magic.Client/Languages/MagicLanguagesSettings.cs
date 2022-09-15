@@ -1,4 +1,4 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Settings;
+﻿namespace ToSic.Oqt.Cre8Magic.Client.Languages;
 
 public class MagicLanguagesSettings
 {

@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Oqtane.Models;
-using ToSic.Oqt.Cre8Magic.Client.Tokens;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Menu;
 

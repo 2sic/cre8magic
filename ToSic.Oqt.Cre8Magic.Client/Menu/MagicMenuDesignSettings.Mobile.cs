@@ -1,6 +1,6 @@
-﻿using ToSic.Oqt.Cre8Magic.Client.Styling;
+﻿namespace ToSic.Oqt.Cre8Magic.Client.Menu;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Menu;
+using ToSic.Oqt.Cre8Magic.Client.Themes;
 using static MagicTokens;
 
 public partial class MagicMenuDesignSettings
@@ -18,7 +18,7 @@ public partial class MagicMenuDesignSettings
                 {
                     { 0, "navbar-nav" },
                     // todo: doc why collapse-PageId
-                    { ByLevelOtherKey, $"collapse {MagicPageDesignSettings.MainPrefix}submenu-{MenuId}-{PageId}" },
+                    { ByLevelOtherKey, $"collapse {MagicThemeDesignSettings.MainPrefix}submenu-{MenuId}-{PageId}" },
                 },
                 IsInBreadcrumb = "show",
             }

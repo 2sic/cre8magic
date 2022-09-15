@@ -1,8 +1,6 @@
 ﻿using Oqtane.Models;
-using Oqtane.UI;
-using ToSic.Oqt.Cre8Magic.Client.Tokens;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Settings;
+namespace ToSic.Oqt.Cre8Magic.Client.Settings.Containers;
 
 public class MagicContainerSettings
 {

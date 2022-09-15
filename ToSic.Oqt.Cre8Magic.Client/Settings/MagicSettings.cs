@@ -1,6 +1,4 @@
 ﻿using Oqtane.UI;
-using ToSic.Oqt.Cre8Magic.Client.Styling;
-using ToSic.Oqt.Cre8Magic.Client.Tokens;
 using static System.StringComparer;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Settings;
@@ -13,9 +11,9 @@ public class MagicSettings: IHasSettingsExceptions
     internal MagicSettings(
         string name,
         MagicSettingsService service,
-        MagicLayoutSettings layout, 
+        MagicThemeSettings layout, 
         MagicBreadcrumbSettings breadcrumb, 
-        MagicPageDesignSettings page, 
+        MagicThemeDesignSettings page, 
         MagicLanguagesSettings languages, 
         MagicLanguageDesignSettings languageDesign, 
         MagicContainerSettings container,
@@ -48,11 +46,11 @@ public class MagicSettings: IHasSettingsExceptions
 
     public MagicSettingsService Service { get; }
 
-    public MagicLayoutSettings Layout { get; }
+    public MagicThemeSettings Layout { get; }
 
     public MagicBreadcrumbSettings Breadcrumb { get; }
 
-    public MagicPageDesignSettings Page { get; }
+    public MagicThemeDesignSettings Page { get; }
 
     public MagicLanguagesSettings Languages { get; }
 

@@ -1,6 +1,5 @@
 ﻿using Oqtane.UI;
-using ToSic.Oqt.Cre8Magic.Client.Styling;
-using ToSic.Oqt.Cre8Magic.Client.Tokens;
+using ToSic.Oqt.Cre8Magic.Client.Settings.Themes;
 using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
 using static ToSic.Oqt.Cre8Magic.Client.Settings.MagicPackageSettings;
 
@@ -27,7 +26,7 @@ public class MagicSettingsService: IHasSettingsExceptions
 
     public bool Debug => ConfigurationSources.First().Debug;
 
-    public MagicPageDesigner PageDesigner { get; } = new();
+    internal ThemeDesigner ThemeDesigner { get; } = new();
 
 
     private MagicPackageSettings PackageSettings
@@ -94,8 +93,8 @@ public class MagicSettingsService: IHasSettingsExceptions
             (s, n) => s.PageDesigns?.GetInvariant(n));
 
         var current = new MagicSettings(name, this, layout, breadcrumb, pageDesign.Result, languages.Languages, langDesign.Result, container.Result, containerDesign.Result, tokensPro, pageState);
-        PageDesigner.InitSettings(current);
-        current.MagicContext = PageDesigner.BodyClasses(pageState, tokensPro);
+        ThemeDesigner.InitSettings(current);
+        current.MagicContext = ThemeDesigner.BodyClasses(pageState, tokensPro);
         var dbg = current.DebugSources;
         dbg.Add("Name", configName.Source);
         dbg.Add(nameof(current.Languages), languages.Source);
@@ -118,12 +117,12 @@ public class MagicSettingsService: IHasSettingsExceptions
             : new[] { configuredNameOrNull, Default }.Distinct().ToArray();
     }
 
-    private (MagicLayoutSettings Layout, string Source) FindLayout(string name, ITokenReplace tokens)
+    private (MagicThemeSettings Layout, string Source) FindLayout(string name, ITokenReplace tokens)
     {
         var cached = _layoutSettingsCache.FindInvariant(name);
         if (cached != null) return (cached, "cached");
         var names = GetConfigNamesToCheck(name, name);
-        var layoutSettings = new MagicLayoutSettings
+        var layoutSettings = new MagicThemeSettings
         {
             Container = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.Container, names),
             ContainerDesign = FindValue((set, n) => set.Layouts?.GetInvariant(n)?.ContainerDesign, names),
@@ -145,7 +144,7 @@ public class MagicSettingsService: IHasSettingsExceptions
         return (layoutSettings, "various");
     }
 
-    private readonly NamedSettings<MagicLayoutSettings> _layoutSettingsCache = new();
+    private readonly NamedSettings<MagicThemeSettings> _layoutSettingsCache = new();
 
     private (MagicLanguagesSettings Languages, string Source) FindLanguageSettings(string[] languagesNames)
     {
@@ -263,5 +262,5 @@ public class MagicSettingsService: IHasSettingsExceptions
     private List<MagicSettingsCatalog>? _configurationSources;
 
     public List<Exception> Exceptions => MyExceptions.Concat(Json.Exceptions).ToList();
-    private List<SettingsException> MyExceptions { get; }= new();
+    private List<SettingsException> MyExceptions { get; } = new();
 }

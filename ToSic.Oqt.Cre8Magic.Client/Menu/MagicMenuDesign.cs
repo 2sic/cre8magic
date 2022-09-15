@@ -1,8 +1,6 @@
-﻿using ToSic.Oqt.Cre8Magic.Client.Styling;
+﻿namespace ToSic.Oqt.Cre8Magic.Client.Menu;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Menu;
-
-public class MagicMenuDesign: MagicDesignWithActive
+public class MagicMenuDesign: DesignSettingActive
 {
     /// <summary>
     /// List of classes to add on certain levels only.

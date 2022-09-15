@@ -1,11 +1,11 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Styling;
+﻿namespace ToSic.Oqt.Cre8Magic.Client.Settings.Themes;
 
 /// <summary>
 /// Constants and helpers related to creating Css and Css Classes.
 ///
 /// If you change these, you must also update the SCSS files. 
 /// </summary>
-public class MagicPageDesignSettings
+public class MagicThemeDesignSettings
 {
     private const string SitePrefixDefault = "site";
     private const string PagePrefixDefault = "page";
@@ -49,5 +49,5 @@ public class MagicPageDesignSettings
     public NamedSettings<string> Other { get; set; } = new();
 
     // TODO: initialize with real properties, so the defaults don't already contain something?
-    public static MagicPageDesignSettings Defaults = new();
+    public static MagicThemeDesignSettings Defaults = new();
 }

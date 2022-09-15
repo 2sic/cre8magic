@@ -1,11 +1,11 @@
 ﻿using Oqtane.Models;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Styling;
+namespace ToSic.Oqt.Cre8Magic.Client.Settings.Containers;
 
-internal class ModuleStyler 
+internal class ContainerDesigner 
 {
 
-    public ModuleStyler(Module module) => _module = module;
+    public ContainerDesigner(Module module) => _module = module;
     private readonly Module _module;
 
         
@@ -15,7 +15,7 @@ internal class ModuleStyler
     /// </summary>
     /// <param name="styles"></param>
     /// <returns></returns>
-    public string GetClasses(MagicContainerDesign styles)
+    public string GetClasses(MagicContainerDesignSettingsItem styles)
     {
         var value =  string.Join(" ", new[]
         {

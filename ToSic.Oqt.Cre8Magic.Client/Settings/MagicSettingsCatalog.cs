@@ -1,6 +1,4 @@
-﻿using ToSic.Oqt.Cre8Magic.Client.Styling;
-
-namespace ToSic.Oqt.Cre8Magic.Client.Settings;
+﻿namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 
 /// <summary>
 /// This is a catalog of all kinds of configurations.
@@ -21,7 +19,7 @@ public class MagicSettingsCatalog
     /// </summary>
     public string Source { get; set; } = SourceDefault;
 
-    public NamedSettings<MagicLayoutSettings> Layouts { get; set; } = new();
+    public NamedSettings<MagicThemeSettings> Layouts { get; set; } = new();
 
     public NamedSettings<MagicContainerSettings> Containers { get; set; } = new();
 
@@ -35,7 +33,7 @@ public class MagicSettingsCatalog
 
     // TODO: For completeness, we may need BreadcrumbDesign
 
-    public NamedSettings<MagicPageDesignSettings> PageDesigns { get; set; } = new();
+    public NamedSettings<MagicThemeDesignSettings> PageDesigns { get; set; } = new();
 
     /// <summary>
     /// The menu definitions

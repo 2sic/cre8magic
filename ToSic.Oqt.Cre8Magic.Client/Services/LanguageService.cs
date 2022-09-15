@@ -1,11 +1,9 @@
 ﻿using System.Globalization;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Localization;
 using Microsoft.JSInterop;
 using Oqtane.Services;
 using Oqtane.UI;
 using static Microsoft.AspNetCore.Localization.CookieRequestCultureProvider;
-#pragma warning disable CS8602
 
 namespace ToSic.Oqt.Cre8Magic.Client.Services;
 
@@ -28,8 +26,6 @@ public class LanguageService: MagicServiceWithSettingsBase
     private readonly NavigationManager _navigationManager;
     private readonly IJSRuntime _jsRuntime;
     private readonly ILanguageService _oqtLanguages;
-
-
 
 
     public async Task<bool> ShowMenu(int siteId)
