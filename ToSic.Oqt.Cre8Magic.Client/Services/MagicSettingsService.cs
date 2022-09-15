@@ -1,4 +1,5 @@
 ﻿using Oqtane.UI;
+using ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
 using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
 using static ToSic.Oqt.Cre8Magic.Client.Settings.MagicPackageSettings;
 
