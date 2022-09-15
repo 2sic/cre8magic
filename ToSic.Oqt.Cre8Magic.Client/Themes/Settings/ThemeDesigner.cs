@@ -47,4 +47,6 @@ internal class ThemeDesigner : MagicServiceWithSettingsBase
 
     public string PaneIsEmptyClasses(PageState pageState, string paneName)
         => PaneIsEmpty(pageState, paneName) ? Settings?.Page.PaneIsEmpty ?? "" : "";
+
+    public string? Classes(string target) => Settings?.Page.Classes.GetInvariant(target).EmptyAsNull();
 }

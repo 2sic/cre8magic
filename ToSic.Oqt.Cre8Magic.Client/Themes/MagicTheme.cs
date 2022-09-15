@@ -79,4 +79,6 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase
     /// Special classes for divs surrounding panes pane, especially to indicate when it's empty
     /// </summary>
     public string PaneClasses(string paneName) => ThemeDesigner.PaneIsEmptyClasses(PageState, paneName);
+
+    public string? Classes(string target) => ThemeDesigner.Classes(target);
 }

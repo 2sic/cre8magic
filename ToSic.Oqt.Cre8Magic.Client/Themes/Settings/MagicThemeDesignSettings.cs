@@ -13,10 +13,9 @@ public class MagicThemeDesignSettings
     private const string PanePrefixDefault = "pane";
     private const string MenuLevelPrefixDefault = "nav-level";
     private const string BodyDivId = "cre8magic-root";
+    internal const string SettingFromDefaults = $"{MainPrefix}-warning-this-is-from-defaults-you-should-set-your-own-value";
 
-    public const string SettingFromDefaults = $"{MainPrefix}-warning-this-is-from-defaults-you-should-set-your-own-value";
-
-    public string[] MagicContext { get; set; } =
+    private static string[] MagicContextDefaults =
     {
         //1.2 Set the page-### class
         $"{PagePrefixDefault}-{MagicTokens.PageId}",
@@ -38,15 +37,17 @@ public class MagicThemeDesignSettings
         SettingFromDefaults
     };
 
-    public string PageIsHome { get; set; } = $"{PagePrefixDefault}-is-home";
 
+    public string[] MagicContext { get; set; } = MagicContextDefaults;
+
+    public string PageIsHome { get; set; } = $"{PagePrefixDefault}-is-home";
 
     public string PaneIsEmpty { get; set; } = $"{PanePrefixDefault}-is-empty";
 
     public string MagicContextTagId { get; set; } = BodyDivId;
 
     // TODO:
-    public NamedSettings<string> Other { get; set; } = new();
+    public NamedSettings<string> Classes { get; set; } = new();
 
     // TODO: initialize with real properties, so the defaults don't already contain something?
     public static MagicThemeDesignSettings Defaults = new();
