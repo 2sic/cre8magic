@@ -3,5 +3,5 @@
 internal interface ITokenReplace
 {
     string NameId { get; }
-    string Parse(string value);
+    string? Parse(string? value);
 }

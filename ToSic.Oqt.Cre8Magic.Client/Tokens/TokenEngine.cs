@@ -39,13 +39,13 @@ internal class TokenEngine: ITokenReplace
     }
 
 
-    public string Parse(string value)
+    public string? Parse(string? value)
     {
-        if (!value.HasValue() || !value.Contains(MagicTokens.PlaceholderMarker)) return value;
+        if (string.IsNullOrEmpty(value) || !value.Contains(MagicTokens.PlaceholderMarker)) return value;
         foreach (var p in Parsers)
         {
             value = p.Parse(value);
-            if (!value.Contains(MagicTokens.PlaceholderMarker))
+            if (value == null || !value.Contains(MagicTokens.PlaceholderMarker))
                 return value;
         }
 

@@ -23,9 +23,9 @@ public class MagicMenuService: MagicServiceWithSettingsBase
 
         // If the user didn't specify a config name in the Parameters or the config name
         // isn't contained in the json file the normal parameter are given to the service
-        var (menuSettings, menuConfigSource) = settingsSvc.FindMenuConfig(configName);
+        var /*(*/menuSettings/*, menuConfigSource)*/ = (settingsSvc as MagicSettingsServiceMerge).MenuSettings.Find(configName);
         config = menuSettings.Overrule(config);
-        debugInfo += "; " + menuConfigSource;
+        // debugInfo += "; " + menuConfigSource;
 
         // See if we have a default configuration for CSS which should be applied
         var designName = config.Design;

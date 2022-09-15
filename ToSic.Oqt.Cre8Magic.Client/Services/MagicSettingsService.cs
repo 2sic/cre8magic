@@ -29,16 +29,16 @@ public class MagicSettingsService: IHasSettingsExceptions
     internal ThemeDesigner ThemeDesigner { get; } = new();
 
 
-    private MagicPackageSettings PackageSettings
+    protected MagicPackageSettings PackageSettings
     {
         get => _settings ?? throw new ArgumentException($"The {nameof(MagicSettingsService)} can't work without first calling {nameof(InitSettings)}", nameof(PackageSettings));
         set => _settings = value;
     }
     private MagicPackageSettings _settings;
 
-    private MagicSettingsJsonService Json { get; }
+    protected MagicSettingsJsonService Json { get; }
 
-    public MagicSettings CurrentSettings(PageState pageState, string name, string bodyClasses)
+    public virtual MagicSettings CurrentSettings(PageState pageState, string name, string bodyClasses)
     {
         var tokensPro = new TokenEngine(new()
         {

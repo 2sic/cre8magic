@@ -46,6 +46,12 @@ public class MagicThemeSettings
     /// </summary>
     public string? Breadcrumbs { get; set; }
 
+    internal MagicThemeSettings Parse(ITokenReplace tokens)
+    {
+        Logo = tokens.Parse(Logo);
+        return this;
+    }
+
     public static MagicThemeSettings Defaults = new()
     {
         Logo = "unknown-logo.png",
