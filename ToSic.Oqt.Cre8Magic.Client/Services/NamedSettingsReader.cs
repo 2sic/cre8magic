@@ -8,17 +8,17 @@ internal class NamedSettingsReader<TPart> where TPart: class
     public NamedSettingsReader(
         MagicSettingsService parent,
         TPart fallback,
-        Func<MagicSettingsCatalog, string, TPart> findFunc,
+        Func<MagicSettingsCatalog, NamedSettings<TPart>> findList,
         Func<string, Func<string, string>>? optionalJsonProcessing = null)
     {
         _parent = parent;
         _fallback = fallback;
-        _findFunc = findFunc;
+        _findList = findList;
         _optionalJsonProcessing = optionalJsonProcessing;
     }
     private readonly MagicSettingsService _parent;
     private readonly TPart _fallback;
-    private readonly Func<MagicSettingsCatalog, string, TPart> _findFunc;
+    private readonly Func<MagicSettingsCatalog, NamedSettings<TPart>> _findList;
     private readonly Func<string, Func<string, string>>? _optionalJsonProcessing;
 
     internal TPart Find(string name, string? defaultName = null)
@@ -28,7 +28,7 @@ internal class NamedSettingsReader<TPart> where TPart: class
         var cached = _cache.FindInvariant(realName);
         if (cached != null) return cached;
 
-        var priority = _parent.FindInMerged(_findFunc, names);
+        var priority = _parent.FindInMerged((set, n) => _findList(set).GetInvariant(n), names);
         if (priority == null) return _fallback;
         var merged = JsonMerger.Merge(priority, _fallback, _optionalJsonProcessing?.Invoke(realName));
         return merged;

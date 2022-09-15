@@ -89,50 +89,41 @@ public class MagicSettingsService: IHasSettingsExceptions
     private readonly NamedSettings<MagicSettings> _currentSettingsCache = new();
 
     private NamedSettingsReader<MagicThemeSettings> Layout => _getLayout ??=
-        new(this, MagicThemeSettings.Defaults,
-            (set, n) => set.Layouts?.GetInvariant(n),
+        new(this, MagicThemeSettings.Defaults, cat => cat.Layouts,
             (name) => json => json.Replace("\"=\"", $"\"{name}\""));
     private NamedSettingsReader<MagicThemeSettings>? _getLayout;
 
     internal NamedSettingsReader<MagicBreadcrumbSettings> Breadcrumbs => _getBreadcrumbs ??=
-        new(this, MagicBreadcrumbSettings.Defaults,
-            (set, n) => set.Breadcrumbs?.GetInvariant(n));
+        new(this, MagicBreadcrumbSettings.Defaults, cat => cat.Breadcrumbs);
     private NamedSettingsReader<MagicBreadcrumbSettings>? _getBreadcrumbs;
 
 
     internal NamedSettingsReader<MagicMenuSettings> MenuSettings => _getMenuSettings ??=
-        new(this, MagicMenuSettings.Defaults,
-            (set, n) => set.Menus?.GetInvariant(n));
+        new(this, MagicMenuSettings.Defaults, cat => cat.Menus);
     private NamedSettingsReader<MagicMenuSettings>? _getMenuSettings;
 
     internal NamedSettingsReader<MagicLanguagesSettings> Languages => _languages ??=
-        new(this, MagicLanguagesSettings.Defaults,
-            (set, n) => set.Languages?.GetInvariant(n));
+        new(this, MagicLanguagesSettings.Defaults, cat => cat.Languages);
     private NamedSettingsReader<MagicLanguagesSettings>? _languages;
 
     internal NamedSettingsReader<MagicLanguageDesignSettings> LanguageDesign => _languageDesign ??=
-        new(this, MagicLanguageDesignSettings.Defaults,
-            (set, n) => set.LanguageDesigns?.GetInvariant(n));
+        new(this, MagicLanguageDesignSettings.Defaults, cat => cat.LanguageDesigns);
     private NamedSettingsReader<MagicLanguageDesignSettings>? _languageDesign;
 
     internal NamedSettingsReader<MagicContainerSettings> Containers => _containers ??=
-        new(this, MagicContainerSettings.Defaults,
-            (set, n) => set.Containers?.GetInvariant(n));
+        new(this, MagicContainerSettings.Defaults, cat => cat.Containers);
     private NamedSettingsReader<MagicContainerSettings>? _containers;
 
     internal NamedSettingsReader<MagicContainerDesignSettings> ContainerDesign => _containerDesign ??=
-        new(this, MagicContainerDesignSettings.Defaults,
-            (set, n) => set.ContainerDesigns?.GetInvariant(n));
+        new(this, MagicContainerDesignSettings.Defaults, cat => cat.ContainerDesigns);
     private NamedSettingsReader<MagicContainerDesignSettings>? _containerDesign;
 
     internal NamedSettingsReader<MagicThemeDesignSettings> ThemeDesign => _themeDesign ??=
-        new(this, MagicThemeDesignSettings.Defaults,
-            (set, n) => set.PageDesigns?.GetInvariant(n));
+        new(this, MagicThemeDesignSettings.Defaults, cat => cat.PageDesigns);
     private NamedSettingsReader<MagicThemeDesignSettings>? _themeDesign;
 
     internal NamedSettingsReader<MagicMenuDesignSettings> MenuDesigns => _menuDesigns ??=
-        new(this, MagicMenuDesignSettings.Defaults,
-            (set, n) => set.MenuDesigns?.GetInvariant(n));
+        new(this, MagicMenuDesignSettings.Defaults, cat => cat.MenuDesigns);
     private NamedSettingsReader<MagicMenuDesignSettings>? _menuDesigns;
 
 
