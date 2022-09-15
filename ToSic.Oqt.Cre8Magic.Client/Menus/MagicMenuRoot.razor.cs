@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Controls.Menu;
+namespace ToSic.Oqt.Cre8Magic.Client.Menus;
 
 /// <summary>
 /// Base class for Razor menus

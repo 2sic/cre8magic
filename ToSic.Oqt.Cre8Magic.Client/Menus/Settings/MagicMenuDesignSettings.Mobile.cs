@@ -1,6 +1,5 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Menu;
+﻿namespace ToSic.Oqt.Cre8Magic.Client.Menus.Settings;
 
-using ToSic.Oqt.Cre8Magic.Client.Themes;
 using static MagicTokens;
 
 public partial class MagicMenuDesignSettings

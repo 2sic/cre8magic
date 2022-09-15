@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
 using ToSic.Oqt.Cre8Magic.Client.DynComponents;
-using ToSic.Oqt.Cre8Magic.Client.Settings.Themes;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Themes;
 

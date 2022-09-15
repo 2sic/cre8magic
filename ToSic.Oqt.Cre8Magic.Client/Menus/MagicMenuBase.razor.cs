@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
+using ToSic.Oqt.Cre8Magic.Client.Controls;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Controls.Menu;
+namespace ToSic.Oqt.Cre8Magic.Client.Menus;
 
 public abstract class MagicMenuBase: Oqtane.Themes.Controls.MenuBase, IMagicControlWithSettings
 {

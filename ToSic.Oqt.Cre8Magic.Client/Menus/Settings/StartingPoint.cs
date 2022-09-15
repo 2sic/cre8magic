@@ -1,4 +1,4 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Menu
+﻿namespace ToSic.Oqt.Cre8Magic.Client.Menus.Settings
 {
     internal class StartingPoint
     {

@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Menu;
+namespace ToSic.Oqt.Cre8Magic.Client.Menus.Settings;
 
 /// <summary>
 /// Special helper to provide Css classes to menus
 /// </summary>
-public class MagicMenuDesigner
+internal class MagicMenuDesigner
 {
     public MagicMenuDesigner(IMagicMenuSettings menuConfig)
     {
@@ -34,11 +34,11 @@ public class MagicMenuDesigner
             : "";
     }
 
-    private List<MagicMenuDesign?> ConfigsForTag(string tag) =>
+    private List<MagicMenuDesign> ConfigsForTag(string tag) =>
         DesignSettingsList
             .Select(c => c.FindInvariant(tag))
-            .Where(c => c is not null)
-            .ToList();
+            .Where(c => c is { })
+            .ToList()!;
 
     private List<string?> TagClasses(MagicMenuBranch branch, List<MagicMenuDesign> configs)
     {

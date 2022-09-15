@@ -3,7 +3,7 @@ using Oqtane.Models;
 using Oqtane.UI;
 using ToSic.Oqt.Cre8Magic.Client.OqtanePatches;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Menu;
+namespace ToSic.Oqt.Cre8Magic.Client.Menus;
 
 public class MagicMenuTree : MagicMenuBranch
 {
