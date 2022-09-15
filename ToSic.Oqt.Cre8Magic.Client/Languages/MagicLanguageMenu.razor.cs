@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Components;
+using ToSic.Oqt.Cre8Magic.Client.Controls;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Controls.Language;
+namespace ToSic.Oqt.Cre8Magic.Client.Languages;
 
 public abstract class MagicLanguageMenu: MagicControl
 {
     [Inject] private LanguageService LanguageService { get; set; }
 
-    public List<Languages.MagicLanguage> Languages { get; private set; }
+    public List<MagicLanguage> Languages { get; private set; }
 
     public bool? Show { get; private set; } = null;
 
@@ -25,5 +26,5 @@ public abstract class MagicLanguageMenu: MagicControl
 
 
 
-    public string? Classes(string tag, Languages.MagicLanguage? lang = null) => Settings.LanguageDesign.Classes(tag, lang).EmptyAsNull();
+    public string? Classes(string tag, MagicLanguage? lang = null) => Settings.LanguageDesign.Classes(tag, lang).EmptyAsNull();
 }

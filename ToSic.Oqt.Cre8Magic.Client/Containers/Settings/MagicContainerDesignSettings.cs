@@ -1,7 +1,7 @@
 ﻿using Oqtane.Models;
-using static ToSic.Oqt.Cre8Magic.Client.Settings.Themes.MagicThemeDesignSettings;
+using static ToSic.Oqt.Cre8Magic.Client.Themes.Settings.MagicThemeDesignSettings;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Settings.Containers;
+namespace ToSic.Oqt.Cre8Magic.Client.Containers.Settings;
 
 public class MagicContainerDesignSettings : NamedSettings<MagicContainerDesignSettingsItem>
 {

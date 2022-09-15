@@ -1,4 +1,4 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Settings;
+﻿namespace ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
 
 public class MagicBreadcrumbSettings
 {

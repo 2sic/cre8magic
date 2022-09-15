@@ -1,4 +1,6 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Settings;
+﻿using ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
+
+namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 
 /// <summary>
 /// This is a catalog of all kinds of configurations.

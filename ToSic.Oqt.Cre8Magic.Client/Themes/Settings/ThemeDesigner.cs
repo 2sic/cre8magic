@@ -1,6 +1,6 @@
 ﻿using Oqtane.UI;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Settings.Themes;
+namespace ToSic.Oqt.Cre8Magic.Client.Themes.Settings;
 
 /// <summary>
 /// Special helper to figure out what classes should be applied to the page. 

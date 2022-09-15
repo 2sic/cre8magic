@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Languages;
+namespace ToSic.Oqt.Cre8Magic.Client.Languages.Settings;
 
 public class MagicLanguage
 {

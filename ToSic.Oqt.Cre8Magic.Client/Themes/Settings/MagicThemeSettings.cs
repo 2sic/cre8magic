@@ -1,6 +1,6 @@
 ﻿using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Settings.Themes;
+namespace ToSic.Oqt.Cre8Magic.Client.Themes.Settings;
 
 public class MagicThemeSettings
 {

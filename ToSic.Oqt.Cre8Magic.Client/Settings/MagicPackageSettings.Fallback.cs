@@ -1,4 +1,5 @@
-﻿using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
+﻿using ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
+using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 

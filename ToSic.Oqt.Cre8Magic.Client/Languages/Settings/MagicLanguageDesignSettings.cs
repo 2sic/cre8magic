@@ -1,6 +1,6 @@
-﻿using static ToSic.Oqt.Cre8Magic.Client.Settings.Themes.MagicThemeDesignSettings;
+﻿using static ToSic.Oqt.Cre8Magic.Client.Themes.Settings.MagicThemeDesignSettings;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Languages;
+namespace ToSic.Oqt.Cre8Magic.Client.Languages.Settings;
 
 public class MagicLanguageDesignSettings: NamedSettings<DesignSettingActive>
 {

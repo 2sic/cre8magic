@@ -1,4 +1,5 @@
 ﻿using Oqtane.UI;
+using ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
 using static System.StringComparer;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Settings;
