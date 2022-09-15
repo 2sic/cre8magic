@@ -1,4 +1,5 @@
-﻿using static System.StringComparer;
+﻿using System.Text.Json.Serialization;
+using static System.StringComparer;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 
@@ -16,14 +17,4 @@ public class NamedSettings<T>: Dictionary<string, T> where T : class
 
     public T? GetInvariant(string key) => TryGetValue(key, out var value) ? value : default;
 
-    //public string? GetString(string key, string? separator = null)
-    //{
-    //    if (!TryGetValue(key, out var value) || value == default)
-    //        return default;
-    //    if (separator == null)
-    //        return value.ToString();
-    //    if (value is string[] valArray)
-    //        return string.Join(separator, valArray);
-    //    return value.ToString();
-    //}
 }

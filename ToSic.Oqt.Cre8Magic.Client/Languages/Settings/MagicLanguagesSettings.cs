@@ -1,6 +1,6 @@
 ﻿namespace ToSic.Oqt.Cre8Magic.Client.Languages.Settings;
 
-public class MagicLanguagesSettings
+public class MagicLanguagesSettings : SettingsWithInherit
 {
     /// <summary>
     /// Dummy constructor so better find cases where it's created

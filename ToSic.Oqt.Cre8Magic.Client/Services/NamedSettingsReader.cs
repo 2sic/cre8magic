@@ -1,5 +1,5 @@
-﻿using ToSic.Oqt.Cre8Magic.Client.Settings.JsonMerge;
-using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
+﻿using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
+using static ToSic.Oqt.Cre8Magic.Client.Settings.JsonMerge.JsonMerger;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Services;
 
@@ -9,17 +9,17 @@ internal class NamedSettingsReader<TPart> where TPart: class, new()
         MagicSettingsService parent,
         Defaults<TPart> defaults,
         Func<MagicSettingsCatalog, NamedSettings<TPart>> findList,
-        Func<string, Func<string, string>>? optionalJsonProcessing = null)
+        Func<string, Func<string, string>>? jsonProcessing = null)
     {
         _parent = parent;
         _defaults = defaults;
         _findList = findList;
-        _optionalJsonProcessing = optionalJsonProcessing;
+        _jsonProcessing = jsonProcessing;
     }
     private readonly MagicSettingsService _parent;
     private readonly Defaults<TPart> _defaults;
     private readonly Func<MagicSettingsCatalog, NamedSettings<TPart>> _findList;
-    private readonly Func<string, Func<string, string>>? _optionalJsonProcessing;
+    private readonly Func<string, Func<string, string>>? _jsonProcessing;
 
     internal TPart Find(string name, string? defaultName = null)
     {
@@ -28,20 +28,23 @@ internal class NamedSettingsReader<TPart> where TPart: class, new()
         var cached = _cache.FindInvariant(realName);
         if (cached != null) return cached;
 
-        var priority = FindInMerged(names);
-
+        // Get best part; return Fallback if nothing found
+        var priority = FindPart(names);
         if (priority == null) return _defaults.Fallback;
 
+        // Check if our part declares that it inherits something
         if (priority is IInherit needsMore && needsMore.Inherits.HasText())
         {
-            var addition = FindInMerged(needsMore.Inherits);
+            var inheritFrom = needsMore.Inherits;
+            needsMore.Inherits = null;
+            var addition = FindPart(inheritFrom);
             if (addition != null)
-                priority = JsonMerger.Merge(priority, addition, _optionalJsonProcessing?.Invoke(realName));
+                priority = Merge(priority, addition, _jsonProcessing?.Invoke(realName));
         }
 
         if (_defaults.Foundation == null) return priority;
 
-        var merged = JsonMerger.Merge(priority, _defaults.Foundation, _optionalJsonProcessing?.Invoke(realName));
+        var merged = Merge(priority, _defaults.Foundation, _jsonProcessing?.Invoke(realName));
         return merged!;
     }
 
@@ -56,7 +59,7 @@ internal class NamedSettingsReader<TPart> where TPart: class, new()
             : new[] { Default };
     }
 
-    internal TPart? FindInMerged(params string[]? names)
+    internal TPart? FindPart(params string[]? names)
     {
         // Make sure we have at least one name
         if (names == null || names.Length == 0) names = new[] { Default };

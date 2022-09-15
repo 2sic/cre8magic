@@ -1,8 +1,6 @@
-﻿using Oqtane.Themes.BlazorTheme;
+﻿namespace ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
-
-public class MagicBreadcrumbSettings
+public class MagicBreadcrumbSettings: SettingsWithInherit
 {
     public string? Separator { get; set; }
     private const string BreadcrumbSeparatorDefault = "&nbsp;&rsaquo;&nbsp;";

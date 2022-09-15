@@ -4,6 +4,7 @@ namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 
 public abstract class SettingsWithInherit: IInherit
 {
-    [JsonPropertyName("@inherits")]
+    internal const string InheritsNameInJson = "@inherits";
+    [JsonPropertyName(InheritsNameInJson)]
     public string? Inherits { get; set; }
 }

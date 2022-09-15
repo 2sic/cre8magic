@@ -20,6 +20,5 @@ public class MagicLanguageDesignSettings: NamedSettings<DesignSettingActive>
             { "ul", new() { Classes = $"{MainPrefix}-page-language {SettingFromDefaults}" } },
             { "li", new() { IsActive = $"active {SettingFromDefaults}", IsNotActive = "" } }
         },
-        //Foundation = new(),
     };
 }

@@ -1,6 +1,6 @@
 ﻿namespace ToSic.Oqt.Cre8Magic.Client.Menus.Settings;
 
-public class MagicMenuSettings: IMagicMenuSettings
+public class MagicMenuSettings : SettingsWithInherit, IMagicMenuSettings
 {
 
     /// <summary>

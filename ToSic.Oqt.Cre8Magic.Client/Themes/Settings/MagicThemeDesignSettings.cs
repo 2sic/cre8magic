@@ -5,7 +5,7 @@
 ///
 /// If you change these, you must also update the SCSS files. 
 /// </summary>
-public class MagicThemeDesignSettings
+public class MagicThemeDesignSettings: SettingsWithInherit
 {
     private const string SitePrefixDefault = "site";
     private const string PagePrefixDefault = "page";

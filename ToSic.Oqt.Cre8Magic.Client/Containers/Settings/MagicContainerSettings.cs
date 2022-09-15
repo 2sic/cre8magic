@@ -2,7 +2,7 @@
 
 namespace ToSic.Oqt.Cre8Magic.Client.Containers.Settings;
 
-public class MagicContainerSettings
+public class MagicContainerSettings: SettingsWithInherit
 {
     public NamedSettings<string> Values { get; set; } = new();
 
