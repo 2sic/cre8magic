@@ -1,4 +1,6 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
+﻿using Oqtane.Themes.BlazorTheme;
+
+namespace ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
 
 public class MagicBreadcrumbSettings
 {
@@ -9,10 +11,15 @@ public class MagicBreadcrumbSettings
 
     private const string BreadcrumbRevealDefault = "…"; // Ellipsis character
 
-    public static MagicBreadcrumbSettings Defaults = new()
+    private static readonly MagicBreadcrumbSettings FbAndF = new()
     {
         Separator = BreadcrumbSeparatorDefault,
         Revealer = BreadcrumbRevealDefault,
     };
 
+    internal static Defaults<MagicBreadcrumbSettings> Defaults = new()
+    {
+        Fallback = FbAndF,
+        Foundation = FbAndF,
+    };
 }

@@ -90,9 +90,15 @@ public class MagicMenuSettings: IMagicMenuSettings
     private string? _menuId;
 
 
-    public static MagicMenuSettings Defaults = new()
+    private static readonly MagicMenuSettings FbAndF = new()
     {
         Start = "*",
         Depth = 0,
+    };
+
+    internal static Defaults<MagicMenuSettings> Defaults = new()
+    {
+        Fallback = FbAndF,
+        Foundation = FbAndF,
     };
 }

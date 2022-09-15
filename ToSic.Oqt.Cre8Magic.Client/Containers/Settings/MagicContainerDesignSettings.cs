@@ -17,15 +17,19 @@ public class MagicContainerDesignSettings : NamedSettings<MagicContainerDesignSe
         return tokens.Parse(value);
     }
 
-    public static MagicContainerDesignSettings Defaults = new()
+    internal static Defaults<MagicContainerDesignSettings> Defaults = new()
     {
+        Fallback = new()
         {
-            "div", new()
             {
-                Classes = $"{MainPrefix}-page-language {SettingFromDefaults}",
-                IsNotPublished = $"{ModulePrefixDefault}-unpublished  {SettingFromDefaults}",
-                IsAdminModule = $"{MainPrefix}-admin-container  {SettingFromDefaults}"
-            }
+                "div", new()
+                {
+                    Classes = $"{MainPrefix}-page-language {SettingFromDefaults}",
+                    IsNotPublished = $"{ModulePrefixDefault}-unpublished  {SettingFromDefaults}",
+                    IsAdminModule = $"{MainPrefix}-admin-container  {SettingFromDefaults}"
+                }
+            },
         },
+        //Foundation = new(),
     };
 }

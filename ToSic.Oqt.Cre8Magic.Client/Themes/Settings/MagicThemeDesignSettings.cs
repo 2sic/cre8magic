@@ -38,17 +38,35 @@ public class MagicThemeDesignSettings
     };
 
 
-    public string[] MagicContext { get; set; } = MagicContextDefaults;
+    public string[] MagicContext { get; set; } = { }; //= MagicContextDefaults;
 
-    public string PageIsHome { get; set; } = $"{PagePrefixDefault}-is-home";
+    public string PageIsHome { get; set; } // = $"{PagePrefixDefault}-is-home";
 
-    public string PaneIsEmpty { get; set; } = $"{PanePrefixDefault}-is-empty";
+    public string PaneIsEmpty { get; set; } // = $"{PanePrefixDefault}-is-empty";
 
-    public string MagicContextTagId { get; set; } = BodyDivId;
+    public string MagicContextTagId { get; set; } // = BodyDivId;
 
     // TODO:
     public NamedSettings<string> Classes { get; set; } = new();
 
     // TODO: initialize with real properties, so the defaults don't already contain something?
-    public static MagicThemeDesignSettings Defaults = new();
+
+
+    internal static Defaults<MagicThemeDesignSettings> Defaults = new()
+    {
+        Fallback = new()
+        {
+            MagicContext = MagicContextDefaults,
+            PageIsHome = $"{PagePrefixDefault}-is-home",
+            PaneIsEmpty = $"{PanePrefixDefault}-is-empty",
+            MagicContextTagId = BodyDivId
+        },
+        Foundation = new()
+        {
+            MagicContext = Array.Empty<string>(),
+            PageIsHome = "",
+            PaneIsEmpty = "",
+            MagicContextTagId = BodyDivId
+        },
+    };
 }

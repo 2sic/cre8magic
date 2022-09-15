@@ -18,12 +18,18 @@ public class MagicContainerSettings
         return tokens.Parse(value!);
     }
 
-    public static MagicContainerSettings Defaults = new()
+    private static readonly MagicContainerSettings FbAndF = new()
     {
         Values = new()
         {
             { IdKey, IdDefault }
         },
+    };
+
+    internal static Defaults<MagicContainerSettings> Defaults = new()
+    {
+        Fallback = FbAndF,
+        Foundation = FbAndF,
     };
 
 }

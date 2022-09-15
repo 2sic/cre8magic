@@ -9,26 +9,13 @@ namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 /// </summary>
 public class MagicSettings: IHasSettingsExceptions
 {
-    internal MagicSettings(
-        string name,
-        MagicSettingsService service,
-        MagicThemeSettings layout, 
-        //MagicBreadcrumbSettings breadcrumbs, 
-        //MagicThemeDesignSettings themeDesign,
-        //MagicContainerSettings container,
-        //MagicContainerDesignSettings containerDesign, 
-        TokenEngine tokens, 
-        PageState pageState)
+    internal MagicSettings(string name, MagicSettingsService service, MagicThemeSettings layout, TokenEngine tokens, PageState pageState)
     {
-        Layout = layout;
-        //Breadcrumbs = breadcrumbs;
-        //ThemeDesign = themeDesign;
-        //Container = container;
-        //ContainerDesign = containerDesign;
-        Tokens = tokens;
-        PageState = pageState;
         Name = name;
         Service = service;
+        Layout = layout;
+        Tokens = tokens;
+        PageState = pageState;
     }
 
     public bool Debug => Service.Debug;

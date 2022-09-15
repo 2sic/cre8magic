@@ -53,6 +53,9 @@ public class MagicSettingsService: IHasSettingsExceptions
         var cached = _currentSettingsCache.FindInvariant(originalNameForCache);
         if (cached != null) return cached;
 
+        // Access catalog to see if we have errors
+        var m = MergedCatalog;
+
         // Figure out real config-name, and get the initial layout
         var configName = FindConfigName(name, Default);
         name = configName.ConfigName;
@@ -173,7 +176,6 @@ public class MagicSettingsService: IHasSettingsExceptions
                     // in future also add the settings from the dialog as the first priority
                     Json.LoadJson(PackageSettings),
                     PackageSettings.Defaults,
-                    Fallback.Defaults,
                 }
                 .Where(x => x != null)
                 .Cast<MagicSettingsCatalog>()

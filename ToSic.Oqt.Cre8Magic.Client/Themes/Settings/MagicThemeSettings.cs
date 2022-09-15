@@ -52,7 +52,7 @@ public class MagicThemeSettings
         return this;
     }
 
-    public static MagicThemeSettings Defaults = new()
+    public static MagicThemeSettings Fallback = new()
     {
         Logo = "unknown-logo.png",
         Container = Inherit,
@@ -69,5 +69,11 @@ public class MagicThemeSettings
             { Default, Default }
         },
         PageDesign = Inherit,
+    };
+
+    internal static Defaults<MagicThemeSettings> Defaults = new()
+    {
+        Fallback = Fallback,
+        Foundation = Fallback
     };
 }

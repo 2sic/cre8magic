@@ -41,7 +41,7 @@ public class MagicMenuService: MagicServiceWithSettingsBase
         if (config.DesignSettings == null)
         {
             // Check various places where design could be configured by priority
-            var designConfig = settingsSvc.MenuDesigns.Find(designName);
+            var designConfig = settingsSvc.MenuDesigns.Find(designName, Settings.Name);
 
             config = config.Overrule(new(config) { DesignSettings = designConfig });
         }

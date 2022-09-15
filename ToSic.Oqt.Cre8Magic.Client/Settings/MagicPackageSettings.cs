@@ -5,7 +5,7 @@
 ///
 /// Contains semi-constants like location of assets and configuration for various parts like CSS.
 /// </summary>
-public partial class MagicPackageSettings
+public class MagicPackageSettings
 {
     /// <summary>
     /// All kinds of settings for the layout, how it should be etc.

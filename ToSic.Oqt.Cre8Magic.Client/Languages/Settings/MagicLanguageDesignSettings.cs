@@ -13,9 +13,13 @@ public class MagicLanguageDesignSettings: NamedSettings<DesignSettingActive>
         return styles.Classes + " " + (lang?.IsActive ?? false ? styles.IsActive : styles.IsNotActive);
     }
 
-    public static MagicLanguageDesignSettings Defaults = new()
+    internal static Defaults<MagicLanguageDesignSettings> Defaults = new()
     {
-        { "ul", new() { Classes = $"{MainPrefix}-page-language {SettingFromDefaults}" } },
-        { "li", new() { IsActive = $"active {SettingFromDefaults}", IsNotActive = "" } }
+        Fallback = new()
+        {
+            { "ul", new() { Classes = $"{MainPrefix}-page-language {SettingFromDefaults}" } },
+            { "li", new() { IsActive = $"active {SettingFromDefaults}", IsNotActive = "" } }
+        },
+        //Foundation = new(),
     };
 }

@@ -33,13 +33,20 @@ public class MagicLanguagesSettings
         return dic; //.ToInvariant();
     }
 
-    public static MagicLanguagesSettings Defaults = new()
+    internal static Defaults<MagicLanguagesSettings> Defaults = new()
     {
-        HideOthers = false,
-        Languages = new()
+        Fallback = new()
         {
-            { "en", new() { Culture = "en", Description = "English" } }
+            HideOthers = false,
+            Languages = new()
+            {
+                { "en", new() { Culture = "en", Description = "English" } }
+            },
         },
+        Foundation = new()
+        {
+            HideOthers = false,
+            Languages = new(),
+        }
     };
-
 }

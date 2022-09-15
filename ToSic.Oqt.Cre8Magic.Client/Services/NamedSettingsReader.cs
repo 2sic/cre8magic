@@ -3,21 +3,21 @@ using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Services;
 
-internal class NamedSettingsReader<TPart> where TPart: class 
+internal class NamedSettingsReader<TPart> where TPart: class, new()
 {
     public NamedSettingsReader(
         MagicSettingsService parent,
-        TPart fallback,
+        Defaults<TPart> defaults,
         Func<MagicSettingsCatalog, NamedSettings<TPart>> findList,
         Func<string, Func<string, string>>? optionalJsonProcessing = null)
     {
         _parent = parent;
-        _fallback = fallback;
+        _defaults = defaults;
         _findList = findList;
         _optionalJsonProcessing = optionalJsonProcessing;
     }
     private readonly MagicSettingsService _parent;
-    private readonly TPart _fallback;
+    private readonly Defaults<TPart> _defaults;
     private readonly Func<MagicSettingsCatalog, NamedSettings<TPart>> _findList;
     private readonly Func<string, Func<string, string>>? _optionalJsonProcessing;
 
@@ -29,9 +29,12 @@ internal class NamedSettingsReader<TPart> where TPart: class
         if (cached != null) return cached;
 
         var priority = _parent.FindInMerged((set, n) => _findList(set).GetInvariant(n), names);
-        if (priority == null) return _fallback;
-        var merged = JsonMerger.Merge(priority, _fallback, _optionalJsonProcessing?.Invoke(realName));
-        return merged;
+
+        if (priority == null) return _defaults.Fallback;
+        if (_defaults.Foundation == null) return priority;
+
+        var merged = JsonMerger.Merge(priority, _defaults.Foundation, _optionalJsonProcessing?.Invoke(realName));
+        return merged!;
     }
 
     private readonly NamedSettings<TPart> _cache = new();
