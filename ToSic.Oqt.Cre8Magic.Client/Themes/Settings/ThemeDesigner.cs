@@ -9,7 +9,7 @@ internal class ThemeDesigner : MagicServiceWithSettingsBase
 {
     internal string BodyClasses(PageState pageState, ITokenReplace tokens)
     {
-        var css = Settings?.Page;
+        var css = Settings?.ThemeDesign;
 
         if (css == null) throw new ArgumentException("Can't continue without CSS specs", nameof(css));
 
@@ -46,7 +46,7 @@ internal class ThemeDesigner : MagicServiceWithSettingsBase
     }
 
     public string PaneIsEmptyClasses(PageState pageState, string paneName)
-        => PaneIsEmpty(pageState, paneName) ? Settings?.Page.PaneIsEmpty ?? "" : "";
+        => PaneIsEmpty(pageState, paneName) ? Settings?.ThemeDesign.PaneIsEmpty ?? "" : "";
 
-    public string? Classes(string target) => Settings?.Page.Classes.GetInvariant(target).EmptyAsNull();
+    public string? Classes(string target) => Settings?.ThemeDesign.Classes.GetInvariant(target).EmptyAsNull();
 }
