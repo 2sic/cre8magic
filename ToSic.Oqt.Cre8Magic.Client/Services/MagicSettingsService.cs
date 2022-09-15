@@ -42,28 +42,26 @@ public class MagicSettingsService: IHasSettingsExceptions
 
     public MagicSettings CurrentSettings(PageState pageState, string name, string bodyClasses)
     {
-        var tokensPro = new TokenEngine(new()
-        {
-            new PageTokens(pageState, null, bodyClasses),
-            new ThemeTokens(PackageSettings)
-        });
-
         // Get a cache-id for this specific configuration, which can vary by page
         var originalNameForCache = (name ?? "prevent-error") + pageState.Page.PageId;
         var cached = _currentSettingsCache.FindInvariant(originalNameForCache);
         if (cached != null) return cached;
 
-        // Access catalog to see if we have errors
-        var m = MergedCatalog;
+        // Tokens engine for this specific PageState
+        var tokens = new TokenEngine(new()
+        {
+            new PageTokens(pageState, null, bodyClasses),
+            new ThemeTokens(PackageSettings)
+        });
 
         // Figure out real config-name, and get the initial layout
         var configName = FindConfigName(name, Default);
         name = configName.ConfigName;
-        var layout = Layout.Find(name).Parse(tokensPro);
+        var layout = Layout.Find(name).Parse(tokens);
 
-        var current = new MagicSettings(name, this, layout, tokensPro, pageState);
+        var current = new MagicSettings(name, this, layout, tokens, pageState);
         ThemeDesigner.InitSettings(current);
-        current.MagicContext = ThemeDesigner.BodyClasses(pageState, tokensPro);
+        current.MagicContext = ThemeDesigner.BodyClasses(pageState, tokens);
         var dbg = current.DebugSources;
         dbg.Add("Name", configName.Source);
 
@@ -71,7 +69,7 @@ public class MagicSettingsService: IHasSettingsExceptions
         return current;
     }
 
-    private MagicSettingsCatalog MergedCatalog => _mergedCatalog ??= MergeCatalogs();
+    internal MagicSettingsCatalog MergedCatalog => _mergedCatalog ??= MergeCatalogs();
     private MagicSettingsCatalog? _mergedCatalog;
 
     private MagicSettingsCatalog MergeCatalogs()
@@ -92,7 +90,7 @@ public class MagicSettingsService: IHasSettingsExceptions
     private readonly NamedSettings<MagicSettings> _currentSettingsCache = new();
 
     private NamedSettingsReader<MagicThemeSettings> Layout => _getLayout ??=
-        new(this, MagicThemeSettings.Defaults, cat => cat.Layouts,
+        new(this, MagicThemeSettings.Defaults, cat => cat.Themes,
             (name) => json => json.Replace("\"=\"", $"\"{name}\""));
     private NamedSettingsReader<MagicThemeSettings>? _getLayout;
 
@@ -122,7 +120,7 @@ public class MagicSettingsService: IHasSettingsExceptions
     private NamedSettingsReader<MagicContainerDesignSettings>? _containerDesign;
 
     internal NamedSettingsReader<MagicThemeDesignSettings> ThemeDesign => _themeDesign ??=
-        new(this, MagicThemeDesignSettings.Defaults, cat => cat.PageDesigns);
+        new(this, MagicThemeDesignSettings.Defaults, cat => cat.ThemeDesigns);
     private NamedSettingsReader<MagicThemeDesignSettings>? _themeDesign;
 
     internal NamedSettingsReader<MagicMenuDesignSettings> MenuDesigns => _menuDesigns ??=
@@ -133,12 +131,12 @@ public class MagicSettingsService: IHasSettingsExceptions
     internal (string ConfigName, string Source) FindConfigName(string? configName, string inheritedName)
     {
         var debugInfo = $"Initial Config: '{configName}'";
-        if (configName.EqInvariant(Inherit))
+        if (configName.EqInvariant(InheritName))
         {
             configName = inheritedName;
             debugInfo += $"; switched to inherit '{inheritedName}'";
         }
-        if (!string.IsNullOrWhiteSpace(configName)) return (configName, debugInfo);
+        if (configName.HasText()) return (configName, debugInfo);
 
         debugInfo += $"; Config changed to '{Default}'";
         return (Default, debugInfo);
@@ -146,24 +144,24 @@ public class MagicSettingsService: IHasSettingsExceptions
 
 
     
-    internal TResult? FindInMerged<TResult>(Func<MagicSettingsCatalog, string, TResult> findFunc, params string[]? names)
-    {
-        // Make sure we have at least one name
-        if (names == null || names.Length == 0) names = new[] { Default };
+    //internal TResult? FindInMerged<TResult>(Func<MagicSettingsCatalog, string, TResult> findFunc, params string[]? names)
+    //{
+    //    // Make sure we have at least one name
+    //    if (names == null || names.Length == 0) names = new[] { Default };
 
-        var allSourcesAndNames = names
-            .Distinct()
-            .Select(name => (Settings: MergedCatalog, Name: name))
-            .ToList();
+    //    var allSourcesAndNames = names
+    //        .Distinct()
+    //        .Select(name => (Settings: MergedCatalog, Name: name))
+    //        .ToList();
 
-        foreach (var set in allSourcesAndNames)
-        {
-            var result = findFunc(set.Settings, set.Name);
-            if (result != null) return result;
-        }
+    //    foreach (var set in allSourcesAndNames)
+    //    {
+    //        var result = findFunc(set.Settings, set.Name);
+    //        if (result != null) return result;
+    //    }
 
-        return default;
-    }
+    //    return default;
+    //}
 
 
     private List<MagicSettingsCatalog> ConfigurationSources

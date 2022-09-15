@@ -28,7 +28,7 @@ public class MagicMenuSettings: IMagicMenuSettings
     {
         var newMc = new MagicMenuSettings(this);
         if (overrule == null) return newMc;
-        if (!string.IsNullOrWhiteSpace(overrule.Id)) newMc.Id = overrule.Id;
+        if (overrule.Id.HasText()) newMc.Id = overrule.Id;
         if (overrule.ConfigName != default) newMc.ConfigName = overrule.ConfigName;
         if (overrule.Debug != default) newMc.Debug = overrule.Debug;
         if (overrule.Display != default) newMc.Display = overrule.Display;
@@ -84,9 +84,9 @@ public class MagicMenuSettings: IMagicMenuSettings
     // todo: name, maybe not on interface
     public MagicMenuDesignSettings? DesignSettings { get; set; }
 
-    public string MenuId => _menuId ??= string.IsNullOrWhiteSpace(Id)
-        ? new Random().Next(100000, 1000000).ToString()
-        : Id;
+    public string MenuId => _menuId ??= Id.HasText()
+        ? Id
+        : new Random().Next(100000, 1000000).ToString();
     private string? _menuId;
 
 

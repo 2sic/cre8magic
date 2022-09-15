@@ -152,13 +152,13 @@ public class MagicMenuTree : MagicMenuBranch
 
     private StartingPoint[] ConfigToStartingPoints(string? value, int level, bool children)
     {
-        if (string.IsNullOrWhiteSpace(value)) return Array.Empty<StartingPoint>();
+        if (!value.HasText()) return Array.Empty<StartingPoint>();
         var parts = value.Split(',');
         var result = parts
             .Select(fromNode =>
             {
                 fromNode = fromNode.Trim();
-                if (string.IsNullOrWhiteSpace(fromNode)) return null;
+                if (!fromNode.HasText()) return null;
                 var important = fromNode.EndsWith(PageForced);
                 if (important) fromNode = fromNode.TrimEnd(PageForced);
                 fromNode = fromNode.Trim();

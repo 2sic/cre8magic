@@ -21,7 +21,8 @@ public class MagicSettingsCatalog
     /// </summary>
     public string Source { get; set; } = SourceDefault;
 
-    public NamedSettings<MagicThemeSettings> Layouts { get; set; } = new();
+    public NamedSettings<MagicThemeSettings> Themes { get; set; } = new();
+    public NamedSettings<MagicThemeDesignSettings> ThemeDesigns { get; set; } = new();
 
     public NamedSettings<MagicContainerSettings> Containers { get; set; } = new();
 
@@ -35,7 +36,6 @@ public class MagicSettingsCatalog
 
     // TODO: For completeness, we may need BreadcrumbDesign
 
-    public NamedSettings<MagicThemeDesignSettings> PageDesigns { get; set; } = new();
 
     /// <summary>
     /// The menu definitions

@@ -2,7 +2,7 @@
 
 namespace ToSic.Oqt.Cre8Magic.Client.Themes.Settings;
 
-public class MagicThemeSettings
+public class MagicThemeSettings: SettingsWithInherit
 {
     /// <summary>
     /// The logo to show, should be located in the assets subfolder
@@ -55,20 +55,20 @@ public class MagicThemeSettings
     public static MagicThemeSettings Fallback = new()
     {
         Logo = "unknown-logo.png",
-        Container = Inherit,
-        ContainerDesign = Inherit,
-        Languages = Inherit,
-        LanguageMenuDesign = Inherit,
+        Container = InheritName,
+        ContainerDesign = InheritName,
+        Languages = InheritName,
+        LanguageMenuDesign = InheritName,
         LanguageMenuShow = true,
         LanguageMenuShowMin = 2,
         MagicContextInBody = false,
-        Breadcrumbs = Inherit,
+        Breadcrumbs = InheritName,
         // The menus-map. Since this is the fallback, it must have at least an entry to not be skipped. 
         Menus = new()
         {
             { Default, Default }
         },
-        PageDesign = Inherit,
+        PageDesign = InheritName,
     };
 
     internal static Defaults<MagicThemeSettings> Defaults = new()

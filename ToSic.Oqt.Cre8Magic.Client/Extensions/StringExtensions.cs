@@ -1,4 +1,5 @@
-﻿using static System.StringComparison;
+﻿using System.Diagnostics.CodeAnalysis;
+using static System.StringComparison;
 
 namespace ToSic.Oqt.Cre8Magic.Client;
 
@@ -8,8 +9,11 @@ public static class StringExtensions
         => a == null && b == null
            || string.Equals(a, b, InvariantCultureIgnoreCase);
 
-    internal static bool HasValue(this string? value)
+    internal static bool HasValue([NotNullWhen(true)] this string? value)
         => !string.IsNullOrEmpty(value);
+
+    internal static bool HasText([NotNullWhen(true)] this string? value)
+        => !string.IsNullOrWhiteSpace(value);
 
     internal static string? EmptyAsNull(this string? value) => string.IsNullOrWhiteSpace(value) ? null : value;
 
