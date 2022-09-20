@@ -2,7 +2,7 @@
 
 namespace ToSic.Oqt.Cre8Magic.Client.Themes.Settings;
 
-public class MagicThemeSettings: SettingsWithInherit
+public class MagicThemeSettings: SettingsWithInherit, IHasDebugSettings
 {
     /// <summary>
     /// The logo to show, should be located in the assets subfolder
@@ -76,4 +76,6 @@ public class MagicThemeSettings: SettingsWithInherit
         Fallback = Fallback,
         Foundation = Fallback
     };
+
+    public MagicDebugSettings? Debug { get; set; }
 }

@@ -10,7 +10,7 @@
     [Parameter] public RenderFragment? ChildContent { get; set; }
     [Inject] protected IMagicThemeJsService? ThemeJs { get; set; }
 
-    private bool PutInBody => Settings.Layout.MagicContextInBody == true;
+    private bool PutInBody => Settings.Theme.MagicContextInBody == true;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {

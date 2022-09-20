@@ -15,7 +15,7 @@ public class MagicMenuService: MagicServiceWithSettingsBase
         var (configName, debugInfo) = settingsSvc.FindConfigName(config.ConfigName, Settings.Name);
 
         // Check if we have a name-remap to consider
-        var updatedName = Settings.Layout.Menus.FindInvariant(configName);
+        var updatedName = Settings.Theme.Menus.FindInvariant(configName);
         if (updatedName.HasValue())
         {
             configName = updatedName!;

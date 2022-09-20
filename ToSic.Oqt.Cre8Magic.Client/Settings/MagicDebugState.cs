@@ -6,5 +6,4 @@
 public class MagicDebugState
 {
     public bool Show { get; set; }
-    //public bool Enabled { get; set; }
 }

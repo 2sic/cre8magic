@@ -1,5 +1,4 @@
-﻿@using System.Text.Json
-@code {
+﻿@code {
     [Parameter, EditorRequired] public MagicMenuTree? MenuTree { get; set; }
 }
 <MagicDebug Target="@MenuTree?.Settings" Title="Settings (Menu)">

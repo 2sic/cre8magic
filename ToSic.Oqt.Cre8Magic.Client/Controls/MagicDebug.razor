@@ -1,5 +1,6 @@
 ﻿@inherits MagicControl
 @using System.Text.Json
+@using System.Text.Json.Serialization
 @code {
     [Parameter] public bool? Show { get; set; }
     [Parameter, EditorRequired] public object? Target { get; set; }
@@ -31,7 +32,7 @@
 <!-- Modal -->
 @* info to the next developer: data-backdrop=false helps avoid certain z-index issues if this debug is used in the menu etc. which has a z-index *@
 <div class="modal fade" id="debug-@Target?.GetHashCode()" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false">
-    <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">@(Title ?? "Debug")</h5>
@@ -48,7 +49,7 @@
                 {
                     @Content
                     <pre>
-@JsonSerializer.Serialize(Target, new JsonSerializerOptions { WriteIndented = true })
+@JsonSerializer.Serialize(Target, new JsonSerializerOptions { WriteIndented = true, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull})
 </pre>
                 }
             </div>

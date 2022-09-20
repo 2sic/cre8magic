@@ -1,0 +1,9 @@
+﻿@inherits MagicControl
+<MagicDebug Target="@Settings" Title="Current Settings for this Theme">
+    <Content>
+    @if (Settings == null)
+    {
+        <text>Trying to show debug info for a general settings, but didn't get anything for @nameof(Settings)</text>
+    }
+    </Content>
+</MagicDebug>

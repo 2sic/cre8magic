@@ -59,9 +59,9 @@ public class MagicSettingsService: IHasSettingsExceptions
         // Figure out real config-name, and get the initial layout
         var configName = FindConfigName(name, Default);
         name = configName.ConfigName;
-        var layout = Layout.Find(name).Parse(tokens);
+        var theme = Layout.Find(name).Parse(tokens);
 
-        var current = new MagicSettings(name, this, layout, tokens, pageState);
+        var current = new MagicSettings(name, this, theme, tokens, pageState);
         ThemeDesigner.InitSettings(current);
         current.MagicContext = ThemeDesigner.BodyClasses(pageState, tokens);
         var dbg = current.DebugSources;
