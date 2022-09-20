@@ -54,7 +54,7 @@ public class MagicMenuBranch: IHasSettingsExceptions
     [return: NotNull]
     protected List<MagicMenuBranch> GetChildren()
     {
-        var levelsRemaining = (Tree.Config.Depth ?? MagicMenuSettings.LevelDepthDefault) - MenuLevel + 1;
+        var levelsRemaining = (Tree.Settings.Depth ?? MagicMenuSettings.LevelDepthFallback) - MenuLevel + 1;
         return levelsRemaining <= 0
             ? new()
             : GetChildPages()

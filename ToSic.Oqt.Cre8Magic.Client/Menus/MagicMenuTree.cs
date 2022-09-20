@@ -9,13 +9,13 @@ public class MagicMenuTree : MagicMenuBranch
 {
     public const char PageForced = '!';
 
-    public MagicMenuTree(MagicSettings settings, IMagicMenuSettings config, List<Page> menuPages, string? debug, IHasSettingsExceptions exceptions)
-        : base(null! /* root must be null, as `Tree` is handled in this class */, 0, settings.PageState.Page)
+    public MagicMenuTree(MagicSettings magicSettings, IMagicMenuSettings settings, List<Page> menuPages, string? debug, IHasSettingsExceptions exceptions)
+        : base(null! /* root must be null, as `Tree` is handled in this class */, 0, magicSettings.PageState.Page)
     {
+        MagicSettings = magicSettings;
+        PageState = magicSettings.PageState;
         Settings = settings;
-        PageState = settings.PageState;
-        Config = config;
-        AllPages = settings.PageState.Pages;
+        AllPages = magicSettings.PageState.Pages;
         MenuPages = menuPages;
         _exceptions = exceptions;
         Debug = debug;
@@ -25,15 +25,15 @@ public class MagicMenuTree : MagicMenuBranch
             MenuPatchCode.GetPagesHierarchy(AllPages);
     }
 
-    internal IMagicMenuSettings Config { get; }
-    public MagicSettings Settings { get; }
+    public IMagicMenuSettings Settings { get; }
+    private MagicSettings MagicSettings { get; }
     public PageState PageState { get; }
 
     internal TokenEngine PageTokenEngine(Page page)
     {
-        var originalPage = (PageTokens)Settings.Tokens.Parsers.First(p => p.NameId == PageTokens.NameIdConstant);
+        var originalPage = (PageTokens)MagicSettings.Tokens.Parsers.First(p => p.NameId == PageTokens.NameIdConstant);
         originalPage = originalPage.Modified(page, menuId: MenuId);
-        return Settings.Tokens.SwapParser(originalPage);
+        return MagicSettings.Tokens.SwapParser(originalPage);
     }
 
     /// <summary>
@@ -52,13 +52,13 @@ public class MagicMenuTree : MagicMenuBranch
 
     protected override MagicMenuTree Tree => this;
 
-    internal MagicMenuDesigner Design => _menuCss ??= new(Config);
+    internal MagicMenuDesigner Design => _menuCss ??= new(Settings);
     private MagicMenuDesigner? _menuCss;
 
     internal List<Page> Breadcrumb => _breadcrumb ??= AllPages.Breadcrumb(Page).ToList();
     private List<Page>? _breadcrumb;
 
-    public override string MenuId => _menuId ??= (Config as MagicMenuSettings)?.MenuId ?? "error-menu-id";
+    public override string MenuId => _menuId ??= (Settings as MagicMenuSettings)?.MenuId ?? "error-menu-id";
     private string? _menuId;
 
     public override string? Debug { get; }
@@ -68,18 +68,18 @@ public class MagicMenuTree : MagicMenuBranch
     protected override List<Page> GetChildPages()
     {
         // Give empty list if we shouldn't display it
-        if (Config.Display == false) return new();
+        if (Settings.Display == false) return new();
 
         // Fake code to be able to stop at specific menus for testing
-        if (Config.Debug)
-            Config.Debug = Config.Debug;
+        if (Settings.Debug)
+            Settings.Debug = Settings.Debug;
 
         // Case 1: StartPage *, so all top-level entries
-        var start = Config.Start?.Trim();
+        var start = Settings.Start?.Trim();
 
         // Case 2: '.' - not yet tested
-        var startLevel = Config.Level ?? MagicMenuSettings.StartLevelDefault;
-        var getChildren = Config.Children ?? MagicMenuSettings.ChildrenDefault;
+        var startLevel = Settings.Level ?? MagicMenuSettings.StartLevelFallback;
+        var getChildren = Settings.Children ?? MagicMenuSettings.ChildrenFallback;
         var startingPoints = ConfigToStartingPoints(start, startLevel, getChildren);
         // Case 3: one or more IDs to start from
 

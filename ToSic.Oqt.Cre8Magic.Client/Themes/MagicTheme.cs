@@ -40,7 +40,6 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase
     protected List<DynComponent> DynComponents { get; } = new();
 
     // Panes of the layout
-    public const string PaneNameDefault = "Default";
     public const string PaneNameHeader = "Header";
 
     /// <summary>

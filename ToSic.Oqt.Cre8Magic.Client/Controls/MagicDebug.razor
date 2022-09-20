@@ -1,0 +1,54 @@
+﻿@inherits MagicControl
+@using System.Text.Json
+@code {
+    [Parameter] public bool? Show { get; set; }
+    [Parameter, EditorRequired] public object? Target { get; set; }
+    [Parameter] public string? Title { get; set; }
+
+    [Parameter] public RenderFragment? Content { get; set; }
+
+    [Parameter] public RenderFragment? Button { get; set; }
+}
+@if (Show == false || Settings?.Debug != true)
+{
+    return;
+}
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    @if (Button == null)
+    {
+        <text>show</text>
+    }
+    else
+    {
+        @Button
+    }
+</button>
+
+<!-- Modal -->
+@* info to the next developer: data-backdrop=false helps avoid certain z-index issues if this debug is used in the menu etc. which has a z-index *@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">@(Title ?? "Debug")</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @if (Target == null)
+                {
+                    <div class="alert alert-danger">
+                        Trying to show debug JSON, but didn't get anything for @nameof(Target)
+                    </div>
+                }
+                else
+                {
+                    @Content
+                    <pre>
+@JsonSerializer.Serialize(Target, new JsonSerializerOptions { WriteIndented = true })
+</pre>
+                }
+            </div>
+        </div>
+    </div>
+</div>

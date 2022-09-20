@@ -3,7 +3,6 @@ using Oqtane.UI;
 using ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
 using ToSic.Oqt.Cre8Magic.Client.Settings.JsonMerge;
 using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
-using static ToSic.Oqt.Cre8Magic.Client.Settings.MagicPackageSettings;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Services;
 
@@ -36,11 +35,11 @@ public class MagicSettingsService: IHasSettingsExceptions
         get => _settings ?? throw new ArgumentException($"The {nameof(MagicSettingsService)} can't work without first calling {nameof(InitSettings)}", nameof(PackageSettings));
         set => _settings = value;
     }
-    private MagicPackageSettings _settings;
+    private MagicPackageSettings? _settings;
 
     private MagicSettingsJsonService Json { get; }
 
-    public MagicSettings CurrentSettings(PageState pageState, string name, string bodyClasses)
+    public MagicSettings CurrentSettings(PageState pageState, string? name, string bodyClasses)
     {
         // Get a cache-id for this specific configuration, which can vary by page
         var originalNameForCache = (name ?? "prevent-error") + pageState.Page.PageId;
@@ -80,7 +79,7 @@ public class MagicSettingsService: IHasSettingsExceptions
         {
             // get new json
             var lowerPriority = JsonSerializer.Serialize(source, JsonMerger.OptionsForPreMerge);
-            var merged = JsonMerger.Merge(lowerPriority, priority);
+            var merged = JsonMerger.Merge(priority, lowerPriority);
             priority = merged;
         }
         var result = JsonSerializer.Deserialize<MagicSettingsCatalog>(priority);

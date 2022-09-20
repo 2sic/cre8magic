@@ -1,4 +1,5 @@
 ﻿using Oqtane.Models;
+using ToSic.Oqt.Cre8Magic.Client.Settings.JsonMerge;
 
 namespace ToSic.Oqt.Cre8Magic.Client.Services;
 
@@ -24,7 +25,7 @@ public class MagicMenuService: MagicServiceWithSettingsBase
         // If the user didn't specify a config name in the Parameters or the config name
         // isn't contained in the json file the normal parameter are given to the service
         var menuSettings = settingsSvc.MenuSettings.Find(configName);
-        config = menuSettings.Overrule(config);
+        config = JsonMerger.Merge(config, menuSettings);
 
         // See if we have a default configuration for CSS which should be applied
         var designName = config.Design;
@@ -43,7 +44,7 @@ public class MagicMenuService: MagicServiceWithSettingsBase
             // Check various places where design could be configured by priority
             var designConfig = settingsSvc.MenuDesigns.Find(designName, Settings.Name);
 
-            config = config.Overrule(new(config) { DesignSettings = designConfig });
+            config.DesignSettings = designConfig; // = JsonMerger.Merge(new(config) { DesignSettings = designConfig }, config);
         }
         else
             debugInfo += "; Design rules already set";

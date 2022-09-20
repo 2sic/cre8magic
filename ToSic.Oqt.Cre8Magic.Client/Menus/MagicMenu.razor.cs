@@ -8,7 +8,7 @@ namespace ToSic.Oqt.Cre8Magic.Client.Menus;
 public abstract class MagicMenu : MagicMenuBase
 {
 #pragma warning disable CS8618
-    [Parameter, EditorRequired] public MagicMenuBranch MenuBranch { get; set; }
+    [Parameter, EditorRequired] public MagicMenuBranch CurrentBranch { get; set; }
 #pragma warning restore CS8618
 
     public string GetUrl(MagicMenuBranch branch) => GetUrl(branch.Page);

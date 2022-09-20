@@ -69,4 +69,9 @@ public interface IMagicMenuSettings
 
     string? Design { get; set; }
 
+    /// <summary>
+    /// The template to use - horizontal/vertical
+    /// </summary>
+    string? Template { get; set; }
+
 }

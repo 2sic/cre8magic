@@ -16,22 +16,29 @@ internal class JsonMerger
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
     };
 
+    public static TType Clone<TType>(TType original)
+    {
+        var json = JsonSerializer.Serialize(original);
+        var result = JsonSerializer.Deserialize<TType>(json);
+        return result!;
+    }
+
     public static TType Merge<TType>(TType priority, TType fallback, Func<string, string>? optionalProcessing = null)
     {
         var priorityJson = JsonSerializer.Serialize(priority, OptionsForPreMerge);
-        var lessJson = JsonSerializer.Serialize(fallback, OptionsForPreMerge);
-        var merged = Merge(lessJson, priorityJson);
+        var lessJson = fallback == null ? null : JsonSerializer.Serialize(fallback, OptionsForPreMerge);
+        var merged = lessJson == null ? priorityJson : Merge(priorityJson, lessJson);
         var processed = optionalProcessing?.Invoke(merged) ?? merged;
         var result = JsonSerializer.Deserialize<TType>(processed);
         return result!;
     }
 
-    public static string Merge(string originalJson, string newContent)
+    public static string Merge(string priority, string secondary)
     {
         var outputBuffer = new ArrayBufferWriter<byte>();
 
-        using (JsonDocument jDoc1 = JsonDocument.Parse(originalJson))
-        using (JsonDocument jDoc2 = JsonDocument.Parse(newContent))
+        using (JsonDocument jDoc1 = JsonDocument.Parse(secondary))
+        using (JsonDocument jDoc2 = JsonDocument.Parse(priority))
         using (var jsonWriter = new Utf8JsonWriter(outputBuffer, new JsonWriterOptions { Indented = true }))
         {
             JsonElement root1 = jDoc1.RootElement;
@@ -44,7 +51,7 @@ internal class JsonMerger
 
             if (root1.ValueKind != root2.ValueKind)
             {
-                return originalJson;
+                return secondary;
             }
 
             if (root1.ValueKind == JsonValueKind.Array)

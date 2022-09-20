@@ -1,0 +1,24 @@
+﻿@using System.Text.Json
+@code {
+    [Parameter, EditorRequired] public MagicMenuTree? MenuTree { get; set; }
+}
+@if (MenuTree == null)
+{
+    <div class="alert alert-danger">
+        Trying to show debug info for a menu, but didn't get anything for @nameof(MenuTree)
+    </div>
+}
+else
+{
+    <MagicDebug Show="true" Target="MenuTree.Settings" Title="Settings (Menu)">
+        <Button>
+            ⚙️
+        </Button>
+        <Content>
+            <ul>
+                <li>Config Name:@MenuTree.Settings.ConfigName</li>
+                <li>Template: @MenuTree.Settings.Template</li>
+            </ul>
+        </Content>
+    </MagicDebug>
+}
