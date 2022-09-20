@@ -7,7 +7,7 @@ namespace ToSic.Oqt.Cre8Magic.Client.Menus.Settings;
 /// </summary>
 internal class MagicMenuDesigner
 {
-    public MagicMenuDesigner(IMagicMenuSettings menuConfig)
+    public MagicMenuDesigner(MagicMenuSettings menuConfig)
     {
         MenuSettings = menuConfig as MagicMenuSettings ?? throw new ArgumentException("MenuConfig must be real", nameof(MenuSettings));
 

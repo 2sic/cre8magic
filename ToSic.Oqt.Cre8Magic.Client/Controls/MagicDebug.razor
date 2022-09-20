@@ -8,26 +8,29 @@
     [Parameter] public RenderFragment? Content { get; set; }
 
     [Parameter] public RenderFragment? Button { get; set; }
+
+    private MagicDebugState Debug => _debug ??= Settings.DebugState(Target);
+    private MagicDebugState? _debug;
 }
-@if (Show == false || Settings?.Debug != true)
+@if (Show == false || !Debug.Show)
 {
     return;
 }
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<!-- Link to trigger modal -->
+<a href="#debug-@Target?.GetHashCode()" data-bs-toggle="modal">
     @if (Button == null)
     {
-        <text>show</text>
+        <text>🪲</text>
     }
     else
     {
         @Button
     }
-</button>
+</a>
 
 <!-- Modal -->
 @* info to the next developer: data-backdrop=false helps avoid certain z-index issues if this debug is used in the menu etc. which has a z-index *@
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false">
+<div class="modal fade" id="debug-@Target?.GetHashCode()" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="false">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">

@@ -25,7 +25,10 @@ public class MagicSettingsService: IHasSettingsExceptions
         return this;
     }
 
-    public bool Debug => ConfigurationSources.First().Debug;
+    public MagicDebugSettings Debug => _debug
+        ??= ConfigurationSources.FirstOrDefault(c => c.Debug != null)?.Debug
+            ?? MagicDebugSettings.Defaults.Fallback;
+    private MagicDebugSettings? _debug;
 
     internal ThemeDesigner ThemeDesigner { get; } = new();
 
@@ -140,27 +143,6 @@ public class MagicSettingsService: IHasSettingsExceptions
         debugInfo += $"; Config changed to '{Default}'";
         return (Default, debugInfo);
     }
-
-
-    
-    //internal TResult? FindInMerged<TResult>(Func<MagicSettingsCatalog, string, TResult> findFunc, params string[]? names)
-    //{
-    //    // Make sure we have at least one name
-    //    if (names == null || names.Length == 0) names = new[] { Default };
-
-    //    var allSourcesAndNames = names
-    //        .Distinct()
-    //        .Select(name => (Settings: MergedCatalog, Name: name))
-    //        .ToList();
-
-    //    foreach (var set in allSourcesAndNames)
-    //    {
-    //        var result = findFunc(set.Settings, set.Name);
-    //        if (result != null) return result;
-    //    }
-
-    //    return default;
-    //}
 
 
     private List<MagicSettingsCatalog> ConfigurationSources

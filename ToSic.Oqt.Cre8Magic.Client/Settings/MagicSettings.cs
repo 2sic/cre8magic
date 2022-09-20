@@ -7,7 +7,7 @@ namespace ToSic.Oqt.Cre8Magic.Client.Settings;
 /// <summary>
 /// The current settings of a page.
 /// </summary>
-public class MagicSettings: IHasSettingsExceptions
+public class MagicSettings: IHasSettingsExceptions //, IHasDebugSettings
 {
     internal MagicSettings(string name, MagicSettingsService service, MagicThemeSettings layout, TokenEngine tokens, PageState pageState)
     {
@@ -18,8 +18,12 @@ public class MagicSettings: IHasSettingsExceptions
         PageState = pageState;
     }
 
-    public bool Debug => Service.Debug;
+    public MagicDebugState Debug => _debug ??= Service.Debug.Parsed(PageState.UserIsAdmin());
+    private MagicDebugState? _debug;
 
+    public MagicDebugState DebugState(object? target) => Service.Debug.GetState(target, PageState.UserIsAdmin());
+
+    //return Debug;
     internal PageState PageState { get; }
 
     internal TokenEngine Tokens { get; }

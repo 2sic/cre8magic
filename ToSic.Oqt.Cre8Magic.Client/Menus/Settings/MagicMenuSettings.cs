@@ -1,30 +1,11 @@
 ﻿namespace ToSic.Oqt.Cre8Magic.Client.Menus.Settings;
 
-public class MagicMenuSettings : SettingsWithInherit, IMagicMenuSettings, ICloneAndMerge<MagicMenuSettings>
+public class MagicMenuSettings : SettingsWithInherit, ICloneAndMerge<MagicMenuSettings>, IHasDebugSettings
 {
-
     /// <summary>
     /// Empty constructor is important for JSON deserialization
     /// </summary>
     public MagicMenuSettings() { }
-
-    //public MagicMenuSettings(IMagicMenuSettings original)
-    //{
-    //    Id = original.Id;
-    //    ConfigName = original.ConfigName;
-    //    Debug = original.Debug;
-    //    Display = original.Display;
-    //    Depth = original.Depth;
-    //    Children = original.Children;
-    //    PageList = original.PageList;
-    //    Start = original.Start;
-    //    Level = original.Level;
-    //    Template = original.Template;
-
-    //    Design = original.Design;
-    //    DesignSettings = (original as MagicMenuSettings)?.DesignSettings;
-    //}
-
 
     /// <inheritdoc />
     public string? Id { get; set; }
@@ -33,9 +14,9 @@ public class MagicMenuSettings : SettingsWithInherit, IMagicMenuSettings, IClone
     public string? ConfigName { get; set; }
 
     /// <inheritdoc />
-    public bool Debug { get; set; } = DebugDefault;
+    public MagicDebugSettings Debug { get; set; } // = DebugDefault;
 
-    public const bool DebugDefault = false;
+    //public const bool DebugDefault = false;
 
     /// <inheritdoc />
     public bool? Display { get; set; } = DisplayDefault;
@@ -49,6 +30,7 @@ public class MagicMenuSettings : SettingsWithInherit, IMagicMenuSettings, IClone
     public bool? Children { get; set; }
     public const bool ChildrenFallback = default;
 
+    // TODO: NOT YET IMPLEMENTED
     /// <inheritdoc />
     public List<int>? PageList { get; set; }
 

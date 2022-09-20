@@ -9,7 +9,7 @@ public class MagicMenuTree : MagicMenuBranch
 {
     public const char PageForced = '!';
 
-    public MagicMenuTree(MagicSettings magicSettings, IMagicMenuSettings settings, List<Page> menuPages, string? debug, IHasSettingsExceptions exceptions)
+    public MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<Page> menuPages, string? debug, IHasSettingsExceptions exceptions)
         : base(null! /* root must be null, as `Tree` is handled in this class */, 0, magicSettings.PageState.Page)
     {
         MagicSettings = magicSettings;
@@ -25,7 +25,7 @@ public class MagicMenuTree : MagicMenuBranch
             MenuPatchCode.GetPagesHierarchy(AllPages);
     }
 
-    public IMagicMenuSettings Settings { get; }
+    public MagicMenuSettings Settings { get; }
     private MagicSettings MagicSettings { get; }
     public PageState PageState { get; }
 
@@ -69,10 +69,6 @@ public class MagicMenuTree : MagicMenuBranch
     {
         // Give empty list if we shouldn't display it
         if (Settings.Display == false) return new();
-
-        // Fake code to be able to stop at specific menus for testing
-        if (Settings.Debug)
-            Settings.Debug = Settings.Debug;
 
         // Case 1: StartPage *, so all top-level entries
         var start = Settings.Start?.Trim();

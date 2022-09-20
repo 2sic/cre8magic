@@ -1,5 +1,5 @@
 ﻿@inherits MagicControl
-@if ((Settings as IHasSettingsExceptions)?.HasExceptions == true && (Settings.Debug || PageState.UserIsAdmin()))
+@if ((Settings as IHasSettingsExceptions)?.HasExceptions == true && (Settings.Debug?.Show == true || PageState.UserIsAdmin()))
 {
     <div class="alert alert-danger" role="alert">
         <strong>The Cre8Magic Design System reports some problems (visible to Admins only)</strong>
