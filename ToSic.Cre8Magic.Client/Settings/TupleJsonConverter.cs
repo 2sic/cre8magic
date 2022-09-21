@@ -2,7 +2,7 @@
 //using System.Text.Json;
 //using System.Text.Json.Nodes;
 
-//namespace ToSic.Oqt.Cre8Magic.Client.Settings;
+//namespace ToSic.Cre8Magic.Client.Settings;
 
 //public class TupleJsonConverter : JsonConverter<(string On, string Off)>
 //{

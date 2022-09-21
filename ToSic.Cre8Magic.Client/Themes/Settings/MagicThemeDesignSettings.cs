@@ -1,4 +1,4 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Themes.Settings;
+﻿namespace ToSic.Cre8Magic.Client.Themes.Settings;
 
 /// <summary>
 /// Constants and helpers related to creating Css and Css Classes.

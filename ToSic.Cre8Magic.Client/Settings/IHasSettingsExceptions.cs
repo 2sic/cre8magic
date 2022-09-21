@@ -1,4 +1,4 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Settings;
+﻿namespace ToSic.Cre8Magic.Client.Settings;
 
 public interface IHasSettingsExceptions
 {

@@ -1,9 +1,9 @@
 ﻿using Oqtane.Models;
 using Oqtane.UI;
-using static ToSic.Oqt.Cre8Magic.Client.MagicTokens;
+using static ToSic.Cre8Magic.Client.MagicTokens;
 using static System.StringComparison;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Tokens;
+namespace ToSic.Cre8Magic.Client.Tokens;
 
 internal class PageTokens: ITokenReplace
 {

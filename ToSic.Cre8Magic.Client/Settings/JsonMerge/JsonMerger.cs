@@ -4,7 +4,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Settings.JsonMerge;
+namespace ToSic.Cre8Magic.Client.Settings.JsonMerge;
 
 /// <summary>
 /// Inspired by https://github.com/dotnet/runtime/issues/31433

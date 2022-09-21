@@ -933,11 +933,11 @@
   "project": {
     "version": "0.0.1",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Oqt.Cre8Magic.Client\\ToSic.Oqt.Cre8Magic.Client.csproj",
-      "projectName": "ToSic.Oqt.Cre8Magic.Client.Oqtane",
-      "projectPath": "C:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Oqt.Cre8Magic.Client\\ToSic.Oqt.Cre8Magic.Client.csproj",
+      "projectUniqueName": "C:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\ToSic.Cre8Magic.Client.csproj",
+      "projectName": "ToSic.Cre8Magic.Client.Oqtane",
+      "projectPath": "C:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\ToSic.Cre8Magic.Client.csproj",
       "packagesPath": "C:\\Users\\2dm\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Oqt.Cre8Magic.Client\\obj\\",
+      "outputPath": "C:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

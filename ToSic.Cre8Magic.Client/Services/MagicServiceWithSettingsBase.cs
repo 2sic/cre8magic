@@ -1,4 +1,4 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Services;
+﻿namespace ToSic.Cre8Magic.Client.Services;
 
 public abstract class MagicServiceWithSettingsBase
 {

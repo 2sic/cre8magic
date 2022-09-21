@@ -5,7 +5,7 @@ using Oqtane.Services;
 using Oqtane.UI;
 using static Microsoft.AspNetCore.Localization.CookieRequestCultureProvider;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Services;
+namespace ToSic.Cre8Magic.Client.Services;
 
 /*
  * Todo:

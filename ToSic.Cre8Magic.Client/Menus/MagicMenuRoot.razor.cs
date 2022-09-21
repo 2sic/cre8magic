@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
-using ToSic.Oqt.Cre8Magic.Client.Settings.JsonMerge;
+using ToSic.Cre8Magic.Client.Settings.JsonMerge;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Menus;
+namespace ToSic.Cre8Magic.Client.Menus;
 
 /// <summary>
 /// Base class for Razor menus

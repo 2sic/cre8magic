@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "gpLFOCgu1CKn4LehRJilBw0ooAN0Y16ZL+DKlwsaQjIiGOCwirnEcV4goZFQWUg7Qj29MfZKw7wySc+2C3kSAA==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Oqt.Cre8Magic.Client\\ToSic.Oqt.Cre8Magic.Client.csproj",
+  "projectFilePath": "C:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\ToSic.Cre8Magic.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\2dm\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.8\\microsoft.aspnetcore.authorization.6.0.8.nupkg.sha512",
     "C:\\Users\\2dm\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.8\\microsoft.aspnetcore.components.6.0.8.nupkg.sha512",

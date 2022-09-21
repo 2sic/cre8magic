@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Containers;
+namespace ToSic.Cre8Magic.Client.Containers;
 
 public class MagicContainer: Oqtane.Themes.ContainerBase, IMagicControlWithSettings
 {

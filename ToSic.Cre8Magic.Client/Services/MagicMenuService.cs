@@ -1,7 +1,7 @@
 ﻿using Oqtane.Models;
-using ToSic.Oqt.Cre8Magic.Client.Settings.JsonMerge;
+using ToSic.Cre8Magic.Client.Settings.JsonMerge;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Services;
+namespace ToSic.Cre8Magic.Client.Services;
 
 /// <summary>
 /// Will create a MenuTree based on the current pages information and configuration

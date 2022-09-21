@@ -6,39 +6,39 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows,browser
-build_property.RootNamespace = ToSic.Oqt.Cre8Magic.Client
-build_property.RootNamespace = ToSic.Oqt.Cre8Magic.Client
-build_property.ProjectDir = c:\Projects\2shine-oqtane\oqtane-cre8magic\ToSic.Oqt.Cre8Magic.Client\
+build_property.RootNamespace = ToSic.Cre8Magic.Client
+build_property.RootNamespace = ToSic.Cre8Magic.Client
+build_property.ProjectDir = c:\Projects\2shine-oqtane\oqtane-cre8magic\ToSic.Cre8Magic.Client\
 build_property.RazorLangVersion = 3.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Projects\2shine-oqtane\oqtane-cre8magic\ToSic.Oqt.Cre8Magic.Client
+build_property.MSBuildProjectDirectory = c:\Projects\2shine-oqtane\oqtane-cre8magic\ToSic.Cre8Magic.Client
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Oqt.Cre8Magic.Client/Controls/MagicDebug.razor]
+[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Cre8Magic.Client/Controls/MagicDebug.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTWFnaWNEZWJ1Zy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Oqt.Cre8Magic.Client/Controls/MagicExceptions.razor]
+[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Cre8Magic.Client/Controls/MagicExceptions.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTWFnaWNFeGNlcHRpb25zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Oqt.Cre8Magic.Client/Controls/MagicThemeDebug.razor]
+[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Cre8Magic.Client/Controls/MagicThemeDebug.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTWFnaWNUaGVtZURlYnVnLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Oqt.Cre8Magic.Client/DynComponents/DynComponentList.razor]
+[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Cre8Magic.Client/DynComponents/DynComponentList.razor]
 build_metadata.AdditionalFiles.TargetPath = RHluQ29tcG9uZW50c1xEeW5Db21wb25lbnRMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Oqt.Cre8Magic.Client/Menus/MagicMenuDebug.razor]
+[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Cre8Magic.Client/Menus/MagicMenuDebug.razor]
 build_metadata.AdditionalFiles.TargetPath = TWVudXNcTWFnaWNNZW51RGVidWcucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Oqt.Cre8Magic.Client/Themes/MagicContext.razor]
+[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Cre8Magic.Client/Themes/MagicContext.razor]
 build_metadata.AdditionalFiles.TargetPath = VGhlbWVzXE1hZ2ljQ29udGV4dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Oqt.Cre8Magic.Client/_Imports.razor]
+[c:/Projects/2shine-oqtane/oqtane-cre8magic/ToSic.Cre8Magic.Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

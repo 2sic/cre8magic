@@ -1,4 +1,4 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Settings;
+﻿namespace ToSic.Cre8Magic.Client.Settings;
 
 internal class Defaults<T> where T: class, new()
 {

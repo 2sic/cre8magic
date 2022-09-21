@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Languages;
+namespace ToSic.Cre8Magic.Client.Languages;
 
 public abstract class MagicLanguageMenu: MagicControl
 {

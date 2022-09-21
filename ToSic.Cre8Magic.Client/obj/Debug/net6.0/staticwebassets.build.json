@@ -1,17 +1,17 @@
 {
   "Version": 1,
   "Hash": "ZXln5m2P6OunZwdW82LPyxI3ISlCUF0969c8wKZb71I=",
-  "Source": "ToSic.Oqt.Cre8Magic.Client.Oqtane",
-  "BasePath": "_content/ToSic.Oqt.Cre8Magic.Client.Oqtane",
+  "Source": "ToSic.Cre8Magic.Client.Oqtane",
+  "BasePath": "_content/ToSic.Cre8Magic.Client.Oqtane",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "ToSic.Oqt.Cre8Magic.Client.Oqtane\\wwwroot",
-      "Source": "ToSic.Oqt.Cre8Magic.Client.Oqtane",
-      "ContentRoot": "C:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Oqt.Cre8Magic.Client\\wwwroot\\",
-      "BasePath": "_content/ToSic.Oqt.Cre8Magic.Client.Oqtane",
+      "Name": "ToSic.Cre8Magic.Client.Oqtane\\wwwroot",
+      "Source": "ToSic.Cre8Magic.Client.Oqtane",
+      "ContentRoot": "C:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\wwwroot\\",
+      "BasePath": "_content/ToSic.Cre8Magic.Client.Oqtane",
       "Pattern": "**"
     }
   ],

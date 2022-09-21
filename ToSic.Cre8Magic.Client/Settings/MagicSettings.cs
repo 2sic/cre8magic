@@ -1,9 +1,9 @@
 ﻿using System.Text.Json.Serialization;
 using Oqtane.UI;
-using ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
+using ToSic.Cre8Magic.Client.Breadcrumbs.Settings;
 using static System.StringComparer;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Settings;
+namespace ToSic.Cre8Magic.Client.Settings;
 
 /// <summary>
 /// The current settings of a page.

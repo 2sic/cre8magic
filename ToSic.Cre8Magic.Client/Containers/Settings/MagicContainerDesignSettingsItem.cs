@@ -1,6 +1,6 @@
 ﻿
 
-namespace ToSic.Oqt.Cre8Magic.Client.Containers.Settings;
+namespace ToSic.Cre8Magic.Client.Containers.Settings;
 
 public class MagicContainerDesignSettingsItem: DesignSettingClasses
 {

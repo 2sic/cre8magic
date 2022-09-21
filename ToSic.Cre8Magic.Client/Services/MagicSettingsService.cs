@@ -1,10 +1,10 @@
 ﻿using System.Text.Json;
 using Oqtane.UI;
-using ToSic.Oqt.Cre8Magic.Client.Breadcrumbs.Settings;
-using ToSic.Oqt.Cre8Magic.Client.Settings.JsonMerge;
-using static ToSic.Oqt.Cre8Magic.Client.MagicConstants;
+using ToSic.Cre8Magic.Client.Breadcrumbs.Settings;
+using ToSic.Cre8Magic.Client.Settings.JsonMerge;
+using static ToSic.Cre8Magic.Client.MagicConstants;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Services;
+namespace ToSic.Cre8Magic.Client.Services;
 
 /// <summary>
 /// Service which consolidates settings made in the UI, in the JSON and falls back to coded defaults.

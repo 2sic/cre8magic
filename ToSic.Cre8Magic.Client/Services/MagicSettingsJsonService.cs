@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Services;
+namespace ToSic.Cre8Magic.Client.Services;
 
 public class MagicSettingsJsonService : IHasSettingsExceptions
 {

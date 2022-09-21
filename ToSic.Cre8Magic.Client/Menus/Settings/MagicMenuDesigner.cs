@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Menus.Settings;
+namespace ToSic.Cre8Magic.Client.Menus.Settings;
 
 /// <summary>
 /// Special helper to provide Css classes to menus

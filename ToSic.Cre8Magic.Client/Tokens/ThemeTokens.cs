@@ -1,4 +1,4 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Tokens;
+﻿namespace ToSic.Cre8Magic.Client.Tokens;
 
 public class ThemeTokens: ITokenReplace
 {

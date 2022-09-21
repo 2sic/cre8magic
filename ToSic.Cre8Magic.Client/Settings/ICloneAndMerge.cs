@@ -1,4 +1,4 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Settings;
+﻿namespace ToSic.Cre8Magic.Client.Settings;
 
 internal interface ICloneAndMerge<T> where T : class, new()
 {

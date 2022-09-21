@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "ToSic.Oqt.Cre8Magic.Client.Oqtane/0.0.1": {
+      "ToSic.Cre8Magic.Client.Oqtane/0.0.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.Web": "6.0.8",
           "Microsoft.AspNetCore.Localization": "2.2.0",
@@ -15,7 +15,7 @@
           "Oqtane.Shared": "3.1.4"
         },
         "runtime": {
-          "ToSic.Oqt.Cre8Magic.Client.Oqtane.dll": {}
+          "ToSic.Cre8Magic.Client.Oqtane.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authorization/6.0.8": {
@@ -263,7 +263,7 @@
     }
   },
   "libraries": {
-    "ToSic.Oqt.Cre8Magic.Client.Oqtane/0.0.1": {
+    "ToSic.Cre8Magic.Client.Oqtane/0.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

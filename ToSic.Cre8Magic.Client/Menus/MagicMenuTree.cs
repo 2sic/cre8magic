@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Oqtane.Models;
 using Oqtane.UI;
-using ToSic.Oqt.Cre8Magic.Client.OqtanePatches;
+using ToSic.Cre8Magic.Client.OqtanePatches;
 
-namespace ToSic.Oqt.Cre8Magic.Client.Menus;
+namespace ToSic.Cre8Magic.Client.Menus;
 
 public class MagicMenuTree : MagicMenuBranch
 {

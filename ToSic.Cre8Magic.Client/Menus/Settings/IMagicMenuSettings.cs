@@ -1,4 +1,4 @@
-﻿namespace ToSic.Oqt.Cre8Magic.Client.Menus.Settings;
+﻿namespace ToSic.Cre8Magic.Client.Menus.Settings;
 
 /// <summary>
 /// Interface which describes what a menu config contains.
