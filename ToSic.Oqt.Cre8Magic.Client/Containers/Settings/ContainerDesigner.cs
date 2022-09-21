@@ -20,8 +20,8 @@ internal class ContainerDesigner
         var value =  string.Join(" ", new[]
         {
             styles.Classes,
-            _module.IsPublished() ? styles.IsPublished : styles.IsNotPublished, // Info-Class if not published
-            _module.UseAdminContainer ? styles.IsAdminModule : styles.IsNotAdminModule // Info-class if admin module
+            styles.IsPublished.Get(_module.IsPublished()),      // Info-Class if not published
+            styles.IsAdminModule.Get(_module.UseAdminContainer)       // Info-class if admin module
         }.Where(s => s.HasValue()));
 
         return value;

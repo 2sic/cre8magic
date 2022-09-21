@@ -31,8 +31,8 @@ public class MagicContainerDesignSettings : NamedSettings<MagicContainerDesignSe
                 "div", new()
                 {
                     Classes = $"{MainPrefix}-page-language {SettingFromDefaults}",
-                    IsNotPublished = $"{ModulePrefixDefault}-unpublished  {SettingFromDefaults}",
-                    IsAdminModule = $"{MainPrefix}-admin-container  {SettingFromDefaults}"
+                    IsPublished = new(null, $"{ModulePrefixDefault}-unpublished  {SettingFromDefaults}"),
+                    IsAdminModule = new($"{MainPrefix}-admin-container  {SettingFromDefaults}"),
                 }
             },
         },
