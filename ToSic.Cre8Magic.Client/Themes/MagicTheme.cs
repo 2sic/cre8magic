@@ -13,7 +13,7 @@ namespace ToSic.Cre8Magic.Client.Themes;
 /// - The base class must be abstract, so that Oqtane doesn't see it as a real them.
 /// - The config-properties must be abstract, so the inheriting files are forced to set them. 
 /// </remarks>
-public abstract class MagicTheme : Oqtane.Themes.ThemeBase
+public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSettings
 {
 
     /// <summary>
@@ -60,7 +60,7 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase
     /// <summary>
     /// The settings of this layout, as loaded from the ThemePackageSettings + JSON
     /// </summary>
-    protected MagicSettings? Settings { get; set; }
+    public MagicSettings? Settings { get; set; }
 
     /// <summary>
     /// This contains the default settings which must be used in this theme.
@@ -80,4 +80,5 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase
     public string PaneClasses(string paneName) => ThemeDesigner.PaneIsEmptyClasses(PageState, paneName);
 
     public string? Classes(string target) => ThemeDesigner.Classes(target);
+    public string? Value(string target) => ThemeDesigner.Value(target);
 }

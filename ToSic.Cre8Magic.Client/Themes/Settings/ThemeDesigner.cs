@@ -48,5 +48,7 @@ internal class ThemeDesigner : MagicServiceWithSettingsBase
     public string PaneIsEmptyClasses(PageState pageState, string paneName)
         => Settings?.ThemeDesign.PaneIsEmpty.Get(PaneIsEmpty(pageState, paneName)) ?? "";
 
-    public string? Classes(string target) => Settings?.ThemeDesign.Custom.GetInvariant(target)?.Value.EmptyAsNull();
+    public string? Classes(string target) => Settings?.ThemeDesign.Custom.GetInvariant(target)?.Classes.EmptyAsNull();
+
+    public string? Value(string target) => Settings?.ThemeDesign.Custom.GetInvariant(target)?.Value.EmptyAsNull();
 }

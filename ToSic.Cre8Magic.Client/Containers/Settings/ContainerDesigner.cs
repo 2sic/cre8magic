@@ -21,7 +21,7 @@ internal class ContainerDesigner
         var styles = _settings.ContainerDesign.FindInvariant(tag); // safe, also does null-check
         if (styles is null) return null;
 
-        var value = /*new ContainerDesigner(settings, module).*/GetClasses(styles);
+        var value = GetClasses(styles);
         var tokens = _settings.Tokens.Expanded(new ModuleTokens(_module));
         return tokens.Parse(value);
     }

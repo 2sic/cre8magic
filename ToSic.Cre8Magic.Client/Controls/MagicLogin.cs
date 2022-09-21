@@ -24,5 +24,7 @@ namespace ToSic.Cre8Magic.Client.Controls
         }
 
         public string? Classes(string target) => Settings.ThemeDesigner.Classes(target);
+
+        public string? Value(string target) => Settings.ThemeDesigner.Value(target);
     }
 }
