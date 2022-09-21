@@ -4,25 +4,25 @@ namespace ToSic.Cre8Magic.Client.Containers.Settings;
 
 public class MagicContainerSettings: SettingsWithInherit
 {
-    public NamedSettings<string> Values { get; set; } = new();
+    public NamedSettings<DesignSettingBase> Custom { get; set; } = new();
 
     private const string IdKey = "Id";
     private const string IdDefault = "module-[Module.Id]";
 
     internal string? Value(MagicSettings settings, Module module, string key)
     {
-        var value = Values.FindInvariant(key); // safe, also does null-check
-        if (!value.HasValue()) return null;
+        var value = Custom.FindInvariant(key); // safe, also does null-check
+        if (value == null || !value.Value.HasValue()) return null;
 
         var tokens = settings.Tokens.Expanded(new ModuleTokens(module));
-        return tokens.Parse(value!);
+        return tokens.Parse(value.Value);
     }
 
     private static readonly MagicContainerSettings FbAndF = new()
     {
-        Values = new()
+        Custom = new()
         {
-            { IdKey, IdDefault }
+            { IdKey, new() { Value = IdDefault } }
         },
     };
 
