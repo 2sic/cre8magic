@@ -46,8 +46,7 @@ public class MagicThemeDesignSettings: SettingsWithInherit
 
     public string MagicContextTagId { get; set; }
 
-    // TODO:
-    public NamedSettings<string> Classes { get; set; } = new();
+    public NamedSettings<DesignSettingBase> Custom { get; set; } = new();
 
     // TODO: initialize with real properties, so the defaults don't already contain something?
 
