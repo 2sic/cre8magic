@@ -14,6 +14,9 @@ internal class JsonMerger
     public static JsonSerializerOptions OptionsForPreMerge = new()
     {
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
+        Converters = { PairOnOffJsonConverter.GetNew() },
+        ReadCommentHandling = JsonCommentHandling.Skip,
+        AllowTrailingCommas = true,
     };
 
     public static TType Clone<TType>(TType original)
@@ -29,7 +32,7 @@ internal class JsonMerger
         var lessJson = fallback == null ? null : JsonSerializer.Serialize(fallback, OptionsForPreMerge);
         var merged = lessJson == null ? priorityJson : Merge(priorityJson, lessJson);
         var processed = optionalProcessing?.Invoke(merged) ?? merged;
-        var result = JsonSerializer.Deserialize<TType>(processed);
+        var result = JsonSerializer.Deserialize<TType>(processed, OptionsForPreMerge);
         return result!;
     }
 

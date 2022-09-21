@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using ToSic.Cre8Magic.Client.Settings.JsonMerge;
 
 namespace ToSic.Cre8Magic.Client.Services;
 
@@ -11,11 +12,11 @@ public class MagicSettingsJsonService : IHasSettingsExceptions
         {
             var jsonString = File.ReadAllText(jsonFileName);
                 
-            var result = JsonSerializer.Deserialize<MagicSettingsCatalog>(jsonString, new JsonSerializerOptions
+            var result = JsonSerializer.Deserialize<MagicSettingsCatalog>(jsonString, new JsonSerializerOptions(JsonMerger.OptionsForPreMerge)
             {
                 PropertyNameCaseInsensitive = true,
-                ReadCommentHandling = JsonCommentHandling.Skip,
-                AllowTrailingCommas = true,
+                //ReadCommentHandling = JsonCommentHandling.Skip,
+                //AllowTrailingCommas = true,
             })!;
 
             // Ensure we have version set, ATM exactly 0.01

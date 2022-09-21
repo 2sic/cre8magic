@@ -1,8 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿namespace ToSic.Cre8Magic.Client.Settings;
 
-namespace ToSic.Cre8Magic.Client.Settings;
-
-[JsonConverter(typeof(PairOnOffJsonConverter))]
 public class PairOnOff
 {
     /// <summary>
@@ -19,6 +16,7 @@ public class PairOnOff
     public string? On { get; set; }
     public string? Off { get; set; }
 }
+
 
 public static class PairOnOffExtensions
 {
