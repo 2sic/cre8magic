@@ -38,8 +38,8 @@ public class MagicSettings: IHasSettingsExceptions, IHasDebugSettings
 
     public string Name { get; }
 
-    [JsonIgnore]
-    public MagicSettingsService Service { get; }
+    [JsonIgnore] public MagicSettingsService Service { get; }
+    [JsonIgnore] internal ThemeDesigner ThemeDesigner => Service.ThemeDesigner;
 
     public MagicThemeSettings Theme { get; }
 

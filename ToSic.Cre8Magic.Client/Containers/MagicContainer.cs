@@ -15,4 +15,11 @@ public class MagicContainer: Oqtane.Themes.ContainerBase, IMagicControlWithSetti
     public string? Classes(string tag) => Settings.ContainerDesign.Classes(Settings, ModuleState, tag).EmptyAsNull();
 
     public string? Value(string key) => Settings.Container.Value(Settings, ModuleState, key).EmptyAsNull();
+
+    /// <summary>
+    /// Modules are treated as admin modules (and must use the the admin container) if they are marked as such, or come from the Oqtane ....Admin... type
+    /// </summary>
+    /// <returns></returns>
+    protected bool ForceAdminContainer => ModuleState.ForceAdminContainer();
+
 }
