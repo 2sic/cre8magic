@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
-using ToSic.Cre8Magic.Client.Settings.JsonMerge;
+using ToSic.Cre8Magic.Client.Settings.Json;
 
 namespace ToSic.Cre8Magic.Client.Menus;
 

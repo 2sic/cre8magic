@@ -10,7 +10,7 @@ public class MagicLanguageDesignSettings: NamedSettings<DesignSettingActive>
         if (!this.Any()) return "";
         var styles = this.FindInvariant(tag);
         if (styles is null) return "";
-        return styles.Classes + " " + styles.IsActive.Get(lang?.IsActive); // (lang?.IsActive ?? false ? styles.IsActive : styles.IsNotActive);
+        return styles.Classes + " " + styles.IsActive.Get(lang?.IsActive);
     }
 
     internal static Defaults<MagicLanguageDesignSettings> Defaults = new()

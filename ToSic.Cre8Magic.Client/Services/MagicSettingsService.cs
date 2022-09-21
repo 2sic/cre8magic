@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using Oqtane.UI;
 using ToSic.Cre8Magic.Client.Breadcrumbs.Settings;
-using ToSic.Cre8Magic.Client.Settings.JsonMerge;
+using ToSic.Cre8Magic.Client.Settings.Json;
 using static ToSic.Cre8Magic.Client.MagicConstants;
 
 namespace ToSic.Cre8Magic.Client.Services;

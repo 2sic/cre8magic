@@ -4,7 +4,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace ToSic.Cre8Magic.Client.Settings.JsonMerge;
+namespace ToSic.Cre8Magic.Client.Settings.Json;
 
 /// <summary>
 /// Inspired by https://github.com/dotnet/runtime/issues/31433
@@ -14,7 +14,7 @@ internal class JsonMerger
     public static JsonSerializerOptions OptionsForPreMerge = new()
     {
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
-        Converters = { PairOnOffJsonConverter.GetNew() },
+        Converters = { PairOnOffJsonConverter.GetNew(), DesignSettingsActiveJsonConverter.GetNew() },
         ReadCommentHandling = JsonCommentHandling.Skip,
         AllowTrailingCommas = true,
     };

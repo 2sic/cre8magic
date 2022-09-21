@@ -1,5 +1,5 @@
 ﻿using static ToSic.Cre8Magic.Client.MagicConstants;
-using static ToSic.Cre8Magic.Client.Settings.JsonMerge.JsonMerger;
+using static ToSic.Cre8Magic.Client.Settings.Json.JsonMerger;
 
 namespace ToSic.Cre8Magic.Client.Services;
 

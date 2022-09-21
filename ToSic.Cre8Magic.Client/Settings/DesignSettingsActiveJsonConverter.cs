@@ -7,7 +7,7 @@ namespace ToSic.Cre8Magic.Client.Settings;
 /// <summary>
 /// Important: NEVER use this on a 
 /// </summary>
-public class PairOnOffJsonConverter : JsonConverterBase<PairOnOff>
+public class DesignSettingsActiveJsonConverter : JsonConverterBase<DesignSettingActive>
 {
     /// <summary>
     /// Private constructor to prevent use in attributes.
@@ -18,44 +18,36 @@ public class PairOnOffJsonConverter : JsonConverterBase<PairOnOff>
     /// but removed at other times to use default conversion.
     /// That is only possible if it's not used in a POCO attribute, but added in the serializer options.
     /// </summary>
-    private PairOnOffJsonConverter() {}
+    private DesignSettingsActiveJsonConverter() {}
 
-    public static PairOnOffJsonConverter GetNew() => new();
+    public static DesignSettingsActiveJsonConverter GetNew() => new();
 
-    public override void Write(Utf8JsonWriter writer, PairOnOff? pair, JsonSerializerOptions options)
-    {
-        if (pair?.On == null && pair?.Off == null)
-        {
-            writer.WriteNullValue();
-            return;
-        }
-
+    public override void Write(Utf8JsonWriter writer, DesignSettingActive? pair, JsonSerializerOptions options) =>
         // Copy options to remove this serializer, then serialize with default method
         JsonSerializer.Serialize(writer, pair, GetOptionsWithoutThisConverter(options));
-    }
 
 
-
-    public override PairOnOff? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    public override DesignSettingActive? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
         var x = JsonNode.Parse(ref reader);
+
         return x switch
         {
             null => null,
-            JsonArray jArray => ConvertArray(jArray),
-            JsonValue jValue => new() { On = jValue.ToString() },
+            JsonArray jArray => null, //ConvertArray(jArray),
+            JsonValue jValue =>  new() { Classes = jValue.ToString() },
             JsonObject jObject => ConvertObject(jObject, options),
-            _ => new() { On = "error", Off = "error" },
+            _ => null,
         };
     }
 
-    private PairOnOff? ConvertArray(JsonArray jsonArray)
-    {
-        if (jsonArray.Count == 0) return null;
-        return new()
-        {
-            On = jsonArray[0]?.ToString(),
-            Off = jsonArray.Count > 1 ? jsonArray[1]?.ToString() : null
-        };
-    }
+    //private PairOnOff? ConvertArray(JsonArray jsonArray)
+    //{
+    //    if (jsonArray.Count == 0) return null;
+    //    return new()
+    //    {
+    //        On = jsonArray[0]?.ToString(),
+    //        Off = jsonArray.Count > 1 ? jsonArray[1]?.ToString() : null
+    //    };
+    //}
 }
