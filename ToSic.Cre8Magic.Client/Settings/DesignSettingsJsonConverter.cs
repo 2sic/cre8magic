@@ -7,7 +7,7 @@ namespace ToSic.Cre8Magic.Client.Settings;
 /// <summary>
 /// Important: NEVER use this on a 
 /// </summary>
-public class DesignSettingsActiveJsonConverter : JsonConverterBase<DesignSettingActive>
+public class DesignSettingsJsonConverter<T> : JsonConverterBase<T> where T : DesignSettingBase, new()
 {
     /// <summary>
     /// Private constructor to prevent use in attributes.
@@ -18,36 +18,29 @@ public class DesignSettingsActiveJsonConverter : JsonConverterBase<DesignSetting
     /// but removed at other times to use default conversion.
     /// That is only possible if it's not used in a POCO attribute, but added in the serializer options.
     /// </summary>
-    private DesignSettingsActiveJsonConverter() {}
+    private DesignSettingsJsonConverter() {}
 
-    public static DesignSettingsActiveJsonConverter GetNew() => new();
+    public static DesignSettingsJsonConverter<T> GetNew() => new();
 
-    public override void Write(Utf8JsonWriter writer, DesignSettingActive? pair, JsonSerializerOptions options) =>
+    public override void Write(Utf8JsonWriter writer, T? pair, JsonSerializerOptions options) =>
         // Copy options to remove this serializer, then serialize with default method
         JsonSerializer.Serialize(writer, pair, GetOptionsWithoutThisConverter(options));
 
 
-    public override DesignSettingActive? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    public override T? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        var x = JsonNode.Parse(ref reader);
+        var jsonNode = JsonNode.Parse(ref reader);
 
-        return x switch
+        const string errArray = "Error unexpected data - array instead of string or object";
+        return jsonNode switch
         {
             null => null,
-            JsonArray jArray => null, //ConvertArray(jArray),
-            JsonValue jValue =>  new() { Classes = jValue.ToString() },
+            JsonArray _ => ConvertValue(errArray),
+            JsonValue jValue => ConvertValue(jValue.ToString()),
             JsonObject jObject => ConvertObject(jObject, options),
             _ => null,
         };
     }
 
-    //private PairOnOff? ConvertArray(JsonArray jsonArray)
-    //{
-    //    if (jsonArray.Count == 0) return null;
-    //    return new()
-    //    {
-    //        On = jsonArray[0]?.ToString(),
-    //        Off = jsonArray.Count > 1 ? jsonArray[1]?.ToString() : null
-    //    };
-    //}
+    private T ConvertValue(string value) => new() { Classes = value, Value = value };
 }

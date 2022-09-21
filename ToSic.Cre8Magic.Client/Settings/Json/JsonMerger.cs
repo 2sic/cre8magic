@@ -14,7 +14,14 @@ internal class JsonMerger
     public static JsonSerializerOptions OptionsForPreMerge = new()
     {
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
-        Converters = { PairOnOffJsonConverter.GetNew(), DesignSettingsActiveJsonConverter.GetNew() },
+        Converters =
+        {
+            PairOnOffJsonConverter.GetNew(),
+            DesignSettingsJsonConverter<DesignSettingBase>.GetNew(),
+            DesignSettingsJsonConverter<DesignSettingActive>.GetNew(),
+            DesignSettingsJsonConverter<MagicMenuDesign>.GetNew(),
+            DesignSettingsJsonConverter<MagicContainerDesignSettingsItem>.GetNew(),
+        },
         ReadCommentHandling = JsonCommentHandling.Skip,
         AllowTrailingCommas = true,
     };

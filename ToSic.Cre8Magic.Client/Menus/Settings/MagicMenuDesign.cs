@@ -23,10 +23,4 @@ public class MagicMenuDesign: DesignSettingActive
     /// Classes to add if this node is in the path / breadcrumb of the current page.
     /// </summary>
     public PairOnOff? InBreadcrumb { get; set; }
-
-
-    /// <summary>
-    /// Special key to get a value - for non-css configurations
-    /// </summary>
-    public string? Value { get; set; }
 }

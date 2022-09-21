@@ -2,7 +2,7 @@
 
 namespace ToSic.Cre8Magic.Client.Containers.Settings;
 
-public class MagicContainerDesignSettingsItem: DesignSettingClasses
+public class MagicContainerDesignSettingsItem: DesignSettingBase
 {
     public PairOnOff? IsPublished { get; set; }
 
