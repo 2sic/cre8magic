@@ -5,6 +5,7 @@ public class MagicDebugSettings
     public bool? Allowed { get; set; }
     private const bool AllowedDefault = false;
     public bool? Anonymous { get; set; }
+    private const bool AnonymousDefault = false;
     public bool? Admin { get; set; }
     private const bool AdminDefault = true;
 
@@ -21,25 +22,23 @@ public class MagicDebugSettings
         return new()
         {
             Allowed = master.Allowed, // allowed can only come from master
-            Anonymous = master.Anonymous == true || slave.Anonymous == true,
-            Admin = master.Admin == true || slave.Admin == true,
+            Anonymous = Merge(master.Anonymous, slave.Anonymous), // slave.Anonymous == true || (slave.Anonymous == null && master.Anonymous == true),
+            Admin = Merge(master.Admin, slave.Admin), // slave.Admin == true || (slave.Admin == null && master.Admin == true),
         };
     }
+
+    private bool Merge(bool? master, bool? slave) => slave == true || (slave == null && master == true);
 
     internal MagicDebugState Parsed(bool isSuperUser)
     {
-        var onForAnonymous = Anonymous ?? false;
-        var onForCurrentUser = isSuperUser || onForAnonymous;
+        var settingForAnonymous = Anonymous ?? AnonymousDefault;
+        var settingForAdmin = Admin ?? AdminDefault;
+        var settingCurrentUser = isSuperUser ? settingForAdmin : settingForAnonymous;
 
-        var allow = onForCurrentUser && (Allowed ?? AllowedDefault);
-
-        return new()
-        {
-            Show = allow && (Admin ?? AdminDefault),
-        };
+        return new() { Show = settingCurrentUser && (Allowed ?? AllowedDefault) };
     }
 
-    private static readonly MagicDebugSettings DefFandF = new()
+    private static readonly MagicDebugSettings DefaultForAll = new()
     {
         Allowed = false,
         Anonymous = false,
@@ -48,7 +47,7 @@ public class MagicDebugSettings
 
     internal static Defaults<MagicDebugSettings> Defaults = new ()
     {
-        Foundation = DefFandF,
-        Fallback = DefFandF,
+        Foundation = DefaultForAll,
+        Fallback = DefaultForAll,
     };
 }

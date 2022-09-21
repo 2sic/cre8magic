@@ -1,0 +1,23 @@
+﻿@inherits MagicControl
+@code
+{
+    [Parameter, EditorRequired] public bool Show { get; set; }
+
+    [Parameter, EditorRequired] public LanguageService LanguageService { get; set; }
+
+    [Parameter, EditorRequired] public List<MagicLanguage> Languages { get; set; }
+
+    private Dictionary<string, object> GetMore() => new()
+    {
+        { "Language Settings", Settings.Languages },
+        { "Languages To Show", Languages },
+        { "Language Design", Settings.LanguageDesign }
+    };
+}
+<MagicDebug Target="@Settings.Languages" Title="Language Settings" More="GetMore()">
+    <Content>
+        <ul>
+            <li>Show: @Show</li>
+        </ul>
+    </Content>
+</MagicDebug>

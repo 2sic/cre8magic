@@ -1,6 +1,6 @@
 ﻿namespace ToSic.Cre8Magic.Client.Languages.Settings;
 
-public class MagicLanguagesSettings : SettingsWithInherit
+public class MagicLanguagesSettings : SettingsWithInherit, IHasDebugSettings
 {
     /// <summary>
     /// Dummy constructor so better find cases where it's created
@@ -13,6 +13,9 @@ public class MagicLanguagesSettings : SettingsWithInherit
     /// If false, will first show the configured languages, then the rest. 
     /// </summary>
     public bool HideOthers { get; set; } = false;
+
+    /// <inheritdoc />
+    public MagicDebugSettings? Debug { get; set; }
 
     /// <summary>
     /// List of languages
@@ -30,7 +33,7 @@ public class MagicLanguagesSettings : SettingsWithInherit
         // Ensure each config knows what culture it's for, as 
         foreach (var set in dic)
             set.Value.Culture ??= set.Key;
-        return dic; //.ToInvariant();
+        return dic;
     }
 
     internal static Defaults<MagicLanguagesSettings> Defaults = new()

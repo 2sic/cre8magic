@@ -9,13 +9,6 @@ public class MagicLanguage
     /// </summary>
     public MagicLanguage() { }
 
-    //public MagicLanguage(string culture, string? label = null, string? description = null)
-    //{
-    //    Culture = culture;
-    //    Label = label;
-    //    Description = description;
-    //}
-
     public string? Culture { get; set; }
 
     /// <summary>
@@ -33,5 +26,4 @@ public class MagicLanguage
     public bool IsActive => CultureInfo.CurrentUICulture.Name == Culture;
 
     // TODO: MAYBE additional options to only enable on certain roles...?
-
 }

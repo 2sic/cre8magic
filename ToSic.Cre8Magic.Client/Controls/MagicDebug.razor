@@ -4,6 +4,7 @@
 @code {
     [Parameter] public bool? Show { get; set; }
     [Parameter, EditorRequired] public object? Target { get; set; }
+    [Parameter] public Dictionary<string, object>? More { get; set; }
     [Parameter] public string? Title { get; set; }
 
     [Parameter] public RenderFragment? Content { get; set; }
@@ -12,6 +13,14 @@
 
     private MagicDebugState Debug => _debug ??= Settings.DebugState(Target);
     private MagicDebugState? _debug;
+
+    private static JsonSerializerOptions showOptions = new()
+    {
+        WriteIndented = true, 
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+    };
+
+    private bool MoreContainsTarget() => More?.ContainsValue(Target ?? "something random") ?? false;
 }
 @if (Show == false || !Debug.Show)
 {
@@ -48,9 +57,19 @@
                 else
                 {
                     @Content
-                    <pre>
-@JsonSerializer.Serialize(Target, new JsonSerializerOptions { WriteIndented = true, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull})
-</pre>
+                    @if (!MoreContainsTarget())
+                    {
+                        <pre>@JsonSerializer.Serialize(Target, showOptions)</pre>
+                    }
+                    @if (More?.Any() == true)
+                    {
+                        foreach (var m in More.Where(m => m.Value != default))
+                        {
+                            <h4>@m.Key</h4>
+                            <pre>@JsonSerializer.Serialize(m, showOptions)</pre>
+                        }
+
+                    }
                 }
             </div>
         </div>

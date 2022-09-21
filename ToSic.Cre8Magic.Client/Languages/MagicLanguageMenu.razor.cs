@@ -4,11 +4,14 @@ namespace ToSic.Cre8Magic.Client.Languages;
 
 public abstract class MagicLanguageMenu: MagicControl
 {
-    [Inject] private LanguageService LanguageService { get; set; }
+    [Inject] protected LanguageService LanguageService { get; set; }
 
     public List<MagicLanguage> Languages { get; private set; }
 
-    public bool? Show { get; private set; } = null;
+    /// <summary>
+    /// Determines if the languages should be shown. Will be retrieved from the settings
+    /// </summary>
+    protected bool? Show { get; private set; } = null;
 
     protected override async Task OnParametersSetAsync()
     {
