@@ -1,0 +1,16 @@
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\obj\Debug\net6.0\ToSic.Oqt.Cre8ive.Client.csproj.AssemblyReference.cache
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\obj\Debug\net6.0\ToSic.Oqt.Cre8ive.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\obj\Debug\net6.0\ToSic.Oqt.Cre8ive.Client.AssemblyInfoInputs.cache
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\obj\Debug\net6.0\ToSic.Oqt.Cre8ive.Client.AssemblyInfo.cs
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\obj\Debug\net6.0\ToSic.Oqt.Cre8ive.Client.csproj.CoreCompileInputs.cache
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\obj\Debug\net6.0\staticwebassets.build.json
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\obj\Debug\net6.0\staticwebassets.development.json
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\bin\Debug\net6.0\ToSic.Oqt.Cre8ive.Client.Oqtane.staticwebassets.runtime.json
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\bin\Debug\net6.0\ToSic.Oqt.Cre8ive.Client.Oqtane.deps.json
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\bin\Debug\net6.0\ToSic.Oqt.Cre8ive.Client.Oqtane.dll
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\bin\Debug\net6.0\ToSic.Oqt.Cre8ive.Client.Oqtane.pdb
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\obj\Debug\net6.0\scopedcss\bundle\ToSic.Oqt.Cre8ive.Client.Oqtane.styles.css
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\obj\Debug\net6.0\ToSic.Oqt.Cre8ive.Client.Oqtane.dll
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\obj\Debug\net6.0\refint\ToSic.Oqt.Cre8ive.Client.Oqtane.dll
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\obj\Debug\net6.0\ToSic.Oqt.Cre8ive.Client.Oqtane.pdb
+C:\Projects\2shine-oqtane\oqt-theme-2shine-bs5\ToSic.Oqt.Cre8ive.Client\obj\Debug\net6.0\ref\ToSic.Oqt.Cre8ive.Client.Oqtane.dll
