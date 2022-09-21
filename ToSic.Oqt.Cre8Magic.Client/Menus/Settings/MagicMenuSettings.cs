@@ -14,7 +14,7 @@ public class MagicMenuSettings : SettingsWithInherit, ICloneAndMerge<MagicMenuSe
     public string? ConfigName { get; set; }
 
     /// <inheritdoc />
-    public MagicDebugSettings Debug { get; set; } // = DebugDefault;
+    public MagicDebugSettings Debug { get; set; }
 
     //public const bool DebugDefault = false;
 
