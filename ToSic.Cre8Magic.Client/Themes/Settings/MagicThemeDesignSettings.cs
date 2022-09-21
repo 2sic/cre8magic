@@ -38,13 +38,13 @@ public class MagicThemeDesignSettings: SettingsWithInherit
     };
 
 
-    public string[] MagicContext { get; set; } = { }; //= MagicContextDefaults;
+    public string[] MagicContext { get; set; } = { };
 
-    public string PageIsHome { get; set; } // = $"{PagePrefixDefault}-is-home";
+    public PairOnOff PageIsHome { get; set; }
 
-    public string PaneIsEmpty { get; set; } // = $"{PanePrefixDefault}-is-empty";
+    public PairOnOff PaneIsEmpty { get; set; }
 
-    public string MagicContextTagId { get; set; } // = BodyDivId;
+    public string MagicContextTagId { get; set; }
 
     // TODO:
     public NamedSettings<string> Classes { get; set; } = new();
@@ -57,15 +57,15 @@ public class MagicThemeDesignSettings: SettingsWithInherit
         Fallback = new()
         {
             MagicContext = MagicContextDefaults,
-            PageIsHome = $"{PagePrefixDefault}-is-home",
-            PaneIsEmpty = $"{PanePrefixDefault}-is-empty",
+            PageIsHome = new($"{PagePrefixDefault}-is-home"),
+            PaneIsEmpty = new($"{PanePrefixDefault}-is-empty"),
             MagicContextTagId = BodyDivId
         },
         Foundation = new()
         {
             MagicContext = Array.Empty<string>(),
-            PageIsHome = "",
-            PaneIsEmpty = "",
+            PageIsHome = new(),
+            PaneIsEmpty = new(),
             MagicContextTagId = BodyDivId
         },
     };

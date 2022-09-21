@@ -15,7 +15,7 @@ internal class ThemeDesigner : MagicServiceWithSettingsBase
 
         // Make a copy...
         var classes = css.MagicContext.ToList();
-        if (pageState.Page.Path == "") classes.Add(css.PageIsHome);
+        classes.Add(css.PageIsHome?.Get(pageState.Page.Path == ""));
 
         // Do these once multi-language is better
         //1.5 Set the page-root-neutral-### class
@@ -29,7 +29,7 @@ internal class ThemeDesigner : MagicServiceWithSettingsBase
         //4.3 Set the lang-neutral- class
         // do once lang is clear
 
-        var bodyClasses = string.Join(" ", classes).Replace("  ", " ");
+        var bodyClasses = string.Join(" ", classes.Where(c => c.HasValue())).Replace("  ", " ");
 
         return tokens.Parse(bodyClasses);
     }
@@ -46,7 +46,7 @@ internal class ThemeDesigner : MagicServiceWithSettingsBase
     }
 
     public string PaneIsEmptyClasses(PageState pageState, string paneName)
-        => PaneIsEmpty(pageState, paneName) ? Settings?.ThemeDesign.PaneIsEmpty ?? "" : "";
+        => Settings?.ThemeDesign.PaneIsEmpty.Get(PaneIsEmpty(pageState, paneName)) ?? "";
 
     public string? Classes(string target) => Settings?.ThemeDesign.Classes.GetInvariant(target).EmptyAsNull();
 }
