@@ -1,4 +1,6 @@
-﻿namespace ToSic.Cre8Magic.Client.Menus.Settings;
+﻿using ToSic.Cre8Magic.Client.Settings.Debug;
+
+namespace ToSic.Cre8Magic.Client.Menus.Settings;
 
 public class MagicMenuSettings : SettingsWithInherit, ICloneAndMerge<MagicMenuSettings>, IHasDebugSettings
 {

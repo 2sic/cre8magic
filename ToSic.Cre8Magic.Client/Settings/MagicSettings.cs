@@ -1,6 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 using Oqtane.UI;
 using ToSic.Cre8Magic.Client.Breadcrumbs.Settings;
+using ToSic.Cre8Magic.Client.Settings.Debug;
 using static System.StringComparer;
 
 namespace ToSic.Cre8Magic.Client.Settings;
@@ -19,7 +20,7 @@ public class MagicSettings: IHasSettingsExceptions, IHasDebugSettings
         PageState = pageState;
     }
 
-    public MagicDebugState Debug => _debug ??= DebugState(Theme); // Service.Debug.Parsed(PageState.UserIsAdmin());
+    public MagicDebugState Debug => _debug ??= DebugState(Theme);
     private MagicDebugState? _debug;
 
     /// <summary>

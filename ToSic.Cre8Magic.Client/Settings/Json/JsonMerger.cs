@@ -79,8 +79,8 @@ internal class JsonMerger
 
     private static void MergeObjects(Utf8JsonWriter jsonWriter, JsonElement root1, JsonElement root2)
     {
-        Debug.Assert(root1.ValueKind == JsonValueKind.Object);
-        Debug.Assert(root2.ValueKind == JsonValueKind.Object);
+        System.Diagnostics.Debug.Assert(root1.ValueKind == JsonValueKind.Object);
+        System.Diagnostics.Debug.Assert(root2.ValueKind == JsonValueKind.Object);
 
         jsonWriter.WriteStartObject();
 
@@ -135,8 +135,8 @@ internal class JsonMerger
 
     private static void MergeArrays(Utf8JsonWriter jsonWriter, JsonElement root1, JsonElement root2)
     {
-        Debug.Assert(root1.ValueKind == JsonValueKind.Array);
-        Debug.Assert(root2.ValueKind == JsonValueKind.Array);
+        System.Diagnostics.Debug.Assert(root1.ValueKind == JsonValueKind.Array);
+        System.Diagnostics.Debug.Assert(root2.ValueKind == JsonValueKind.Array);
 
         jsonWriter.WriteStartArray();
 

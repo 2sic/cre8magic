@@ -1,4 +1,5 @@
-﻿using static ToSic.Cre8Magic.Client.MagicConstants;
+﻿using ToSic.Cre8Magic.Client.Settings.Debug;
+using static ToSic.Cre8Magic.Client.MagicConstants;
 
 namespace ToSic.Cre8Magic.Client.Themes.Settings;
 

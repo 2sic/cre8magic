@@ -1,4 +1,4 @@
-﻿namespace ToSic.Cre8Magic.Client.Settings;
+﻿namespace ToSic.Cre8Magic.Client.Settings.Debug;
 
 public class MagicDebugSettings
 {
@@ -9,11 +9,11 @@ public class MagicDebugSettings
     public bool? Admin { get; set; }
     private const bool AdminDefault = true;
 
-    public MagicDebugState GetState(object? target, bool isSuperUser)
+    public MagicDebugState GetState(object? target, bool isAdmin)
         => (target is not IHasDebugSettings debugTarget
                 ? this
                 : Merge(this, debugTarget.Debug))
-            .Parsed(isSuperUser);
+            .Parsed(isAdmin);
 
 
     private MagicDebugSettings Merge(MagicDebugSettings master, MagicDebugSettings? slave)
@@ -22,20 +22,18 @@ public class MagicDebugSettings
         return new()
         {
             Allowed = master.Allowed, // allowed can only come from master
-            Anonymous = Merge(master.Anonymous, slave.Anonymous), // slave.Anonymous == true || (slave.Anonymous == null && master.Anonymous == true),
-            Admin = Merge(master.Admin, slave.Admin), // slave.Admin == true || (slave.Admin == null && master.Admin == true),
+            Anonymous = Merge(master.Anonymous, slave.Anonymous),
+            Admin = Merge(master.Admin, slave.Admin),
         };
     }
 
-    private bool Merge(bool? master, bool? slave) => slave == true || (slave == null && master == true);
+    private bool Merge(bool? master, bool? slave) => slave == true || slave == null && master == true;
 
-    internal MagicDebugState Parsed(bool isSuperUser)
+    internal MagicDebugState Parsed(bool isAdmin)
     {
-        var settingForAnonymous = Anonymous ?? AnonymousDefault;
-        var settingForAdmin = Admin ?? AdminDefault;
-        var settingCurrentUser = isSuperUser ? settingForAdmin : settingForAnonymous;
+        if (!(Allowed ?? AllowedDefault)) return new();
 
-        return new() { Show = settingCurrentUser && (Allowed ?? AllowedDefault) };
+        return new() { Show = isAdmin ? Admin ?? AdminDefault : Anonymous ?? AnonymousDefault };
     }
 
     private static readonly MagicDebugSettings DefaultForAll = new()
@@ -45,7 +43,7 @@ public class MagicDebugSettings
         Admin = false,
     };
 
-    internal static Defaults<MagicDebugSettings> Defaults = new ()
+    internal static Defaults<MagicDebugSettings> Defaults = new()
     {
         Foundation = DefaultForAll,
         Fallback = DefaultForAll,
