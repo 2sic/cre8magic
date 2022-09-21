@@ -10,28 +10,19 @@ public class MagicMenuDesign: DesignSettingActive
 
     /// <summary>
     /// Classes to add if this node is a parent (has-children).
-    ///
-    /// Note that we used `IsParent` instead of `HasChildren` to keep naming with `IsNotParent` consistent. 
     /// </summary>
-    public string? HasChildren { get; set; }
-
-    /// <summary>
-    /// Classes to add if this node is not a parent (doesn't have children)
-    /// </summary>
-    public string? HasNoChildren { get; set; }
+    public PairOnOff? HasChildren { get; set; }
 
     /// <summary>
     /// Classes to add if the node is disabled.
     /// TODO: unclear why it's disabled, what would cause this...
     /// </summary>
-    public string? IsDisabled { get; set; }
-    public string? IsNotDisabled { get; set; }
+    public PairOnOff? IsDisabled { get; set; }
 
     /// <summary>
     /// Classes to add if this node is in the path / breadcrumb of the current page.
     /// </summary>
-    public string? IsInBreadcrumb { get; set; }
-    public string? IsNotInBreadcrumb { get; set; }
+    public PairOnOff? InBreadcrumb { get; set; }
 
 
     /// <summary>

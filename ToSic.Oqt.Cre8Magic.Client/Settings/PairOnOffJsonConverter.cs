@@ -8,17 +8,16 @@ public class PairOnOffJsonConverter : JsonConverter<PairOnOff>
 {
     public override void Write(Utf8JsonWriter writer, PairOnOff? pair, JsonSerializerOptions options)
     {
-        if (pair == null)
-            writer.WriteNullValue();
-        else if (pair.Off == null)
-            writer.WriteStringValue(pair.On);
-        else
+        if (pair?.On == null && pair?.Off == null)
         {
-            writer.WriteStartArray();
-            writer.WriteStringValue(pair.On);
-            writer.WriteStringValue(pair.Off);
-            writer.WriteEndArray();
+            writer.WriteNullValue();
+            return;
         }
+
+        writer.WriteStartObject();
+        writer.WritePair(nameof(pair.On), pair.On, true);
+        writer.WritePair(nameof(pair.Off), pair.Off, true);
+        writer.WriteEndObject();
     }
 
 
@@ -30,7 +29,7 @@ public class PairOnOffJsonConverter : JsonConverter<PairOnOff>
             null => null,
             JsonArray jArray => ArrayToPair(jArray),
             JsonValue jValue => new() { On = jValue.ToString() },
-            JsonObject jObject => null,
+            JsonObject jObject => ObjectToPair(jObject),
             _ => new() { On = "error", Off = "error" },
         };
     }
@@ -44,5 +43,16 @@ public class PairOnOffJsonConverter : JsonConverter<PairOnOff>
             On = parts[0]?.ToString(),
             Off = parts.Count > 1 ? parts[1]?.ToString() : null
         };
+    }
+
+    private PairOnOff? ObjectToPair(JsonObject jsonObject)
+    {
+        if (jsonObject == null) return null;
+        jsonObject.TryGetPropertyValue(nameof(PairOnOff.On), out var on);
+        jsonObject.TryGetPropertyValue(nameof(PairOnOff.Off), out var off);
+
+        if (on == null && off == null) return null;
+
+        return new(on?.ToString(), off?.ToString());
     }
 }

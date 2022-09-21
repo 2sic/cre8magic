@@ -14,7 +14,7 @@ public partial class MagicMenuDesignSettings
                 "a", new()
                 {
                     IsActive = new("active"),
-                    HasChildren = "dropdown-toggle",
+                    HasChildren = new("dropdown-toggle"),
                     ByLevel = new()
                     {
                         { ByLevelOtherKey, "dropdown-item" },
@@ -27,9 +27,9 @@ public partial class MagicMenuDesignSettings
                 "li", new()
                 {
                     Classes = $"nav-item nav-{PageId}",
-                    HasChildren = "has-child dropdown",
+                    HasChildren = new("has-child dropdown"),
                     IsActive = new("active"),
-                    IsDisabled = "disabled",
+                    IsDisabled = new("disabled"),
                 }
 
             },

@@ -44,17 +44,10 @@ internal class MagicMenuDesigner
     {
         var classes = new List<string?>();
         classes.AddRange(configs.Select(c => c.Classes));
-
-        classes.AddRange(configs.Select(c
-            => c.IsActive.Get(branch.IsActive))); // branch.IsActive ? c.IsActive : c.IsNotActive));
-
-        classes.AddRange(configs.Select(c
-            => branch.HasChildren ? c.HasChildren : c.HasNoChildren));
-        classes.AddRange(configs.Select(c
-            => branch.Page.IsClickable ? c.IsNotDisabled : c.IsDisabled));
-
-        classes.AddRange(configs.Select(c
-            => branch.InBreadcrumb ? c.IsInBreadcrumb : c.IsNotInBreadcrumb));
+        classes.AddRange(configs.Select(c => c.IsActive.Get(branch.IsActive)));
+        classes.AddRange(configs.Select(c => c.HasChildren.Get(branch.HasChildren)));
+        classes.AddRange(configs.Select(c => c.IsDisabled.Get(!branch.Page.IsClickable)));
+        classes.AddRange(configs.Select(c => c.InBreadcrumb.Get(branch.InBreadcrumb)));
 
         // See if there are any css for this level or for not-specified levels
         var levelCss = configs
