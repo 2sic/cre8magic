@@ -10,7 +10,7 @@ public class MagicLanguageDesignSettings: NamedSettings<DesignSettingActive>
         if (!this.Any()) return "";
         var styles = this.FindInvariant(tag);
         if (styles is null) return "";
-        return styles.Classes + " " + (lang?.IsActive ?? false ? styles.IsActive : styles.IsNotActive);
+        return styles.Classes + " " + styles.IsActive.Get(lang?.IsActive); // (lang?.IsActive ?? false ? styles.IsActive : styles.IsNotActive);
     }
 
     internal static Defaults<MagicLanguageDesignSettings> Defaults = new()
@@ -18,7 +18,7 @@ public class MagicLanguageDesignSettings: NamedSettings<DesignSettingActive>
         Fallback = new()
         {
             { "ul", new() { Classes = $"{MainPrefix}-page-language {SettingFromDefaults}" } },
-            { "li", new() { IsActive = $"active {SettingFromDefaults}", IsNotActive = "" } }
+            { "li", new() { IsActive = new($"active {SettingFromDefaults}") } },
         },
     };
 }

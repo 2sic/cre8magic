@@ -46,7 +46,7 @@ internal class MagicMenuDesigner
         classes.AddRange(configs.Select(c => c.Classes));
 
         classes.AddRange(configs.Select(c
-            => branch.IsActive ? c.IsActive : c.IsNotActive));
+            => c.IsActive.Get(branch.IsActive))); // branch.IsActive ? c.IsActive : c.IsNotActive));
 
         classes.AddRange(configs.Select(c
             => branch.HasChildren ? c.HasChildren : c.HasNoChildren));

@@ -28,7 +28,7 @@ public partial class MagicMenuDesignSettings
                 Classes = $"nav-item nav-{PageId} position-relative",
                 HasChildren = "has-child",
                 // todo: make sure that all the LIs or ULs in the breadcrumb don't have collapse ... or with "show"
-                IsActive = "active",
+                IsActive = new("active"),
                 IsDisabled = "disabled",
             }
         },
@@ -36,7 +36,7 @@ public partial class MagicMenuDesignSettings
             "a", new()
             {
                 Classes = "nav-link mobile-navigation-link",
-                IsActive = "active",
+                IsActive = new("active"),
             }
         },
         {
