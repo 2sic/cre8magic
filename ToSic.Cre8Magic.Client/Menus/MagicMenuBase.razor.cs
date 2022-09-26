@@ -6,6 +6,10 @@ public abstract class MagicMenuBase: Oqtane.Themes.Controls.MenuBase, IMagicCont
 {
     [CascadingParameter] public MagicSettings Settings { get; set; }
 
-    public string? Classes(string target) => $"error calling {nameof(Classes)} in {nameof(MagicMenuBase)}. Use the Classes method of the branch to get the expected result.";
-    public string? Value(string target) => $"error calling {nameof(Value)} in {nameof(MagicMenuBase)}. Use the Classes method of the branch to get the expected result.";
+    private const string ErrMsg = "error calling {0} in {1}. Use the {0} method of the branch to get the expected result.";
+
+    public string? Classes(string target) => string.Format(ErrMsg, nameof(Classes), nameof(MagicMenuBase));
+    public string? Value(string target) => string.Format(ErrMsg, nameof(Value), nameof(MagicMenuBase));
+
+    public string? Id(string target) => string.Format(ErrMsg, nameof(Id), nameof(MagicMenuBase));
 }

@@ -2,28 +2,30 @@
 
 namespace ToSic.Cre8Magic.Client.Containers.Settings;
 
-internal class ContainerDesigner 
+internal class ContainerDesigner: MagicDesignerBase
 {
     internal const string ModulePrefixDefault = "module";
 
     public ContainerDesigner(MagicSettings settings, Module module)
     {
-        _settings = settings;
+        InitSettings(settings);
+        // Settings = settings;
         _module = module;
     }
 
-    private readonly MagicSettings _settings;
     private readonly Module _module;
 
 
-    internal string? Classes(string tag)
+    protected override DesignSettingBase? GetSettings(string name) => Settings?.ContainerDesign.GetInvariant(name);
+
+    public override string? Classes(string tag)
     {
-        var styles = _settings.ContainerDesign.FindInvariant(tag); // safe, also does null-check
+        var styles = Settings.ContainerDesign.FindInvariant(tag); // safe, also does null-check
         if (styles is null) return null;
 
         var value = GetClasses(styles);
-        var tokens = _settings.Tokens.Expanded(new ModuleTokens(_module));
-        return tokens.Parse(value);
+        var tokens = Settings.Tokens.Expanded(new ModuleTokens(_module));
+        return tokens.Parse(value).EmptyAsNull();
     }
 
 

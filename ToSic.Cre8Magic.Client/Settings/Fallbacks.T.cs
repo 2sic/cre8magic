@@ -10,6 +10,6 @@ internal class Defaults<T> where T: class, new()
         Foundation = foundation;
     }
 
-    public T Fallback { get; set; } = new T();
+    public T Fallback { get; set; } = new();
     public T? Foundation { get; set; } = null;
 }

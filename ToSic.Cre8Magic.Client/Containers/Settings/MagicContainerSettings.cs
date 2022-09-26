@@ -15,7 +15,7 @@ public class MagicContainerSettings: SettingsWithInherit
         if (value == null || !value.Value.HasValue()) return null;
 
         var tokens = settings.Tokens.Expanded(new ModuleTokens(module));
-        return tokens.Parse(value.Value);
+        return tokens.Parse(value.Value).EmptyAsNull();
     }
 
     private static readonly MagicContainerSettings FbAndF = new()

@@ -31,6 +31,7 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     /// <summary>
     /// Sets additional body classes - usually to activate CSS variations for this theme
     /// </summary>
+    // TODO: probably rename to MagicClasses
     protected abstract string BodyClasses { get; }
 
     /// <summary>
@@ -55,8 +56,6 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     }
     private MagicSettingsService? _magicSettingsService;
 
-    private ThemeDesigner ThemeDesigner => MagicSettingsService.ThemeDesigner;
-
     /// <summary>
     /// The settings of this layout, as loaded from the ThemePackageSettings + JSON
     /// </summary>
@@ -77,9 +76,11 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     /// <summary>
     /// Special classes for divs surrounding panes pane, especially to indicate when it's empty
     /// </summary>
-    public string PaneClasses(string paneName) => ThemeDesigner.PaneClasses(paneName);
+    protected string PaneClasses(string paneName) => Settings?.ThemeDesigner.PaneClasses(paneName);
 
-    public string? Classes(string target) => ThemeDesigner.Classes(target);
+    public string? Classes(string target) => Settings?.ThemeDesigner.Classes(target);
 
-    public string? Value(string target) => ThemeDesigner.Value(target);
+    public string? Value(string target) => Settings?.ThemeDesigner.Value(target);
+
+    public string? Id(string name) => Settings?.ThemeDesigner.Id(name);
 }

@@ -48,7 +48,7 @@ internal class JsonMerger
 
         using (JsonDocument jDoc1 = JsonDocument.Parse(secondary))
         using (JsonDocument jDoc2 = JsonDocument.Parse(priority))
-        using (var jsonWriter = new Utf8JsonWriter(outputBuffer, new JsonWriterOptions { Indented = true }))
+        using (var jsonWriter = new Utf8JsonWriter(outputBuffer, new() { Indented = true }))
         {
             JsonElement root1 = jDoc1.RootElement;
             JsonElement root2 = jDoc2.RootElement;

@@ -3,7 +3,7 @@
 /// <summary>
 /// Special helper to figure out what classes should be applied to the page. 
 /// </summary>
-internal class ThemeDesigner : MagicServiceWithSettingsBase
+internal class ThemeDesigner : MagicDesignerBase
 {
     internal ThemeDesigner()
     {
@@ -57,7 +57,6 @@ internal class ThemeDesigner : MagicServiceWithSettingsBase
         return string.Join(" ", (new[] { empty, classes }).Where(s => s.HasValue()));
     }
 
-    public string? Classes(string target) => Settings?.ThemeDesign.Custom.GetInvariant(target)?.Classes.EmptyAsNull();
 
-    public string? Value(string target) => Settings?.ThemeDesign.Custom.GetInvariant(target)?.Value.EmptyAsNull();
+    protected override DesignSettingBase? GetSettings(string name) => Settings?.ThemeDesign.Custom.GetInvariant(name);
 }
