@@ -1,6 +1,4 @@
-﻿using ToSic.Cre8Magic.Client.Settings.Debug;
-
-namespace ToSic.Cre8Magic.Client.Languages.Settings;
+﻿namespace ToSic.Cre8Magic.Client.Languages.Settings;
 
 public class MagicLanguagesSettings : SettingsWithInherit, IHasDebugSettings
 {

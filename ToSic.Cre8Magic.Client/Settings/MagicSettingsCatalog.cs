@@ -1,5 +1,4 @@
 ﻿using ToSic.Cre8Magic.Client.Breadcrumbs.Settings;
-using ToSic.Cre8Magic.Client.Settings.Debug;
 
 namespace ToSic.Cre8Magic.Client.Settings;
 

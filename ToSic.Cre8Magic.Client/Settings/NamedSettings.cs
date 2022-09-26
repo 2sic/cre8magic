@@ -1,5 +1,4 @@
-﻿using System.Text.Json.Serialization;
-using static System.StringComparer;
+﻿using static System.StringComparer;
 
 namespace ToSic.Cre8Magic.Client.Settings;
 

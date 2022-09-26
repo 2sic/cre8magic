@@ -8,7 +8,7 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 418850854,
+        "HashCode": -548820630,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Containers.MagicContainer",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -24,7 +24,7 @@
         }
       },
       {
-        "HashCode": -1025243697,
+        "HashCode": 702819941,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Containers.MagicContainer",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -41,7 +41,7 @@
         }
       },
       {
-        "HashCode": -1431521435,
+        "HashCode": 1033648779,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicDebug",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -67,6 +67,14 @@
             "IsEditorRequired": true,
             "Metadata": {
               "Common.PropertyName": "Target"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "More",
+            "TypeName": "System.Collections.Generic.Dictionary<System.String, System.Object>",
+            "Metadata": {
+              "Common.PropertyName": "More"
             }
           },
           {
@@ -102,7 +110,7 @@
         }
       },
       {
-        "HashCode": 284106790,
+        "HashCode": -337301966,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicDebug",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -128,6 +136,14 @@
             "IsEditorRequired": true,
             "Metadata": {
               "Common.PropertyName": "Target"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "More",
+            "TypeName": "System.Collections.Generic.Dictionary<System.String, System.Object>",
+            "Metadata": {
+              "Common.PropertyName": "More"
             }
           },
           {
@@ -164,7 +180,7 @@
         }
       },
       {
-        "HashCode": -601321726,
+        "HashCode": -1748048322,
         "Kind": "Components.ChildContent",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicDebug.Content",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -182,7 +198,7 @@
         }
       },
       {
-        "HashCode": -1172807657,
+        "HashCode": 2019967355,
         "Kind": "Components.ChildContent",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicDebug.Content",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -201,7 +217,7 @@
         }
       },
       {
-        "HashCode": 1558270637,
+        "HashCode": 710109046,
         "Kind": "Components.ChildContent",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicDebug.Button",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -219,7 +235,7 @@
         }
       },
       {
-        "HashCode": 1586826000,
+        "HashCode": -146164144,
         "Kind": "Components.ChildContent",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicDebug.Button",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -238,7 +254,7 @@
         }
       },
       {
-        "HashCode": -815292518,
+        "HashCode": 380772151,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicExceptions",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -254,7 +270,7 @@
         }
       },
       {
-        "HashCode": -433366596,
+        "HashCode": -276729304,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicExceptions",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -271,7 +287,7 @@
         }
       },
       {
-        "HashCode": -1248808656,
+        "HashCode": 603540862,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicThemeDebug",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -287,7 +303,7 @@
         }
       },
       {
-        "HashCode": 1558297552,
+        "HashCode": -945584903,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicThemeDebug",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -304,7 +320,7 @@
         }
       },
       {
-        "HashCode": -535942646,
+        "HashCode": 1423655069,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.DynComponents.DynComponentList",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -339,7 +355,7 @@
         }
       },
       {
-        "HashCode": -1120862382,
+        "HashCode": 1863028803,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.DynComponents.DynComponentList",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -375,7 +391,98 @@
         }
       },
       {
-        "HashCode": -425653382,
+        "HashCode": -917215730,
+        "Kind": "Components.Component",
+        "Name": "ToSic.Cre8Magic.Client.Languages.MagicLanguageDebug",
+        "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MagicLanguageDebug"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Show",
+            "TypeName": "System.Boolean",
+            "IsEditorRequired": true,
+            "Metadata": {
+              "Common.PropertyName": "Show"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "LanguageService",
+            "TypeName": "ToSic.Cre8Magic.Client.Services.LanguageService",
+            "IsEditorRequired": true,
+            "Metadata": {
+              "Common.PropertyName": "LanguageService"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Languages",
+            "TypeName": "System.Collections.Generic.List<ToSic.Cre8Magic.Client.Languages.Settings.MagicLanguage>",
+            "IsEditorRequired": true,
+            "Metadata": {
+              "Common.PropertyName": "Languages"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToSic.Cre8Magic.Client.Languages.MagicLanguageDebug"
+        }
+      },
+      {
+        "HashCode": 1599045527,
+        "Kind": "Components.Component",
+        "Name": "ToSic.Cre8Magic.Client.Languages.MagicLanguageDebug",
+        "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ToSic.Cre8Magic.Client.Languages.MagicLanguageDebug"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Show",
+            "TypeName": "System.Boolean",
+            "IsEditorRequired": true,
+            "Metadata": {
+              "Common.PropertyName": "Show"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "LanguageService",
+            "TypeName": "ToSic.Cre8Magic.Client.Services.LanguageService",
+            "IsEditorRequired": true,
+            "Metadata": {
+              "Common.PropertyName": "LanguageService"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Languages",
+            "TypeName": "System.Collections.Generic.List<ToSic.Cre8Magic.Client.Languages.Settings.MagicLanguage>",
+            "IsEditorRequired": true,
+            "Metadata": {
+              "Common.PropertyName": "Languages"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToSic.Cre8Magic.Client.Languages.MagicLanguageDebug",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 2144403578,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Menus.MagicMenuDebug",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -402,7 +509,7 @@
         }
       },
       {
-        "HashCode": -1479624323,
+        "HashCode": 1827964624,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Menus.MagicMenuDebug",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -430,7 +537,7 @@
         }
       },
       {
-        "HashCode": 507794345,
+        "HashCode": -1776688775,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Themes.MagicContext",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -457,7 +564,7 @@
         }
       },
       {
-        "HashCode": 297876249,
+        "HashCode": 717341366,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Themes.MagicContext",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -485,7 +592,7 @@
         }
       },
       {
-        "HashCode": -63858957,
+        "HashCode": -1170180724,
         "Kind": "Components.ChildContent",
         "Name": "ToSic.Cre8Magic.Client.Themes.MagicContext.ChildContent",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -503,7 +610,7 @@
         }
       },
       {
-        "HashCode": 170298338,
+        "HashCode": 672101740,
         "Kind": "Components.ChildContent",
         "Name": "ToSic.Cre8Magic.Client.Themes.MagicContext.ChildContent",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -522,7 +629,7 @@
         }
       },
       {
-        "HashCode": -304191239,
+        "HashCode": 110270744,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -591,7 +698,7 @@
         }
       },
       {
-        "HashCode": 640513476,
+        "HashCode": -529212789,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -661,7 +768,7 @@
         }
       },
       {
-        "HashCode": -1525872629,
+        "HashCode": -1497431481,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -680,7 +787,7 @@
         }
       },
       {
-        "HashCode": -720002950,
+        "HashCode": 1220878104,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.CascadingValue<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -700,7 +807,7 @@
         }
       },
       {
-        "HashCode": 1060814312,
+        "HashCode": 145847496,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.DynamicComponent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -738,7 +845,7 @@
         }
       },
       {
-        "HashCode": -562916495,
+        "HashCode": 594169282,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.DynamicComponent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -777,7 +884,7 @@
         }
       },
       {
-        "HashCode": 346814638,
+        "HashCode": -519660685,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.LayoutView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -815,7 +922,7 @@
         }
       },
       {
-        "HashCode": 1171658676,
+        "HashCode": -40141128,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.LayoutView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -854,7 +961,7 @@
         }
       },
       {
-        "HashCode": -1631718166,
+        "HashCode": -827279510,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.LayoutView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -873,7 +980,7 @@
         }
       },
       {
-        "HashCode": -1587774250,
+        "HashCode": -1876302973,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.LayoutView.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -893,7 +1000,7 @@
         }
       },
       {
-        "HashCode": -505558052,
+        "HashCode": -73333268,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.RouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -931,7 +1038,7 @@
         }
       },
       {
-        "HashCode": -82430770,
+        "HashCode": -1189888600,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.RouteView",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -970,7 +1077,7 @@
         }
       },
       {
-        "HashCode": 1305809022,
+        "HashCode": 1434969721,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1069,7 +1176,7 @@
         }
       },
       {
-        "HashCode": -5146407,
+        "HashCode": 1110874699,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1169,7 +1276,7 @@
         }
       },
       {
-        "HashCode": -266550559,
+        "HashCode": 2072377471,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.NotFound",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1188,7 +1295,7 @@
         }
       },
       {
-        "HashCode": 1999928646,
+        "HashCode": 237452672,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.NotFound",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1208,7 +1315,7 @@
         }
       },
       {
-        "HashCode": -304640574,
+        "HashCode": 1900408163,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Found",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1239,7 +1346,7 @@
         }
       },
       {
-        "HashCode": 840291156,
+        "HashCode": -675987677,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Found",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1271,7 +1378,7 @@
         }
       },
       {
-        "HashCode": -1143596391,
+        "HashCode": -640326134,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Navigating",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1290,7 +1397,7 @@
         }
       },
       {
-        "HashCode": 714736901,
+        "HashCode": 421766510,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.Router.Navigating",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -1310,7 +1417,7 @@
         }
       },
       {
-        "HashCode": -2023895431,
+        "HashCode": -279641735,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.DataAnnotationsValidator",
         "AssemblyName": "Microsoft.AspNetCore.Components.Forms",
@@ -1327,7 +1434,7 @@
         }
       },
       {
-        "HashCode": -931591194,
+        "HashCode": 1595504060,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.DataAnnotationsValidator",
         "AssemblyName": "Microsoft.AspNetCore.Components.Forms",
@@ -1345,7 +1452,7 @@
         }
       },
       {
-        "HashCode": -1508797316,
+        "HashCode": 650400653,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -1441,7 +1548,7 @@
         }
       },
       {
-        "HashCode": -173077191,
+        "HashCode": 1442926765,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -1538,7 +1645,7 @@
         }
       },
       {
-        "HashCode": -853496528,
+        "HashCode": -1681490196,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -1569,7 +1676,7 @@
         }
       },
       {
-        "HashCode": -1086724191,
+        "HashCode": -1910569066,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -1601,7 +1708,7 @@
         }
       },
       {
-        "HashCode": -1585358677,
+        "HashCode": -1754423577,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -1666,7 +1773,7 @@
         }
       },
       {
-        "HashCode": -2083612491,
+        "HashCode": -544987446,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -1732,7 +1839,7 @@
         }
       },
       {
-        "HashCode": 78128135,
+        "HashCode": 1558338483,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -1831,7 +1938,7 @@
         }
       },
       {
-        "HashCode": -1547501434,
+        "HashCode": -470118904,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -1931,7 +2038,7 @@
         }
       },
       {
-        "HashCode": -1657582031,
+        "HashCode": 1679492146,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputFile",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -1969,7 +2076,7 @@
         }
       },
       {
-        "HashCode": 954121976,
+        "HashCode": 567061558,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputFile",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2008,7 +2115,7 @@
         }
       },
       {
-        "HashCode": -171591729,
+        "HashCode": 1995678685,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2097,7 +2204,7 @@
         }
       },
       {
-        "HashCode": -712126118,
+        "HashCode": -1193128379,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2187,7 +2294,7 @@
         }
       },
       {
-        "HashCode": -1988855612,
+        "HashCode": -167305467,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadio<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2246,7 +2353,7 @@
         }
       },
       {
-        "HashCode": 413000743,
+        "HashCode": -1052343366,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadio<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2306,7 +2413,7 @@
         }
       },
       {
-        "HashCode": 638888709,
+        "HashCode": 113297682,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2405,7 +2512,7 @@
         }
       },
       {
-        "HashCode": -1748684063,
+        "HashCode": -840748695,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2505,7 +2612,7 @@
         }
       },
       {
-        "HashCode": 1988163723,
+        "HashCode": 2082697485,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2524,7 +2631,7 @@
         }
       },
       {
-        "HashCode": 192788813,
+        "HashCode": 741752509,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2544,7 +2651,7 @@
         }
       },
       {
-        "HashCode": -581989806,
+        "HashCode": -507734040,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2634,7 +2741,7 @@
         }
       },
       {
-        "HashCode": 561002884,
+        "HashCode": 1397864791,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2725,7 +2832,7 @@
         }
       },
       {
-        "HashCode": 1263072785,
+        "HashCode": -1582913700,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2744,7 +2851,7 @@
         }
       },
       {
-        "HashCode": 1223406689,
+        "HashCode": 1986043935,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2764,7 +2871,7 @@
         }
       },
       {
-        "HashCode": -263523340,
+        "HashCode": 1703655344,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2829,7 +2936,7 @@
         }
       },
       {
-        "HashCode": 756726605,
+        "HashCode": 202612704,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2895,7 +3002,7 @@
         }
       },
       {
-        "HashCode": 2021278976,
+        "HashCode": -1825965248,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -2960,7 +3067,7 @@
         }
       },
       {
-        "HashCode": -901917344,
+        "HashCode": 975159049,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3026,7 +3133,7 @@
         }
       },
       {
-        "HashCode": -762964493,
+        "HashCode": 1706320460,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationMessage<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3076,7 +3183,7 @@
         }
       },
       {
-        "HashCode": -1880434718,
+        "HashCode": -366785630,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationMessage<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3127,7 +3234,7 @@
         }
       },
       {
-        "HashCode": -1948208902,
+        "HashCode": -1817061847,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationSummary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3164,7 +3271,7 @@
         }
       },
       {
-        "HashCode": -1226806180,
+        "HashCode": 1195454280,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.ValidationSummary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3202,7 +3309,7 @@
         }
       },
       {
-        "HashCode": -1659088680,
+        "HashCode": -564440624,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.FocusOnNavigate",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3239,7 +3346,7 @@
         }
       },
       {
-        "HashCode": 282561022,
+        "HashCode": 32040401,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.FocusOnNavigate",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3277,7 +3384,7 @@
         }
       },
       {
-        "HashCode": -1873296203,
+        "HashCode": -1523194375,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3334,7 +3441,7 @@
         }
       },
       {
-        "HashCode": -1526778838,
+        "HashCode": 1271697528,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3392,7 +3499,7 @@
         }
       },
       {
-        "HashCode": 417785287,
+        "HashCode": 564818956,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3411,7 +3518,7 @@
         }
       },
       {
-        "HashCode": -1910626713,
+        "HashCode": -1653833036,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Routing.NavLink.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3431,7 +3538,7 @@
         }
       },
       {
-        "HashCode": -1450810603,
+        "HashCode": 782620587,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3460,7 +3567,7 @@
         }
       },
       {
-        "HashCode": 532473570,
+        "HashCode": -1828044862,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3490,7 +3597,7 @@
         }
       },
       {
-        "HashCode": 1985800979,
+        "HashCode": -1320479083,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3509,7 +3616,7 @@
         }
       },
       {
-        "HashCode": 1950499514,
+        "HashCode": -306207080,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadContent.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3529,7 +3636,7 @@
         }
       },
       {
-        "HashCode": 352096617,
+        "HashCode": -1498211250,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadOutlet",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3546,7 +3653,7 @@
         }
       },
       {
-        "HashCode": 1043897317,
+        "HashCode": 1782678067,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.HeadOutlet",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3564,7 +3671,7 @@
         }
       },
       {
-        "HashCode": 1723799268,
+        "HashCode": 147484246,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3593,7 +3700,7 @@
         }
       },
       {
-        "HashCode": -488541426,
+        "HashCode": -1722798294,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3623,7 +3730,7 @@
         }
       },
       {
-        "HashCode": 371650012,
+        "HashCode": 1710646127,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3642,7 +3749,7 @@
         }
       },
       {
-        "HashCode": 835194524,
+        "HashCode": -1702468189,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.PageTitle.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3662,7 +3769,7 @@
         }
       },
       {
-        "HashCode": 1198288512,
+        "HashCode": 1151974524,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3720,7 +3827,7 @@
         }
       },
       {
-        "HashCode": 274185104,
+        "HashCode": -629212610,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3779,7 +3886,7 @@
         }
       },
       {
-        "HashCode": 318288768,
+        "HashCode": -325808997,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3798,7 +3905,7 @@
         }
       },
       {
-        "HashCode": -13967240,
+        "HashCode": 1918605883,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3818,7 +3925,7 @@
         }
       },
       {
-        "HashCode": -1820002853,
+        "HashCode": 2018937469,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ErrorContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3849,7 +3956,7 @@
         }
       },
       {
-        "HashCode": 425483415,
+        "HashCode": -1674341116,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.ErrorBoundary.ErrorContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3881,7 +3988,7 @@
         }
       },
       {
-        "HashCode": 1542959142,
+        "HashCode": 582671627,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -3993,7 +4100,7 @@
         }
       },
       {
-        "HashCode": -954965633,
+        "HashCode": 2144485290,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4106,7 +4213,7 @@
         }
       },
       {
-        "HashCode": 1186047138,
+        "HashCode": -234195344,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4137,7 +4244,7 @@
         }
       },
       {
-        "HashCode": 1529299667,
+        "HashCode": -1837955348,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ChildContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4169,7 +4276,7 @@
         }
       },
       {
-        "HashCode": 841663595,
+        "HashCode": -2068788009,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ItemContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4200,7 +4307,7 @@
         }
       },
       {
-        "HashCode": -802746335,
+        "HashCode": 1541392783,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.ItemContent",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4232,7 +4339,7 @@
         }
       },
       {
-        "HashCode": 411098564,
+        "HashCode": 425244452,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.Placeholder",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4263,7 +4370,7 @@
         }
       },
       {
-        "HashCode": -1424951843,
+        "HashCode": -1635018186,
         "Kind": "Components.ChildContent",
         "Name": "Microsoft.AspNetCore.Components.Web.Virtualization.Virtualize<TItem>.Placeholder",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -4295,7 +4402,7 @@
         }
       },
       {
-        "HashCode": -1719821404,
+        "HashCode": 466487237,
         "Kind": "Components.Component",
         "Name": "Oqtane.App",
         "AssemblyName": "Oqtane.Client",
@@ -4361,7 +4468,7 @@
         }
       },
       {
-        "HashCode": -104567121,
+        "HashCode": -931263069,
         "Kind": "Components.Component",
         "Name": "Oqtane.App",
         "AssemblyName": "Oqtane.Client",
@@ -4428,7 +4535,7 @@
         }
       },
       {
-        "HashCode": -144108434,
+        "HashCode": 1325777413,
         "Kind": "Components.Component",
         "Name": "Oqtane._Imports",
         "AssemblyName": "Oqtane.Client",
@@ -4444,7 +4551,7 @@
         }
       },
       {
-        "HashCode": -203374166,
+        "HashCode": -1486714058,
         "Kind": "Components.Component",
         "Name": "Oqtane._Imports",
         "AssemblyName": "Oqtane.Client",
@@ -4461,7 +4568,7 @@
         }
       },
       {
-        "HashCode": 1745487867,
+        "HashCode": 1530778130,
         "Kind": "Components.Component",
         "Name": "Oqtane.Installer.Installer",
         "AssemblyName": "Oqtane.Client",
@@ -4477,7 +4584,7 @@
         }
       },
       {
-        "HashCode": -1689119196,
+        "HashCode": 1343862180,
         "Kind": "Components.Component",
         "Name": "Oqtane.Installer.Installer",
         "AssemblyName": "Oqtane.Client",
@@ -4494,7 +4601,7 @@
         }
       },
       {
-        "HashCode": -923851358,
+        "HashCode": 839136107,
         "Kind": "Components.Component",
         "Name": "Oqtane.Installer.Controls.LocalDBConfig",
         "AssemblyName": "Oqtane.Client",
@@ -4510,7 +4617,7 @@
         }
       },
       {
-        "HashCode": -139516736,
+        "HashCode": 2065467557,
         "Kind": "Components.Component",
         "Name": "Oqtane.Installer.Controls.LocalDBConfig",
         "AssemblyName": "Oqtane.Client",
@@ -4527,7 +4634,7 @@
         }
       },
       {
-        "HashCode": -421673804,
+        "HashCode": 695477282,
         "Kind": "Components.Component",
         "Name": "Oqtane.Installer.Controls.MySQLConfig",
         "AssemblyName": "Oqtane.Client",
@@ -4543,7 +4650,7 @@
         }
       },
       {
-        "HashCode": 522673752,
+        "HashCode": -1155760870,
         "Kind": "Components.Component",
         "Name": "Oqtane.Installer.Controls.MySQLConfig",
         "AssemblyName": "Oqtane.Client",
@@ -4560,7 +4667,7 @@
         }
       },
       {
-        "HashCode": 1860016353,
+        "HashCode": 241880643,
         "Kind": "Components.Component",
         "Name": "Oqtane.Installer.Controls.PostgreSQLConfig",
         "AssemblyName": "Oqtane.Client",
@@ -4576,7 +4683,7 @@
         }
       },
       {
-        "HashCode": 1023060719,
+        "HashCode": 1824155659,
         "Kind": "Components.Component",
         "Name": "Oqtane.Installer.Controls.PostgreSQLConfig",
         "AssemblyName": "Oqtane.Client",
@@ -4593,7 +4700,7 @@
         }
       },
       {
-        "HashCode": -923468823,
+        "HashCode": 105192679,
         "Kind": "Components.Component",
         "Name": "Oqtane.Installer.Controls.SqliteConfig",
         "AssemblyName": "Oqtane.Client",
@@ -4609,7 +4716,7 @@
         }
       },
       {
-        "HashCode": -1298447437,
+        "HashCode": 1831765946,
         "Kind": "Components.Component",
         "Name": "Oqtane.Installer.Controls.SqliteConfig",
         "AssemblyName": "Oqtane.Client",
@@ -4626,7 +4733,7 @@
         }
       },
       {
-        "HashCode": -722589671,
+        "HashCode": -31732307,
         "Kind": "Components.Component",
         "Name": "Oqtane.Installer.Controls.SqlServerConfig",
         "AssemblyName": "Oqtane.Client",
@@ -4642,7 +4749,7 @@
         }
       },
       {
-        "HashCode": 713857935,
+        "HashCode": -504217589,
         "Kind": "Components.Component",
         "Name": "Oqtane.Installer.Controls.SqlServerConfig",
         "AssemblyName": "Oqtane.Client",
@@ -4659,7 +4766,7 @@
         }
       },
       {
-        "HashCode": 1141254016,
+        "HashCode": -324142717,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Dashboard.Index",
         "AssemblyName": "Oqtane.Client",
@@ -4685,7 +4792,7 @@
         }
       },
       {
-        "HashCode": 140953305,
+        "HashCode": 1140954813,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Dashboard.Index",
         "AssemblyName": "Oqtane.Client",
@@ -4712,7 +4819,7 @@
         }
       },
       {
-        "HashCode": 581549925,
+        "HashCode": -1145597910,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Error.Index",
         "AssemblyName": "Oqtane.Client",
@@ -4738,7 +4845,7 @@
         }
       },
       {
-        "HashCode": -1683423935,
+        "HashCode": 269834502,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Error.Index",
         "AssemblyName": "Oqtane.Client",
@@ -4765,7 +4872,7 @@
         }
       },
       {
-        "HashCode": -1984701710,
+        "HashCode": -2047388113,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Files.Add",
         "AssemblyName": "Oqtane.Client",
@@ -4791,7 +4898,7 @@
         }
       },
       {
-        "HashCode": 1133470452,
+        "HashCode": 1341711550,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Files.Add",
         "AssemblyName": "Oqtane.Client",
@@ -4818,7 +4925,7 @@
         }
       },
       {
-        "HashCode": -927429891,
+        "HashCode": -439514643,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Files.Details",
         "AssemblyName": "Oqtane.Client",
@@ -4844,7 +4951,7 @@
         }
       },
       {
-        "HashCode": 1580116034,
+        "HashCode": -1006520847,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Files.Details",
         "AssemblyName": "Oqtane.Client",
@@ -4871,7 +4978,7 @@
         }
       },
       {
-        "HashCode": 1050875993,
+        "HashCode": -1830543035,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Files.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -4897,7 +5004,7 @@
         }
       },
       {
-        "HashCode": -759722887,
+        "HashCode": -1634232492,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Files.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -4924,7 +5031,7 @@
         }
       },
       {
-        "HashCode": 915139302,
+        "HashCode": -1663973104,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Files.Index",
         "AssemblyName": "Oqtane.Client",
@@ -4950,7 +5057,7 @@
         }
       },
       {
-        "HashCode": 30219773,
+        "HashCode": 1050178799,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Files.Index",
         "AssemblyName": "Oqtane.Client",
@@ -4977,7 +5084,7 @@
         }
       },
       {
-        "HashCode": 1403576238,
+        "HashCode": -917507692,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Jobs.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -5003,7 +5110,7 @@
         }
       },
       {
-        "HashCode": -797872983,
+        "HashCode": -1735506928,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Jobs.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -5030,7 +5137,7 @@
         }
       },
       {
-        "HashCode": -542862300,
+        "HashCode": -374443645,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Jobs.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5056,7 +5163,7 @@
         }
       },
       {
-        "HashCode": -1174599615,
+        "HashCode": -867734771,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Jobs.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5083,7 +5190,7 @@
         }
       },
       {
-        "HashCode": 1345830804,
+        "HashCode": -1597325521,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Jobs.Log",
         "AssemblyName": "Oqtane.Client",
@@ -5109,7 +5216,7 @@
         }
       },
       {
-        "HashCode": 83070457,
+        "HashCode": 1226956067,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Jobs.Log",
         "AssemblyName": "Oqtane.Client",
@@ -5136,7 +5243,7 @@
         }
       },
       {
-        "HashCode": 2020893671,
+        "HashCode": -167194842,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Languages.Add",
         "AssemblyName": "Oqtane.Client",
@@ -5162,7 +5269,7 @@
         }
       },
       {
-        "HashCode": -723527455,
+        "HashCode": 143832962,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Languages.Add",
         "AssemblyName": "Oqtane.Client",
@@ -5189,7 +5296,7 @@
         }
       },
       {
-        "HashCode": 1477051495,
+        "HashCode": -1917581616,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Languages.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5215,7 +5322,7 @@
         }
       },
       {
-        "HashCode": -1358365113,
+        "HashCode": -1837767195,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Languages.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5242,7 +5349,7 @@
         }
       },
       {
-        "HashCode": -300341039,
+        "HashCode": -1520178231,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Login.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5268,7 +5375,7 @@
         }
       },
       {
-        "HashCode": 1208368756,
+        "HashCode": 1558728158,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Login.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5295,7 +5402,7 @@
         }
       },
       {
-        "HashCode": -352822681,
+        "HashCode": 1129981869,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Logs.Detail",
         "AssemblyName": "Oqtane.Client",
@@ -5321,7 +5428,7 @@
         }
       },
       {
-        "HashCode": -1877022474,
+        "HashCode": -1883092333,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Logs.Detail",
         "AssemblyName": "Oqtane.Client",
@@ -5348,7 +5455,7 @@
         }
       },
       {
-        "HashCode": -436536738,
+        "HashCode": -1415356913,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Logs.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5374,7 +5481,7 @@
         }
       },
       {
-        "HashCode": -525034991,
+        "HashCode": -1094625011,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Logs.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5401,7 +5508,7 @@
         }
       },
       {
-        "HashCode": 1614367952,
+        "HashCode": -612417350,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.ModuleCreator.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5427,7 +5534,7 @@
         }
       },
       {
-        "HashCode": 304976962,
+        "HashCode": 1696537930,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.ModuleCreator.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5454,7 +5561,7 @@
         }
       },
       {
-        "HashCode": -714115426,
+        "HashCode": 646658483,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.ModuleDefinitions.Add",
         "AssemblyName": "Oqtane.Client",
@@ -5480,7 +5587,7 @@
         }
       },
       {
-        "HashCode": -141144529,
+        "HashCode": 849417352,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.ModuleDefinitions.Add",
         "AssemblyName": "Oqtane.Client",
@@ -5507,7 +5614,7 @@
         }
       },
       {
-        "HashCode": 1228803751,
+        "HashCode": 1406862628,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.ModuleDefinitions.Create",
         "AssemblyName": "Oqtane.Client",
@@ -5533,7 +5640,7 @@
         }
       },
       {
-        "HashCode": -1203133363,
+        "HashCode": 707178335,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.ModuleDefinitions.Create",
         "AssemblyName": "Oqtane.Client",
@@ -5560,7 +5667,7 @@
         }
       },
       {
-        "HashCode": -2033122535,
+        "HashCode": -1122682419,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.ModuleDefinitions.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -5586,7 +5693,7 @@
         }
       },
       {
-        "HashCode": 2142338001,
+        "HashCode": 1555765915,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.ModuleDefinitions.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -5613,7 +5720,7 @@
         }
       },
       {
-        "HashCode": 1200900696,
+        "HashCode": 557436190,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.ModuleDefinitions.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5639,7 +5746,7 @@
         }
       },
       {
-        "HashCode": 112003337,
+        "HashCode": -391988469,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.ModuleDefinitions.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5666,7 +5773,7 @@
         }
       },
       {
-        "HashCode": 1091534214,
+        "HashCode": 1673997115,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Modules.Export",
         "AssemblyName": "Oqtane.Client",
@@ -5692,7 +5799,7 @@
         }
       },
       {
-        "HashCode": 1340187071,
+        "HashCode": -868815428,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Modules.Export",
         "AssemblyName": "Oqtane.Client",
@@ -5719,7 +5826,7 @@
         }
       },
       {
-        "HashCode": -1176962260,
+        "HashCode": -1761405296,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Modules.Import",
         "AssemblyName": "Oqtane.Client",
@@ -5745,7 +5852,7 @@
         }
       },
       {
-        "HashCode": -1783664860,
+        "HashCode": -2052661187,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Modules.Import",
         "AssemblyName": "Oqtane.Client",
@@ -5772,7 +5879,7 @@
         }
       },
       {
-        "HashCode": -1482592323,
+        "HashCode": 289508890,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Modules.Settings",
         "AssemblyName": "Oqtane.Client",
@@ -5798,7 +5905,7 @@
         }
       },
       {
-        "HashCode": -1904895531,
+        "HashCode": -1156026900,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Modules.Settings",
         "AssemblyName": "Oqtane.Client",
@@ -5825,7 +5932,7 @@
         }
       },
       {
-        "HashCode": -1195069239,
+        "HashCode": 1679237827,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Pages.Add",
         "AssemblyName": "Oqtane.Client",
@@ -5851,7 +5958,7 @@
         }
       },
       {
-        "HashCode": 1237786563,
+        "HashCode": -1815250061,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Pages.Add",
         "AssemblyName": "Oqtane.Client",
@@ -5878,7 +5985,7 @@
         }
       },
       {
-        "HashCode": -54888137,
+        "HashCode": -503679392,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Pages.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -5904,7 +6011,7 @@
         }
       },
       {
-        "HashCode": 2142169256,
+        "HashCode": -1023271184,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Pages.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -5931,7 +6038,7 @@
         }
       },
       {
-        "HashCode": -1852103933,
+        "HashCode": 1549863258,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Pages.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5957,7 +6064,7 @@
         }
       },
       {
-        "HashCode": -1996381266,
+        "HashCode": -1191847246,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Pages.Index",
         "AssemblyName": "Oqtane.Client",
@@ -5984,7 +6091,7 @@
         }
       },
       {
-        "HashCode": 552681482,
+        "HashCode": -1571471534,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Profiles.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -6010,7 +6117,7 @@
         }
       },
       {
-        "HashCode": 703452504,
+        "HashCode": 1051440521,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Profiles.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -6037,7 +6144,7 @@
         }
       },
       {
-        "HashCode": -1496979843,
+        "HashCode": 424419445,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Profiles.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6063,7 +6170,7 @@
         }
       },
       {
-        "HashCode": -2016242718,
+        "HashCode": 1022059341,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Profiles.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6090,7 +6197,7 @@
         }
       },
       {
-        "HashCode": 520920091,
+        "HashCode": -842918880,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.RecycleBin.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6116,7 +6223,7 @@
         }
       },
       {
-        "HashCode": 2028816308,
+        "HashCode": 730238474,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.RecycleBin.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6143,7 +6250,7 @@
         }
       },
       {
-        "HashCode": 259696006,
+        "HashCode": -326772556,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Register.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6169,7 +6276,7 @@
         }
       },
       {
-        "HashCode": 622195611,
+        "HashCode": 1673149972,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Register.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6196,7 +6303,7 @@
         }
       },
       {
-        "HashCode": 767524941,
+        "HashCode": -587579679,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Reset.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6222,7 +6329,7 @@
         }
       },
       {
-        "HashCode": -381075408,
+        "HashCode": -692418811,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Reset.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6249,7 +6356,7 @@
         }
       },
       {
-        "HashCode": 798939301,
+        "HashCode": -1778391524,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Roles.Add",
         "AssemblyName": "Oqtane.Client",
@@ -6275,7 +6382,7 @@
         }
       },
       {
-        "HashCode": -297970177,
+        "HashCode": 1791137592,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Roles.Add",
         "AssemblyName": "Oqtane.Client",
@@ -6302,7 +6409,7 @@
         }
       },
       {
-        "HashCode": 740369904,
+        "HashCode": -1141953111,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Roles.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -6328,7 +6435,7 @@
         }
       },
       {
-        "HashCode": -2012690690,
+        "HashCode": -501926986,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Roles.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -6355,7 +6462,7 @@
         }
       },
       {
-        "HashCode": 442250290,
+        "HashCode": 342356762,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Roles.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6381,7 +6488,7 @@
         }
       },
       {
-        "HashCode": 1883696185,
+        "HashCode": -517555361,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Roles.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6408,7 +6515,7 @@
         }
       },
       {
-        "HashCode": 842645026,
+        "HashCode": -1955744604,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Roles.Users",
         "AssemblyName": "Oqtane.Client",
@@ -6434,7 +6541,7 @@
         }
       },
       {
-        "HashCode": 1151120111,
+        "HashCode": 1877935409,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Roles.Users",
         "AssemblyName": "Oqtane.Client",
@@ -6461,7 +6568,7 @@
         }
       },
       {
-        "HashCode": -1501806294,
+        "HashCode": -605964299,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Site.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6487,7 +6594,7 @@
         }
       },
       {
-        "HashCode": 1499827828,
+        "HashCode": 371447195,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Site.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6514,7 +6621,7 @@
         }
       },
       {
-        "HashCode": -1159550002,
+        "HashCode": -651535378,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Sites.Add",
         "AssemblyName": "Oqtane.Client",
@@ -6540,7 +6647,7 @@
         }
       },
       {
-        "HashCode": -1680305904,
+        "HashCode": -354687262,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Sites.Add",
         "AssemblyName": "Oqtane.Client",
@@ -6567,7 +6674,7 @@
         }
       },
       {
-        "HashCode": 1748595295,
+        "HashCode": -1894478894,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Sites.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6593,7 +6700,7 @@
         }
       },
       {
-        "HashCode": 350469379,
+        "HashCode": -1662525516,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Sites.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6620,7 +6727,7 @@
         }
       },
       {
-        "HashCode": 1208610690,
+        "HashCode": -222722191,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Sql.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6646,7 +6753,7 @@
         }
       },
       {
-        "HashCode": 1347349153,
+        "HashCode": -23931,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Sql.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6673,7 +6780,7 @@
         }
       },
       {
-        "HashCode": 1476277496,
+        "HashCode": 1375888996,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.SystemInfo.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6699,7 +6806,7 @@
         }
       },
       {
-        "HashCode": 273737846,
+        "HashCode": -1164278354,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.SystemInfo.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6726,7 +6833,7 @@
         }
       },
       {
-        "HashCode": 721439702,
+        "HashCode": -1842974055,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Themes.Add",
         "AssemblyName": "Oqtane.Client",
@@ -6752,7 +6859,7 @@
         }
       },
       {
-        "HashCode": -1063458104,
+        "HashCode": -1164840747,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Themes.Add",
         "AssemblyName": "Oqtane.Client",
@@ -6779,7 +6886,7 @@
         }
       },
       {
-        "HashCode": 699357970,
+        "HashCode": 1583890193,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Themes.Create",
         "AssemblyName": "Oqtane.Client",
@@ -6805,7 +6912,7 @@
         }
       },
       {
-        "HashCode": -1036203489,
+        "HashCode": -2033568996,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Themes.Create",
         "AssemblyName": "Oqtane.Client",
@@ -6832,7 +6939,7 @@
         }
       },
       {
-        "HashCode": 1870499505,
+        "HashCode": -19632813,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Themes.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6858,7 +6965,7 @@
         }
       },
       {
-        "HashCode": -31031604,
+        "HashCode": 583258225,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Themes.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6885,7 +6992,7 @@
         }
       },
       {
-        "HashCode": 1896345518,
+        "HashCode": 757914601,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Themes.View",
         "AssemblyName": "Oqtane.Client",
@@ -6911,7 +7018,7 @@
         }
       },
       {
-        "HashCode": 182584548,
+        "HashCode": 68761631,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Themes.View",
         "AssemblyName": "Oqtane.Client",
@@ -6938,7 +7045,7 @@
         }
       },
       {
-        "HashCode": 1639195861,
+        "HashCode": -268515412,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Upgrade.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6964,7 +7071,7 @@
         }
       },
       {
-        "HashCode": 589480339,
+        "HashCode": -349831899,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Upgrade.Index",
         "AssemblyName": "Oqtane.Client",
@@ -6991,7 +7098,7 @@
         }
       },
       {
-        "HashCode": -1526909263,
+        "HashCode": -1477611185,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.UrlMappings.Add",
         "AssemblyName": "Oqtane.Client",
@@ -7017,7 +7124,7 @@
         }
       },
       {
-        "HashCode": 1356419504,
+        "HashCode": 809525567,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.UrlMappings.Add",
         "AssemblyName": "Oqtane.Client",
@@ -7044,7 +7151,7 @@
         }
       },
       {
-        "HashCode": -926573431,
+        "HashCode": -1661737559,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.UrlMappings.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -7070,7 +7177,7 @@
         }
       },
       {
-        "HashCode": 1194046570,
+        "HashCode": 440609523,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.UrlMappings.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -7097,7 +7204,7 @@
         }
       },
       {
-        "HashCode": 1441904573,
+        "HashCode": -506766969,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.UrlMappings.Index",
         "AssemblyName": "Oqtane.Client",
@@ -7123,7 +7230,7 @@
         }
       },
       {
-        "HashCode": -1391766178,
+        "HashCode": 1368001088,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.UrlMappings.Index",
         "AssemblyName": "Oqtane.Client",
@@ -7150,7 +7257,7 @@
         }
       },
       {
-        "HashCode": 1601561834,
+        "HashCode": 1747702278,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.UserProfile.Add",
         "AssemblyName": "Oqtane.Client",
@@ -7176,7 +7283,7 @@
         }
       },
       {
-        "HashCode": -276100024,
+        "HashCode": 487450526,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.UserProfile.Add",
         "AssemblyName": "Oqtane.Client",
@@ -7203,7 +7310,7 @@
         }
       },
       {
-        "HashCode": 2012702193,
+        "HashCode": -235257583,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.UserProfile.Index",
         "AssemblyName": "Oqtane.Client",
@@ -7229,7 +7336,7 @@
         }
       },
       {
-        "HashCode": 1258576316,
+        "HashCode": -1860823016,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.UserProfile.Index",
         "AssemblyName": "Oqtane.Client",
@@ -7256,7 +7363,7 @@
         }
       },
       {
-        "HashCode": 609635638,
+        "HashCode": -850571117,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.UserProfile.View",
         "AssemblyName": "Oqtane.Client",
@@ -7282,7 +7389,7 @@
         }
       },
       {
-        "HashCode": -768850812,
+        "HashCode": 1539074199,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.UserProfile.View",
         "AssemblyName": "Oqtane.Client",
@@ -7309,7 +7416,7 @@
         }
       },
       {
-        "HashCode": -102378132,
+        "HashCode": -1856704186,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Users.Add",
         "AssemblyName": "Oqtane.Client",
@@ -7335,7 +7442,7 @@
         }
       },
       {
-        "HashCode": 2117944817,
+        "HashCode": -1383471878,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Users.Add",
         "AssemblyName": "Oqtane.Client",
@@ -7362,7 +7469,7 @@
         }
       },
       {
-        "HashCode": 1545126221,
+        "HashCode": 314688182,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Users.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -7388,7 +7495,7 @@
         }
       },
       {
-        "HashCode": -1583715818,
+        "HashCode": -1351192166,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Users.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -7415,7 +7522,7 @@
         }
       },
       {
-        "HashCode": -1561864796,
+        "HashCode": -1488757975,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Users.Index",
         "AssemblyName": "Oqtane.Client",
@@ -7441,7 +7548,7 @@
         }
       },
       {
-        "HashCode": 39861170,
+        "HashCode": 1964479043,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Users.Index",
         "AssemblyName": "Oqtane.Client",
@@ -7468,7 +7575,7 @@
         }
       },
       {
-        "HashCode": 1846601102,
+        "HashCode": -252874185,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Users.Roles",
         "AssemblyName": "Oqtane.Client",
@@ -7494,7 +7601,7 @@
         }
       },
       {
-        "HashCode": -102562216,
+        "HashCode": -1256188592,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Users.Roles",
         "AssemblyName": "Oqtane.Client",
@@ -7521,7 +7628,7 @@
         }
       },
       {
-        "HashCode": 1481945562,
+        "HashCode": 438109450,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Visitors.Detail",
         "AssemblyName": "Oqtane.Client",
@@ -7547,7 +7654,7 @@
         }
       },
       {
-        "HashCode": -990243975,
+        "HashCode": -1743669828,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Visitors.Detail",
         "AssemblyName": "Oqtane.Client",
@@ -7574,7 +7681,7 @@
         }
       },
       {
-        "HashCode": -193678185,
+        "HashCode": 427355219,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Visitors.Index",
         "AssemblyName": "Oqtane.Client",
@@ -7600,7 +7707,7 @@
         }
       },
       {
-        "HashCode": -1167785719,
+        "HashCode": 1855153202,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Admin.Visitors.Index",
         "AssemblyName": "Oqtane.Client",
@@ -7627,7 +7734,7 @@
         }
       },
       {
-        "HashCode": -1409476494,
+        "HashCode": -588792347,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.LocalizableComponent",
         "AssemblyName": "Oqtane.Client",
@@ -7669,7 +7776,7 @@
         }
       },
       {
-        "HashCode": 1773659835,
+        "HashCode": -910821340,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.LocalizableComponent",
         "AssemblyName": "Oqtane.Client",
@@ -7712,7 +7819,7 @@
         }
       },
       {
-        "HashCode": -673035295,
+        "HashCode": -687888030,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.ActionDialog",
         "AssemblyName": "Oqtane.Client",
@@ -7843,7 +7950,7 @@
         }
       },
       {
-        "HashCode": 693252505,
+        "HashCode": -769085914,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.ActionDialog",
         "AssemblyName": "Oqtane.Client",
@@ -7975,7 +8082,7 @@
         }
       },
       {
-        "HashCode": -1414254554,
+        "HashCode": -1265600537,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.ActionLink",
         "AssemblyName": "Oqtane.Client",
@@ -8130,7 +8237,7 @@
         }
       },
       {
-        "HashCode": -1373656110,
+        "HashCode": -696666726,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.ActionLink",
         "AssemblyName": "Oqtane.Client",
@@ -8286,7 +8393,7 @@
         }
       },
       {
-        "HashCode": 1831061686,
+        "HashCode": 1550385111,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.AuditInfo",
         "AssemblyName": "Oqtane.Client",
@@ -8384,7 +8491,7 @@
         }
       },
       {
-        "HashCode": -1067042979,
+        "HashCode": -1874830225,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.AuditInfo",
         "AssemblyName": "Oqtane.Client",
@@ -8483,7 +8590,7 @@
         }
       },
       {
-        "HashCode": 606791877,
+        "HashCode": 224253742,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.FileManager",
         "AssemblyName": "Oqtane.Client",
@@ -8624,7 +8731,7 @@
         }
       },
       {
-        "HashCode": -603338052,
+        "HashCode": -190801445,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.FileManager",
         "AssemblyName": "Oqtane.Client",
@@ -8766,7 +8873,7 @@
         }
       },
       {
-        "HashCode": -1631600417,
+        "HashCode": -2146016054,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.Label",
         "AssemblyName": "Oqtane.Client",
@@ -8841,7 +8948,7 @@
         }
       },
       {
-        "HashCode": 382853174,
+        "HashCode": -788124142,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.Label",
         "AssemblyName": "Oqtane.Client",
@@ -8917,7 +9024,7 @@
         }
       },
       {
-        "HashCode": -1250539206,
+        "HashCode": 382325999,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.Label.ChildContent",
         "AssemblyName": "Oqtane.Client",
@@ -8935,7 +9042,7 @@
         }
       },
       {
-        "HashCode": -949859323,
+        "HashCode": 1282739352,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.Label.ChildContent",
         "AssemblyName": "Oqtane.Client",
@@ -8954,7 +9061,7 @@
         }
       },
       {
-        "HashCode": -1505834101,
+        "HashCode": 1966290404,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.ModuleMessage",
         "AssemblyName": "Oqtane.Client",
@@ -8997,7 +9104,7 @@
         }
       },
       {
-        "HashCode": 476269720,
+        "HashCode": -1402450421,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.ModuleMessage",
         "AssemblyName": "Oqtane.Client",
@@ -9041,7 +9148,7 @@
         }
       },
       {
-        "HashCode": 1858702988,
+        "HashCode": 1431363080,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.Pager<TableItem>",
         "AssemblyName": "Oqtane.Client",
@@ -9208,7 +9315,7 @@
         }
       },
       {
-        "HashCode": 380392114,
+        "HashCode": -786165405,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.Pager<TableItem>",
         "AssemblyName": "Oqtane.Client",
@@ -9376,7 +9483,7 @@
         }
       },
       {
-        "HashCode": 1135978211,
+        "HashCode": -1596071472,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.Pager<TableItem>.Header",
         "AssemblyName": "Oqtane.Client",
@@ -9394,7 +9501,7 @@
         }
       },
       {
-        "HashCode": -897604669,
+        "HashCode": -1354147386,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.Pager<TableItem>.Header",
         "AssemblyName": "Oqtane.Client",
@@ -9413,7 +9520,7 @@
         }
       },
       {
-        "HashCode": -1028997688,
+        "HashCode": 632468372,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.Pager<TableItem>.Row",
         "AssemblyName": "Oqtane.Client",
@@ -9443,7 +9550,7 @@
         }
       },
       {
-        "HashCode": 14620100,
+        "HashCode": -162535468,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.Pager<TableItem>.Row",
         "AssemblyName": "Oqtane.Client",
@@ -9474,7 +9581,7 @@
         }
       },
       {
-        "HashCode": 2129321135,
+        "HashCode": -648001199,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.Pager<TableItem>.Detail",
         "AssemblyName": "Oqtane.Client",
@@ -9504,7 +9611,7 @@
         }
       },
       {
-        "HashCode": -706699570,
+        "HashCode": -126935966,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.Pager<TableItem>.Detail",
         "AssemblyName": "Oqtane.Client",
@@ -9535,7 +9642,7 @@
         }
       },
       {
-        "HashCode": 696182663,
+        "HashCode": -181094771,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.PermissionGrid",
         "AssemblyName": "Oqtane.Client",
@@ -9585,7 +9692,7 @@
         }
       },
       {
-        "HashCode": -1803676594,
+        "HashCode": 703500678,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.PermissionGrid",
         "AssemblyName": "Oqtane.Client",
@@ -9636,7 +9743,7 @@
         }
       },
       {
-        "HashCode": -1365055793,
+        "HashCode": 2012427329,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.RichTextEditor",
         "AssemblyName": "Oqtane.Client",
@@ -9727,7 +9834,7 @@
         }
       },
       {
-        "HashCode": 1690786367,
+        "HashCode": 1136786831,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.RichTextEditor",
         "AssemblyName": "Oqtane.Client",
@@ -9819,7 +9926,7 @@
         }
       },
       {
-        "HashCode": 2077520385,
+        "HashCode": 1981936187,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.RichTextEditor.ToolbarContent",
         "AssemblyName": "Oqtane.Client",
@@ -9837,7 +9944,7 @@
         }
       },
       {
-        "HashCode": 1375392502,
+        "HashCode": -1973606008,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.RichTextEditor.ToolbarContent",
         "AssemblyName": "Oqtane.Client",
@@ -9856,7 +9963,7 @@
         }
       },
       {
-        "HashCode": -318238382,
+        "HashCode": -1046370499,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.Section",
         "AssemblyName": "Oqtane.Client",
@@ -9931,7 +10038,7 @@
         }
       },
       {
-        "HashCode": -17133078,
+        "HashCode": 733335970,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.Section",
         "AssemblyName": "Oqtane.Client",
@@ -10007,7 +10114,7 @@
         }
       },
       {
-        "HashCode": 1215684849,
+        "HashCode": -521430564,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.Section.ChildContent",
         "AssemblyName": "Oqtane.Client",
@@ -10025,7 +10132,7 @@
         }
       },
       {
-        "HashCode": -1003774059,
+        "HashCode": 1776085390,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.Section.ChildContent",
         "AssemblyName": "Oqtane.Client",
@@ -10044,7 +10151,7 @@
         }
       },
       {
-        "HashCode": -208698570,
+        "HashCode": 1798313218,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.TabPanel",
         "AssemblyName": "Oqtane.Client",
@@ -10119,7 +10226,7 @@
         }
       },
       {
-        "HashCode": 1650307140,
+        "HashCode": 848536877,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.TabPanel",
         "AssemblyName": "Oqtane.Client",
@@ -10195,7 +10302,7 @@
         }
       },
       {
-        "HashCode": 1808080216,
+        "HashCode": -1508621510,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.TabPanel.ChildContent",
         "AssemblyName": "Oqtane.Client",
@@ -10213,7 +10320,7 @@
         }
       },
       {
-        "HashCode": -947835999,
+        "HashCode": -1568775309,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.TabPanel.ChildContent",
         "AssemblyName": "Oqtane.Client",
@@ -10232,7 +10339,7 @@
         }
       },
       {
-        "HashCode": -31684156,
+        "HashCode": -519854362,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.TabStrip",
         "AssemblyName": "Oqtane.Client",
@@ -10283,7 +10390,7 @@
         }
       },
       {
-        "HashCode": 1892638062,
+        "HashCode": 402827043,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.TabStrip",
         "AssemblyName": "Oqtane.Client",
@@ -10335,7 +10442,7 @@
         }
       },
       {
-        "HashCode": 2032508812,
+        "HashCode": 69288088,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.TabStrip.ChildContent",
         "AssemblyName": "Oqtane.Client",
@@ -10353,7 +10460,7 @@
         }
       },
       {
-        "HashCode": 126333288,
+        "HashCode": -2020800300,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.Modules.Controls.TabStrip.ChildContent",
         "AssemblyName": "Oqtane.Client",
@@ -10372,7 +10479,7 @@
         }
       },
       {
-        "HashCode": -2095682123,
+        "HashCode": -476532857,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.TriStateCheckBox",
         "AssemblyName": "Oqtane.Client",
@@ -10423,7 +10530,7 @@
         }
       },
       {
-        "HashCode": 1287612316,
+        "HashCode": 2111673536,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.Controls.TriStateCheckBox",
         "AssemblyName": "Oqtane.Client",
@@ -10475,7 +10582,7 @@
         }
       },
       {
-        "HashCode": -468748494,
+        "HashCode": -989526716,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.HtmlText.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -10501,7 +10608,7 @@
         }
       },
       {
-        "HashCode": 1178504467,
+        "HashCode": -910958053,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.HtmlText.Edit",
         "AssemblyName": "Oqtane.Client",
@@ -10528,7 +10635,7 @@
         }
       },
       {
-        "HashCode": -1472682552,
+        "HashCode": -1161069562,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.HtmlText.Index",
         "AssemblyName": "Oqtane.Client",
@@ -10554,7 +10661,7 @@
         }
       },
       {
-        "HashCode": -2127971263,
+        "HashCode": 2142894626,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.HtmlText.Index",
         "AssemblyName": "Oqtane.Client",
@@ -10581,7 +10688,7 @@
         }
       },
       {
-        "HashCode": 464114162,
+        "HashCode": -536750170,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.HtmlText.Settings",
         "AssemblyName": "Oqtane.Client",
@@ -10607,7 +10714,7 @@
         }
       },
       {
-        "HashCode": 1920998035,
+        "HashCode": -2138556128,
         "Kind": "Components.Component",
         "Name": "Oqtane.Modules.HtmlText.Settings",
         "AssemblyName": "Oqtane.Client",
@@ -10634,7 +10741,7 @@
         }
       },
       {
-        "HashCode": 725439661,
+        "HashCode": 646473230,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.AdminContainer",
         "AssemblyName": "Oqtane.Client",
@@ -10650,7 +10757,7 @@
         }
       },
       {
-        "HashCode": 188903985,
+        "HashCode": 2088388965,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.AdminContainer",
         "AssemblyName": "Oqtane.Client",
@@ -10667,7 +10774,7 @@
         }
       },
       {
-        "HashCode": 498656943,
+        "HashCode": -1068367752,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.DefaultContainer",
         "AssemblyName": "Oqtane.Client",
@@ -10683,7 +10790,7 @@
         }
       },
       {
-        "HashCode": 236912264,
+        "HashCode": 1690507894,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.DefaultContainer",
         "AssemblyName": "Oqtane.Client",
@@ -10700,7 +10807,7 @@
         }
       },
       {
-        "HashCode": -125348847,
+        "HashCode": 1312423044,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.BlazorTheme.Container",
         "AssemblyName": "Oqtane.Client",
@@ -10716,7 +10823,7 @@
         }
       },
       {
-        "HashCode": -456994355,
+        "HashCode": 237215401,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.BlazorTheme.Container",
         "AssemblyName": "Oqtane.Client",
@@ -10733,7 +10840,7 @@
         }
       },
       {
-        "HashCode": 1697690995,
+        "HashCode": 567238441,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.BlazorTheme.Default",
         "AssemblyName": "Oqtane.Client",
@@ -10749,7 +10856,7 @@
         }
       },
       {
-        "HashCode": 1884302802,
+        "HashCode": 437288955,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.BlazorTheme.Default",
         "AssemblyName": "Oqtane.Client",
@@ -10766,7 +10873,7 @@
         }
       },
       {
-        "HashCode": -1044916441,
+        "HashCode": 350041142,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.ModuleActionsBase",
         "AssemblyName": "Oqtane.Client",
@@ -10782,7 +10889,7 @@
         }
       },
       {
-        "HashCode": -117439027,
+        "HashCode": -1703210734,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.ModuleActionsBase",
         "AssemblyName": "Oqtane.Client",
@@ -10799,7 +10906,7 @@
         }
       },
       {
-        "HashCode": 2026511114,
+        "HashCode": 872420840,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.LoginBase",
         "AssemblyName": "Oqtane.Client",
@@ -10815,7 +10922,7 @@
         }
       },
       {
-        "HashCode": 1011483695,
+        "HashCode": 1846853243,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.LoginBase",
         "AssemblyName": "Oqtane.Client",
@@ -10832,7 +10939,7 @@
         }
       },
       {
-        "HashCode": 279085915,
+        "HashCode": -383970726,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.MenuBase",
         "AssemblyName": "Oqtane.Client",
@@ -10848,7 +10955,7 @@
         }
       },
       {
-        "HashCode": -1469027398,
+        "HashCode": -1871962608,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.MenuBase",
         "AssemblyName": "Oqtane.Client",
@@ -10865,7 +10972,7 @@
         }
       },
       {
-        "HashCode": -803387620,
+        "HashCode": 305121473,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.ModuleActions",
         "AssemblyName": "Oqtane.Client",
@@ -10881,7 +10988,7 @@
         }
       },
       {
-        "HashCode": -173399968,
+        "HashCode": -798798785,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.ModuleActions",
         "AssemblyName": "Oqtane.Client",
@@ -10898,7 +11005,7 @@
         }
       },
       {
-        "HashCode": -1214179986,
+        "HashCode": -2078051619,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.ModuleTitle",
         "AssemblyName": "Oqtane.Client",
@@ -10914,7 +11021,7 @@
         }
       },
       {
-        "HashCode": 577715226,
+        "HashCode": -997067817,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.ModuleTitle",
         "AssemblyName": "Oqtane.Client",
@@ -10931,7 +11038,7 @@
         }
       },
       {
-        "HashCode": -1950065825,
+        "HashCode": 964621309,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.Breadcrumbs",
         "AssemblyName": "Oqtane.Client",
@@ -10947,7 +11054,7 @@
         }
       },
       {
-        "HashCode": 673284102,
+        "HashCode": -1142410359,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.Breadcrumbs",
         "AssemblyName": "Oqtane.Client",
@@ -10964,7 +11071,7 @@
         }
       },
       {
-        "HashCode": 1176355513,
+        "HashCode": -324945850,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.ControlPanel",
         "AssemblyName": "Oqtane.Client",
@@ -11022,7 +11129,7 @@
         }
       },
       {
-        "HashCode": -1067635368,
+        "HashCode": 1811256187,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.ControlPanel",
         "AssemblyName": "Oqtane.Client",
@@ -11081,7 +11188,7 @@
         }
       },
       {
-        "HashCode": -2141755618,
+        "HashCode": -1486784051,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.LanguageSwitcher",
         "AssemblyName": "Oqtane.Client",
@@ -11097,7 +11204,7 @@
         }
       },
       {
-        "HashCode": -2054032215,
+        "HashCode": -2127487165,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.LanguageSwitcher",
         "AssemblyName": "Oqtane.Client",
@@ -11114,7 +11221,7 @@
         }
       },
       {
-        "HashCode": 1439400542,
+        "HashCode": 1249526690,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.Login",
         "AssemblyName": "Oqtane.Client",
@@ -11140,7 +11247,7 @@
         }
       },
       {
-        "HashCode": 1327307976,
+        "HashCode": -1707453289,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.Login",
         "AssemblyName": "Oqtane.Client",
@@ -11167,7 +11274,7 @@
         }
       },
       {
-        "HashCode": 279471427,
+        "HashCode": 900539220,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.Logo",
         "AssemblyName": "Oqtane.Client",
@@ -11183,7 +11290,7 @@
         }
       },
       {
-        "HashCode": 1740948460,
+        "HashCode": 437787230,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.Logo",
         "AssemblyName": "Oqtane.Client",
@@ -11200,7 +11307,7 @@
         }
       },
       {
-        "HashCode": 626831956,
+        "HashCode": 636490741,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.Menu",
         "AssemblyName": "Oqtane.Client",
@@ -11226,7 +11333,7 @@
         }
       },
       {
-        "HashCode": -1623203477,
+        "HashCode": 243928472,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.Menu",
         "AssemblyName": "Oqtane.Client",
@@ -11253,7 +11360,7 @@
         }
       },
       {
-        "HashCode": -774083013,
+        "HashCode": -1583780407,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.MenuHorizontal",
         "AssemblyName": "Oqtane.Client",
@@ -11269,7 +11376,7 @@
         }
       },
       {
-        "HashCode": -1836835288,
+        "HashCode": -1502369587,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.MenuHorizontal",
         "AssemblyName": "Oqtane.Client",
@@ -11286,7 +11393,7 @@
         }
       },
       {
-        "HashCode": -1199389307,
+        "HashCode": -882237964,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.MenuItemsHorizontal",
         "AssemblyName": "Oqtane.Client",
@@ -11320,7 +11427,7 @@
         }
       },
       {
-        "HashCode": 1344773291,
+        "HashCode": 1432553930,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.MenuItemsHorizontal",
         "AssemblyName": "Oqtane.Client",
@@ -11355,7 +11462,7 @@
         }
       },
       {
-        "HashCode": 755132965,
+        "HashCode": -1139624945,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.MenuItemsVertical",
         "AssemblyName": "Oqtane.Client",
@@ -11389,7 +11496,7 @@
         }
       },
       {
-        "HashCode": -1603330831,
+        "HashCode": 1656733687,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.MenuItemsVertical",
         "AssemblyName": "Oqtane.Client",
@@ -11424,7 +11531,7 @@
         }
       },
       {
-        "HashCode": -1881247285,
+        "HashCode": 1148473714,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.MenuVertical",
         "AssemblyName": "Oqtane.Client",
@@ -11440,7 +11547,7 @@
         }
       },
       {
-        "HashCode": 321194042,
+        "HashCode": 470127053,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.MenuVertical",
         "AssemblyName": "Oqtane.Client",
@@ -11457,7 +11564,7 @@
         }
       },
       {
-        "HashCode": 1899670701,
+        "HashCode": -379321656,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.UserProfile",
         "AssemblyName": "Oqtane.Client",
@@ -11483,7 +11590,7 @@
         }
       },
       {
-        "HashCode": 1607764777,
+        "HashCode": -716957151,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.Controls.UserProfile",
         "AssemblyName": "Oqtane.Client",
@@ -11510,7 +11617,7 @@
         }
       },
       {
-        "HashCode": 1179232473,
+        "HashCode": 1452750778,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.OqtaneTheme.Container",
         "AssemblyName": "Oqtane.Client",
@@ -11526,7 +11633,7 @@
         }
       },
       {
-        "HashCode": -1125930517,
+        "HashCode": -532335061,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.OqtaneTheme.Container",
         "AssemblyName": "Oqtane.Client",
@@ -11543,7 +11650,7 @@
         }
       },
       {
-        "HashCode": 2001739966,
+        "HashCode": -509650273,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.OqtaneTheme.ContainerSettings",
         "AssemblyName": "Oqtane.Client",
@@ -11569,7 +11676,7 @@
         }
       },
       {
-        "HashCode": 1556164149,
+        "HashCode": -1473416971,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.OqtaneTheme.ContainerSettings",
         "AssemblyName": "Oqtane.Client",
@@ -11596,7 +11703,7 @@
         }
       },
       {
-        "HashCode": 74711060,
+        "HashCode": -1590195294,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.OqtaneTheme.Default",
         "AssemblyName": "Oqtane.Client",
@@ -11612,7 +11719,7 @@
         }
       },
       {
-        "HashCode": 2031761942,
+        "HashCode": -713711012,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.OqtaneTheme.Default",
         "AssemblyName": "Oqtane.Client",
@@ -11629,7 +11736,7 @@
         }
       },
       {
-        "HashCode": -1375203896,
+        "HashCode": 1755023876,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.OqtaneTheme.ThemeSettings",
         "AssemblyName": "Oqtane.Client",
@@ -11655,7 +11762,7 @@
         }
       },
       {
-        "HashCode": -1074382213,
+        "HashCode": -1718684602,
         "Kind": "Components.Component",
         "Name": "Oqtane.Themes.OqtaneTheme.ThemeSettings",
         "AssemblyName": "Oqtane.Client",
@@ -11682,7 +11789,7 @@
         }
       },
       {
-        "HashCode": -1158082864,
+        "HashCode": -1764433701,
         "Kind": "Components.Component",
         "Name": "Oqtane.UI.ContainerBuilder",
         "AssemblyName": "Oqtane.Client",
@@ -11708,7 +11815,7 @@
         }
       },
       {
-        "HashCode": -1556878404,
+        "HashCode": -1266342625,
         "Kind": "Components.Component",
         "Name": "Oqtane.UI.ContainerBuilder",
         "AssemblyName": "Oqtane.Client",
@@ -11735,7 +11842,7 @@
         }
       },
       {
-        "HashCode": -6547411,
+        "HashCode": -1461021185,
         "Kind": "Components.Component",
         "Name": "Oqtane.UI.ModuleInstance",
         "AssemblyName": "Oqtane.Client",
@@ -11792,7 +11899,7 @@
         }
       },
       {
-        "HashCode": -284493171,
+        "HashCode": -626624970,
         "Kind": "Components.Component",
         "Name": "Oqtane.UI.ModuleInstance",
         "AssemblyName": "Oqtane.Client",
@@ -11850,7 +11957,7 @@
         }
       },
       {
-        "HashCode": 547538525,
+        "HashCode": -1862171167,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.UI.ModuleInstance.ChildContent",
         "AssemblyName": "Oqtane.Client",
@@ -11869,7 +11976,7 @@
         }
       },
       {
-        "HashCode": -1448037529,
+        "HashCode": 804096358,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.UI.ModuleInstance.ChildContent",
         "AssemblyName": "Oqtane.Client",
@@ -11889,7 +11996,7 @@
         }
       },
       {
-        "HashCode": -384887207,
+        "HashCode": -736955585,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.UI.ModuleInstance.ErrorContent",
         "AssemblyName": "Oqtane.Client",
@@ -11920,7 +12027,7 @@
         }
       },
       {
-        "HashCode": 1274176364,
+        "HashCode": 276924823,
         "Kind": "Components.ChildContent",
         "Name": "Oqtane.UI.ModuleInstance.ErrorContent",
         "AssemblyName": "Oqtane.Client",
@@ -11952,7 +12059,7 @@
         }
       },
       {
-        "HashCode": 1081799873,
+        "HashCode": -557233660,
         "Kind": "Components.Component",
         "Name": "Oqtane.UI.Pane",
         "AssemblyName": "Oqtane.Client",
@@ -11978,7 +12085,7 @@
         }
       },
       {
-        "HashCode": 681879431,
+        "HashCode": -1202058030,
         "Kind": "Components.Component",
         "Name": "Oqtane.UI.Pane",
         "AssemblyName": "Oqtane.Client",
@@ -12005,7 +12112,7 @@
         }
       },
       {
-        "HashCode": -1774191345,
+        "HashCode": -92650965,
         "Kind": "Components.Component",
         "Name": "Oqtane.UI.PaneLayout",
         "AssemblyName": "Oqtane.Client",
@@ -12021,7 +12128,7 @@
         }
       },
       {
-        "HashCode": 286222601,
+        "HashCode": 207331969,
         "Kind": "Components.Component",
         "Name": "Oqtane.UI.PaneLayout",
         "AssemblyName": "Oqtane.Client",
@@ -12038,7 +12145,7 @@
         }
       },
       {
-        "HashCode": 1311443815,
+        "HashCode": 360307063,
         "Kind": "Components.Component",
         "Name": "Oqtane.UI.SiteRouter",
         "AssemblyName": "Oqtane.Client",
@@ -12089,7 +12196,7 @@
         }
       },
       {
-        "HashCode": -1195160441,
+        "HashCode": -1434760303,
         "Kind": "Components.Component",
         "Name": "Oqtane.UI.SiteRouter",
         "AssemblyName": "Oqtane.Client",
@@ -12141,7 +12248,7 @@
         }
       },
       {
-        "HashCode": 816980625,
+        "HashCode": -1791051965,
         "Kind": "Components.Component",
         "Name": "Oqtane.UI.ThemeBuilder",
         "AssemblyName": "Oqtane.Client",
@@ -12157,7 +12264,7 @@
         }
       },
       {
-        "HashCode": -1605387501,
+        "HashCode": 2046608465,
         "Kind": "Components.Component",
         "Name": "Oqtane.UI.ThemeBuilder",
         "AssemblyName": "Oqtane.Client",
@@ -12174,7 +12281,7 @@
         }
       },
       {
-        "HashCode": -1035526934,
+        "HashCode": -314690816,
         "Kind": "Components.EventHandler",
         "Name": "onfocus",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12255,7 +12362,7 @@
         }
       },
       {
-        "HashCode": -727828488,
+        "HashCode": -602694667,
         "Kind": "Components.EventHandler",
         "Name": "onblur",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12336,7 +12443,7 @@
         }
       },
       {
-        "HashCode": -537590309,
+        "HashCode": -624853418,
         "Kind": "Components.EventHandler",
         "Name": "onfocusin",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12417,7 +12524,7 @@
         }
       },
       {
-        "HashCode": -1966504823,
+        "HashCode": 665170607,
         "Kind": "Components.EventHandler",
         "Name": "onfocusout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12498,7 +12605,7 @@
         }
       },
       {
-        "HashCode": 737058651,
+        "HashCode": 628022539,
         "Kind": "Components.EventHandler",
         "Name": "onmouseover",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12579,7 +12686,7 @@
         }
       },
       {
-        "HashCode": 1803363224,
+        "HashCode": 493328004,
         "Kind": "Components.EventHandler",
         "Name": "onmouseout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12660,7 +12767,7 @@
         }
       },
       {
-        "HashCode": 1514349086,
+        "HashCode": -830358850,
         "Kind": "Components.EventHandler",
         "Name": "onmousemove",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12741,7 +12848,7 @@
         }
       },
       {
-        "HashCode": -2055689868,
+        "HashCode": 1059766440,
         "Kind": "Components.EventHandler",
         "Name": "onmousedown",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12822,7 +12929,7 @@
         }
       },
       {
-        "HashCode": 1005043863,
+        "HashCode": -2144474633,
         "Kind": "Components.EventHandler",
         "Name": "onmouseup",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12903,7 +13010,7 @@
         }
       },
       {
-        "HashCode": -979519367,
+        "HashCode": 2068501639,
         "Kind": "Components.EventHandler",
         "Name": "onclick",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -12984,7 +13091,7 @@
         }
       },
       {
-        "HashCode": -1860916914,
+        "HashCode": 1990740433,
         "Kind": "Components.EventHandler",
         "Name": "ondblclick",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13065,7 +13172,7 @@
         }
       },
       {
-        "HashCode": 805365074,
+        "HashCode": 1182446811,
         "Kind": "Components.EventHandler",
         "Name": "onwheel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13146,7 +13253,7 @@
         }
       },
       {
-        "HashCode": -859468000,
+        "HashCode": -1803781527,
         "Kind": "Components.EventHandler",
         "Name": "onmousewheel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13227,7 +13334,7 @@
         }
       },
       {
-        "HashCode": -1652214777,
+        "HashCode": 1043134812,
         "Kind": "Components.EventHandler",
         "Name": "oncontextmenu",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13308,7 +13415,7 @@
         }
       },
       {
-        "HashCode": -1559862614,
+        "HashCode": 1543440767,
         "Kind": "Components.EventHandler",
         "Name": "ondrag",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13389,7 +13496,7 @@
         }
       },
       {
-        "HashCode": 1110190194,
+        "HashCode": 1614162082,
         "Kind": "Components.EventHandler",
         "Name": "ondragend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13470,7 +13577,7 @@
         }
       },
       {
-        "HashCode": 1230303658,
+        "HashCode": 39433690,
         "Kind": "Components.EventHandler",
         "Name": "ondragenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13551,7 +13658,7 @@
         }
       },
       {
-        "HashCode": 1975006529,
+        "HashCode": 882714995,
         "Kind": "Components.EventHandler",
         "Name": "ondragleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13632,7 +13739,7 @@
         }
       },
       {
-        "HashCode": -1749693375,
+        "HashCode": -487145458,
         "Kind": "Components.EventHandler",
         "Name": "ondragover",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13713,7 +13820,7 @@
         }
       },
       {
-        "HashCode": -2093128124,
+        "HashCode": -657289383,
         "Kind": "Components.EventHandler",
         "Name": "ondragstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13794,7 +13901,7 @@
         }
       },
       {
-        "HashCode": 1492698280,
+        "HashCode": -1014274919,
         "Kind": "Components.EventHandler",
         "Name": "ondrop",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13875,7 +13982,7 @@
         }
       },
       {
-        "HashCode": 884271864,
+        "HashCode": -968199203,
         "Kind": "Components.EventHandler",
         "Name": "onkeydown",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -13956,7 +14063,7 @@
         }
       },
       {
-        "HashCode": 960622834,
+        "HashCode": -1450692295,
         "Kind": "Components.EventHandler",
         "Name": "onkeyup",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14037,7 +14144,7 @@
         }
       },
       {
-        "HashCode": -697459095,
+        "HashCode": -1882985724,
         "Kind": "Components.EventHandler",
         "Name": "onkeypress",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14118,7 +14225,7 @@
         }
       },
       {
-        "HashCode": 1213166368,
+        "HashCode": 2041909108,
         "Kind": "Components.EventHandler",
         "Name": "onchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14199,7 +14306,7 @@
         }
       },
       {
-        "HashCode": 1256742491,
+        "HashCode": 1865116961,
         "Kind": "Components.EventHandler",
         "Name": "oninput",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14280,7 +14387,7 @@
         }
       },
       {
-        "HashCode": -1245687588,
+        "HashCode": -253299749,
         "Kind": "Components.EventHandler",
         "Name": "oninvalid",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14361,7 +14468,7 @@
         }
       },
       {
-        "HashCode": -123974117,
+        "HashCode": -1184341101,
         "Kind": "Components.EventHandler",
         "Name": "onreset",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14442,7 +14549,7 @@
         }
       },
       {
-        "HashCode": 1805834614,
+        "HashCode": 1451252346,
         "Kind": "Components.EventHandler",
         "Name": "onselect",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14523,7 +14630,7 @@
         }
       },
       {
-        "HashCode": 850656989,
+        "HashCode": 868905947,
         "Kind": "Components.EventHandler",
         "Name": "onselectstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14604,7 +14711,7 @@
         }
       },
       {
-        "HashCode": 24274861,
+        "HashCode": -1793216236,
         "Kind": "Components.EventHandler",
         "Name": "onselectionchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14685,7 +14792,7 @@
         }
       },
       {
-        "HashCode": -455460647,
+        "HashCode": -1988258539,
         "Kind": "Components.EventHandler",
         "Name": "onsubmit",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14766,7 +14873,7 @@
         }
       },
       {
-        "HashCode": 34527566,
+        "HashCode": -266599656,
         "Kind": "Components.EventHandler",
         "Name": "onbeforecopy",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14847,7 +14954,7 @@
         }
       },
       {
-        "HashCode": -155767361,
+        "HashCode": 1201553712,
         "Kind": "Components.EventHandler",
         "Name": "onbeforecut",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14928,7 +15035,7 @@
         }
       },
       {
-        "HashCode": -670731839,
+        "HashCode": 1777579646,
         "Kind": "Components.EventHandler",
         "Name": "onbeforepaste",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15009,7 +15116,7 @@
         }
       },
       {
-        "HashCode": 354940482,
+        "HashCode": -1014437736,
         "Kind": "Components.EventHandler",
         "Name": "oncopy",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15090,7 +15197,7 @@
         }
       },
       {
-        "HashCode": 772481273,
+        "HashCode": 2062630537,
         "Kind": "Components.EventHandler",
         "Name": "oncut",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15171,7 +15278,7 @@
         }
       },
       {
-        "HashCode": -1534837731,
+        "HashCode": -1819696330,
         "Kind": "Components.EventHandler",
         "Name": "onpaste",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15252,7 +15359,7 @@
         }
       },
       {
-        "HashCode": -2090828906,
+        "HashCode": -1035546453,
         "Kind": "Components.EventHandler",
         "Name": "ontouchcancel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15333,7 +15440,7 @@
         }
       },
       {
-        "HashCode": -1681540037,
+        "HashCode": -803372953,
         "Kind": "Components.EventHandler",
         "Name": "ontouchend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15414,7 +15521,7 @@
         }
       },
       {
-        "HashCode": 1656870082,
+        "HashCode": -243207902,
         "Kind": "Components.EventHandler",
         "Name": "ontouchmove",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15495,7 +15602,7 @@
         }
       },
       {
-        "HashCode": -252586053,
+        "HashCode": 2128827047,
         "Kind": "Components.EventHandler",
         "Name": "ontouchstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15576,7 +15683,7 @@
         }
       },
       {
-        "HashCode": -509888688,
+        "HashCode": 680454639,
         "Kind": "Components.EventHandler",
         "Name": "ontouchenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15657,7 +15764,7 @@
         }
       },
       {
-        "HashCode": -1905252403,
+        "HashCode": -754337986,
         "Kind": "Components.EventHandler",
         "Name": "ontouchleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15738,7 +15845,7 @@
         }
       },
       {
-        "HashCode": 1733120315,
+        "HashCode": -132326380,
         "Kind": "Components.EventHandler",
         "Name": "ongotpointercapture",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15819,7 +15926,7 @@
         }
       },
       {
-        "HashCode": 2053101173,
+        "HashCode": -1430799117,
         "Kind": "Components.EventHandler",
         "Name": "onlostpointercapture",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15900,7 +16007,7 @@
         }
       },
       {
-        "HashCode": 1652323135,
+        "HashCode": -328486260,
         "Kind": "Components.EventHandler",
         "Name": "onpointercancel",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -15981,7 +16088,7 @@
         }
       },
       {
-        "HashCode": -370393900,
+        "HashCode": -414093425,
         "Kind": "Components.EventHandler",
         "Name": "onpointerdown",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16062,7 +16169,7 @@
         }
       },
       {
-        "HashCode": 1189154158,
+        "HashCode": 2042657175,
         "Kind": "Components.EventHandler",
         "Name": "onpointerenter",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16143,7 +16250,7 @@
         }
       },
       {
-        "HashCode": 2009734523,
+        "HashCode": -611686505,
         "Kind": "Components.EventHandler",
         "Name": "onpointerleave",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16224,7 +16331,7 @@
         }
       },
       {
-        "HashCode": 1459010181,
+        "HashCode": -1669030320,
         "Kind": "Components.EventHandler",
         "Name": "onpointermove",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16305,7 +16412,7 @@
         }
       },
       {
-        "HashCode": -373947764,
+        "HashCode": 18591839,
         "Kind": "Components.EventHandler",
         "Name": "onpointerout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16386,7 +16493,7 @@
         }
       },
       {
-        "HashCode": -774152679,
+        "HashCode": -2097385943,
         "Kind": "Components.EventHandler",
         "Name": "onpointerover",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16467,7 +16574,7 @@
         }
       },
       {
-        "HashCode": -796512237,
+        "HashCode": 1011523900,
         "Kind": "Components.EventHandler",
         "Name": "onpointerup",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16548,7 +16655,7 @@
         }
       },
       {
-        "HashCode": 1742409949,
+        "HashCode": -718772584,
         "Kind": "Components.EventHandler",
         "Name": "oncanplay",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16629,7 +16736,7 @@
         }
       },
       {
-        "HashCode": 296133711,
+        "HashCode": -1565714520,
         "Kind": "Components.EventHandler",
         "Name": "oncanplaythrough",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16710,7 +16817,7 @@
         }
       },
       {
-        "HashCode": 690577996,
+        "HashCode": -456194958,
         "Kind": "Components.EventHandler",
         "Name": "oncuechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16791,7 +16898,7 @@
         }
       },
       {
-        "HashCode": 1727509344,
+        "HashCode": -1429235162,
         "Kind": "Components.EventHandler",
         "Name": "ondurationchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16872,7 +16979,7 @@
         }
       },
       {
-        "HashCode": 1218940826,
+        "HashCode": -1059987265,
         "Kind": "Components.EventHandler",
         "Name": "onemptied",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -16953,7 +17060,7 @@
         }
       },
       {
-        "HashCode": 1889893758,
+        "HashCode": -984183887,
         "Kind": "Components.EventHandler",
         "Name": "onpause",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17034,7 +17141,7 @@
         }
       },
       {
-        "HashCode": -11558375,
+        "HashCode": 693781836,
         "Kind": "Components.EventHandler",
         "Name": "onplay",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17115,7 +17222,7 @@
         }
       },
       {
-        "HashCode": -461711945,
+        "HashCode": 381390016,
         "Kind": "Components.EventHandler",
         "Name": "onplaying",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17196,7 +17303,7 @@
         }
       },
       {
-        "HashCode": -1520357570,
+        "HashCode": 129264255,
         "Kind": "Components.EventHandler",
         "Name": "onratechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17277,7 +17384,7 @@
         }
       },
       {
-        "HashCode": -598040261,
+        "HashCode": -1948048075,
         "Kind": "Components.EventHandler",
         "Name": "onseeked",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17358,7 +17465,7 @@
         }
       },
       {
-        "HashCode": 272192958,
+        "HashCode": 1740766836,
         "Kind": "Components.EventHandler",
         "Name": "onseeking",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17439,7 +17546,7 @@
         }
       },
       {
-        "HashCode": -1614456396,
+        "HashCode": -956879141,
         "Kind": "Components.EventHandler",
         "Name": "onstalled",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17520,7 +17627,7 @@
         }
       },
       {
-        "HashCode": 1833486784,
+        "HashCode": 1154040580,
         "Kind": "Components.EventHandler",
         "Name": "onstop",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17601,7 +17708,7 @@
         }
       },
       {
-        "HashCode": 2103953900,
+        "HashCode": 324472077,
         "Kind": "Components.EventHandler",
         "Name": "onsuspend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17682,7 +17789,7 @@
         }
       },
       {
-        "HashCode": 671444018,
+        "HashCode": 121905456,
         "Kind": "Components.EventHandler",
         "Name": "ontimeupdate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17763,7 +17870,7 @@
         }
       },
       {
-        "HashCode": 1504844535,
+        "HashCode": -572161648,
         "Kind": "Components.EventHandler",
         "Name": "onvolumechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17844,7 +17951,7 @@
         }
       },
       {
-        "HashCode": -1917430661,
+        "HashCode": 1558539546,
         "Kind": "Components.EventHandler",
         "Name": "onwaiting",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -17925,7 +18032,7 @@
         }
       },
       {
-        "HashCode": 225434444,
+        "HashCode": -610438569,
         "Kind": "Components.EventHandler",
         "Name": "onloadstart",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18006,7 +18113,7 @@
         }
       },
       {
-        "HashCode": 505084881,
+        "HashCode": 1680198146,
         "Kind": "Components.EventHandler",
         "Name": "ontimeout",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18087,7 +18194,7 @@
         }
       },
       {
-        "HashCode": -1641129360,
+        "HashCode": 1259156672,
         "Kind": "Components.EventHandler",
         "Name": "onabort",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18168,7 +18275,7 @@
         }
       },
       {
-        "HashCode": 1339106436,
+        "HashCode": 461167456,
         "Kind": "Components.EventHandler",
         "Name": "onload",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18249,7 +18356,7 @@
         }
       },
       {
-        "HashCode": -903520338,
+        "HashCode": -2128043392,
         "Kind": "Components.EventHandler",
         "Name": "onloadend",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18330,7 +18437,7 @@
         }
       },
       {
-        "HashCode": 1815514583,
+        "HashCode": -2106670079,
         "Kind": "Components.EventHandler",
         "Name": "onprogress",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18411,7 +18518,7 @@
         }
       },
       {
-        "HashCode": 733016358,
+        "HashCode": -1693707465,
         "Kind": "Components.EventHandler",
         "Name": "onerror",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18492,7 +18599,7 @@
         }
       },
       {
-        "HashCode": -1765824489,
+        "HashCode": -1214511374,
         "Kind": "Components.EventHandler",
         "Name": "onactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18573,7 +18680,7 @@
         }
       },
       {
-        "HashCode": 721480515,
+        "HashCode": 1576785652,
         "Kind": "Components.EventHandler",
         "Name": "onbeforeactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18654,7 +18761,7 @@
         }
       },
       {
-        "HashCode": 670559040,
+        "HashCode": -611882644,
         "Kind": "Components.EventHandler",
         "Name": "onbeforedeactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18735,7 +18842,7 @@
         }
       },
       {
-        "HashCode": 348200164,
+        "HashCode": 1135873960,
         "Kind": "Components.EventHandler",
         "Name": "ondeactivate",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18816,7 +18923,7 @@
         }
       },
       {
-        "HashCode": 819088927,
+        "HashCode": 1108102650,
         "Kind": "Components.EventHandler",
         "Name": "onended",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18897,7 +19004,7 @@
         }
       },
       {
-        "HashCode": -493952228,
+        "HashCode": -411824491,
         "Kind": "Components.EventHandler",
         "Name": "onfullscreenchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -18978,7 +19085,7 @@
         }
       },
       {
-        "HashCode": -507714206,
+        "HashCode": 1084127936,
         "Kind": "Components.EventHandler",
         "Name": "onfullscreenerror",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19059,7 +19166,7 @@
         }
       },
       {
-        "HashCode": 1758742454,
+        "HashCode": 338100434,
         "Kind": "Components.EventHandler",
         "Name": "onloadeddata",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19140,7 +19247,7 @@
         }
       },
       {
-        "HashCode": 527800339,
+        "HashCode": -1672060960,
         "Kind": "Components.EventHandler",
         "Name": "onloadedmetadata",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19221,7 +19328,7 @@
         }
       },
       {
-        "HashCode": -1177443460,
+        "HashCode": -1124661878,
         "Kind": "Components.EventHandler",
         "Name": "onpointerlockchange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19302,7 +19409,7 @@
         }
       },
       {
-        "HashCode": 1130629328,
+        "HashCode": 1596836908,
         "Kind": "Components.EventHandler",
         "Name": "onpointerlockerror",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19383,7 +19490,7 @@
         }
       },
       {
-        "HashCode": 1840985823,
+        "HashCode": 841159446,
         "Kind": "Components.EventHandler",
         "Name": "onreadystatechange",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19464,7 +19571,7 @@
         }
       },
       {
-        "HashCode": 211078424,
+        "HashCode": 344331614,
         "Kind": "Components.EventHandler",
         "Name": "onscroll",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19545,7 +19652,7 @@
         }
       },
       {
-        "HashCode": -1452608610,
+        "HashCode": 1759472097,
         "Kind": "Components.EventHandler",
         "Name": "ontoggle",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19626,7 +19733,7 @@
         }
       },
       {
-        "HashCode": -75690220,
+        "HashCode": -87202439,
         "Kind": "Components.Splat",
         "Name": "Attributes",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19665,7 +19772,7 @@
         }
       },
       {
-        "HashCode": 1240403008,
+        "HashCode": -1531658122,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19734,7 +19841,7 @@
         }
       },
       {
-        "HashCode": 1098848549,
+        "HashCode": 1182978558,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19812,7 +19919,7 @@
         }
       },
       {
-        "HashCode": 853487473,
+        "HashCode": -607381320,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19890,7 +19997,7 @@
         }
       },
       {
-        "HashCode": -200415491,
+        "HashCode": 1218193824,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -19974,7 +20081,7 @@
         }
       },
       {
-        "HashCode": -1424910066,
+        "HashCode": -756773551,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20058,7 +20165,7 @@
         }
       },
       {
-        "HashCode": -1620039521,
+        "HashCode": -323194138,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20142,7 +20249,7 @@
         }
       },
       {
-        "HashCode": 150534628,
+        "HashCode": 296404417,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20226,7 +20333,7 @@
         }
       },
       {
-        "HashCode": 1177734883,
+        "HashCode": 147183350,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20310,7 +20417,7 @@
         }
       },
       {
-        "HashCode": 11863205,
+        "HashCode": 545125852,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20394,7 +20501,7 @@
         }
       },
       {
-        "HashCode": -1094686820,
+        "HashCode": 249709942,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20478,7 +20585,7 @@
         }
       },
       {
-        "HashCode": -116806050,
+        "HashCode": -1207078428,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20562,7 +20669,7 @@
         }
       },
       {
-        "HashCode": -1234170703,
+        "HashCode": 2075670308,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20646,7 +20753,7 @@
         }
       },
       {
-        "HashCode": 940515486,
+        "HashCode": 1814664588,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20730,7 +20837,7 @@
         }
       },
       {
-        "HashCode": -783614014,
+        "HashCode": 446457782,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20814,7 +20921,7 @@
         }
       },
       {
-        "HashCode": 405100430,
+        "HashCode": 2142460738,
         "Kind": "Components.Bind",
         "Name": "Bind_value",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20898,7 +21005,7 @@
         }
       },
       {
-        "HashCode": 1179698939,
+        "HashCode": 550182147,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20976,7 +21083,7 @@
         }
       },
       {
-        "HashCode": 726243148,
+        "HashCode": -1291840574,
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -21054,7 +21161,7 @@
         }
       },
       {
-        "HashCode": -1199113471,
+        "HashCode": -96759195,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21095,7 +21202,7 @@
         }
       },
       {
-        "HashCode": 113485307,
+        "HashCode": 2090395648,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputCheckbox",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21137,7 +21244,7 @@
         }
       },
       {
-        "HashCode": 1834650989,
+        "HashCode": -231889140,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21178,7 +21285,7 @@
         }
       },
       {
-        "HashCode": -159740635,
+        "HashCode": 1525767530,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputDate<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21220,7 +21327,7 @@
         }
       },
       {
-        "HashCode": -1200908293,
+        "HashCode": 639052146,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21261,7 +21368,7 @@
         }
       },
       {
-        "HashCode": -251944108,
+        "HashCode": 753482539,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputNumber<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21303,7 +21410,7 @@
         }
       },
       {
-        "HashCode": 1448236834,
+        "HashCode": -1048807130,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21344,7 +21451,7 @@
         }
       },
       {
-        "HashCode": -597542904,
+        "HashCode": 1813294291,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputRadioGroup<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21386,7 +21493,7 @@
         }
       },
       {
-        "HashCode": -1205740600,
+        "HashCode": 1854387807,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21427,7 +21534,7 @@
         }
       },
       {
-        "HashCode": -1151180237,
+        "HashCode": 78240092,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputSelect<TValue>",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21469,7 +21576,7 @@
         }
       },
       {
-        "HashCode": 436499345,
+        "HashCode": 975623541,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21510,7 +21617,7 @@
         }
       },
       {
-        "HashCode": 1216171627,
+        "HashCode": -1070638318,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputText",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21552,7 +21659,7 @@
         }
       },
       {
-        "HashCode": 985008188,
+        "HashCode": -1123888149,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21593,7 +21700,7 @@
         }
       },
       {
-        "HashCode": 74006146,
+        "HashCode": 1180490944,
         "Kind": "Components.Bind",
         "Name": "Microsoft.AspNetCore.Components.Forms.InputTextArea",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
@@ -21635,7 +21742,7 @@
         }
       },
       {
-        "HashCode": -1661692513,
+        "HashCode": -464678077,
         "Kind": "Components.Ref",
         "Name": "Ref",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -21674,7 +21781,7 @@
         }
       },
       {
-        "HashCode": -2001150639,
+        "HashCode": 1666322456,
         "Kind": "Components.Key",
         "Name": "Key",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -21718,13 +21825,8 @@
   "RootNamespace": "ToSic.Cre8Magic.Client",
   "Documents": [
     {
-      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Controls\\MagicThemeDebug.razor",
-      "TargetPath": "Controls\\MagicThemeDebug.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Controls\\MagicDebug.razor",
-      "TargetPath": "Controls\\MagicDebug.razor",
+      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\DynComponents\\DynComponentList.razor",
+      "TargetPath": "DynComponents\\DynComponentList.razor",
       "FileKind": "component"
     },
     {
@@ -21733,13 +21835,18 @@
       "FileKind": "componentImport"
     },
     {
-      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Themes\\MagicContext.razor",
-      "TargetPath": "Themes\\MagicContext.razor",
+      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Controls\\MagicExceptions.razor",
+      "TargetPath": "Controls\\MagicExceptions.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\DynComponents\\DynComponentList.razor",
-      "TargetPath": "DynComponents\\DynComponentList.razor",
+      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Controls\\MagicDebug.razor",
+      "TargetPath": "Controls\\MagicDebug.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Themes\\MagicContext.razor",
+      "TargetPath": "Themes\\MagicContext.razor",
       "FileKind": "component"
     },
     {
@@ -21748,8 +21855,13 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Controls\\MagicExceptions.razor",
-      "TargetPath": "Controls\\MagicExceptions.razor",
+      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Languages\\MagicLanguageDebug.razor",
+      "TargetPath": "Languages\\MagicLanguageDebug.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Controls\\MagicThemeDebug.razor",
+      "TargetPath": "Controls\\MagicThemeDebug.razor",
       "FileKind": "component"
     }
   ],
