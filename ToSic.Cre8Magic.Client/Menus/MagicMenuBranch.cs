@@ -17,7 +17,7 @@ public class MagicMenuBranch: IHasSettingsExceptions
 
     public string? Value(string key) => NodeReplace.Parse(Tree.Design.Value(key, this)).EmptyAsNull();
 
-    public virtual string? Debug => Tree.Debug;
+    public virtual List<string> Debug => Tree.Debug;
 
     /// <summary>
     /// Current Page

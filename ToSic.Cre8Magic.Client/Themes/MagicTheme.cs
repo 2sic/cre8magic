@@ -18,7 +18,7 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
 
     /// <summary>
     /// Name to show in the Theme-picker.
-    /// Must be set by each inheriting theme. 
+    /// Must be set by each inheriting theme, which is why it's marked abstract to enforce this.
     /// </summary>
     public abstract override string Name { get; }
 
@@ -31,11 +31,10 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     /// <summary>
     /// Sets additional body classes - usually to activate CSS variations for this theme
     /// </summary>
-    // TODO: probably rename to MagicClasses
     protected abstract string MagicClasses { get; }
 
     /// <summary>
-    /// WIP
+    /// Option to inject dynamic components - mainly for testing
     /// inspired by http://www.binaryintellect.net/articles/a92dea29-3218-4d1c-a132-9671b518d1f4.aspx
     /// </summary>
     protected List<DynComponent> DynComponents { get; } = new();
@@ -52,7 +51,7 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     protected MagicSettingsService MagicSettingsService
     {
         get => _magicSettingsService!;
-        set => _magicSettingsService = value.InitSettings(ThemePackageSettings);
+        set => _magicSettingsService = value.InitSettings(ThemePackageSettings);    // Init when injecting
     }
     private MagicSettingsService? _magicSettingsService;
 

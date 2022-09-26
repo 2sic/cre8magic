@@ -57,15 +57,15 @@ public class MagicSettingsService: IHasSettingsExceptions
         });
 
         // Figure out real config-name, and get the initial layout
-        var configName = FindConfigName(name, Default);
-        name = configName.ConfigName;
-        var theme = Layout.Find(name).Parse(tokens);
+        var configDetails = FindConfigName(name, Default);
+        name = configDetails.ConfigName;
+        var theme = Theme.Find(name).Parse(tokens);
 
         var current = new MagicSettings(name, this, theme, tokens, pageState);
         ThemeDesigner.InitSettings(current);
         current.MagicContext = ThemeDesigner.BodyClasses(tokens);
         var dbg = current.DebugSources;
-        dbg.Add("Name", configName.Source);
+        dbg.Add("Name", string.Join("; ", configDetails.Source));
 
         _currentSettingsCache[originalNameForCache] = current;
         return current;
@@ -91,10 +91,10 @@ public class MagicSettingsService: IHasSettingsExceptions
 
     private readonly NamedSettings<MagicSettings> _currentSettingsCache = new();
 
-    private NamedSettingsReader<MagicThemeSettings> Layout => _getLayout ??=
+    private NamedSettingsReader<MagicThemeSettings> Theme => _getTheme ??=
         new(this, MagicThemeSettings.Defaults, cat => cat.Themes,
             (name) => json => json.Replace("\"=\"", $"\"{name}\""));
-    private NamedSettingsReader<MagicThemeSettings>? _getLayout;
+    private NamedSettingsReader<MagicThemeSettings>? _getTheme;
 
     internal NamedSettingsReader<MagicBreadcrumbSettings> Breadcrumbs => _getBreadcrumbs ??=
         new(this, MagicBreadcrumbSettings.Defaults, cat => cat.Breadcrumbs);
@@ -130,17 +130,17 @@ public class MagicSettingsService: IHasSettingsExceptions
     private NamedSettingsReader<MagicMenuDesignSettings>? _menuDesigns;
 
 
-    internal (string ConfigName, string Source) FindConfigName(string? configName, string inheritedName)
+    internal (string ConfigName, List<string> Source) FindConfigName(string? configName, string inheritedName)
     {
-        var debugInfo = $"Initial Config: '{configName}'";
+        var debugInfo = new List<string> { $"Initial Config: '{configName}'"};
         if (configName.EqInvariant(InheritName))
         {
             configName = inheritedName;
-            debugInfo += $"; switched to inherit '{inheritedName}'";
+            debugInfo.Add($"switched to inherit '{inheritedName}'");
         }
         if (configName.HasText()) return (configName, debugInfo);
 
-        debugInfo += $"; Config changed to '{Default}'";
+        debugInfo.Add($"Config changed to '{Default}'");
         return (Default, debugInfo);
     }
 

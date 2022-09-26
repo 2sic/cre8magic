@@ -9,7 +9,7 @@ public class MagicMenuTree : MagicMenuBranch
 {
     public const char PageForced = '!';
 
-    public MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<Page> menuPages, string? debug, IHasSettingsExceptions exceptions)
+    public MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<Page> menuPages, List<string> debug, IHasSettingsExceptions exceptions)
         : base(null! /* root must be null, as `Tree` is handled in this class */, 0, magicSettings.PageState.Page)
     {
         MagicSettings = magicSettings;
@@ -18,7 +18,7 @@ public class MagicMenuTree : MagicMenuBranch
         AllPages = magicSettings.PageState.Pages;
         MenuPages = menuPages;
         _exceptions = exceptions;
-        Debug = debug;
+        Debug = debug ?? new();
 
         // Bug in Oqtane 3.2 and before: Level isn't hydrated
         if (AllPages.All(p => p.Level == 0))
@@ -61,7 +61,7 @@ public class MagicMenuTree : MagicMenuBranch
     public override string MenuId => _menuId ??= (Settings as MagicMenuSettings)?.MenuId ?? "error-menu-id";
     private string? _menuId;
 
-    public override string? Debug { get; }
+    public override List<string> Debug { get; }
 
 
     [return: NotNull]

@@ -1,19 +1,17 @@
 ﻿@code {
     [Parameter, EditorRequired] public MagicMenuTree? MenuTree { get; set; }
-}
-<MagicDebug Target="@MenuTree?.Settings" Title="Settings (Menu)">
-    <Content>
-    @if (MenuTree == null)
-    {
-        <text>Trying to show debug info for a menu, but didn't get anything for @nameof(MenuTree)</text>
-    }
-    else
-    {
 
+    private Dictionary<string, object> GetMore() => new()
+    {
+        { "Menu Settings", MenuTree?.Settings },
+        { "Tree Build Messages", MenuTree?.Debug },
+    };
+}
+<MagicDebug Target="@MenuTree?.Settings" Title="Settings (Menu)" More="GetMore()">
+    <Content>
         <ul>
-            <li>Config Name:@MenuTree.Settings.ConfigName</li>
-            <li>Template: @MenuTree.Settings.Template</li>
+            <li>Config Name:@MenuTree?.Settings.ConfigName</li>
+            <li>Template: @MenuTree?.Settings.Template</li>
         </ul>
-    }
     </Content>
 </MagicDebug>

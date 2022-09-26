@@ -1,6 +1,7 @@
 ﻿@inherits MagicControl
 @using System.Text.Json
 @using System.Text.Json.Serialization
+@using System.Text.Encodings.Web
 @code {
     [Parameter] public bool? Show { get; set; }
     [Parameter, EditorRequired] public object? Target { get; set; }
@@ -8,6 +9,8 @@
     [Parameter] public string? Title { get; set; }
 
     [Parameter] public RenderFragment? Content { get; set; }
+
+    [Parameter] public RenderFragment? ContentMore { get; set; }
 
     [Parameter] public RenderFragment? Button { get; set; }
 
@@ -17,7 +20,8 @@
     private static JsonSerializerOptions showOptions = new()
     {
         WriteIndented = true, 
-        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+        Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
     };
 
     private bool MoreContainsTarget() => More?.ContainsValue(Target ?? "something random") ?? false;
@@ -48,6 +52,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                @Content
                 @if (Target == null)
                 {
                     <div class="alert alert-danger">
@@ -56,21 +61,33 @@
                 }
                 else
                 {
-                    @Content
                     @if (!MoreContainsTarget())
                     {
                         <pre>@JsonSerializer.Serialize(Target, showOptions)</pre>
                     }
                     @if (More?.Any() == true)
                     {
-                        foreach (var m in More.Where(m => m.Value != default))
+                        foreach (var data in More.Where(m => m.Value != default))
                         {
-                            <h4>@m.Key</h4>
-                            <pre>@JsonSerializer.Serialize(m, showOptions)</pre>
+                            <h4>@data.Key</h4>
+                            @if (false && data.Value is IEnumerable<string> messages)
+                            {
+                                <ol>
+                                    @foreach (var message in messages)
+                                    {
+                                        <li>@message</li>
+                                    }
+                                </ol>
+                            }
+                            else
+                            {
+                                <pre>@JsonSerializer.Serialize(data.Value, showOptions)</pre>
+                            }
                         }
 
                     }
                 }
+                @ContentMore
             </div>
         </div>
     </div>

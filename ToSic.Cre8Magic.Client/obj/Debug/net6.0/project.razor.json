@@ -41,7 +41,7 @@
         }
       },
       {
-        "HashCode": 1033648779,
+        "HashCode": -671662464,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicDebug",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -96,6 +96,15 @@
           },
           {
             "Kind": "Components.Component",
+            "Name": "ContentMore",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "ContentMore",
+              "Components.ChildContent": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
             "Name": "Button",
             "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
             "Metadata": {
@@ -110,7 +119,7 @@
         }
       },
       {
-        "HashCode": -337301966,
+        "HashCode": -267148856,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicDebug",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
@@ -165,6 +174,15 @@
           },
           {
             "Kind": "Components.Component",
+            "Name": "ContentMore",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Metadata": {
+              "Common.PropertyName": "ContentMore",
+              "Components.ChildContent": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
             "Name": "Button",
             "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
             "Metadata": {
@@ -212,6 +230,43 @@
         "Metadata": {
           "Runtime.Name": "Components.None",
           "Common.TypeName": "ToSic.Cre8Magic.Client.Controls.MagicDebug.Content",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1423458360,
+        "Kind": "Components.ChildContent",
+        "Name": "ToSic.Cre8Magic.Client.Controls.MagicDebug.ContentMore",
+        "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ContentMore",
+            "ParentTag": "MagicDebug"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "ToSic.Cre8Magic.Client.Controls.MagicDebug.ContentMore",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": -1557785268,
+        "Kind": "Components.ChildContent",
+        "Name": "ToSic.Cre8Magic.Client.Controls.MagicDebug.ContentMore",
+        "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ContentMore",
+            "ParentTag": "ToSic.Cre8Magic.Client.Controls.MagicDebug"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "ToSic.Cre8Magic.Client.Controls.MagicDebug.ContentMore",
           "Components.IsSpecialKind": "Components.ChildContent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
