@@ -3,9 +3,11 @@
 internal class LogEntry
 {
 
-    public LogEntry(string source, string message, CodeRef codeRef)
+    public LogEntry(ILog? log, string message, int depth, CodeRef codeRef)
     {
-        Source = source;
+        Depth = depth;
+        Source = log?.Prefix ?? "";
+        Log = log;
         CodeRef = codeRef;
         Message = message;
     }
@@ -14,7 +16,25 @@ internal class LogEntry
 
     public string Message { get; }
 
+    public ILog? Log { get; }
     public CodeRef CodeRef { get; }
 
-    public override string ToString() => $"{Source}{(Source.HasValue() ? ": " : "")}{Message}";
+    public string? Result { get; private set; }
+
+    public int Depth;
+
+    public void AppendResult(string message)
+    {
+        Result = message;
+        //WrapOpenWasClosed = true;
+    }
+
+
+    public override string ToString()
+    {
+        return $"{Source}{(Source.HasValue() ? ": " : "")}" +
+               new string('>', Math.Max(0, Depth - 1)) +
+               $"{Message}" +
+               $"{(Result.HasValue() ? $"='{Result}'" : "")}";
+    }
 }

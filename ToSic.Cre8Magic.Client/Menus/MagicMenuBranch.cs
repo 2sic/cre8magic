@@ -1,9 +1,10 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Oqtane.Models;
+using Log = ToSic.Cre8Magic.Client.Logging.Log;
 
 namespace ToSic.Cre8Magic.Client.Menus;
 
-public class MagicMenuBranch: IHasSettingsExceptions
+public class MagicMenuBranch //: IHasSettingsExceptions
 {
     /// <summary>
     /// Root navigator object which has some data/logs for all navigators which spawned from it. 
@@ -22,13 +23,16 @@ public class MagicMenuBranch: IHasSettingsExceptions
     /// </summary>
     public int MenuLevel { get; }
 
-    public MagicMenuBranch(MagicMenuTree root, int menuLevel, Page page, string debugPrefix)
+    public MagicMenuBranch(MagicMenuTree tree, int menuLevel, Page page, string debugPrefix)
     {
-        if (root != null) LogChild = new(root.Log, debugPrefix);
-        Tree = root!;
+        if (tree != null)
+        {
+            Log = tree.LogRoot.GetLog(debugPrefix);
+            Log.A($"Branch for {nameof(page)}: {page.PageId}; {nameof(menuLevel)}: {menuLevel}");
+        }
+        Tree = tree!;
         Page = page;
         MenuLevel = menuLevel;
-        //DebugPrefix = debugPrefix;
     }
 
     /// <summary>
@@ -36,11 +40,10 @@ public class MagicMenuBranch: IHasSettingsExceptions
     /// </summary>
     public Page Page { get; }
 
-    //protected virtual string DebugPrefix { get; }
+    internal Log Log { get; set; }
 
-    //protected void AddDebug(string message) => Tree.Log.A(DebugPrefix + ": " + message);
-    internal LogChild LogChild { get; set; }
-
+    protected string LogPageList(List<Page>? pages) =>
+        pages == null ? "" : string.Join(",", pages.Select(p => p.PageId)) + $"(total: {pages.Count})";
 
     public bool HasChildren => Children.Any();
 
@@ -60,28 +63,33 @@ public class MagicMenuBranch: IHasSettingsExceptions
     [return: NotNull]
     protected List<MagicMenuBranch> GetChildren()
     {
-        LogChild.Call("");
+        var l = Log.Fn<List<MagicMenuBranch>>($"{nameof(MenuLevel)}: {MenuLevel}");
         var levelsRemaining = (Tree.Settings.Depth ?? MagicMenuSettings.LevelDepthFallback) - MenuLevel + 1;
-        return levelsRemaining <= 0
-            ? new()
-            : GetChildPages()
-                .Select(page => new MagicMenuBranch(Tree, MenuLevel + 1, page, $"{LogChild.Prefix}>{Page.PageId}"))
-                .ToList();
+        if (levelsRemaining <= 0)
+            return l.Return(new(), "no levels remaining, empty");
+        
+        var children = GetChildPages()
+            .Select(page => new MagicMenuBranch(Tree, MenuLevel + 1, page, $"{Log.Prefix}>{Page.PageId}"))
+            .ToList();
+        return l.Return(children, $"{children.Count}");
     }
 
 
     protected virtual List<Page> GetChildPages()
     {
-        LogChild.Call("");
-        return Page == null
-            ? new() { ErrPage(-1, "Error: No current page found") }
-            : ChildrenOf(Page.PageId);
+        var l = Log.Fn<List<Page>>();
+        if (Page == null)
+            return l.Return(new() { ErrPage(-1, "Error: No current page found") }, "no current page found");
+
+        var result = ChildrenOf(Page.PageId);
+        return l.Return(result, LogPageList(result));
     }
 
     protected List<Page> ChildrenOf(int pageId)
     {
-        LogChild.Call(pageId.ToString());
-        return Tree.MenuPages.Where(p => p.ParentId == pageId).ToList();
+        var l = Log.Fn<List<Page>>(pageId.ToString());
+        var result = Tree.MenuPages.Where(p => p.ParentId == pageId).ToList();
+        return l.Return(result, LogPageList(result));
     }
 
     //protected List<Page> FindPages(int[] pageIds)
@@ -90,5 +98,5 @@ public class MagicMenuBranch: IHasSettingsExceptions
 
     protected static Page ErrPage(int id, string message) => new() { PageId = id, Name = message };
 
-    public virtual List<Exception> Exceptions => Tree.Exceptions;
+    //public virtual List<Exception> Exceptions => Tree.Exceptions;
 }

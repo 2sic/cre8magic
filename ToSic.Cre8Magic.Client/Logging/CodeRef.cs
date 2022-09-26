@@ -19,19 +19,19 @@ public class CodeRef
     /// </summary>
     public string Name;
 
-    ///// <summary>
-    ///// Line of code where the code was running
-    ///// </summary>
-    //public int Line;
+    /// <summary>
+    /// Line of code where the code was running
+    /// </summary>
+    public int Line;
 
     /// <summary>
     /// Default constructor to set the values
     /// </summary>
-    public CodeRef(string cPath, string cName/*, int cLine*/)
+    public CodeRef(string cPath, string cName, int cLine)
     {
         Path = cPath;
         Name = cName;
-        //Line = cLine;
+        Line = cLine;
     }
 
     /// <summary>
@@ -44,8 +44,8 @@ public class CodeRef
     // ReSharper disable once UnusedParameter.Local - 
     public CodeRef(bool autoPickup = true,
         [CallerFilePath] string cPath = null,
-        [CallerMemberName] string cName = null
-        //[CallerLineNumber] int cLine = 0
+        [CallerMemberName] string cName = null,
+        [CallerLineNumber] int cLine = 0
         )
-        : this(cPath, cName/*, cLine*/) { }
+        : this(cPath, cName, cLine) { }
 }

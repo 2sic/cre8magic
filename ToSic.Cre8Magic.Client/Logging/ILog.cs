@@ -2,5 +2,9 @@
 
 internal interface ILog
 {
-    Log Log { get; }
+    LogRoot LogRoot { get; }
+
+    string Prefix { get; }
+
+    int Depth { get; set; }
 }

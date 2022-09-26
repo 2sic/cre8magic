@@ -9,17 +9,18 @@ public class MagicMenuTree : MagicMenuBranch
 {
     public const char PageForced = '!';
 
-    public MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<Page> menuPages, List<string> debug, IHasSettingsExceptions exceptions)
+    public MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<Page> menuPages, List<string> messages, IHasSettingsExceptions exceptions)
         : base(null! /* root must be null, as `Tree` is handled in this class */, 0, magicSettings.PageState.Page, "Root")
     {
-        LogChild = new(Log, "Root");
+        Log = LogRoot.GetLog("Root");
+        Log.A($"Start for Page: {magicSettings.PageState.Page.PageId}; Level: 0");
         MagicSettings = magicSettings;
         PageState = magicSettings.PageState;
         Settings = settings;
         AllPages = magicSettings.PageState.Pages;
         MenuPages = menuPages;
-        _exceptions = exceptions;
-        Debug = debug ?? new();
+        //_exceptions = exceptions;
+        Debug = messages ?? new();
 
         // Bug in Oqtane 3.2 and before: Level isn't hydrated
         if (AllPages.All(p => p.Level == 0))
@@ -48,8 +49,8 @@ public class MagicMenuTree : MagicMenuBranch
     /// </summary>
     internal List<Page> MenuPages;
 
-    public override List<Exception> Exceptions => _exceptions.Exceptions;
-    private readonly IHasSettingsExceptions _exceptions;
+    //public override List<Exception> Exceptions => _exceptions.Exceptions;
+    //private readonly IHasSettingsExceptions _exceptions;
 
     protected override MagicMenuTree Tree => this;
 
@@ -59,22 +60,20 @@ public class MagicMenuTree : MagicMenuBranch
     internal List<Page> Breadcrumb => _breadcrumb ??= AllPages.Breadcrumb(Page).ToList();
     private List<Page>? _breadcrumb;
 
-    public override string MenuId => _menuId ??= (Settings as MagicMenuSettings)?.MenuId ?? "error-menu-id";
+    public override string MenuId => _menuId ??= Settings?.MenuId ?? "error-menu-id";
     private string? _menuId;
 
     public List<string> Debug { get; }
 
-    internal Logging.Log Log { get; } = new();
+    internal Logging.LogRoot LogRoot { get; } = new();
 
     [return: NotNull]
     protected override List<Page> GetChildPages()
     {
+        var l = Log.Fn<List<Page>>();
         // Give empty list if we shouldn't display it
         if (Settings.Display == false)
-        {
-            LogChild.A("Display == false, don't show");
-            return new();
-        }
+            return l.Return(new(), "Display == false, don't show");
 
         // Case 1: StartPage *, so all top-level entries
         var start = Settings.Start?.Trim();
@@ -87,19 +86,21 @@ public class MagicMenuTree : MagicMenuBranch
 
         var startPages = FindStartPages(startingPoints);
 
-        return startPages;
+        return l.Return(startPages, LogPageList(startPages));
     }
 
     internal List<Page> FindStartPages(StartingPoint[] pageIds)
     {
+        var l = Log.Fn<List<Page>>(string.Join(',', pageIds.Select(p => p.Id)));
         var result = pageIds.SelectMany(FindStartingPage)
             .Where(p => p != null)
             .ToList();
-        return result;
+        return l.Return(result, LogPageList(result));
     }
 
-    private IEnumerable<Page> FindStartingPage(StartingPoint n)
+    private List<Page> FindStartingPage(StartingPoint n)
     {
+        var l = Log.Fn<List<Page>>();
         var source = n.Force ? Tree.AllPages : Tree.MenuPages;
 
         // Start by getting all the anchors - the pages to start from, before we know about children or not
@@ -129,34 +130,41 @@ public class MagicMenuTree : MagicMenuBranch
 
         anchors ??= new();
 
-        return n.Children
+        var result = n.Children
             ? anchors.SelectMany(p => GetRelatedPagesByLevel(p, 1)).ToList()
             : anchors;
+
+        return l.Return(result, LogPageList(result));
     }
 
 
     private List<Page> GetRelatedPagesByLevel(Page referencePage, int level)
     {
+        var l = Log.Fn<List<Page>>($"{referencePage.PageId}; {level}");
+        List<Page> result;
         switch (level)
         {
             case -1:
-                return ChildrenOf(referencePage.ParentId ?? 0);
+                result = ChildrenOf(referencePage.ParentId ?? 0);
+                return l.Return(result, LogPageList(result));
             case 0:
-                return new() { referencePage };
+                result = new() { referencePage };
+                return l.Return(result, LogPageList(result));
             case 1:
-                return ChildrenOf(referencePage.PageId);
+                result = ChildrenOf(referencePage.PageId);
+                return l.Return(result, LogPageList(result));
             case > 1:
-                return new() { ErrPage(0, "Error: Create menu from current page but level > 1") };
+                return l.Return(new() { ErrPage(0, "Error: Create menu from current page but level > 1") }, "err");
             default:
-                return new() { ErrPage(0, "Error: Create menu from current page but level < -1, not yet implemented") };
+                return l.Return(new() { ErrPage(0, "Error: Create menu from current page but level < -1, not yet implemented") }, "err");
         }
     }
 
     private StartingPoint[] ConfigToStartingPoints(string? value, int level, bool children)
     {
-        LogChild.Call($"{nameof(value)}: '{value}'; {nameof(level)}: {level}; {nameof(children)}: {children}");
+        var l = Log.Fn<StartingPoint[]>($"{nameof(value)}: '{value}'; {nameof(level)}: {level}; {nameof(children)}: {children}");
 
-        if (!value.HasText()) return Array.Empty<StartingPoint>();
+        if (!value.HasText()) return l.Return(Array.Empty<StartingPoint>(), "no value, empty list");
         var parts = value.Split(',');
         var result = parts
             .Select(fromNode =>
@@ -170,7 +178,7 @@ public class MagicMenuTree : MagicMenuBranch
                 return new StartingPoint { Id = id, From = fromNode, Force = important, Children = children, Level = level};
             })
             .Where(n => n != null)
-            .ToArray();
-        return result as StartingPoint[];
+            .ToArray() as StartingPoint[];
+        return l.Return(result, result.Length.ToString());
     }
 }

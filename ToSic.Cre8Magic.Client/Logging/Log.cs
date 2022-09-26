@@ -1,13 +1,18 @@
-﻿using System.Text.Json.Serialization;
-
-namespace ToSic.Cre8Magic.Client.Logging;
+﻿namespace ToSic.Cre8Magic.Client.Logging;
 
 internal class Log: ILog
 {
-    [JsonIgnore]
-    public readonly List<LogEntry> LogEntries = new();
+    public LogRoot LogRoot { get; }
+    public string Prefix { get; }
 
-    public IEnumerable<string> Entries => LogEntries.Select(e => e.ToString());
-    
-    Log ILog.Log => this;
+    internal Log(LogRoot logRoot, int depth, string prefix)
+    {
+        LogRoot = logRoot;
+        Prefix = prefix;
+        Depth = depth;
+    }
+
+    public int Depth { get; set; }
+
+    //public Log GetLog(string? prefix) => new(LogRoot, Depth + 1, prefix);
 }
