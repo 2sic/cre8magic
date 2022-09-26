@@ -537,17 +537,26 @@
         }
       },
       {
-        "HashCode": -1776688775,
+        "HashCode": 538582993,
         "Kind": "Components.Component",
-        "Name": "ToSic.Cre8Magic.Client.Themes.MagicContext",
+        "Name": "ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "MagicContext"
+            "TagName": "MagicContextAndSettings"
           }
         ],
         "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Settings",
+            "TypeName": "ToSic.Cre8Magic.Client.Settings.MagicSettings",
+            "IsEditorRequired": true,
+            "Metadata": {
+              "Common.PropertyName": "Settings"
+            }
+          },
           {
             "Kind": "Components.Component",
             "Name": "ChildContent",
@@ -560,21 +569,30 @@
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToSic.Cre8Magic.Client.Themes.MagicContext"
+          "Common.TypeName": "ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings"
         }
       },
       {
-        "HashCode": 717341366,
+        "HashCode": 1711588300,
         "Kind": "Components.Component",
-        "Name": "ToSic.Cre8Magic.Client.Themes.MagicContext",
+        "Name": "ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ToSic.Cre8Magic.Client.Themes.MagicContext"
+            "TagName": "ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings"
           }
         ],
         "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Settings",
+            "TypeName": "ToSic.Cre8Magic.Client.Settings.MagicSettings",
+            "IsEditorRequired": true,
+            "Metadata": {
+              "Common.PropertyName": "Settings"
+            }
+          },
           {
             "Kind": "Components.Component",
             "Name": "ChildContent",
@@ -587,43 +605,43 @@
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToSic.Cre8Magic.Client.Themes.MagicContext",
+          "Common.TypeName": "ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": -1170180724,
+        "HashCode": -596352648,
         "Kind": "Components.ChildContent",
-        "Name": "ToSic.Cre8Magic.Client.Themes.MagicContext.ChildContent",
+        "Name": "ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings.ChildContent",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
             "TagName": "ChildContent",
-            "ParentTag": "MagicContext"
+            "ParentTag": "MagicContextAndSettings"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.None",
-          "Common.TypeName": "ToSic.Cre8Magic.Client.Themes.MagicContext.ChildContent",
+          "Common.TypeName": "ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings.ChildContent",
           "Components.IsSpecialKind": "Components.ChildContent"
         }
       },
       {
-        "HashCode": 672101740,
+        "HashCode": -1495557509,
         "Kind": "Components.ChildContent",
-        "Name": "ToSic.Cre8Magic.Client.Themes.MagicContext.ChildContent",
+        "Name": "ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings.ChildContent",
         "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
             "TagName": "ChildContent",
-            "ParentTag": "ToSic.Cre8Magic.Client.Themes.MagicContext"
+            "ParentTag": "ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.None",
-          "Common.TypeName": "ToSic.Cre8Magic.Client.Themes.MagicContext.ChildContent",
+          "Common.TypeName": "ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings.ChildContent",
           "Components.IsSpecialKind": "Components.ChildContent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
@@ -21845,11 +21863,6 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Themes\\MagicContext.razor",
-      "TargetPath": "Themes\\MagicContext.razor",
-      "FileKind": "component"
-    },
-    {
       "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Menus\\MagicMenuDebug.razor",
       "TargetPath": "Menus\\MagicMenuDebug.razor",
       "FileKind": "component"
@@ -21862,6 +21875,11 @@
     {
       "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Controls\\MagicThemeDebug.razor",
       "TargetPath": "Controls\\MagicThemeDebug.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Projects\\2shine-oqtane\\oqtane-cre8magic\\ToSic.Cre8Magic.Client\\Themes\\MagicContextAndSettings.razor",
+      "TargetPath": "Themes\\MagicContextAndSettings.razor",
       "FileKind": "component"
     }
   ],

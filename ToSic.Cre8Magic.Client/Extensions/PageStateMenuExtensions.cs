@@ -7,6 +7,8 @@ public static class PageStateMenuExtensions
 {
     public static Page? GetHomePage(this PageState pageState) => pageState.Pages.Find(p => p.Path == "");
 
+    public static bool CurrentPageIsHome(this PageState pageState) => pageState?.Page.Path == "";
+
     public static List<Page> Breadcrumb(this PageState pageState, Page? page = null)
         => GetAncestors(pageState, page).Reverse().ToList();
 

@@ -63,7 +63,7 @@ public class MagicSettingsService: IHasSettingsExceptions
 
         var current = new MagicSettings(name, this, theme, tokens, pageState);
         ThemeDesigner.InitSettings(current);
-        current.MagicContext = ThemeDesigner.BodyClasses(pageState, tokens);
+        current.MagicContext = ThemeDesigner.BodyClasses(tokens);
         var dbg = current.DebugSources;
         dbg.Add("Name", configName.Source);
 

@@ -1,13 +1,16 @@
-﻿using Oqtane.UI;
-
-namespace ToSic.Cre8Magic.Client.Themes.Settings;
+﻿namespace ToSic.Cre8Magic.Client.Themes.Settings;
 
 /// <summary>
 /// Special helper to figure out what classes should be applied to the page. 
 /// </summary>
 internal class ThemeDesigner : MagicServiceWithSettingsBase
 {
-    internal string BodyClasses(PageState pageState, ITokenReplace tokens)
+    internal ThemeDesigner()
+    {
+
+    }
+
+    internal string? BodyClasses(ITokenReplace tokens)
     {
         var css = Settings?.ThemeDesign;
 
@@ -15,7 +18,7 @@ internal class ThemeDesigner : MagicServiceWithSettingsBase
 
         // Make a copy...
         var classes = css.MagicContext.ToList();
-        classes.Add(css.PageIsHome?.Get(pageState.Page.Path == ""));
+        classes.Add(css.PageIsHome?.Get(Settings.PageState.CurrentPageIsHome()));
 
         // Do these once multi-language is better
         //1.5 Set the page-root-neutral-### class
@@ -35,8 +38,10 @@ internal class ThemeDesigner : MagicServiceWithSettingsBase
     }
 
 
-    public bool PaneIsEmpty(PageState pageState, string paneName)
+    private bool PaneIsEmpty(string paneName)
     {
+        if (Settings == null) return true;
+        var pageState = Settings.PageState;
         var paneHasModules = pageState.Modules.Any(
             module => !module.IsDeleted
                       && module.PageId == pageState.Page.PageId
@@ -45,8 +50,12 @@ internal class ThemeDesigner : MagicServiceWithSettingsBase
         return !paneHasModules;
     }
 
-    public string PaneIsEmptyClasses(PageState pageState, string paneName)
-        => Settings?.ThemeDesign.PaneIsEmpty.Get(PaneIsEmpty(pageState, paneName)) ?? "";
+    public string PaneClasses(string paneName)
+    {
+        var empty = Settings?.ThemeDesign.PaneIsEmpty.Get(PaneIsEmpty(paneName)) ?? "";
+        var classes = Classes(paneName);
+        return string.Join(" ", (new[] { empty, classes }).Where(s => s.HasValue()));
+    }
 
     public string? Classes(string target) => Settings?.ThemeDesign.Custom.GetInvariant(target)?.Classes.EmptyAsNull();
 

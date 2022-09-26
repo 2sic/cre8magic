@@ -1,4 +1,4 @@
-﻿@inherits MagicComponent
+﻿@inherits ComponentBase
 @*
     Purpose:    Ensures that there is a wrapper - div or body
                 which has a bunch of css-classes to tell the stylesheets
@@ -6,7 +6,7 @@
 *@
 @code
 {
-
+    [Parameter, EditorRequired] public MagicSettings Settings { get; set; }
     [Parameter] public RenderFragment? ChildContent { get; set; }
     [Inject] protected IMagicThemeJsService? ThemeJs { get; set; }
 
@@ -19,6 +19,7 @@
     }
 
 }
+<CascadingValue Value="Settings">
 @if (PutInBody)
 {
     @ChildContent
@@ -29,3 +30,4 @@ else
         @ChildContent
     </div>
 }
+</CascadingValue>

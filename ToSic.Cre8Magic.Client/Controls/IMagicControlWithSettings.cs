@@ -2,7 +2,7 @@
 
 namespace ToSic.Cre8Magic.Client.Controls;
 
-public interface IMagicControlWithSettings
+public interface IMagicControlWithSettings: IHasMagicSettings
 {
     [CascadingParameter] MagicSettings Settings { get; set; }
 
