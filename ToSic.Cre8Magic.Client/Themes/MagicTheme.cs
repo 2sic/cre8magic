@@ -32,7 +32,7 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     /// Sets additional body classes - usually to activate CSS variations for this theme
     /// </summary>
     // TODO: probably rename to MagicClasses
-    protected abstract string BodyClasses { get; }
+    protected abstract string MagicClasses { get; }
 
     /// <summary>
     /// WIP
@@ -70,7 +70,7 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     protected override async Task OnParametersSetAsync()
     {
         await base.OnParametersSetAsync();
-        Settings = MagicSettingsService.CurrentSettings(PageState, Layout, BodyClasses);
+        Settings = MagicSettingsService.CurrentSettings(PageState, Layout, MagicClasses);
     }
 
     /// <summary>
