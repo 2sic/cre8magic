@@ -5,11 +5,6 @@
 /// </summary>
 internal class ThemeDesigner : MagicDesignerBase
 {
-    internal ThemeDesigner()
-    {
-
-    }
-
     internal string? BodyClasses(ITokenReplace tokens)
     {
         var css = Settings?.ThemeDesign;

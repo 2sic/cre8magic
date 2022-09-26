@@ -4,10 +4,21 @@ internal abstract class MagicDesignerBase: MagicServiceWithSettingsBase
 {
     protected abstract DesignSettingBase? GetSettings(string name);
 
-    public virtual string? Classes(string target) => GetSettings(target)?.Classes.EmptyAsNull();
+    protected virtual TokenEngine Tokens => _tokens ??= Settings.Tokens;
+    private TokenEngine? _tokens;
 
-    public string? Value(string target) => GetSettings(target)?.Value.EmptyAsNull();
+    protected virtual bool ParseTokens => true;
 
-    public string? Id(string name) => GetSettings(name)?.Id.EmptyAsNull();
+    protected string? PostProcess(string? value)
+    {
+        if (!ParseTokens) return value.EmptyAsNull();
+        return Tokens.Parse(value).EmptyAsNull();
+    }
+
+    public virtual string? Classes(string target) => PostProcess(GetSettings(target)?.Classes);
+
+    public string? Value(string target) => PostProcess(GetSettings(target)?.Value);
+
+    public string? Id(string name) => PostProcess(GetSettings(name)?.Id);
 
 }

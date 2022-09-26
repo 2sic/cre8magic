@@ -9,7 +9,6 @@ internal class ContainerDesigner: MagicDesignerBase
     public ContainerDesigner(MagicSettings settings, Module module)
     {
         InitSettings(settings);
-        // Settings = settings;
         _module = module;
     }
 
@@ -20,14 +19,16 @@ internal class ContainerDesigner: MagicDesignerBase
 
     public override string? Classes(string tag)
     {
-        var styles = Settings.ContainerDesign.FindInvariant(tag); // safe, also does null-check
-        if (styles is null) return null;
+        if (GetSettings(tag) is not MagicContainerDesignSettingsItem styles) return null;
 
         var value = GetClasses(styles);
-        var tokens = Settings.Tokens.Expanded(new ModuleTokens(_module));
-        return tokens.Parse(value).EmptyAsNull();
+        return PostProcess(value);
+        //var tokens = Settings.Tokens.Expanded(new ModuleTokens(_module));
+        //return tokens.Parse(value).EmptyAsNull();
     }
 
+    protected override TokenEngine Tokens => _tokens1 ??= Settings.Tokens.Expanded(new ModuleTokens(_module));
+    private TokenEngine? _tokens1;
 
 
     /// <summary>
@@ -35,7 +36,7 @@ internal class ContainerDesigner: MagicDesignerBase
     /// </summary>
     /// <param name="styles"></param>
     /// <returns></returns>
-    public string GetClasses(MagicContainerDesignSettingsItem styles)
+    private string GetClasses(MagicContainerDesignSettingsItem styles)
     {
         var value =  string.Join(" ", new[]
         {

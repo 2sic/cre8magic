@@ -36,7 +36,6 @@ public abstract class MagicMenuRoot: MagicMenuBase
 
     protected MagicMenuTree? MenuTree { get; private set; }
 
-    /*[Inject]*/
     protected MagicMenuService? MenuTreeService { get; set; } = new();
 
     protected override async Task OnParametersSetAsync()

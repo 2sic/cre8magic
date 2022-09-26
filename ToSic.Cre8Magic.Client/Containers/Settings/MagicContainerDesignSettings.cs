@@ -10,6 +10,9 @@ namespace ToSic.Cre8Magic.Client.Containers.Settings;
 /// </remarks>
 public class MagicContainerDesignSettings : NamedSettings<MagicContainerDesignSettingsItem>
 {
+    //private const string IdKey = "Id";
+    private const string IdDefault = "module-[Module.Id]";
+
     internal static Defaults<MagicContainerDesignSettings> Defaults = new()
     {
         Fallback = new()
@@ -20,8 +23,18 @@ public class MagicContainerDesignSettings : NamedSettings<MagicContainerDesignSe
                     Classes = $"{MainPrefix}-page-language {SettingFromDefaults}",
                     IsPublished = new(null, $"{ContainerDesigner.ModulePrefixDefault}-unpublished  {SettingFromDefaults}"),
                     IsAdminModule = new($"{MainPrefix}-admin-container  {SettingFromDefaults}"),
+                    Id = IdDefault,
                 }
             },
         },
+        Foundation = new()
+        {
+            {
+                "div", new()
+                {
+                    Id = IdDefault,
+                }
+            }
+        }
     };
 }
