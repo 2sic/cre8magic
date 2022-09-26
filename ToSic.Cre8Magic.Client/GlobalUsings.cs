@@ -16,3 +16,4 @@ global using ToSic.Cre8Magic.Client.Tokens;
 global using ToSic.Cre8Magic.Client.Menus;
 global using ToSic.Cre8Magic.Client.Menus.Settings;
 global using ToSic.Cre8Magic.Client.Languages.Settings;
+global using ToSic.Cre8Magic.Client.Logging;

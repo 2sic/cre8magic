@@ -36,7 +36,7 @@ public abstract class MagicMenuRoot: MagicMenuBase
 
     protected MagicMenuTree? MenuTree { get; private set; }
 
-    protected MagicMenuService? MenuTreeService { get; set; } = new();
+    protected MagicMenuBuilder? MenuTreeService { get; set; } = new();
 
     protected override async Task OnParametersSetAsync()
     {

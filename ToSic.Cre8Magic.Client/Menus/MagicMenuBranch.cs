@@ -17,24 +17,30 @@ public class MagicMenuBranch: IHasSettingsExceptions
 
     public string? Value(string key) => NodeReplace.Parse(Tree.Design.Value(key, this)).EmptyAsNull();
 
-    public virtual List<string> Debug => Tree.Debug;
+    /// <summary>
+    /// Menu Level relative to the start of the menu (always starts with 1)
+    /// </summary>
+    public int MenuLevel { get; }
+
+    public MagicMenuBranch(MagicMenuTree root, int menuLevel, Page page, string debugPrefix)
+    {
+        if (root != null) LogChild = new(root.Log, debugPrefix);
+        Tree = root!;
+        Page = page;
+        MenuLevel = menuLevel;
+        //DebugPrefix = debugPrefix;
+    }
 
     /// <summary>
     /// Current Page
     /// </summary>
     public Page Page { get; }
 
-    /// <summary>
-    /// Menu Level relative to the start of the menu (always starts with 1)
-    /// </summary>
-    public int MenuLevel { get; }
+    //protected virtual string DebugPrefix { get; }
 
-    public MagicMenuBranch(MagicMenuTree root, int menuLevel, Page page)
-    {
-        Tree = root;
-        Page = page;
-        MenuLevel = menuLevel;
-    }
+    //protected void AddDebug(string message) => Tree.Log.A(DebugPrefix + ": " + message);
+    internal LogChild LogChild { get; set; }
+
 
     public bool HasChildren => Children.Any();
 
@@ -54,21 +60,29 @@ public class MagicMenuBranch: IHasSettingsExceptions
     [return: NotNull]
     protected List<MagicMenuBranch> GetChildren()
     {
+        LogChild.Call("");
         var levelsRemaining = (Tree.Settings.Depth ?? MagicMenuSettings.LevelDepthFallback) - MenuLevel + 1;
         return levelsRemaining <= 0
             ? new()
             : GetChildPages()
-                .Select(page => new MagicMenuBranch(Tree, MenuLevel + 1, page))
+                .Select(page => new MagicMenuBranch(Tree, MenuLevel + 1, page, $"{LogChild.Prefix}>{Page.PageId}"))
                 .ToList();
     }
 
 
-    protected virtual List<Page> GetChildPages() => Page == null
-        ? new() { ErrPage(-1, "Error: No current page found") }
-        : ChildrenOf(Page.PageId);
+    protected virtual List<Page> GetChildPages()
+    {
+        LogChild.Call("");
+        return Page == null
+            ? new() { ErrPage(-1, "Error: No current page found") }
+            : ChildrenOf(Page.PageId);
+    }
 
     protected List<Page> ChildrenOf(int pageId)
-        => Tree.MenuPages.Where(p => p.ParentId == pageId).ToList();
+    {
+        LogChild.Call(pageId.ToString());
+        return Tree.MenuPages.Where(p => p.ParentId == pageId).ToList();
+    }
 
     //protected List<Page> FindPages(int[] pageIds)
     //    => Tree.MenuPages.Where(p => pageIds.Contains(p.PageId)).ToList();

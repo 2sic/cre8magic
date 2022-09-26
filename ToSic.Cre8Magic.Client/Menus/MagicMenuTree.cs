@@ -10,8 +10,9 @@ public class MagicMenuTree : MagicMenuBranch
     public const char PageForced = '!';
 
     public MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<Page> menuPages, List<string> debug, IHasSettingsExceptions exceptions)
-        : base(null! /* root must be null, as `Tree` is handled in this class */, 0, magicSettings.PageState.Page)
+        : base(null! /* root must be null, as `Tree` is handled in this class */, 0, magicSettings.PageState.Page, "Root")
     {
+        LogChild = new(Log, "Root");
         MagicSettings = magicSettings;
         PageState = magicSettings.PageState;
         Settings = settings;
@@ -61,14 +62,19 @@ public class MagicMenuTree : MagicMenuBranch
     public override string MenuId => _menuId ??= (Settings as MagicMenuSettings)?.MenuId ?? "error-menu-id";
     private string? _menuId;
 
-    public override List<string> Debug { get; }
+    public List<string> Debug { get; }
 
+    internal Logging.Log Log { get; } = new();
 
     [return: NotNull]
     protected override List<Page> GetChildPages()
     {
         // Give empty list if we shouldn't display it
-        if (Settings.Display == false) return new();
+        if (Settings.Display == false)
+        {
+            LogChild.A("Display == false, don't show");
+            return new();
+        }
 
         // Case 1: StartPage *, so all top-level entries
         var start = Settings.Start?.Trim();
@@ -148,6 +154,8 @@ public class MagicMenuTree : MagicMenuBranch
 
     private StartingPoint[] ConfigToStartingPoints(string? value, int level, bool children)
     {
+        LogChild.Call($"{nameof(value)}: '{value}'; {nameof(level)}: {level}; {nameof(children)}: {children}");
+
         if (!value.HasText()) return Array.Empty<StartingPoint>();
         var parts = value.Split(',');
         var result = parts

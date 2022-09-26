@@ -6,8 +6,7 @@ namespace ToSic.Cre8Magic.Client.Services;
 /// <summary>
 /// Will create a MenuTree based on the current pages information and configuration
 /// </summary>
-// TODO: MAYBE NOT A SERVICE - DOESN'T NEED DI atm - rename to MagicMenuBuilder? and move?
-public class MagicMenuService: MagicServiceWithSettingsBase
+public class MagicMenuBuilder: MagicServiceWithSettingsBase
 {
     public MagicMenuTree GetTree(MagicMenuSettings config, List<Page> menuPages)
     {

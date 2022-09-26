@@ -41,6 +41,39 @@
         }
       },
       {
+        "HashCode": 380772151,
+        "Kind": "Components.Component",
+        "Name": "ToSic.Cre8Magic.Client.Controls.MagicExceptions",
+        "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MagicExceptions"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToSic.Cre8Magic.Client.Controls.MagicExceptions"
+        }
+      },
+      {
+        "HashCode": -276729304,
+        "Kind": "Components.Component",
+        "Name": "ToSic.Cre8Magic.Client.Controls.MagicExceptions",
+        "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ToSic.Cre8Magic.Client.Controls.MagicExceptions"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ToSic.Cre8Magic.Client.Controls.MagicExceptions",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -671662464,
         "Kind": "Components.Component",
         "Name": "ToSic.Cre8Magic.Client.Controls.MagicDebug",
@@ -305,39 +338,6 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "ToSic.Cre8Magic.Client.Controls.MagicDebug.Button",
           "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 380772151,
-        "Kind": "Components.Component",
-        "Name": "ToSic.Cre8Magic.Client.Controls.MagicExceptions",
-        "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MagicExceptions"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToSic.Cre8Magic.Client.Controls.MagicExceptions"
-        }
-      },
-      {
-        "HashCode": -276729304,
-        "Kind": "Components.Component",
-        "Name": "ToSic.Cre8Magic.Client.Controls.MagicExceptions",
-        "AssemblyName": "ToSic.Cre8Magic.Client.Oqtane",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ToSic.Cre8Magic.Client.Controls.MagicExceptions"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ToSic.Cre8Magic.Client.Controls.MagicExceptions",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
