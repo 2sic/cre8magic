@@ -1,4 +1,5 @@
-﻿using Oqtane.Models;
+﻿using System.IO.Compression;
+using Oqtane.Models;
 using Oqtane.UI;
 
 namespace ToSic.Cre8Magic.Client.Menus;
@@ -121,15 +122,18 @@ public class MagicMenuTree : MagicMenuBranch
             // TODO: CHECK WHAT LEVEL Oqtane actually gives us, is 1 the top?
             case StartMode.Current when n.Level == 1 && !n.ShowChildren:
                 return l.Return(source.Where(p => p.Level == 0).ToList(), "Current level 1?");
-            case StartMode.Current:
-            {
-                var up = n.Level > 0;
-                var ancestors = up ? source.Breadcrumb(Page) : source.GetAncestors(Page).ToList();
+            case StartMode.Current when n.Level > 0:
                 // If coming from the top, level 1 means top level, so skip one less
-                var level = up ? n.Level - 1 : Math.Abs(n.Level);
-                var result = new List<Page> { ancestors.Skip(level).First() };
-                return l.Return(result, $"{(up ? "from root to" : "up the")} breadcrumb by {level}");
-            }
+                var skipDown = n.Level - 1;
+                var fromTop = source.Breadcrumb(Page).Skip(skipDown).FirstOrDefault();
+                var fromTopResult = fromTop == null ? new() : new List<Page> { fromTop };
+                return l.Return(fromTopResult, $"from root to breadcrumb by {skipDown}");
+            case StartMode.Current when n.Level < 0:
+                // If going up, must change skip to normal
+                var skipUp = Math.Abs(n.Level);
+                var fromCurrent = source.GetAncestors(Page).ToList().Skip(skipUp).FirstOrDefault();
+                var result = fromCurrent == null ? new() : new List<Page> { fromCurrent };
+                return l.Return(result, $"up the ancestors by {skipUp}");
             default:
                 return l.Return(new(), "nothing");
         }

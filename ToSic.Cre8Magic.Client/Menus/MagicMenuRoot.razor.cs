@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Components;
-using ToSic.Cre8Magic.Client.Settings.Json;
 
 namespace ToSic.Cre8Magic.Client.Menus;
 
@@ -8,29 +7,25 @@ namespace ToSic.Cre8Magic.Client.Menus;
 /// </summary>
 public abstract class MagicMenuRoot: MagicMenuBase
 {
-    // TODO: USE THIS INSTEAD
+    /// <summary>
+    /// Complex object with all settings.
+    /// If this is used, all other settings will be ignored.
+    /// </summary>
     [Parameter] public MagicMenuSettings? MenuSettings { get; set; }
 
-    /// <inheritdoc />
-    [Parameter] public string? Id { get; set; }
-    /// <inheritdoc />
+    [Parameter] public string? MenuId { get; set; }
     [Parameter] public string? ConfigName { get; set; }
     ///// <inheritdoc />
     //[Parameter] public List<int>? PageList { get; set; }
-    ///// <inheritdoc />
-    //[Parameter] public bool? Children { get; set; }
-    ///// <inheritdoc />
-    //[Parameter] public int? Depth { get; set; }
-    ///// <inheritdoc />
-    //[Parameter] public bool? Display { get; set; } = true;
-    ///// <inheritdoc />
-    //[Parameter] public int? Level { get; set; }
-    /// <inheritdoc />
+    [Parameter] public bool? Children { get; set; }
+    [Parameter] public bool? Debug { get; set; }
+    [Parameter] public int? Depth { get; set; }
+    [Parameter] public bool? Display { get; set; } = true;
+    [Parameter] public int? Level { get; set; }
     [Parameter] public string? Start { get; set; }
-    ///// <inheritdoc />
-    //[Parameter] public string? Design { get; set; }
+    [Parameter] public string? Design { get; set; }
 
-    //[Parameter] public string? Template { get; set; }
+    [Parameter] public string? Template { get; set; }
 
     protected MagicMenuTree? Menu { get; private set; }
 
@@ -48,18 +43,21 @@ public abstract class MagicMenuRoot: MagicMenuBase
         await base.OnParametersSetAsync();
         MenuTreeService!.InitSettings(Settings);
 
-        var tempSettings = new MagicMenuSettings
+        var menuSettings = MenuSettings ?? new MagicMenuSettings
         {
-            Id = Id,
+            Id = MenuId,
+            Children = Children,
             ConfigName = ConfigName,
+            Debug = Debug == null ? null : new() { Allowed = Debug, Admin = Debug, Anonymous = Debug },
+            Depth = Depth,
+            Design = Design,
+            Display = Display,
+            Level = Level,
             Start = Start,
-            
+            Template = Template,
         };
-        var combined = MenuSettings == null 
-            ? tempSettings 
-            : JsonMerger.Merge(tempSettings, MenuSettings);
 
-        Menu = MenuTreeService?.GetTree(combined, MenuPages.ToList());
+        Menu = MenuTreeService?.GetTree(menuSettings, MenuPages.ToList());
     }
 
 }
