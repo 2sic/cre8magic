@@ -17,26 +17,31 @@ public abstract class MagicMenuRoot: MagicMenuBase
     [Parameter] public string? ConfigName { get; set; }
     ///// <inheritdoc />
     //[Parameter] public List<int>? PageList { get; set; }
-    /// <inheritdoc />
-    [Parameter] public bool? Children { get; set; }
-    /// <inheritdoc />
-    [Parameter] public int? Depth { get; set; }
-    /// <inheritdoc />
-    [Parameter] public bool Debug { get; set; }
+    ///// <inheritdoc />
+    //[Parameter] public bool? Children { get; set; }
+    ///// <inheritdoc />
+    //[Parameter] public int? Depth { get; set; }
     ///// <inheritdoc />
     //[Parameter] public bool? Display { get; set; } = true;
-    /// <inheritdoc />
-    [Parameter] public int? Level { get; set; }
+    ///// <inheritdoc />
+    //[Parameter] public int? Level { get; set; }
     /// <inheritdoc />
     [Parameter] public string? Start { get; set; }
-    /// <inheritdoc />
-    [Parameter] public string? Design { get; set; }
+    ///// <inheritdoc />
+    //[Parameter] public string? Design { get; set; }
 
-    [Parameter] public string? Template { get; set; }
+    //[Parameter] public string? Template { get; set; }
 
-    protected MagicMenuTree? MenuTree { get; private set; }
+    protected MagicMenuTree? Menu { get; private set; }
 
     protected MagicMenuBuilder? MenuTreeService { get; set; } = new();
+
+    /// <summary>
+    /// Detect if the menu is configured for vertical.
+    /// For the most common 2 kinds of menu options. 
+    /// </summary>
+    protected bool IsVertical => MagicConstants.MenuVertical.EqInvariant(Menu?.Settings.Template);
+    protected bool IsHorizontal => MagicConstants.MenuHorizontal.EqInvariant(Menu?.Settings.Template);
 
     protected override async Task OnParametersSetAsync()
     {
@@ -54,7 +59,7 @@ public abstract class MagicMenuRoot: MagicMenuBase
             ? tempSettings 
             : JsonMerger.Merge(tempSettings, MenuSettings);
 
-        MenuTree = MenuTreeService?.GetTree(combined, MenuPages.ToList());
+        Menu = MenuTreeService?.GetTree(combined, MenuPages.ToList());
     }
 
 }
