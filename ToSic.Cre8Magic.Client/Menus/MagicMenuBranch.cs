@@ -23,18 +23,17 @@ public class MagicMenuBranch //: IHasSettingsExceptions
     /// </summary>
     public int MenuLevel { get; }
 
-    public MagicMenuBranch(MagicMenuTree tree, int menuLevel, Page page, string debugPrefix): this(page)
+    public MagicMenuBranch(MagicMenuTree tree, int menuLevel, Page page, string debugPrefix): this(page, menuLevel)
     {
         Tree = tree;
         Log = tree.LogRoot.GetLog(debugPrefix);
-        MenuLevel = menuLevel;
         var _ = PageInfo;   // Access page info early on to make logging nicer
     }
 
-    protected MagicMenuBranch(Page page)
+    protected MagicMenuBranch(Page page, int menuLevel)
     {
         Page = page;
-        MenuLevel = 0;
+        MenuLevel = menuLevel;
     }
 
     /// <summary>

@@ -8,7 +8,7 @@ public class MagicMenuTree : MagicMenuBranch
     public const char PageForced = '!';
 
     public MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<Page> menuPages, List<string> messages)
-        : base(magicSettings.PageState.Page)
+        : base(magicSettings.PageState.Page, 0)
     {
         Log = LogRoot.GetLog("Root");
         Log.A($"Start for Page: {magicSettings.PageState.Page.PageId}; Level: 0");
@@ -125,8 +125,6 @@ public class MagicMenuTree : MagicMenuBranch
             {
                 var up = n.Level > 0;
                 var ancestors = up ? source.Breadcrumb(Page) : source.GetAncestors(Page).ToList();
-                // If level positive, then we need to go root
-                //if (n.Level > 0) ancestors = ancestors.Reverse();
                 // If coming from the top, level 1 means top level, so skip one less
                 var level = up ? n.Level - 1 : Math.Abs(n.Level);
                 var result = new List<Page> { ancestors.Skip(level).First() };
