@@ -33,11 +33,12 @@ public class MagicSettingsCatalog: IHasDebugSettings
 
     public NamedSettings<MagicLanguagesSettings> Languages { get; set; } = new();
 
-    public NamedSettings<MagicLanguageDesignSettings> LanguageDesigns { get; set; } = new();
+    public NamedSettings<MagicLanguagesDesignSettings> LanguagesDesigns { get; set; } = new();
 
     public NamedSettings<MagicBreadcrumbSettings> Breadcrumbs { get; set; } = new();
 
     // TODO: For completeness, we may need BreadcrumbDesign
+    public NamedSettings<MagicBreadcrumbsDesignSettings> BreadcrumbsDesigns { get; set; } = new();
 
 
     /// <summary>

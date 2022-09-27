@@ -55,7 +55,7 @@ internal class PageTokens: ITokenReplace
         {
             if (_pageRootAlreadyTried) return _pageRootId;
             _pageRootAlreadyTried = true;
-            _pageRootId = PageState.Breadcrumb().FirstOrDefault()?.PageId;
+            _pageRootId = PageState.Breadcrumbs().FirstOrDefault()?.PageId;
             return _pageRootId;
         }
     }

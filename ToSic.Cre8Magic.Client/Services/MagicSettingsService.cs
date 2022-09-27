@@ -30,9 +30,6 @@ public class MagicSettingsService: IHasSettingsExceptions
             ?? MagicDebugSettings.Defaults.Fallback;
     private MagicDebugSettings? _debug;
 
-    internal ThemeDesigner ThemeDesigner { get; } = new();
-
-
     private MagicPackageSettings PackageSettings
     {
         get => _settings ?? throw new ArgumentException($"The {nameof(MagicSettingsService)} can't work without first calling {nameof(InitSettings)}", nameof(PackageSettings));
@@ -62,8 +59,8 @@ public class MagicSettingsService: IHasSettingsExceptions
         var theme = Theme.Find(name).Parse(tokens);
 
         var current = new MagicSettings(name, this, theme, tokens, pageState);
-        ThemeDesigner.InitSettings(current);
-        current.MagicContext = ThemeDesigner.BodyClasses(tokens);
+        //ThemeDesigner.InitSettings(current);
+        current.MagicContext = current.ThemeDesigner.BodyClasses(tokens);
         var dbg = current.DebugSources;
         dbg.Add("Name", string.Join("; ", configDetails.Source));
 
@@ -100,6 +97,10 @@ public class MagicSettingsService: IHasSettingsExceptions
         new(this, MagicBreadcrumbSettings.Defaults, cat => cat.Breadcrumbs);
     private NamedSettingsReader<MagicBreadcrumbSettings>? _getBreadcrumbs;
 
+    internal NamedSettingsReader<MagicBreadcrumbsDesignSettings> BreadcrumbsDesigns => _getBreadcrumbsDesign ??=
+        new(this, MagicBreadcrumbsDesignSettings.Defaults, cat => cat.BreadcrumbsDesigns);
+    private NamedSettingsReader<MagicBreadcrumbsDesignSettings>? _getBreadcrumbsDesign;
+
 
     internal NamedSettingsReader<MagicMenuSettings> MenuSettings => _getMenuSettings ??=
         new(this, MagicMenuSettings.Defaults, cat => cat.Menus);
@@ -109,9 +110,9 @@ public class MagicSettingsService: IHasSettingsExceptions
         new(this, MagicLanguagesSettings.Defaults, cat => cat.Languages);
     private NamedSettingsReader<MagicLanguagesSettings>? _languages;
 
-    internal NamedSettingsReader<MagicLanguageDesignSettings> LanguageDesign => _languageDesign ??=
-        new(this, MagicLanguageDesignSettings.Defaults, cat => cat.LanguageDesigns);
-    private NamedSettingsReader<MagicLanguageDesignSettings>? _languageDesign;
+    internal NamedSettingsReader<MagicLanguagesDesignSettings> LanguagesDesign => _languageDesign ??=
+        new(this, MagicLanguagesDesignSettings.Defaults, cat => cat.LanguagesDesigns);
+    private NamedSettingsReader<MagicLanguagesDesignSettings>? _languageDesign;
 
     internal NamedSettingsReader<MagicContainerSettings> Containers => _containers ??=
         new(this, MagicContainerSettings.Defaults, cat => cat.Containers);

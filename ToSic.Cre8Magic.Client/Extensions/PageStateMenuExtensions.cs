@@ -5,14 +5,14 @@ namespace ToSic.Cre8Magic.Client;
 
 public static class PageStateMenuExtensions
 {
-    public static Page? GetHomePage(this PageState pageState) => pageState.Pages.Find(p => p.Path == "");
+    internal static Page? GetHomePage(this PageState pageState) => pageState.Pages.Find(p => p.Path == "");
 
-    public static bool CurrentPageIsHome(this PageState pageState) => pageState?.Page.Path == "";
+    internal static bool CurrentPageIsHome(this PageState pageState) => pageState?.Page.Path == "";
 
-    public static List<Page> Breadcrumb(this PageState pageState, Page? page = null)
+    internal static List<Page> Breadcrumbs(this PageState pageState, Page? page = null)
         => GetAncestors(pageState, page).Reverse().ToList();
 
-    internal static List<Page> Breadcrumb(this List<Page> pages, Page page)
+    internal static List<Page> Breadcrumbs(this List<Page> pages, Page page)
         => GetAncestors(pages, page).Reverse().ToList();
 
     internal static List<Page> Ancestors(this PageState pageState, Page? page = null)

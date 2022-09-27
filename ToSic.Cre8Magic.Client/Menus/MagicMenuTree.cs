@@ -48,7 +48,7 @@ public class MagicMenuTree : MagicMenuBranch
     internal MagicMenuDesigner Design => _menuCss ??= new(Settings);
     private MagicMenuDesigner? _menuCss;
 
-    internal List<Page> Breadcrumb => _breadcrumb ??= AllPages.Breadcrumb(Page).ToList();
+    internal List<Page> Breadcrumb => _breadcrumb ??= AllPages.Breadcrumbs(Page).ToList();
     private List<Page>? _breadcrumb;
 
     public override string MenuId => _menuId ??= Settings?.MenuId ?? "error-menu-id";
@@ -125,7 +125,7 @@ public class MagicMenuTree : MagicMenuBranch
             case StartMode.Current when n.Level > 0:
                 // If coming from the top, level 1 means top level, so skip one less
                 var skipDown = n.Level - 1;
-                var fromTop = source.Breadcrumb(Page).Skip(skipDown).FirstOrDefault();
+                var fromTop = source.Breadcrumbs(Page).Skip(skipDown).FirstOrDefault();
                 var fromTopResult = fromTop == null ? new() : new List<Page> { fromTop };
                 return l.Return(fromTopResult, $"from root to breadcrumb by {skipDown}");
             case StartMode.Current when n.Level < 0:

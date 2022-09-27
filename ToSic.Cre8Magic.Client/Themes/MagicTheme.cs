@@ -69,7 +69,11 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     protected override async Task OnParametersSetAsync()
     {
         await base.OnParametersSetAsync();
+
+        var prevSettings = Settings;
         Settings = MagicSettingsService.CurrentSettings(PageState, Layout, MagicClasses);
+        if (Settings != prevSettings)
+            StateHasChanged();
     }
 
     /// <summary>

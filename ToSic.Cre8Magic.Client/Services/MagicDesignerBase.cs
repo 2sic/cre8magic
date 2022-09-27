@@ -1,6 +1,6 @@
 ﻿namespace ToSic.Cre8Magic.Client.Services;
 
-internal abstract class MagicDesignerBase: MagicServiceWithSettingsBase
+internal abstract class MagicDesignerBase: MagicServiceWithSettingsBase, IMagicDesigner
 {
     protected abstract DesignSettingBase? GetSettings(string name);
 

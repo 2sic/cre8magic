@@ -28,5 +28,5 @@ public abstract class MagicLanguageMenu: MagicControl
 
 
 
-    public string? Classes(string tag, MagicLanguage? lang = null) => Settings.LanguageDesign.Classes(tag, lang).EmptyAsNull();
+    public string? Classes(string tag, MagicLanguage? lang = null) => Settings.LanguagesDesign.Classes(tag, lang).EmptyAsNull();
 }

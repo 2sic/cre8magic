@@ -16,9 +16,12 @@ public abstract class MagicControl: ThemeControlBase, IMagicControlWithSettings
 
     protected bool UserIsLoggedIn => PageState.UserIsRegistered();
 
-    public string? Classes(string target) => Settings?.ThemeDesigner.Classes(target);
+    protected virtual IMagicDesigner Designer => _designer ??= Settings?.ThemeDesigner;
+    private IMagicDesigner? _designer;
 
-    public string? Value(string target) => Settings?.ThemeDesigner.Value(target);
+    public string? Classes(string target) => Designer.Classes(target);
 
-    public string? Id(string name) => Settings?.ThemeDesigner.Id(name);
+    public string? Value(string target) => Designer.Value(target);
+
+    public string? Id(string name) => Designer.Id(name);
 }

@@ -2,7 +2,7 @@
 
 namespace ToSic.Cre8Magic.Client.Languages.Settings;
 
-public class MagicLanguageDesignSettings: NamedSettings<DesignSettingActive>
+public class MagicLanguagesDesignSettings: NamedSettings<DesignSettingActive>
 {
     internal string Classes(string tag, MagicLanguage? lang = null)
     {
@@ -13,7 +13,7 @@ public class MagicLanguageDesignSettings: NamedSettings<DesignSettingActive>
         return styles.Classes + " " + styles.IsActive.Get(lang?.IsActive);
     }
 
-    internal static Defaults<MagicLanguageDesignSettings> Defaults = new()
+    internal static Defaults<MagicLanguagesDesignSettings> Defaults = new()
     {
         Fallback = new()
         {
