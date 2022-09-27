@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace ToSic.Cre8Magic.Client.Logging;
+﻿namespace ToSic.Cre8Magic.Client.Logging;
 
 public class LogCallBase
 {
