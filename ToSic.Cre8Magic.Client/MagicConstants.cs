@@ -13,4 +13,5 @@ public class MagicConstants
     public const string MenuHorizontal = "Horizontal";
     public const string MenuVertical = "Vertical";
 
+    public const string PackageId = "ToSic.Cre8Magic.Oqtane";
 }

@@ -10,12 +10,17 @@
     [Parameter] public RenderFragment? ChildContent { get; set; }
     [Inject] protected IMagicThemeJsService? ThemeJs { get; set; }
 
+    // [Inject] protected MagicThemeJsServiceTest? ThemeJsTest { get; set; }
+
     private bool PutInBody => Settings.Theme.MagicContextInBody == true;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await base.OnAfterRenderAsync(firstRender);
         if (PutInBody && ThemeJs != null) await ThemeJs.SetBodyClasses(Settings.MagicContext);
+
+        // await ThemeJsTest!.Log("test from test");
+        // var x = await ThemeJsTest!.TestFromTest();
     }
 
 }

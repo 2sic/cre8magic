@@ -16,7 +16,7 @@ public class Startup : Oqtane.Services.IClientStartup
         services.TryAddScoped<MagicSettingsService>();
         services.TryAddTransient<LanguageService>();
 
-        //services.AddTransient<MenuTreeService>();
+        services.TryAddTransient<MagicThemeJsServiceTest>();
 
         //// Logic parts for Controls
         services.TryAddTransient<MagicPageEditService>();
