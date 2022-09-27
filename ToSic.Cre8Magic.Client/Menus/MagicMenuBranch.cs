@@ -28,6 +28,7 @@ public class MagicMenuBranch //: IHasSettingsExceptions
         Tree = tree;
         Log = tree.LogRoot.GetLog(debugPrefix);
         MenuLevel = menuLevel;
+        var _ = PageInfo;   // Access page info early on to make logging nicer
     }
 
     protected MagicMenuBranch(Page page)
@@ -54,14 +55,14 @@ public class MagicMenuBranch //: IHasSettingsExceptions
         get
         {
             if (_pI != null) return _pI;
+            var l = Log.Fn<MagicPageInfo>($"Page: {Page.PageId}");
             _pI = new()
             {
                 HasChildren = Children.Any(),
                 IsActive = Page.PageId == Tree.Page.PageId,
                 InBreadcrumb = Tree.Breadcrumb.Contains(Page),
             };
-            Log.A($"PageInfo for #{Page.PageId} '{Page.Name}': {_pI.Log}");
-            return _pI;
+            return l.Return(_pI, $"Name: '{Page.Name}': {_pI.Log}"); 
         }
     }
 
