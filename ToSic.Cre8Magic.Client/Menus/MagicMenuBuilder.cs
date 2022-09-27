@@ -50,6 +50,6 @@ public class MagicMenuBuilder: MagicServiceWithSettingsBase
         else
             messages.Add("Design rules already set");
 
-        return new(Settings, config, menuPages, messages, settingsSvc);
+        return new(Settings, config, menuPages, messages);
     }
 }

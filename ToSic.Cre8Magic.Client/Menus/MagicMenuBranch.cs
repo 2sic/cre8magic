@@ -43,13 +43,34 @@ public class MagicMenuBranch //: IHasSettingsExceptions
     internal Log Log { get; set; }
 
     protected string LogPageList(List<Page>? pages) =>
-        pages == null ? "" : string.Join(",", pages.Select(p => p.PageId)) + $"(total: {pages.Count})";
+        pages?.Any() == true ? $"{pages.Count} pages [" + string.Join(",", pages.Select(p => p.PageId)) + "]" : "(no pages)";
 
-    public bool HasChildren => Children.Any();
+    /// <summary>
+    /// Special central place to get, cache and log the special properties only once
+    /// </summary>
+    internal MagicPageInfo PageInfo
+    {
+        get
+        {
+            if (_pI != null) return _pI;
+            _pI = new()
+            {
+                HasChildren = Children.Any(),
+                IsActive = Page.PageId == Tree.Page.PageId,
+                InBreadcrumb = Tree.Breadcrumb.Contains(Page),
+            };
+            Log.A($"PageInfo for #{Page.PageId} '{Page.Name}': {_pI.Log}");
+            return _pI;
+        }
+    }
 
-    public bool IsActive => Page.PageId == Tree.Page.PageId;
+    private MagicPageInfo? _pI;
 
-    public bool InBreadcrumb => Tree.Breadcrumb.Contains(Page);
+    public bool HasChildren => PageInfo.HasChildren;
+
+    public bool IsActive => PageInfo.IsActive;
+
+    public bool InBreadcrumb => PageInfo.InBreadcrumb;
 
     public virtual string MenuId => Tree.MenuId;
 
@@ -66,7 +87,7 @@ public class MagicMenuBranch //: IHasSettingsExceptions
         var l = Log.Fn<List<MagicMenuBranch>>($"{nameof(MenuLevel)}: {MenuLevel}");
         var levelsRemaining = (Tree.Settings.Depth ?? MagicMenuSettings.LevelDepthFallback) - MenuLevel + 1;
         if (levelsRemaining <= 0)
-            return l.Return(new(), "no levels remaining, empty");
+            return l.Return(new(), "remaining levels 0 - return empty");
         
         var children = GetChildPages()
             .Select(page => new MagicMenuBranch(Tree, MenuLevel + 1, page, $"{Log.Prefix}>{Page.PageId}"))
@@ -74,12 +95,13 @@ public class MagicMenuBranch //: IHasSettingsExceptions
         return l.Return(children, $"{children.Count}");
     }
 
+    private const string ErrPageNotFound = "Error: Page not found";
 
     protected virtual List<Page> GetChildPages()
     {
         var l = Log.Fn<List<Page>>();
         if (Page == null)
-            return l.Return(new() { ErrPage(-1, "Error: No current page found") }, "no current page found");
+            return l.Return(new() { ErrPage(-1, ErrPageNotFound) }, ErrPageNotFound);
 
         var result = ChildrenOf(Page.PageId);
         return l.Return(result, LogPageList(result));
@@ -97,6 +119,4 @@ public class MagicMenuBranch //: IHasSettingsExceptions
 
 
     protected static Page ErrPage(int id, string message) => new() { PageId = id, Name = message };
-
-    //public virtual List<Exception> Exceptions => Tree.Exceptions;
 }

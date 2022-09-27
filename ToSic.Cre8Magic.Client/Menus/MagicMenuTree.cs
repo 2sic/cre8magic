@@ -9,7 +9,7 @@ public class MagicMenuTree : MagicMenuBranch
 {
     public const char PageForced = '!';
 
-    public MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<Page> menuPages, List<string> messages, IHasSettingsExceptions exceptions)
+    public MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<Page> menuPages, List<string> messages)
         : base(null! /* root must be null, as `Tree` is handled in this class */, 0, magicSettings.PageState.Page, "Root")
     {
         Log = LogRoot.GetLog("Root");
@@ -19,7 +19,6 @@ public class MagicMenuTree : MagicMenuBranch
         Settings = settings;
         AllPages = magicSettings.PageState.Pages;
         MenuPages = menuPages;
-        //_exceptions = exceptions;
         Debug = messages ?? new();
 
         // Bug in Oqtane 3.2 and before: Level isn't hydrated
@@ -49,9 +48,6 @@ public class MagicMenuTree : MagicMenuBranch
     /// </summary>
     internal List<Page> MenuPages;
 
-    //public override List<Exception> Exceptions => _exceptions.Exceptions;
-    //private readonly IHasSettingsExceptions _exceptions;
-
     protected override MagicMenuTree Tree => this;
 
     internal MagicMenuDesigner Design => _menuCss ??= new(Settings);
@@ -67,10 +63,11 @@ public class MagicMenuTree : MagicMenuBranch
 
     internal Logging.LogRoot LogRoot { get; } = new();
 
-    [return: NotNull]
-    protected override List<Page> GetChildPages()
+    protected override List<Page> GetChildPages() => GetRootPages();
+
+    protected List<Page> GetRootPages()
     {
-        var l = Log.Fn<List<Page>>();
+        var l = Log.Fn<List<Page>>($"{Page.PageId}");
         // Give empty list if we shouldn't display it
         if (Settings.Display == false)
             return l.Return(new(), "Display == false, don't show");
@@ -179,6 +176,6 @@ public class MagicMenuTree : MagicMenuBranch
             })
             .Where(n => n != null)
             .ToArray() as StartingPoint[];
-        return l.Return(result, result.Length.ToString());
+        return l.ReturnAndKeepData(result, result.Length.ToString());
     }
 }

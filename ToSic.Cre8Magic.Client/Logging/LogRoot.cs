@@ -2,15 +2,16 @@
 
 namespace ToSic.Cre8Magic.Client.Logging;
 
-internal class LogRoot // : ILog
+internal class LogRoot
 {
     [JsonIgnore]
     public readonly List<LogEntry> LogEntries = new();
 
-    public IEnumerable<string> Entries => LogEntries.Select(e => e.ToString());
-
-    //[JsonIgnore]
-    //LogStack ILog.Log => this;
+    public IEnumerable<object?> Entries => LogEntries.SelectMany(e =>
+    {
+        if (e?.Data == null) return new [] { e?.ToString() as object};
+        return new[] { e?.ToString(), new { e.Data } as object };
+    });
 
     [JsonIgnore]
     public int Depth { get; set; } = 0;

@@ -15,6 +15,13 @@ public class LogCall<T> : LogCallBase
         this.DoneInternal(message);
         return result;
     }
+    public T ReturnAndKeepData(T result, string message)
+    {
+        this.DoneInternal(message);
+        if (Entry != null)
+            Entry.Data = result;
+        return result;
+    }
 
     public T ReturnAndLog(T result) => this.Return(result, $"{result}");
 

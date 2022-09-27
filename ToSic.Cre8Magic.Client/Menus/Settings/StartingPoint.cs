@@ -1,4 +1,7 @@
-﻿namespace ToSic.Cre8Magic.Client.Menus.Settings
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
+
+namespace ToSic.Cre8Magic.Client.Menus.Settings
 {
     internal class StartingPoint
     {
@@ -12,5 +15,6 @@
 
         public bool Children { get; set; } = false;
 
+        [JsonIgnore] public string Debug => JsonSerializer.Serialize(this);
     }
 }

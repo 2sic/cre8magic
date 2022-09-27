@@ -22,6 +22,8 @@ internal class LogEntry
     public string? Result { get; private set; }
 
     public int Depth;
+    
+    public object? Data { get; set; }
 
     public void AppendResult(string message)
     {
@@ -32,9 +34,13 @@ internal class LogEntry
 
     public override string ToString()
     {
-        return $"{Source}{(Source.HasValue() ? ": " : "")}" +
-               new string('>', Math.Max(0, Depth - 1)) +
+        var indent = new string('>', Math.Max(0, Depth - 1));
+        if (indent.HasValue()) indent += " ";
+        var result = $"{Source}{(Source.HasValue() ? ": " : "")}" +
+               indent +
                $"{Message}" +
                $"{(Result.HasValue() ? $"='{Result}'" : "")}";
+
+        return result;
     }
 }
