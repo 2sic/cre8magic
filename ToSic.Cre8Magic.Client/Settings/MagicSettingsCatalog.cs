@@ -38,5 +38,5 @@ public class MagicSettingsCatalog: IHasDebugSettings
     /// <summary>
     /// Design definitions of the menu
     /// </summary>
-    public NamedSettings<MagicMenuDesignSettings> MenuDesigns { get; set; } = new();
+    public NamedSettings<NamedSettings<MagicMenuDesign>> MenuDesigns { get; set; } = new();
 }

@@ -16,7 +16,7 @@ public class MagicMenuBranch //: IHasSettingsExceptions
 
     public string? Classes(string tag) => NodeReplace.Parse(Tree.Design.Classes(tag, this)).EmptyAsNull();
 
-    public string? Value(string key) => NodeReplace.Parse(Tree.Design.Value(key, this)).EmptyAsNull();
+    public string? Value(string key) => NodeReplace.Parse(Tree.Design.Value(key)).EmptyAsNull();
 
     /// <summary>
     /// Menu Level relative to the start of the menu (always starts with 1)

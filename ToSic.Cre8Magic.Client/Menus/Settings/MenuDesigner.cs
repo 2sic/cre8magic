@@ -5,18 +5,18 @@ namespace ToSic.Cre8Magic.Client.Menus.Settings;
 /// <summary>
 /// Special helper to provide Css classes to menus
 /// </summary>
-internal class MagicMenuDesigner
+internal class MenuDesigner
 {
-    public MagicMenuDesigner(MagicMenuSettings menuConfig)
+    public MenuDesigner(MagicMenuSettings menuConfig)
     {
         MenuSettings = menuConfig ?? throw new ArgumentException("MenuConfig must be real", nameof(MenuSettings));
 
         DesignSettingsList = new() { MenuSettings.DesignSettings! };
     }
     private MagicMenuSettings MenuSettings { get; }
-    internal List<MagicMenuDesignSettings> DesignSettingsList { get; }
+    internal List<NamedSettings<MagicMenuDesign>> DesignSettingsList { get; }
 
-    public string Value(string key, MagicMenuBranch branch)
+    public string Value(string key)
     {
         var configsForKey = ConfigsForTag(key)
             .Select(c => c.Value)
@@ -30,7 +30,7 @@ internal class MagicMenuDesigner
     {
         var configsForTag = ConfigsForTag(tag);
         return configsForTag.Any()
-            ? ListToClasses(TagClasses(branch, configsForTag as List<MagicMenuDesign>))
+            ? ListToClasses(TagClasses(branch, configsForTag))
             : "";
     }
 

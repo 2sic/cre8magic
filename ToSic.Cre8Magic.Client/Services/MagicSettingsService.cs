@@ -108,9 +108,9 @@ public class MagicSettingsService: IHasSettingsExceptions
         new(this, MagicThemeDesignSettings.Defaults, cat => cat.ThemeDesigns);
     private NamedSettingsReader<MagicThemeDesignSettings>? _themeDesign;
 
-    internal NamedSettingsReader<MagicMenuDesignSettings> MenuDesigns => _menuDesigns ??=
-        new(this, MagicMenuDesignSettings.Defaults, cat => cat.MenuDesigns);
-    private NamedSettingsReader<MagicMenuDesignSettings>? _menuDesigns;
+    internal NamedSettingsReader<NamedSettings<MagicMenuDesign>> MenuDesigns => _menuDesigns ??=
+        new(this, DefaultSettings.Defaults, cat => cat.MenuDesigns);
+    private NamedSettingsReader<NamedSettings<MagicMenuDesign>>? _menuDesigns;
 
 
     internal (string ConfigName, List<string> Source) FindConfigName(string? configName, string inheritedName)

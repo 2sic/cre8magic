@@ -45,8 +45,8 @@ public class MagicMenuTree : MagicMenuBranch
 
     protected override MagicMenuTree Tree => this;
 
-    internal MagicMenuDesigner Design => _menuCss ??= new(Settings);
-    private MagicMenuDesigner? _menuCss;
+    internal MenuDesigner Design => _menuCss ??= new(Settings);
+    private MenuDesigner? _menuCss;
 
     internal List<Page> Breadcrumb => _breadcrumb ??= AllPages.Breadcrumbs(Page).ToList();
     private List<Page>? _breadcrumb;

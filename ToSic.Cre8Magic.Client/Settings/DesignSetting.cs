@@ -26,6 +26,8 @@ public class DesignSetting
     /// </summary>
     public PairOnOff? IsActive { get; set; }
 
+    #region Settings which are ATM for containers only
+
     /// <summary>
     /// If something is published or not, usually just for Containers
     /// </summary>
@@ -35,5 +37,8 @@ public class DesignSetting
     /// If a module is admin or not, usually just for containers
     /// </summary>
     public PairOnOff? IsAdmin { get; set; }
+
+    #endregion
+
 
 }

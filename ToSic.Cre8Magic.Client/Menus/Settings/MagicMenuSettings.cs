@@ -87,7 +87,7 @@ public class MagicMenuSettings : SettingsWithInherit, ICloneAndMerge<MagicMenuSe
     public const string TemplateDefault = "Horizontal";
 
     // todo: name, maybe not on interface
-    public MagicMenuDesignSettings? DesignSettings { get; set; }
+    public NamedSettings<MagicMenuDesign>? DesignSettings { get; set; }
 
     public string MenuId => _menuId ??= Id.HasText()
         ? Id
