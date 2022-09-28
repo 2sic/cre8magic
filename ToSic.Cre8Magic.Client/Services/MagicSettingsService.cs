@@ -1,6 +1,5 @@
 ﻿using System.Text.Json;
 using Oqtane.UI;
-using ToSic.Cre8Magic.Client.Breadcrumbs.Settings;
 using ToSic.Cre8Magic.Client.Settings.Json;
 using static ToSic.Cre8Magic.Client.MagicConstants;
 
@@ -92,15 +91,6 @@ public class MagicSettingsService: IHasSettingsExceptions
         new(this, MagicThemeSettings.Defaults, cat => cat.Themes,
             (name) => json => json.Replace("\"=\"", $"\"{name}\""));
     private NamedSettingsReader<MagicThemeSettings>? _getTheme;
-
-    internal NamedSettingsReader<MagicBreadcrumbSettings> Breadcrumbs => _getBreadcrumbs ??=
-        new(this, MagicBreadcrumbSettings.Defaults, cat => cat.Breadcrumbs);
-    private NamedSettingsReader<MagicBreadcrumbSettings>? _getBreadcrumbs;
-
-    internal NamedSettingsReader<MagicBreadcrumbsDesignSettings> BreadcrumbsDesigns => _getBreadcrumbsDesign ??=
-        new(this, MagicBreadcrumbsDesignSettings.Defaults, cat => cat.BreadcrumbsDesigns);
-    private NamedSettingsReader<MagicBreadcrumbsDesignSettings>? _getBreadcrumbsDesign;
-
 
     internal NamedSettingsReader<MagicMenuSettings> MenuSettings => _getMenuSettings ??=
         new(this, MagicMenuSettings.Defaults, cat => cat.Menus);

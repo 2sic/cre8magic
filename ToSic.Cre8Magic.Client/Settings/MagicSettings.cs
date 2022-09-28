@@ -1,6 +1,5 @@
 ﻿using System.Text.Json.Serialization;
 using Oqtane.UI;
-using ToSic.Cre8Magic.Client.Breadcrumbs.Settings;
 using static System.StringComparer;
 
 namespace ToSic.Cre8Magic.Client.Settings;
@@ -39,16 +38,10 @@ public class MagicSettings: IHasSettingsExceptions, IHasDebugSettings
     public string Name { get; }
 
     [JsonIgnore] public MagicSettingsService Service { get; }
-    [JsonIgnore] internal ThemeDesigner ThemeDesigner => _themeDesigner ??= new(this);// Service.ThemeDesigner;
+    [JsonIgnore] internal ThemeDesigner ThemeDesigner => _themeDesigner ??= new(this);
     private ThemeDesigner? _themeDesigner;
 
     public MagicThemeSettings Theme { get; }
-
-    public MagicBreadcrumbSettings Breadcrumbs => _b ??= Service.Breadcrumbs.Find(Theme.Breadcrumbs ?? Name, Name);
-    private MagicBreadcrumbSettings? _b;
-
-    public MagicBreadcrumbsDesignSettings BreadcrumbsDesigns => _bd ??= Service.BreadcrumbsDesigns.Find(Theme.Breadcrumbs ?? Name, Name);
-    private MagicBreadcrumbsDesignSettings? _bd;
 
     public MagicThemeDesignSettings ThemeDesign => _td ??= Service.ThemeDesign.Find(Theme.PageDesign ?? Name, Name);
     private MagicThemeDesignSettings? _td;

@@ -1,5 +1,4 @@
 ﻿using Oqtane.Models;
-using ToSic.Cre8Magic.Client.Breadcrumbs.Settings;
 
 namespace ToSic.Cre8Magic.Client.Breadcrumbs;
 
@@ -11,8 +10,4 @@ public abstract class MagicBreadcrumbs: MagicControl
 
     protected List<Page> Breadcrumbs => _breadcrumbs ??= PageState.Breadcrumbs();
     private List<Page>? _breadcrumbs;
-
-    protected override IMagicDesigner Designer => _designer ??= new MagicBreadcrumbsDesigner(Settings);
-    private IMagicDesigner? _designer;
-
 }
