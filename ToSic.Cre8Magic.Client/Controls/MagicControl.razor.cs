@@ -21,6 +21,8 @@ public abstract class MagicControl: ThemeControlBase, IMagicControlWithSettings
 
     public string? Classes(string target) => Designer.Classes(target);
 
+    public string? ClassesOrDefault(string target, string defaultValue) => Classes(target) ?? defaultValue;
+
     public string? Value(string target) => Designer.Value(target);
 
     public string? Id(string name) => Designer.Id(name);

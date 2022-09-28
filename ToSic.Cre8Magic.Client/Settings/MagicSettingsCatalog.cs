@@ -32,8 +32,6 @@ public class MagicSettingsCatalog: IHasDebugSettings
 
     public NamedSettings<MagicLanguagesSettings> Languages { get; set; } = new();
 
-    public NamedSettings<MagicLanguagesDesignSettings> LanguagesDesigns { get; set; } = new();
-
     /// <summary>
     /// The menu definitions
     /// </summary>

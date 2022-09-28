@@ -46,7 +46,7 @@ public class MagicThemeDesignSettings: SettingsWithInherit
 
     public string MagicContextTagId { get; set; }
 
-    public NamedSettings<DesignSettingBase> Custom { get; set; } = new();
+    public NamedSettings<DesignSettingActive> Custom { get; set; } = new();
 
     // TODO: initialize with real properties, so the defaults don't already contain something?
 
@@ -58,7 +58,11 @@ public class MagicThemeDesignSettings: SettingsWithInherit
             MagicContext = MagicContextDefaults,
             PageIsHome = new($"{PagePrefixDefault}-is-home"),
             PaneIsEmpty = new($"{PanePrefixDefault}-is-empty"),
-            MagicContextTagId = BodyDivId
+            MagicContextTagId = BodyDivId,
+            Custom = new()
+            {
+                { "languages-li", new() { IsActive = new($"active {SettingFromDefaults}") } },
+            }
         },
         Foundation = new()
         {

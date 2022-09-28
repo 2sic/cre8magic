@@ -2,6 +2,10 @@
 
 internal abstract class MagicDesignerBase: MagicServiceWithSettingsBase, IMagicDesigner
 {
+    protected internal MagicDesignerBase() {}
+
+    protected internal MagicDesignerBase(MagicSettings settings) => InitSettings(settings);
+
     protected abstract DesignSettingBase? GetSettings(string name);
 
     protected virtual TokenEngine Tokens => _tokens ??= Settings.Tokens;

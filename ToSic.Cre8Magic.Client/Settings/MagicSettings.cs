@@ -49,9 +49,6 @@ public class MagicSettings: IHasSettingsExceptions, IHasDebugSettings
     public MagicLanguagesSettings Languages => _l ??= Service.Languages.Find(Theme.Languages ?? Name, Name);
     private MagicLanguagesSettings? _l;
 
-    public MagicLanguagesDesignSettings LanguagesDesign => _ld ??= Service.LanguagesDesign.Find(Theme.LanguageMenuDesign ?? Name, Name);
-    private MagicLanguagesDesignSettings? _ld;
-
     public MagicContainerSettings Container => _c ??= Service.Containers.Find(Theme.Container ?? Name, Name);
     private MagicContainerSettings? _c;
 

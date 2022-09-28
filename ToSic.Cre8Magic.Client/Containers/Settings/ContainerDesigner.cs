@@ -6,12 +6,7 @@ internal class ContainerDesigner: MagicDesignerBase
 {
     internal const string ModulePrefixDefault = "module";
 
-    public ContainerDesigner(MagicSettings settings, Module module)
-    {
-        InitSettings(settings);
-        _module = module;
-    }
-
+    public ContainerDesigner(MagicSettings settings, Module module): base(settings) => _module = module;
     private readonly Module _module;
 
 
@@ -23,8 +18,6 @@ internal class ContainerDesigner: MagicDesignerBase
 
         var value = GetClasses(styles);
         return PostProcess(value);
-        //var tokens = Settings.Tokens.Expanded(new ModuleTokens(_module));
-        //return tokens.Parse(value).EmptyAsNull();
     }
 
     protected override TokenEngine Tokens => _tokens1 ??= Settings.Tokens.Expanded(new ModuleTokens(_module));

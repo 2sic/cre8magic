@@ -9,7 +9,7 @@ internal class MagicMenuDesigner
 {
     public MagicMenuDesigner(MagicMenuSettings menuConfig)
     {
-        MenuSettings = menuConfig as MagicMenuSettings ?? throw new ArgumentException("MenuConfig must be real", nameof(MenuSettings));
+        MenuSettings = menuConfig ?? throw new ArgumentException("MenuConfig must be real", nameof(MenuSettings));
 
         DesignSettingsList = new() { MenuSettings.DesignSettings! };
     }

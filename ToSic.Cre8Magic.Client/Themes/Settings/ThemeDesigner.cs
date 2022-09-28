@@ -5,7 +5,7 @@
 /// </summary>
 internal class ThemeDesigner : MagicDesignerBase
 {
-    public ThemeDesigner(MagicSettings settings) => InitSettings(settings);
+    public ThemeDesigner(MagicSettings settings) : base(settings) {}
 
     internal string? BodyClasses(ITokenReplace tokens)
     {

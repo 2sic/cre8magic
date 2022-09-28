@@ -100,10 +100,6 @@ public class MagicSettingsService: IHasSettingsExceptions
         new(this, MagicLanguagesSettings.Defaults, cat => cat.Languages);
     private NamedSettingsReader<MagicLanguagesSettings>? _languages;
 
-    internal NamedSettingsReader<MagicLanguagesDesignSettings> LanguagesDesign => _languageDesign ??=
-        new(this, MagicLanguagesDesignSettings.Defaults, cat => cat.LanguagesDesigns);
-    private NamedSettingsReader<MagicLanguagesDesignSettings>? _languageDesign;
-
     internal NamedSettingsReader<MagicContainerSettings> Containers => _containers ??=
         new(this, MagicContainerSettings.Defaults, cat => cat.Containers);
     private NamedSettingsReader<MagicContainerSettings>? _containers;
