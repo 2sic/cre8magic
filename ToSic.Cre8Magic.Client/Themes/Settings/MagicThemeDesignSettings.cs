@@ -9,7 +9,7 @@ public class MagicThemeDesignSettings: SettingsWithInherit
 {
     private const string SitePrefixDefault = "site";
     private const string PagePrefixDefault = "page";
-    internal const string MainPrefix = "to-shine";
+    internal const string MainPrefix = "theme";
     private const string PanePrefixDefault = "pane";
     private const string MenuLevelPrefixDefault = "nav-level";
     private const string BodyDivId = "cre8magic-root";
@@ -27,10 +27,10 @@ public class MagicThemeDesignSettings: SettingsWithInherit
         $"{SitePrefixDefault}-{MagicTokens.SiteId}",
         //3 Set the nav-level-### class
         $"{MenuLevelPrefixDefault}-{MagicTokens.MenuLevel}",
-        //5.1 Set the to-shine-variation- class
+        //5.1 Set the theme-variation- class
         $"{MainPrefix}-variation-{MagicTokens.LayoutVariation}",
 
-        //5.2 Set the to-shine-mainnav-variation- class to align the menu
+        //5.2 Set the theme-mainnav-variation- class to align the menu
         $"{MainPrefix}-mainnav-variation-right",
 
         // Debug info so we know the defaults were used
