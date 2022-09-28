@@ -34,6 +34,6 @@ public class DesignSetting
     /// <summary>
     /// If a module is admin or not, usually just for containers
     /// </summary>
-    public PairOnOff? IsAdminModule { get; set; }
+    public PairOnOff? IsAdmin { get; set; }
 
 }

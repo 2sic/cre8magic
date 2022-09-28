@@ -1,4 +1,5 @@
 ﻿using Oqtane.Models;
+using ToSic.Cre8Magic.Client.Settings;
 
 namespace ToSic.Cre8Magic.Client.Containers.Settings;
 
@@ -35,7 +36,7 @@ internal class ContainerDesigner: ThemeDesigner
         {
             styles.Classes,
             styles.IsPublished.Get(_module.IsPublished()),      // Info-Class if not published
-            styles.IsAdminModule.Get(_module.UseAdminContainer)       // Info-class if admin module
+            styles.IsAdmin.Get(_module.ForceAdminContainer())   // Info-class if admin module
         }.Where(s => s.HasValue()));
 
         return value;

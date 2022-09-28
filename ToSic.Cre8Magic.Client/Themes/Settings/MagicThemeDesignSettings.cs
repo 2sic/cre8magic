@@ -65,16 +65,15 @@ public class MagicThemeDesignSettings: SettingsWithInherit
             {
                 { "languages-li", new() { IsActive = new($"active {SettingFromDefaults}") } },
                 {
-                    "container-default", new()
+                    "container", new()
                     {
                         Classes = $"{MainPrefix}-page-language {SettingFromDefaults}",
                         IsPublished = new(null,
                             $"{ContainerDesigner.ModulePrefixDefault}-unpublished  {SettingFromDefaults}"),
-                        IsAdminModule = new($"{MainPrefix}-admin-container  {SettingFromDefaults}"),
+                        IsAdmin = new($"{MainPrefix}-admin-container  {SettingFromDefaults}"),
                         Id = ContainerIdDefault,
                     }
                 },
-                { "container-system", new() { Id = ContainerIdDefault } }
 
 
             }
@@ -87,8 +86,7 @@ public class MagicThemeDesignSettings: SettingsWithInherit
             MagicContextTagId = BodyDivId,
             Custom = new()
             {
-                { "container-default", new() { Id = ContainerIdDefault } },
-                { "container-system", new() { Id = ContainerIdDefault } }
+                { "container", new() { Id = ContainerIdDefault } },
             }
         },
     };
