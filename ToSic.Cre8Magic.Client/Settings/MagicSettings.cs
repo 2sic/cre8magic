@@ -43,14 +43,11 @@ public class MagicSettings: IHasSettingsExceptions, IHasDebugSettings
 
     public MagicThemeSettings Theme { get; }
 
-    public MagicThemeDesignSettings ThemeDesign => _td ??= Service.ThemeDesign.Find(Theme.PageDesign ?? Name, Name);
+    public MagicThemeDesignSettings ThemeDesign => _td ??= Service.ThemeDesign.Find(Theme.Design ?? Name, Name);
     private MagicThemeDesignSettings? _td;
 
     public MagicLanguagesSettings Languages => _l ??= Service.Languages.Find(Theme.Languages ?? Name, Name);
     private MagicLanguagesSettings? _l;
-
-    public MagicContainerSettings Container => _c ??= Service.Containers.Find(Theme.Container ?? Name, Name);
-    private MagicContainerSettings? _c;
 
     public Dictionary<string, string> DebugSources { get; } = new(InvariantCultureIgnoreCase);
 

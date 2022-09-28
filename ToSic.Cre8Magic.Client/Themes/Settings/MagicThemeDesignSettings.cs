@@ -51,6 +51,7 @@ public class MagicThemeDesignSettings: SettingsWithInherit
     // TODO: initialize with real properties, so the defaults don't already contain something?
 
     private const string ContainerIdDefault = "module-[Module.Id]";
+    internal const string ModulePrefixDefault = "module";
 
 
     internal static Defaults<MagicThemeDesignSettings> Defaults = new()
@@ -69,7 +70,7 @@ public class MagicThemeDesignSettings: SettingsWithInherit
                     {
                         Classes = $"{MainPrefix}-page-language {SettingFromDefaults}",
                         IsPublished = new(null,
-                            $"{ContainerDesigner.ModulePrefixDefault}-unpublished  {SettingFromDefaults}"),
+                            $"{ModulePrefixDefault}-unpublished  {SettingFromDefaults}"),
                         IsAdmin = new($"{MainPrefix}-admin-container  {SettingFromDefaults}"),
                         Id = ContainerIdDefault,
                     }

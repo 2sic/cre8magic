@@ -31,7 +31,7 @@ public class LanguageService: MagicServiceWithSettingsBase
     public async Task<bool> ShowMenu(int siteId)
     {
         var languages = await LanguagesToShow(siteId);
-        return Settings.Theme.LanguageMenuShow && Settings.Theme.LanguageMenuShowMin <= languages.Count;
+        return Settings.Theme.LanguagesShow && Settings.Theme.LanguagesMin <= languages.Count;
     }
 
     public async Task<List<MagicLanguage>> LanguagesToShow(int siteId)

@@ -1,28 +1,21 @@
 ﻿using Oqtane.Models;
-using ToSic.Cre8Magic.Client.Settings;
 
 namespace ToSic.Cre8Magic.Client.Containers.Settings;
 
 internal class ContainerDesigner: ThemeDesigner
 {
-    internal const string ModulePrefixDefault = "module";
-
     public ContainerDesigner(MagicSettings settings, Module module): base(settings) => _module = module;
     private readonly Module _module;
 
-
-    // protected override DesignSetting? GetSettings(string name) => Settings?.ContainerDesign.GetInvariant(name);
+    protected override TokenEngine Tokens => _tokens1 ??= Settings.Tokens.Expanded(new ModuleTokens(_module));
+    private TokenEngine? _tokens1;
 
     public override string? Classes(string tag)
     {
         if (GetSettings(tag) is not { } styles) return null;
-
-        var value = GetClasses(styles);
+        var value = CombineWithModuleClasses(styles);
         return PostProcess(value);
     }
-
-    protected override TokenEngine Tokens => _tokens1 ??= Settings.Tokens.Expanded(new ModuleTokens(_module));
-    private TokenEngine? _tokens1;
 
 
     /// <summary>
@@ -30,7 +23,7 @@ internal class ContainerDesigner: ThemeDesigner
     /// </summary>
     /// <param name="styles"></param>
     /// <returns></returns>
-    private string GetClasses(DesignSetting styles)
+    private string CombineWithModuleClasses(DesignSetting styles)
     {
         var value =  string.Join(" ", new[]
         {

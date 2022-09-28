@@ -14,26 +14,18 @@ public class MagicThemeSettings: SettingsWithInherit, IHasDebugSettings
     /// </summary>
     public string? Languages { get; set; }
 
+    public bool LanguagesShow { get; set; } = true;
+
+    public int LanguagesMin { get; set; } = 0;
+
     // TODO:
     // - probably add properties like BreadcrumbShow
     // - consider how to model it - should we have sub-objects? or too complex?
 
-    public bool LanguageMenuShow { get; set; } = true;
-
-    public int LanguageMenuShowMin { get; set; } = 0;
-
-    public string? LanguageMenuDesign { get; set; }
-
-    public string? Container { get; set; }
-
-    /// <summary>
-    /// The preferred container design to use. 
-    /// </summary>
-    public string? ContainerDesign { get; set; }
 
     public bool? MagicContextInBody { get; set; }
 
-    public string? PageDesign { get; set; }
+    public string? Design { get; set; }
 
     /// <summary>
     /// Map of menu names and alternate configurations to load instead
@@ -55,12 +47,9 @@ public class MagicThemeSettings: SettingsWithInherit, IHasDebugSettings
     public static MagicThemeSettings Fallback = new()
     {
         Logo = "unknown-logo.png",
-        Container = InheritName,
-        ContainerDesign = InheritName,
         Languages = InheritName,
-        LanguageMenuDesign = InheritName,
-        LanguageMenuShow = true,
-        LanguageMenuShowMin = 2,
+        LanguagesShow = true,
+        LanguagesMin = 2,
         MagicContextInBody = false,
         Breadcrumbs = InheritName,
         // The menus-map. Since this is the fallback, it must have at least an entry to not be skipped. 
@@ -68,7 +57,7 @@ public class MagicThemeSettings: SettingsWithInherit, IHasDebugSettings
         {
             { Default, Default }
         },
-        PageDesign = InheritName,
+        Design = InheritName,
     };
 
     internal static Defaults<MagicThemeSettings> Defaults = new()
