@@ -2,7 +2,7 @@
 
 public class MagicContainerSettings: SettingsWithInherit
 {
-    public NamedSettings<DesignSettingBase> Custom { get; set; } = new();
+    public NamedSettings<DesignSetting> Custom { get; set; } = new();
 
     private static readonly MagicContainerSettings FbAndF = new()
     {

@@ -7,7 +7,7 @@ internal class LanguagesDesigner: ThemeDesigner
     internal string Classes(MagicLanguage? lang, string tag)
     {
         if (!tag.HasValue()) return "";
-        var styles = GetSettings(tag) as DesignSettingActive;
+        var styles = GetSettings(tag);
         if (styles is null) return "";
         return styles.Classes + " " + styles.IsActive.Get(lang?.IsActive);
     }

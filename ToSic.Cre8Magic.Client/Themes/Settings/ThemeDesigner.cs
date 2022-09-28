@@ -55,5 +55,5 @@ internal class ThemeDesigner : MagicDesignerBase
     }
 
 
-    protected override DesignSettingBase? GetSettings(string name) => Settings?.ThemeDesign.Custom.GetInvariant(name);
+    protected override DesignSetting? GetSettings(string name) => Settings?.ThemeDesign.Custom.GetInvariant(name);
 }

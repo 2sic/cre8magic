@@ -52,9 +52,6 @@ public class MagicSettings: IHasSettingsExceptions, IHasDebugSettings
     public MagicContainerSettings Container => _c ??= Service.Containers.Find(Theme.Container ?? Name, Name);
     private MagicContainerSettings? _c;
 
-    public MagicContainerDesignSettings ContainerDesign => _cd ??= Service.ContainerDesign.Find(Theme.ContainerDesign ?? Name, Name);
-    private MagicContainerDesignSettings? _cd;
-
     public Dictionary<string, string> DebugSources { get; } = new(InvariantCultureIgnoreCase);
 
     public List<Exception> Exceptions => Service.Exceptions;

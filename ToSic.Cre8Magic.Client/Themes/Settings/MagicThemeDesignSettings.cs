@@ -46,9 +46,11 @@ public class MagicThemeDesignSettings: SettingsWithInherit
 
     public string MagicContextTagId { get; set; }
 
-    public NamedSettings<DesignSettingActive> Custom { get; set; } = new();
+    public NamedSettings<DesignSetting> Custom { get; set; } = new();
 
     // TODO: initialize with real properties, so the defaults don't already contain something?
+
+    private const string ContainerIdDefault = "module-[Module.Id]";
 
 
     internal static Defaults<MagicThemeDesignSettings> Defaults = new()
@@ -62,6 +64,19 @@ public class MagicThemeDesignSettings: SettingsWithInherit
             Custom = new()
             {
                 { "languages-li", new() { IsActive = new($"active {SettingFromDefaults}") } },
+                {
+                    "container-default", new()
+                    {
+                        Classes = $"{MainPrefix}-page-language {SettingFromDefaults}",
+                        IsPublished = new(null,
+                            $"{ContainerDesigner.ModulePrefixDefault}-unpublished  {SettingFromDefaults}"),
+                        IsAdminModule = new($"{MainPrefix}-admin-container  {SettingFromDefaults}"),
+                        Id = ContainerIdDefault,
+                    }
+                },
+                { "container-system", new() { Id = ContainerIdDefault } }
+
+
             }
         },
         Foundation = new()
@@ -69,7 +84,12 @@ public class MagicThemeDesignSettings: SettingsWithInherit
             MagicContext = Array.Empty<string>(),
             PageIsHome = new(),
             PaneIsEmpty = new(),
-            MagicContextTagId = BodyDivId
+            MagicContextTagId = BodyDivId,
+            Custom = new()
+            {
+                { "container-default", new() { Id = ContainerIdDefault } },
+                { "container-system", new() { Id = ContainerIdDefault } }
+            }
         },
     };
 }

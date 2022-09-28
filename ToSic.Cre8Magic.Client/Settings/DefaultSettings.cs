@@ -4,5 +4,4 @@ namespace ToSic.Cre8Magic.Client.Settings;
 
 internal class DefaultSettings
 {
-
 }

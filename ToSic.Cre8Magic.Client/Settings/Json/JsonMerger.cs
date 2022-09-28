@@ -16,10 +16,10 @@ internal class JsonMerger
         Converters =
         {
             PairOnOffJsonConverter.GetNew(),
-            DesignSettingsJsonConverter<DesignSettingBase>.GetNew(),
-            DesignSettingsJsonConverter<DesignSettingActive>.GetNew(),
+            DesignSettingsJsonConverter<DesignSetting>.GetNew(),
+            // DesignSettingsJsonConverter<DesignSettingActive>.GetNew(),
             DesignSettingsJsonConverter<MagicMenuDesign>.GetNew(),
-            DesignSettingsJsonConverter<MagicContainerDesignSettingsItem>.GetNew(),
+            // DesignSettingsJsonConverter<MagicContainerDesignSettingsItem>.GetNew(),
         },
         ReadCommentHandling = JsonCommentHandling.Skip,
         AllowTrailingCommas = true,

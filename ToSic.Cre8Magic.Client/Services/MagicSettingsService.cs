@@ -104,10 +104,6 @@ public class MagicSettingsService: IHasSettingsExceptions
         new(this, MagicContainerSettings.Defaults, cat => cat.Containers);
     private NamedSettingsReader<MagicContainerSettings>? _containers;
 
-    internal NamedSettingsReader<MagicContainerDesignSettings> ContainerDesign => _containerDesign ??=
-        new(this, MagicContainerDesignSettings.Defaults, cat => cat.ContainerDesigns);
-    private NamedSettingsReader<MagicContainerDesignSettings>? _containerDesign;
-
     internal NamedSettingsReader<MagicThemeDesignSettings> ThemeDesign => _themeDesign ??=
         new(this, MagicThemeDesignSettings.Defaults, cat => cat.ThemeDesigns);
     private NamedSettingsReader<MagicThemeDesignSettings>? _themeDesign;

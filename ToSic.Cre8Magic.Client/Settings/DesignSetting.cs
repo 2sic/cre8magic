@@ -5,7 +5,7 @@
 ///
 /// This is usually the base class for something that can also have more information.
 /// </summary>
-public class DesignSettingBase
+public class DesignSetting
 {
     /// <summary>
     /// Classes which are applied to all the tags of this type
@@ -19,4 +19,21 @@ public class DesignSettingBase
 
 
     public string? Id { get; set; }
+
+    /// <summary>
+    /// Classes to apply if this thing is active.
+    /// For example, the current page or language. 
+    /// </summary>
+    public PairOnOff? IsActive { get; set; }
+
+    /// <summary>
+    /// If something is published or not, usually just for Containers
+    /// </summary>
+    public PairOnOff? IsPublished { get; set; }
+
+    /// <summary>
+    /// If a module is admin or not, usually just for containers
+    /// </summary>
+    public PairOnOff? IsAdminModule { get; set; }
+
 }

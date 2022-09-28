@@ -2,7 +2,7 @@
 
 namespace ToSic.Cre8Magic.Client.Containers.Settings;
 
-internal class ContainerDesigner: MagicDesignerBase
+internal class ContainerDesigner: ThemeDesigner
 {
     internal const string ModulePrefixDefault = "module";
 
@@ -10,11 +10,11 @@ internal class ContainerDesigner: MagicDesignerBase
     private readonly Module _module;
 
 
-    protected override DesignSettingBase? GetSettings(string name) => Settings?.ContainerDesign.GetInvariant(name);
+    // protected override DesignSetting? GetSettings(string name) => Settings?.ContainerDesign.GetInvariant(name);
 
     public override string? Classes(string tag)
     {
-        if (GetSettings(tag) is not MagicContainerDesignSettingsItem styles) return null;
+        if (GetSettings(tag) is not { } styles) return null;
 
         var value = GetClasses(styles);
         return PostProcess(value);
@@ -29,7 +29,7 @@ internal class ContainerDesigner: MagicDesignerBase
     /// </summary>
     /// <param name="styles"></param>
     /// <returns></returns>
-    private string GetClasses(MagicContainerDesignSettingsItem styles)
+    private string GetClasses(DesignSetting styles)
     {
         var value =  string.Join(" ", new[]
         {

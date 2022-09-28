@@ -1,6 +1,6 @@
 ﻿namespace ToSic.Cre8Magic.Client.Menus.Settings;
 
-public class MagicMenuDesign: DesignSettingActive
+public class MagicMenuDesign: DesignSetting
 {
     /// <summary>
     /// List of classes to add on certain levels only.

@@ -28,8 +28,6 @@ public class MagicSettingsCatalog: IHasDebugSettings
 
     public NamedSettings<MagicContainerSettings> Containers { get; set; } = new();
 
-    public NamedSettings<MagicContainerDesignSettings> ContainerDesigns { get; set; } = new();
-
     public NamedSettings<MagicLanguagesSettings> Languages { get; set; } = new();
 
     /// <summary>
