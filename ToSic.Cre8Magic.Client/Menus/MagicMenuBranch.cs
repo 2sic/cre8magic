@@ -9,7 +9,7 @@ public class MagicMenuBranch //: IHasSettingsExceptions
     /// <summary>
     /// Root navigator object which has some data/logs for all navigators which spawned from it. 
     /// </summary>
-    protected virtual MagicMenuTree Tree { get; }
+    internal virtual MagicMenuTree Tree { get; }
 
     private ITokenReplace NodeReplace => _nodeReplace ??= Tree.PageTokenEngine(Page);
     private ITokenReplace? _nodeReplace;
@@ -21,19 +21,19 @@ public class MagicMenuBranch //: IHasSettingsExceptions
     /// <summary>
     /// Menu Level relative to the start of the menu (always starts with 1)
     /// </summary>
-    public int MenuLevel { get; }
+    public int Level { get; }
 
-    public MagicMenuBranch(MagicMenuTree tree, int menuLevel, Page page, string debugPrefix): this(page, menuLevel)
+    public MagicMenuBranch(MagicMenuTree tree, int level, Page page, string debugPrefix): this(page, level)
     {
         Tree = tree;
         Log = tree.LogRoot.GetLog(debugPrefix);
         var _ = PageInfo;   // Access page info early on to make logging nicer
     }
 
-    protected MagicMenuBranch(Page page, int menuLevel)
+    protected MagicMenuBranch(Page page, int level)
     {
         Page = page;
-        MenuLevel = menuLevel;
+        Level = level;
     }
 
     /// <summary>
@@ -85,13 +85,13 @@ public class MagicMenuBranch //: IHasSettingsExceptions
     [return: NotNull]
     protected List<MagicMenuBranch> GetChildren()
     {
-        var l = Log.Fn<List<MagicMenuBranch>>($"{nameof(MenuLevel)}: {MenuLevel}");
-        var levelsRemaining = (Tree.Settings.Depth ?? MagicMenuSettings.LevelDepthFallback) - MenuLevel + 1;
-        if (levelsRemaining <= 0)
+        var l = Log.Fn<List<MagicMenuBranch>>($"{nameof(Level)}: {Level}");
+        var levelsRemaining = Tree.Depth - (Level - 1 /* Level is 1 based, so -1 */);
+        if (levelsRemaining < 0)
             return l.Return(new(), "remaining levels 0 - return empty");
         
         var children = GetChildPages()
-            .Select(page => new MagicMenuBranch(Tree, MenuLevel + 1, page, $"{Log.Prefix}>{Page.PageId}"))
+            .Select(page => new MagicMenuBranch(Tree, Level + 1, page, $"{Log.Prefix}>{Page.PageId}"))
             .ToList();
         return l.Return(children, $"{children.Count}");
     }

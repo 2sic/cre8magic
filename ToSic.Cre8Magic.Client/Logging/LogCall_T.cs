@@ -8,7 +8,7 @@ public class LogCall<T> : LogCallBase
     {
     }
 
-    public T Return(T result) => this.Return(result, null);
+    public T Return(T result) => Return(result, null);
 
     public T Return(T result, string message)
     {
@@ -23,9 +23,9 @@ public class LogCall<T> : LogCallBase
         return result;
     }
 
-    public T ReturnAndLog(T result) => this.Return(result, $"{result}");
+    public T ReturnAndLog(T result) => Return(result, $"{result}");
 
-    public T ReturnNull() => this.Return(default, null);
+    public T ReturnNull() => Return(default, null);
 
-    public T ReturnNull(string message) => this.Return(default, message);
+    public T ReturnNull(string message) => Return(default, message);
 }

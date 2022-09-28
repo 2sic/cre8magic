@@ -53,7 +53,7 @@ internal class MenuDesigner
         var levelCss = configs
             .Select(c => c.ByLevel == null
                 ? null
-                : c.ByLevel.TryGetValue(branch.MenuLevel, out var levelClasses)
+                : c.ByLevel.TryGetValue(branch.Level, out var levelClasses)
                     ? levelClasses
                     : c.ByLevel.TryGetValue(MagicTokens.ByLevelOtherKey, out var levelClassesDefault)
                         ? levelClassesDefault

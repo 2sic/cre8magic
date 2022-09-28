@@ -1,5 +1,4 @@
-﻿using System.IO.Compression;
-using Oqtane.Models;
+﻿using Oqtane.Models;
 using Oqtane.UI;
 
 namespace ToSic.Cre8Magic.Client.Menus;
@@ -9,7 +8,7 @@ public class MagicMenuTree : MagicMenuBranch
     public const char PageForced = '!';
 
     public MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<Page> menuPages, List<string> messages)
-        : base(magicSettings.PageState.Page, 0)
+        : base(magicSettings.PageState.Page, 1)
     {
         Log = LogRoot.GetLog("Root");
         Log.A($"Start for Page: {magicSettings.PageState.Page.PageId}; Level: 0");
@@ -43,7 +42,7 @@ public class MagicMenuTree : MagicMenuBranch
     /// </summary>
     internal List<Page> MenuPages;
 
-    protected override MagicMenuTree Tree => this;
+    internal override MagicMenuTree Tree => this;
 
     internal MenuDesigner Design => _menuCss ??= new(Settings);
     private MenuDesigner? _menuCss;
@@ -54,9 +53,12 @@ public class MagicMenuTree : MagicMenuBranch
     public override string MenuId => _menuId ??= Settings?.MenuId ?? "error-menu-id";
     private string? _menuId;
 
+    public int Depth => _depth ??= Settings.Depth ?? MagicMenuSettings.LevelDepthFallback;
+    private int? _depth;
+
     public List<string> Debug { get; }
 
-    internal Logging.LogRoot LogRoot { get; } = new();
+    internal LogRoot LogRoot { get; } = new();
 
     protected override List<Page> GetChildPages() => GetRootPages();
 

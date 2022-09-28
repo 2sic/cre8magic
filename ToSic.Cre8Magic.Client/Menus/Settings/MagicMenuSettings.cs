@@ -36,7 +36,7 @@ public class MagicMenuSettings : SettingsWithInherit, ICloneAndMerge<MagicMenuSe
     /// so if the navigation starts an level 2 then levelDepth 2 means to show levels 2 & 3 ??? verify
     /// </summary>
     public int? Depth { get; set; }
-    public const int LevelDepthFallback = default;
+    public const int LevelDepthFallback = 1;
 
     /// <summary>
     /// Levels to skip from the initial stating point.

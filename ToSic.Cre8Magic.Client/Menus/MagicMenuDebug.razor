@@ -1,18 +1,33 @@
 ﻿@code {
-    [Parameter, EditorRequired] public MagicMenuTree? MenuTree { get; set; }
+    [Parameter, EditorRequired] public MagicMenuBranch? Menu { get; set; }
 
-    private Dictionary<string, object> GetMore() => new()
+    [Parameter] public bool Standalone { get; set; } = false;
+
+    private Dictionary<string, object?> GetMore() => new()
     {
-        { "Menu Settings", MenuTree?.Settings },
-        { "Tree Build Messages", MenuTree?.Debug },
-        { "Log", MenuTree?.LogRoot.Entries }
+        { "Menu Settings", Menu?.Tree.Settings },
+        { "Tree Build Messages", Menu?.Tree.Debug },
+        { "Log", Menu?.Tree.LogRoot.Entries }
     };
 }
-<MagicDebug Target="@MenuTree?.Settings" Title="Settings (Menu)" More="GetMore()">
-    <Content>
-        <ul>
-            <li>Config Name:@MenuTree?.Settings.ConfigName</li>
-            <li>Template: @MenuTree?.Settings.Template</li>
-        </ul>
-    </Content>
-</MagicDebug>
+@if (Menu?.Level == 1)
+{
+    <MagicDebug Target="@Menu?.Tree.Settings" Title="Settings (Menu)" More="GetMore()">
+        <Button>
+            @if (Standalone)
+            {
+                <text>🪲</text>
+            }
+            else
+            {
+                <li>🪲</li>
+            }
+        </Button>
+        <Content>
+            <ul>
+                <li>Config Name:@Menu?.Tree.Settings.ConfigName</li>
+                <li>Template: @Menu?.Tree.Settings.Template</li>
+            </ul>
+        </Content>
+    </MagicDebug>
+}
