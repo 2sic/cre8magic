@@ -78,8 +78,6 @@ public class MagicMenuSettings : SettingsWithInherit, ICloneAndMerge<MagicMenuSe
     public int? Level { get; set; }
     public const int StartLevelFallback = default;
 
-    public string? Design { get; set; }
-
     /// <summary>
     /// The template to use - horizontal/vertical
     /// </summary>

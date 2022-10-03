@@ -43,10 +43,27 @@ public class MagicSettings: IHasSettingsExceptions, IHasDebugSettings
 
     public MagicThemeSettings Theme { get; }
 
+    /// <summary>
+    /// Determine if we should show a specific part
+    /// </summary>
+    public bool Show(string name) => Theme.Parts.TryGetValue(name, out var value) && value.Show == true;
+
+    /// <summary>
+    /// Determine the name of the design configuration of a specific part
+    /// </summary>
+    internal string? DesignName(string name) => Theme.Parts.TryGetValue(name, out var value) ? value.Design : null;
+
+    /// <summary>
+    /// Determine the configuration name of a specific part.
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
+    internal string? ConfigurationName(string name) => Theme.Parts.TryGetValue(name, out var value) ? value.Configuration : null;
+
     public MagicThemeDesignSettings ThemeDesign => _td ??= Service.ThemeDesign.Find(Theme.Design ?? Name, Name);
     private MagicThemeDesignSettings? _td;
 
-    public MagicLanguagesSettings Languages => _l ??= Service.Languages.Find(Theme.Languages ?? Name, Name);
+    public MagicLanguagesSettings Languages => _l ??= Service.Languages.Find(ConfigurationName(nameof(Languages)) ?? Name, Name);
     private MagicLanguagesSettings? _l;
 
     public Dictionary<string, string> DebugSources { get; } = new(InvariantCultureIgnoreCase);

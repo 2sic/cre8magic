@@ -50,7 +50,6 @@ public abstract class MagicMenuRoot: MagicMenuBase
             ConfigName = ConfigName,
             Debug = Debug == null ? null : new() { Allowed = Debug, Admin = Debug, Anonymous = Debug },
             Depth = Depth,
-            Design = Design,
             Display = Display,
             Level = Level,
             Start = Start,

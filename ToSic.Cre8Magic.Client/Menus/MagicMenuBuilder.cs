@@ -8,6 +8,8 @@ namespace ToSic.Cre8Magic.Client.Menus;
 /// </summary>
 public class MagicMenuBuilder: MagicServiceWithSettingsBase
 {
+    private const string MenuSettingPrefix = "menu-";
+
     public MagicMenuTree GetTree(MagicMenuSettings config, List<Page> menuPages)
     {
         var settingsSvc = Settings!.Service;
@@ -16,7 +18,11 @@ public class MagicMenuBuilder: MagicServiceWithSettingsBase
         messages.AddRange(configMessages);
 
         // Check if we have a name-remap to consider
-        var updatedName = Settings.Theme.Menus.FindInvariant(configName);
+        var menuConfig = Settings.ConfigurationName(configName);
+        if (menuConfig == null && !configName.StartsWith(MenuSettingPrefix))
+            menuConfig = Settings.ConfigurationName($"{MenuSettingPrefix}{configName}");
+
+        var updatedName = menuConfig; // Settings.Theme.Menus.FindInvariant(configName);
         if (updatedName.HasValue())
         {
             configName = updatedName!;
@@ -29,7 +35,11 @@ public class MagicMenuBuilder: MagicServiceWithSettingsBase
         config = JsonMerger.Merge(config, menuSettings);
 
         // See if we have a default configuration for CSS which should be applied
-        var designName = config.Design;
+        var menuDesign = Settings.DesignName(configName);
+        if (menuDesign == null && !configName.StartsWith(MenuSettingPrefix))
+            menuDesign = Settings.DesignName($"{MenuSettingPrefix}{configName}");
+
+        var designName = menuDesign;
         messages.Add($"Design name in config: '{designName}'");
         if (string.IsNullOrWhiteSpace(designName))
         {

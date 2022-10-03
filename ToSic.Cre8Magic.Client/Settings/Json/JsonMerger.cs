@@ -20,6 +20,7 @@ internal class JsonMerger
             // DesignSettingsJsonConverter<DesignSettingActive>.GetNew(),
             DesignSettingsJsonConverter<MagicMenuDesign>.GetNew(),
             // DesignSettingsJsonConverter<MagicContainerDesignSettingsItem>.GetNew(),
+            ThemePartJsonConverter.GetNew(),
         },
         ReadCommentHandling = JsonCommentHandling.Skip,
         AllowTrailingCommas = true,
