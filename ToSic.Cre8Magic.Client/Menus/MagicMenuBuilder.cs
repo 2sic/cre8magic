@@ -1,7 +1,7 @@
 ﻿using Oqtane.Models;
 using ToSic.Cre8Magic.Client.Settings.Json;
 
-namespace ToSic.Cre8Magic.Client.Services;
+namespace ToSic.Cre8Magic.Client.Menus;
 
 /// <summary>
 /// Will create a MenuTree based on the current pages information and configuration

@@ -6,8 +6,8 @@
     <Version>0.0.1</Version>
     <Authors>2sic</Authors>
     <Company>2sic</Company>
-    <Description>Template Theme for professional Bootstrap 5 Designs</Description>
-    <Product>ToSic.Oqt.Themes.ToShineBs5</Product>
+    <Description>Theme Library for professional Oqtane Themes</Description>
+    <Product>ToSic.Cre8Magic.Oqtane</Product>
     <Copyright>2sic</Copyright>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
