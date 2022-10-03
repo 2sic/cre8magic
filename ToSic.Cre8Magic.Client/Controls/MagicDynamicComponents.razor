@@ -7,7 +7,7 @@
     [Parameter]
     public List<MagicDynamicComponent>? Components { get; set; }
 
-    [Parameter, EditorRequired]
+    [Parameter]
     public string? Group { get; set; }
 
     private List<(Type Type, Dictionary<string, object> Parameters)> MyComponents()
