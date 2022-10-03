@@ -14,14 +14,14 @@ public class MagicThemeSettings: SettingsWithInherit, IHasDebugSettings
     /// </summary>
     public string? Languages { get; set; }
 
-    public bool LanguagesShow { get; set; } = true;
+    public bool? LanguagesShow { get; set; } // = true;
 
     public int LanguagesMin { get; set; } = 0;
 
     // TODO:
     // - probably add properties like BreadcrumbShow
     // - consider how to model it - should we have sub-objects? or too complex?
-
+    public bool? BreadcrumbsShow { get; set; } // = true;
 
     public bool? MagicContextInBody { get; set; }
 
@@ -50,6 +50,7 @@ public class MagicThemeSettings: SettingsWithInherit, IHasDebugSettings
         Languages = InheritName,
         LanguagesShow = true,
         LanguagesMin = 2,
+        BreadcrumbsShow = true,
         MagicContextInBody = false,
         Breadcrumbs = InheritName,
         // The menus-map. Since this is the fallback, it must have at least an entry to not be skipped. 
