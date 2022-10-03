@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
-
-namespace ToSic.Cre8Magic.Client.Controls;
+﻿namespace ToSic.Cre8Magic.Client.Controls;
 
 public interface IMagicDesigner
 {

@@ -1,8 +1,8 @@
-﻿namespace ToSic.Cre8Magic.Client.DynComponents;
+﻿namespace ToSic.Cre8Magic.Client.Controls;
 
-public class DynComponent
+public class MagicDynamicComponent
 {
-    public DynComponent(string group, Type type, Dictionary<string, object>? parameters)
+    public MagicDynamicComponent(string group, Type type, Dictionary<string, object>? parameters)
     {
         Group = group;
         Type = type;

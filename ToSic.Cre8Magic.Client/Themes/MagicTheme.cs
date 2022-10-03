@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Components;
-using ToSic.Cre8Magic.Client.DynComponents;
 
 namespace ToSic.Cre8Magic.Client.Themes;
 
@@ -37,7 +36,7 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     /// Option to inject dynamic components - mainly for testing
     /// inspired by http://www.binaryintellect.net/articles/a92dea29-3218-4d1c-a132-9671b518d1f4.aspx
     /// </summary>
-    protected List<DynComponent> DynComponents { get; } = new();
+    protected List<MagicDynamicComponent> MagicComponents { get; } = new();
 
     // Panes of the layout
     public const string PaneNameHeader = "Header";
