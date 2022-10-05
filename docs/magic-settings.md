@@ -20,7 +20,7 @@ This file is then used by your Theme and it's Controls to
 
 Here's a brief extract of such a configuration file:
 
-```json
+```jsonc
 {
   // Theme Configurations
   "Themes": {
@@ -136,7 +136,7 @@ _Note that the node names are case insensitive, so `Debug` or `debug` will both 
 All of the nodes above (except those marked with _*_) can have many different, named configurations. 
 So you'll see something like this:
 
-```json
+```jsonc
 {
   "Menus": {
     // The default configuration is taken if no other configuration is used

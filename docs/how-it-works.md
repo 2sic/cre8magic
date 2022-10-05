@@ -53,7 +53,7 @@ Here's how it works with Cre8Magic:
 For the system to know what it should do, there are **Magic Settings** which are easy to manage. 
 Below we're only showing the settings relevant to this example, there are of course more:
 
-```json
+```jsonc
 {
 "ThemeDesigns": {
   "Default": {
