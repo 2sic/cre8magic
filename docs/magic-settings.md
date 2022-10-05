@@ -178,6 +178,16 @@ To make this happen, the theme must wrap everything in a `MagicContextAndSetting
 </MagicContextAndSettings>
 ```
 
+This will do a few things
+
+1. Make sure that the inner content is only shown if Settings are loaded - otherwise show a `loading settings...` text
+1. Broadcast the `MagicSettings` with the name `Settings` to all child controls using `CascadingValue`.
+1. It will also ensure that the `MagicContext` TODO: is set on the page
+
+TODO:
+1. EXPLAIN SETTINGS MORE
+1. LIKE FOR MENUS ETC.?
+1. EXPLAIN SETTINGS PARTS
 
 ## Continue...
 
