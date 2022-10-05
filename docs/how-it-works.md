@@ -1,7 +1,5 @@
 # Cre8Magic – How It Works
 
-**Magic Settings** allow you to move 95% of the theme code into some kind of configuration. 
-
 Below we'll give you an example of what you would normally have, and how it would be done with Cre8Magic.
 
 ## Challenge: Smart Containers
@@ -56,28 +54,22 @@ For the system to know what it should do, there are **Magic Settings** which are
 Below we're only showing the settings relevant to this example, there are of course more:
 
 ```json
-// ********************
-// Containers has properties / settings / values on containers which are not directly related to design
-"Containers": {
+{
+"ThemeDesigns": {
   "Default": {
-    "Values": {
-      "id": "module-[Module.Id]"
+      // ...a lot of settings not relevant for this example...
+
+      // Container Designs determine CSS classes on containers
+      // The default/normal container
+      "container": {
+        "classes": "theme-container py-4 demo-module-[Module.Id] demo-page-[Page.Id]",
+        "isPublished": [null, "module-unpublished"],
+        "isAdmin": "theme-container-admin app-admin-modal",
+        "id": "module-[Module.Id]"
+      },
     }
   }
-},
-// ********************
-// Container Designs determine CSS classes on containers
-"ContainerDesigns": {
-  "Default": {
-    "div": {
-      "classes": "to-shine-background-container py-4",
-      // "isPublished": "module-published",
-      "isNotPublished": "module-unpublished",
-      "isAdminModule": "to-shine-admin-container"
-      // "isNotAdminModule": "to-shine-default-container"
-    }
-  }
-},
+}
 ```
 ## The Magic in the Background
 
@@ -88,13 +80,13 @@ Cre8Magic will do a bunch of things in the background, such as:
     1. the DB targeting a branch in the menu (WIP)
     1. the DB targeting the site (WIP)
     1. JSON targeting all kinds of scenarios
-    1. defaults in your code
+    1. ~~defaults in your code~~ (not recommended)
     1. final defaults in Cre8Magic
 1. Flatten configurations to match the current theme
     1. Use names to find the configuration for the theme
-    1. Use further names to find the configuration for each part, such as Container, ContainerDesign, etc.
+    1. Use further names to find the configuration for each part, such as Menus, Breadcrumbs etc.
     1. Flatten all to the current scenario
-1. Broadcast the flattened settings at Theme-level
+1. Broadcast these flattened [Magic Settings](./magic-settings.md) from the Theme to all Controls
     1. Initialize the proper settings
     1. Broadcast these settings to all controls that are somewhere within the theme object tree
 1. Provide simple accessors

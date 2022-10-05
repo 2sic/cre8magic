@@ -24,6 +24,12 @@
     }
 
 }
+@* Stop here if Settings are not ready *@
+@if (Settings == null) 
+{
+    <text>Loading settings...</text>
+    return;
+}
 <CascadingValue Value="Settings">
 @if (PutInBody)
 {

@@ -25,7 +25,7 @@ But for that there were two missing pieces (☮️)...
 As a designer, you need certain tools and workflows to be efficient, such as:
 
 1. the ability to make a small change and then reload the page to see the result
-1. the need to focus on the **what** (like the design), without wasting time on the **how** (like C# loops)
+1. the need to focus on the **what** (like the design), without wasting time on the **how** (like C# code to create the menu)
 1. the ability to create variations of your work, such as other layouts which are similar
 1. every tool you add (such as Cre8Magic) should help, but never restrict
 
@@ -36,16 +36,24 @@ This means you can whatever you want, but there is a **lot of code** involved, a
 > 
 > Cre8Magic takes care of all these problems 🚀
 > 
+> Cre8Magic combines very simple Razor code and lets you adjust everything through settings. 
+>
+> 👉🏾 [Discover how it works](./docs/how-it-works.md)
+> 
 
-## How it Works
+## See a Working Example
 
-Cre8Magic combines very simple Razor code and lets you adjust everything through settings. 
+Since this is a library, just reading the docs won't cut it. 
+It's best to see this in action on a real-life example. 
+Get the ToShine Theme Template and try it out, it will make things much easier to understand. 
 
-👉🏾 [Discover how it works](./docs/how-it-works.md)
-
-TODO
+👉🏼 See https://github.com/2sic/oqtane-theme-2shine-bs5
 
 ## What's in the Magic Box
+
+1. **Magic Settings**: A Settings / Configuration System TODO/WIP
+
+👉🏾 See [Magic Settings](./docs/magic-settings.md)
 
 ### 1. Magic Menu WIP/TODO:
 
@@ -62,9 +70,6 @@ TODO
 👉🏾 See [Magic Classes](./docs/magic-classes.md)
 
 
-### 3. Magic Settings: A Settings / Configuration System WIP/TODO:
-
-👉🏾 See [Magic Settings](./docs/magic-settings.md)
 
 ### 1b Magic Tokens
 
@@ -113,3 +118,12 @@ As of 2022-Q3 Cre8Magic is still beta, so you would need to get it from github a
 
 In 2022-Q4 we plan to release it on nuget.
 
+---
+
+## History
+
+1. Created v0.1 October 2022
+
+## Documentation Tasks
+
+1. Should document the JSON format more
