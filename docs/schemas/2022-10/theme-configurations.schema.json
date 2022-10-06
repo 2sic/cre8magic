@@ -50,7 +50,7 @@
       "type": "object",
       "description": "Main Theme Configurations.",
       "additionalProperties": {
-        "$ref": "./theme-schema.json"
+        "$ref": "./theme.schema.json"
       },
       "required": ["Default"]
     },
@@ -70,7 +70,7 @@
       "title": "All the configurations for languages",
       "description": "Contains various configuration bundles for what languages to show.",
       "additionalProperties": {
-        "$ref": "./languages-schema.json"
+        "$ref": "./languages.schema.json"
       },
       "required": ["Default"]
     },

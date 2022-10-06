@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://schemas.cre8magic.org/2022-01/theme-schema.json",
+  "$id": "https://schemas.cre8magic.org/2022-01/theme.schema.json",
   "title": "Configurations which can Inherit from others",
 
   "type": "object",

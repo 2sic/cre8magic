@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://schemas.cre8magic.org/2022-01/theme-schema.json",
+  "$id": "https://schemas.cre8magic.org/2022-01/theme.schema.json",
   "title": "Menu Configuration",
 
   "type": "object",
@@ -43,7 +43,7 @@
 
 
     "debug": {
-      "$ref": "./debug-schema.json"
+      "$ref": "./debug.schema.json"
     }
   },
   "additionalProperties": false,
