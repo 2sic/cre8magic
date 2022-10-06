@@ -60,8 +60,8 @@ Get the ToShine Theme Template and try it out, it will make things much easier t
 1. Magic Menu WIP/TODO:  
     👉🏾 See [Magic Menu](./magic-menu.md)
 
-1. Magic Context WIP/TODO:  
-    👉🏾 See [Magic Classes](./magic-classes.md)
+1. Magic Context  
+    👉🏾 See [Magic Context](./magic-context.md)
 
 3. Magic Classes WIP/TODO:  
     👉🏾 See [Magic Classes](./magic-classes.md)
