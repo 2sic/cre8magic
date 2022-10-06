@@ -49,37 +49,23 @@ Get the ToShine Theme Template and try it out, it will make things much easier t
 
 👉🏼 See [](https://github.com/2sic/oqtane-theme-2shine-bs5)
 
-
-## TODO:
-
-see [json schema](./schemas/2022-10/theme-configurations.schema.json)
-
-
 ## What's in the Magic Box
 
-1. **Magic Settings**: A Settings / Configuration System TODO/WIP
+1. **Magic Settings**: A Settings / Configuration System TODO/WIP  
+    👉🏾 See [Magic Settings](./magic-settings.md)  
+    👉🏾 see [JSON schema](./schemas/2022-10/theme-configurations.schema.json)
 
-👉🏾 See [Magic Settings](./magic-settings.md)
+1. Magic Menu WIP/TODO:  
+    👉🏾 See [Magic Menu](./magic-menu.md)
 
-### 1. Magic Menu WIP/TODO:
+1. Magic Conetxt WIP/TODO:  
+    👉🏾 See [Magic Classes](./magic-classes.md)
 
-👉🏾 See [Magic Menu](./magic-menu.md)
+3. Magic Classes WIP/TODO:  
+    👉🏾 See [Magic Classes](./magic-classes.md)
 
-
-### 2. Magic Conext WIP/TODO:
-
-👉🏾 See [Magic Classes](./magic-classes.md)
-
-
-### 3. Magic Classes WIP/TODO:
-
-👉🏾 See [Magic Classes](./magic-classes.md)
-
-
-
-### 1b Magic Tokens
-
-👉🏾 See [Magic Tokens](./magic-tokens.md)
+1. Magic Tokens  
+    👉🏾 See [Magic Tokens](./magic-tokens.md)
 
 TODO:
 

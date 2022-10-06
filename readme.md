@@ -4,11 +4,9 @@ TODO: REPLACE logo
 
 # Cre8Magic for Oqtane – Professional Theme Design
 
-> &nbsp;
-> 
-> Create Magic / Stunning / Amazing Designs on Oqtane
-> 
-> &nbsp;
+>  
+> 🪄 Create Magic / Stunning / Amazing Designs on Oqtane
+>  
 
 [Oqtane](https://www.oqtane.org/) is a Blazor based platform to create awesome solutions. 
 
