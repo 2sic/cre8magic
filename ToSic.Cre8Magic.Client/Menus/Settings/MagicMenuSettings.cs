@@ -1,6 +1,6 @@
 ﻿namespace ToSic.Cre8Magic.Client.Menus.Settings;
 
-public class MagicMenuSettings : SettingsWithInherit, ICloneAndMerge<MagicMenuSettings>, IHasDebugSettings
+public class MagicMenuSettings : SettingsWithInherit, /*ICloneAndMerge<MagicMenuSettings>,*/ IHasDebugSettings
 {
     /// <summary>
     /// Empty constructor is important for JSON deserialization

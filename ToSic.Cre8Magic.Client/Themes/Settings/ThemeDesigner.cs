@@ -47,13 +47,7 @@ internal class ThemeDesigner : MagicDesignerBase
         return !paneHasModules;
     }
 
-    public string PaneClasses(string paneName)
-    {
-        var empty = Settings?.ThemeDesign.PaneIsEmpty.Get(PaneIsEmpty(paneName)) ?? "";
-        var classes = Classes(paneName);
-        return string.Join(" ", (new[] { empty, classes }).Where(s => s.HasValue()));
-    }
-
+    public string? PaneClasses(string paneName) => Settings?.ThemeDesign.PaneIsEmpty.Get(PaneIsEmpty(paneName));
 
     protected override DesignSetting? GetSettings(string name) => Settings?.ThemeDesign.Custom.GetInvariant(name);
 }
