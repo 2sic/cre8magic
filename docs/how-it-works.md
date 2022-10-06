@@ -2,7 +2,7 @@
 
 Below we'll give you an example of what you would normally have, and how it would be done with Cre8Magic.
 
-## Challenge: Smart Containers
+## Example Problem: Smart Module Containers
 
 Let's assume you have a container which is a bunch of `div` tags and a bit of CSS. 
 In this example we have two features we are using
