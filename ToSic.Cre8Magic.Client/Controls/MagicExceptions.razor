@@ -1,13 +1,30 @@
 ﻿@inherits MagicControl
-@if ((Settings as IHasSettingsExceptions)?.HasExceptions == true && (Settings.Debug?.Show == true || PageState.UserIsAdmin()))
+@if ((Settings as IHasSettingsExceptions).HasExceptions)
 {
     <div class="alert alert-danger" role="alert">
-        <strong>The Cre8Magic Design System reports some problems (visible to Admins only)</strong>
-        <ul>
-        @foreach (var ex in Settings.Exceptions)
+        @if (Settings.Debug?.Show == true || PageState.UserIsAdmin())
         {
-            <li>@ex.Message</li>
+            <strong>The Cre8Magic Design System reports some problems (visible to Admins only)</strong>
+            <ul>
+                @foreach (var ex in Settings.Exceptions)
+                {
+                    <li>@ex.Message</li>
+                }
+            </ul>
         }
-        </ul>
+        else
+        {
+            <strong>An exception has occurred</strong>
+            <div>
+                Please <a href="/login">login</a> to see details
+                or enable debug so exceptions are visible for anonymous users.
+            </div>
+        }
     </div>
+    @* Add some styles to make sure the login would still work even if everything else fails *@
+    <style>
+        .modal {
+            display: block;
+        }
+    </style>
 }

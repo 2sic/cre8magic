@@ -1,5 +1,9 @@
 # Cre8Magic for Oqtane – Professional Theme Design
 
+<img width="100%" src="./assets/logo.svg">
+
+TODO: REPLACE logo
+
 > &nbsp;
 > 
 > Create Magic / Stunning / Amazing Designs on Oqtane
@@ -43,7 +47,7 @@ Since this is a library, just reading the docs won't cut it.
 It's best to see this in action on a real-life example. 
 Get the ToShine Theme Template and try it out, it will make things much easier to understand. 
 
-👉🏼 See https://github.com/2sic/oqtane-theme-2shine-bs5
+👉🏼 See [](https://github.com/2sic/oqtane-theme-2shine-bs5)
 
 
 ## TODO:
@@ -96,11 +100,6 @@ Settings WIP
 1. Custom list of settings per configuration. 
 
 
-Settings Done
-
-1. Named settings for layouts, breadcrumbs, menus
-1. Named settings for the design of layouts, breadcrumbs, menus
-
 ### 4. Magic Languages WIP/TODO:
 
 
@@ -114,18 +113,9 @@ Settings Done
 
 ## Getting Started 
 
-### How to Install Cre8Magic
-
-As of 2022-Q3 Cre8Magic is still beta, so you would need to get it from github and compile. 
-
-In 2022-Q4 we plan to release it on nuget.
 
 ---
 
 ## History
 
-1. Created v0.1 October 2022
-
-## Documentation Tasks
-
-1. Should document the JSON format more
+⌛ See [change log](./changelog.md)

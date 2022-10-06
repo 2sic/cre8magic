@@ -18,6 +18,9 @@ Here's a brief extract of such a configuration file
 
 ```jsonc
 {
+  // By specifying a schema we get intellisense in this JSON
+  "$schema": "https://2sic.github.io/cre8magic/schemas/2022-10/theme-configurations.schema.json",
+
   "version": 0.01,
 
    // Global debug settings
