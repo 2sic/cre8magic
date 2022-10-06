@@ -34,7 +34,7 @@ This means you can whatever you want, but there is a **lot of code** involved, a
 > 
 > Cre8Magic combines very simple Razor code and lets you adjust everything through settings. 
 >
-> 👉🏾 [Discover how it works](./docs/how-it-works.md)
+> 👉🏾 [Discover how it works](./how-it-works.md)
 > 
 
 ## See a Working Example
