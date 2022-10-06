@@ -7,6 +7,6 @@ internal interface IInherit
     /// <summary>
     /// Determines if it inherits another property
     /// </summary>
-    [JsonPropertyName("@inherits")]
+    [JsonPropertyName(SettingsWithInherit.InheritsNameInJson)]
     string? Inherits { get; set; }
 }

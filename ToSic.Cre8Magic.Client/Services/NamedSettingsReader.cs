@@ -1,5 +1,6 @@
 ﻿using static ToSic.Cre8Magic.Client.MagicConstants;
 using static ToSic.Cre8Magic.Client.Settings.Json.JsonMerger;
+using static ToSic.Cre8Magic.Client.Settings.SettingsWithInherit;
 
 namespace ToSic.Cre8Magic.Client.Services;
 
@@ -37,15 +38,27 @@ internal class NamedSettingsReader<TPart> where TPart: class, new()
         {
             var inheritFrom = needsMore.Inherits;
             needsMore.Inherits = null;
-            var addition = FindPart(inheritFrom);
-            if (addition != null)
-                priority = Merge(priority, addition, _jsonProcessing?.Invoke(realName));
+            priority = FindPartAndMergeIfPossible(priority, realName, inheritFrom);
+        }
+        else if (priority is NamedSettings<MagicMenuDesign> priorityNamed 
+                 && priorityNamed.TryGetValue(InheritsNameInJson, out var value))
+        {
+            priorityNamed.Remove(InheritsNameInJson);
+            if (value.Value != null) priority = FindPartAndMergeIfPossible(priority, realName, value.Value);
         }
 
         if (_defaults.Foundation == null) return priority;
 
         var merged = Merge(priority, _defaults.Foundation, _jsonProcessing?.Invoke(realName));
         return merged!;
+    }
+
+    private TPart FindPartAndMergeIfPossible(TPart priority, string realName, string name)
+    {
+        var addition = FindPart(name);
+        return addition == null 
+            ? priority 
+            : Merge(priority, addition, _jsonProcessing?.Invoke(realName));
     }
 
     private readonly NamedSettings<TPart> _cache = new();
