@@ -49,6 +49,10 @@ Get the ToShine Theme Template and try it out, it will make things much easier t
 
 👉🏼 See https://github.com/2sic/oqtane-theme-2shine-bs5
 
+## See the Docs
+
+📖 https://2sic.github.io/cre8magic/
+
 ## What's in the Magic Box
 
 1. **Magic Settings**: A Settings / Configuration System TODO/WIP
