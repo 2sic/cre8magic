@@ -1,12 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://2sic.github.io/cre8magic/schemas/2022-10/menu.schema.json",
+  "$id": "https://2sic.github.io/cre8magic/schemas/2022-10/menu.json",
   "title": "Menu Configuration",
 
   "type": "object",
 
   // "allOf":[
-  //   { "$ref": "./inherits.schema.json"}
+  //   { "$ref": "./inherits.json"}
   // ],
   "properties": {
     "start": {
@@ -43,7 +43,7 @@
 
 
     "debug": {
-      "$ref": "./debug.schema.json"
+      "$ref": "./debug.json"
     }
   },
   "additionalProperties": false,

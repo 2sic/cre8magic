@@ -1,11 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://2sic.github.io/cre8magic/schemas/2022-10/theme.schema.json",
+  "$id": "https://2sic.github.io/cre8magic/schemas/2022-10/theme-settings.json",
   "title": "Theme Configuration",
   "type": "object",
   "allOf": [
     {
-      "$ref": "./inherits.schema.json"
+      "$ref": "./inherits.json"
     }
   ],
   "properties": {
@@ -39,16 +39,19 @@
           "$ref": "#/$defs/parts"
         }
       },
-      "additionalProperties": {
-        "$ref": "#/$defs/parts"
-      }
+      "patternProperties": {
+        "^[a-z][A-Za-z0-9_-]*$": {
+          "$ref": "#/$defs/parts"
+        }
+      },
+      "additionalProperties": false
     },
     "magicContextInBody": {
       "type": "boolean",
       "description": "Determines if we should use the body (or a div) for the magic context. As of now we feel that browser behavior is better if it's in the div-tag (false)"
     },
     "debug": {
-      "$ref": "./debug.schema.json"
+      "$ref": "./debug.json"
     }
   },
   "unevaluatedProperties": false,

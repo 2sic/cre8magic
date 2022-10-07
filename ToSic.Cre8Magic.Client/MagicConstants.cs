@@ -2,7 +2,7 @@
 
 public class MagicConstants
 {
-    public static string Default = "Default";
+    public static string Default = "default";
     public static string DesignMobile = "Mobile";
 
     /// <summary>

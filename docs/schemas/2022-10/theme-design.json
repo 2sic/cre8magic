@@ -1,11 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://2sic.github.io/cre8magic/schemas/2022-10/theme-design.schema.json",
+  "$id": "https://2sic.github.io/cre8magic/schemas/2022-10/theme-design.json",
   "title": "Theme Design Configuration",
   "type": "object",
   "allOf": [
     {
-      "$ref": "./inherits.schema.json"
+      "$ref": "./inherits.json"
     }
   ],
   "properties": {
@@ -51,20 +51,20 @@
       "description": "Any kind of setting - some are known/expected, others can be added as needed.",
       "properties": {
         "sectionHeader": {
-          "$ref": "./design-settings.schema.json",
+          "$ref": "./design-settings.json",
           "title": "Header Pane Design Settings"
         },
         "sectionMain": {
-          "$ref": "./design-settings.schema.json",
+          "$ref": "./design-settings.json",
           "title": "Main div Design Settings"
         },
         "logo": {
-          "$ref": "./design-settings.schema.json",
+          "$ref": "./design-settings.json",
           "title": "Logo Design Settings - use string or set property 'classes'"
         }
       },
       "additionalProperties": {
-        "$ref": "./design-settings.schema.json"
+        "$ref": "./design-settings.json"
       }
     }
   },

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://2sic.github.io/cre8magic/schemas/2022-10/theme-configurations.schema.json",
+  "$id": "https://2sic.github.io/cre8magic/schemas/2022-10/theme-configurations.json",
   "title": "DRAFT JSON Schema for the theme-configurations.json file",
   "description": "todo",
 
@@ -50,29 +50,35 @@
       "type": "object",
       "description": "Main Theme Configurations.",
       "additionalProperties": {
-        "$ref": "./theme.schema.json"
+        "$ref": "./theme-settings.json"
       },
-      "required": ["Default"]
+      "required": ["default"]
     },
 
     "themeDesigns":{
       "type": "object",
       "title": "All the configurations for the design of a theme",
       "description": "Contains various configuration bundles for how the theme can be designed (mainly CSS classes)",
-      "additionalProperties": {
-        "$ref": "./theme-design.schema.json"
+      "patternProperties": {
+        "^[a-z][A-Za-z0-9_-]*$": {
+          "$ref": "./theme-design.json"
+        }
       },
-      "required": ["Default"]
+      "additionalProperties": false,
+      "required": ["default"]
     },
 
     "languages": {
       "type": "object",
       "title": "All the configurations for languages",
       "description": "Contains various configuration bundles for what languages to show.",
-      "additionalProperties": {
-        "$ref": "./languages.schema.json"
+      "patternProperties": {
+        "^[a-z][A-Za-z0-9_-]*$": {
+          "$ref": "./languages.json"
+        }
       },
-      "required": ["Default"]
+      "additionalProperties": false,
+      "required": ["default"]
     },
 
     // 
@@ -80,28 +86,37 @@
       "type": "object",
       "title": "Menus configurations",
       "description": "WIP",
-      "additionalProperties": {
-        "type": "object",
-        "$ref": "./menu.schema.json"
+      "patternProperties": {
+        "^[a-z][A-Za-z0-9_-]*$": {
+          "$ref": "./menu.json"
+        }
       },
-      "required": ["Default"]
+      "additionalProperties": false,
+      "required": ["default"]
     },
 
     "menuDesigns": {
       "type": "object",
       "title": "Name configuration packages to determine how menus are styled",
-      "additionalProperties": {
-        "type": "object",
-        "allOf": [
-          {
-            "$ref": "./inherits.schema.json"
-          }
-        ],
-        "additionalProperties": {
-          "$ref": "./design-settings.schema.json"
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[a-z][A-Za-z0-9_-]*$": {
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "./inherits.json"
+            }
+          ],
+          "patternProperties": {
+            "^[a-z][A-Za-z0-9_-]*$": {
+              "$ref": "./design-settings.json"
+            }
+          },
+          "unevaluatedProperties": false
         }
       },
-      "required": ["Default"]
+      "unevaluatedProperties": false,
+      "required": ["default"]
     }
 
 

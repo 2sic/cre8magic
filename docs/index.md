@@ -73,17 +73,45 @@ Get the ToShine Theme Template and try it out, it will make things much easier t
 1. Magic Context  
     👉🏾 See [Magic Context](./magic-context.md)
 
-3. Magic Classes WIP/TODO:  
+1. Magic Classes WIP/TODO:  
     👉🏾 See [Magic Classes](./magic-classes.md)
 
 1. Magic Tokens  
     👉🏾 See [Magic Tokens](./magic-tokens.md)
 
+1. Magic Razor Base Classes  
+  _These are the important base classes which your Razor files will inherit.
+  All have in common, that they know about the theme-wide `Settings` and provide helper methods to get things done easily and quickly with as little code as possible._
+    * Theme / Container Level Base Classes
+        1. `MagicTheme` - the foundation for Themes
+        1. `MagicContainer` - the foundation for Containers
+    * Important Base Controls / Components
+        1. `MagicLanguages` is the base for the languages menu
+        1. `MagicBreadcrumbs` is the base for the breadcrumbs
+        1. `MagicMenuRoot` is the base for menu entry point, loading the configuration, nodes etc.
+        1. `MagicMenuBase` is the base for each menu type, like _Horizontal_, _Vertical_, _Mobile_, ...
+        1. `MagicLogin` is the base for login/logout icons and texts
+    * Generic Base Controls / Base Components  
+      _These are meant for any other custom controls that you have._
+        1. `MagicControl` is for razor controls that has the Octane API (it inherits from `ThemeControlBase`)
+        1. `MagicComponent` is for razor controls with just the basic Razor API (inherits from `ComponentBase`)
+
+1. Magic Razor Controls / Components  
+  _These are standalone controls for you to use, which you will normally just use but not inherit, as they already have their HTML output or something._  
+  _Anything we refer to as a `Control` inherits from the Oqtane `ThemeControlBase`, while things we refer to as a `Component` inherit from the .net `ComponentBase`._
+    * Functional Controls / Components
+        1. `MagicOqtaneControlPanel` a control which adds the main control panel for admins
+        1. `MagicContextAndSettings` a wrapper used in every theme to ensure [MagicContext](./magic-context.md) and [MagicSettings](./magic-settings.md) work
+    * Debug and Error Handling
+        1. `MagicExceptions` a control showing important errors to admins
+        1. `MagicMenuDebug` a debug helper to see what configuration a menu has and why
+        1. `MagicLanguagesDebug` a debug helper to see what configuration the laguages have
+        1. `MagicThemeDebug` debug helper to see all the current settings on this theme
+
 1. Magic Languages WIP/TODO:
 
 TODO:
 
-1. Magic Debug TODO:
 
 Most layouts have very similar HTML, but do vary a bit.
 For example, it could have different CSS classes to give it the look you need or a different logo file.
@@ -92,12 +120,6 @@ For example, it could have different CSS classes to give it the look you need or
 
 TODO: DOCS
 
-### 4. Magic Base Classes
-
-* MagicTheme
-* MagicContainer
-* MagicControl
-* MagicComponent
 
 ---
 

@@ -15,7 +15,7 @@ public class MagicPackageSettings
 
     public string WwwRoot { get; set; } = "wwwroot";
 
-    public string SettingsJsonFile { get; set; } = "theme-settings.json";
+    public string SettingsJsonFile { get; set; } = "theme.json";
 
     public string PackageName { get; set; } = "todo: set theme package name in your constructor";
 
