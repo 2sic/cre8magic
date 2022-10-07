@@ -5,7 +5,7 @@
 ### 2022-10-07 v0.0.2
 
 1. Made menu design settings support inherit
-1. Added json schema and published to https://2sic.github.io/cre8magic/schemas/2022-10/theme-configurations.schema.json
+1. Added json schema and published to https://2sic.github.io/cre8magic/schemas/2022-10/theme.json
 
 ### 2022-10-05 v0.0.1
 

@@ -18,7 +18,7 @@ This file is then used by your Theme and it's Controls to
 
 ## Example JSON
 
-See [settings-json](./settings-json.md) to see an example file. 
+See [settings-json](./theme-json.md) to see an example file. 
 
 ## The Configuration File
 

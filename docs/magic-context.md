@@ -26,7 +26,7 @@ This tells you a bunch of things such as:
 
 ## How this Works
 
-Basically all this happens automatically, if your [json configuration](./settings-json.md) has `magicContext` of something like this:
+Basically all this happens automatically, if your [json configuration](./theme-json.md) has `magicContext` of something like this:
 
 ```jsonc
 {

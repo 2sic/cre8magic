@@ -19,22 +19,27 @@ But there are two missing pieces (☮️) to create amazing websites:
 1. Real Content-Management features - which can be done with the extension [2sxc](https://2sxc.org)
 1. Tools to make designing themes fast and professional - enter: **Cre8Magic**
 
+
 ## Cre8Magic makes Oqtane Designer-Friendly
 
 As a designer, you need certain tools and workflows to be efficient, such as:
 
 1. the ability to make a small change and then reload the page to see the result
-1. the need to focus on the **what** (like the design), without wasting time on the **how** (like C# code to create the menu)
-1. the ability to create variations of your work, such as other layouts which are similar
+1. the need to focus on the **what** (like the design), without wasting time
+    on the **how** (like C# code to create the menu)
+1. the ability to create variations of your work, such as other layouts which
+    are similar
 1. every tool you add (such as Cre8Magic) should help, but never restrict
 
 These aspects are important for the productivity of every designer.
-Now if you've worked with Oqtane (or Blazor for that matter) you will quickly see that this is not possible.
-This means you can whatever you want, but there is a **lot of code** involved, and a **lot of time-consuming restarts**.
+Now if you've worked with Oqtane (or Blazor for that matter) you will quickly
+  see that this is not possible.
+This means you can whatever you want, but there is a **lot of code** involved,
+  and a **lot of time-consuming restarts**.
 
 > Cre8Magic takes care of all these problems 🚀
 >
-> Cre8Magic combines very simple Razor code and lets you adjust everything through settings.
+> Cre8Magic combines very simple Razor and lets you do everything through settings.
 
 ## Overview
 
@@ -54,7 +59,7 @@ The resulting page will usually have something like this:
 
 Since this is a library, just reading the docs won't cut it.
 It's best to see this in action on a real-life example.
-Get the ToShine Theme Template and try it out, it will make things much easier to understand.
+Try the ToShine Theme Template, it will make things much easier to understand.
 
 👉🏼 See [2shine Theme Template](https://github.com/2sic/oqtane-theme-2shine-bs5)
 
@@ -64,8 +69,8 @@ Get the ToShine Theme Template and try it out, it will make things much easier t
 
 1. **Magic Settings**: A Settings / Configuration System  
     👉🏾 see [Magic Settings](./magic-settings.md)  
-    👉🏾 see [Settings JSON file](./settings-json.md)  
-    👉🏾 see [JSON schema](./schemas/2022-10/theme-configurations.schema.json)
+    👉🏾 see [Settings JSON file](./theme-json.md)  
+    👉🏾 see [JSON schema](./schemas/2022-10/theme.json)
 
 1. Magic Menu  
     👉🏾 See [Magic Menu](./magic-menu.md)
@@ -73,15 +78,17 @@ Get the ToShine Theme Template and try it out, it will make things much easier t
 1. Magic Context  
     👉🏾 See [Magic Context](./magic-context.md)
 
-1. Magic Classes WIP/TODO:  
-    👉🏾 See [Magic Classes](./magic-classes.md)
+1. Magic Values, Classes and more
+    👉🏾 See [Magic Classes](./magic-values.md)
 
 1. Magic Tokens  
     👉🏾 See [Magic Tokens](./magic-tokens.md)
 
 1. Magic Razor Base Classes  
   _These are the important base classes which your Razor files will inherit.
-  All have in common, that they know about the theme-wide `Settings` and provide helper methods to get things done easily and quickly with as little code as possible._
+  All have in common, that they know about the theme-wide `Settings` and
+  provide helper methods to get things done easily and quickly,
+   with as little code as possible._
     * Theme / Container Level Base Classes
         1. `MagicTheme` - the foundation for Themes
         1. `MagicContainer` - the foundation for Containers
@@ -114,7 +121,8 @@ TODO:
 
 
 Most layouts have very similar HTML, but do vary a bit.
-For example, it could have different CSS classes to give it the look you need or a different logo file.
+For example, it could have different CSS classes to give it the look you need
+or a different logo file.
 
 > imagine tweaking this at runtime (without compiling) 😏
 
