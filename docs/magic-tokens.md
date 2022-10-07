@@ -1,8 +1,8 @@
 # Cre8Magic – Magic Tokens
 
-Most settings will be parsed through a tokens-engine which will convert all kinds of tokens such as `[Page.Id]` into their respective value. 
+Most settings will be parsed through a tokens-engine which will convert all kinds of tokens such as `[Page.Id]` into their respective value.
 
-Note that each context is different. 
+Note that each context is different.
 For example, when parsing settings at the page level, `[Page...]` tokens will work, but `[Module...]` tokens will not work.
 
 _Note: The list of tokens is still work in progress_
@@ -12,13 +12,13 @@ _Note: The list of tokens is still work in progress_
 The purpose of these tokens is for use in configurable values - such as classes on HTML tags.
 
 They are currently not going to give you all possible values, for eg. there is no `[Module.Title]` token
-since there is no good reason to use this in such scenarios. 
+since there is no good reason to use this in such scenarios.
 
-If you need those values in your HTML (eg. to create special hover-labels) you would just do that in Razor code. 
+If you need those values in your HTML (eg. to create special hover-labels) you would just do that in Razor code.
 
 ## Site Tokens
 
-Site tokens work everythere. 
+Site tokens work everythere.
 As of now we have these site tokens:
 
 * `[Site.Id]` - ID of the current site
@@ -35,7 +35,7 @@ As of now we have these assets tokens:
 ## Page Tokens
 
 Page tokens work everywhere.
-They are especially useful in creating menus. 
+They are especially useful in creating menus.
 As of now we have these page tokens:
 
 * `[Page.Id]` - ID of the current page
@@ -44,12 +44,12 @@ As of now we have these page tokens:
 
 ## Module Tokens
 
-Module Tokens work on **Containers** only. 
+Module Tokens work on **Containers** only.
 As of now we have these module tokens:
 
 * `[Module.Id]` - ID of the current module
 
-**Module Type Information**
+### Module Type Information
 
 * `[Module.Namespace]` - the name like `Oqtane.Modules.HtmlText` of the current module  
   ideal to add to containers where you wish to have special styling for special types of modules
@@ -66,7 +66,7 @@ TODO:
 
 ## Menu Tokens
 
-Menu Tokens work on **Menus** only. 
+Menu Tokens work on **Menus** only.
 As of now we have these menu tokens:
 
 * `[Menu.Id]` - ID of the menu which is normally randomly generated to ensure that each menu is unique for collapse/uncollapse
@@ -74,5 +74,5 @@ As of now we have these menu tokens:
 
 ## How it Works
 
-As of v0.1 2022-Q3 it's still a simple search-and-replace. 
+As of v0.1 2022-Q3 it's still a simple search-and-replace.
 We plan to use a more powerfull RegEx in the near future.

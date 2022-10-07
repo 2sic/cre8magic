@@ -1,6 +1,6 @@
 # Cre8Magic – Magic Settings – JSON Settings File
 
-Cre8Magic uses JSON to enable fast and flexible configuration of your theme. 
+Cre8Magic uses JSON to enable fast and flexible configuration of your theme.
 It is used by [Magic Settings](./magic-settings.md) to load all the initial information.
 
 This document explains the json file and everything you must know, such as:
@@ -13,8 +13,8 @@ This document explains the json file and everything you must know, such as:
 
 ## Example JSON
 
-Here's a brief extract of such a configuration file 
-(here's a [live example](https://github.com/2sic/oqtane-theme-2shine-bs5/blob/main/Client/src/theme-configurations.json)):
+Here's a brief extract of such a configuration file
+(here's a [live example](https://github.com/2sic/oqtane-theme-2shine-bs5/blob/main/Client/src/theme.json)):
 
 ```jsonc
 {
@@ -82,7 +82,7 @@ The `theme-settings.json` contains these primary nodes:
 
 ### Named Configurations
 
-All of the nodes above (except those marked with _*_) can have many different, named configurations. 
+All of the nodes above (except those marked with _*_) can have many different, named configurations.
 So you'll see something like this:
 
 ```jsonc
@@ -100,24 +100,87 @@ So you'll see something like this:
 }
 ```
 
-This means that there is a configuration called `Default` and one called `Sidebar` which will do something different. 
+This means that there is a configuration called `Default` and one called `Sidebar` which will do something different.
 
 
 ### @inherits Does Exactly What it Says
 
-TODO:
+Example from the `menuDesigns`
+
+```json
+{
+  "mobile": {
+    "ul": {
+      "byLevel": {
+        "1": "navbar-nav",
+        "-1": "collapse theme-submenu-[Menu.Id]-[Page.Id]"
+      },
+      "inBreadcrumb": "show"
+    },
+    "li": {
+      "classes": "nav-item nav-[Page.Id] position-relative",
+      "hasChildren": "has-child",
+      "isActive": "active",
+      "isDisabled": "disabled"
+    },
+    "a": {
+      "classes": "nav-link mobile-navigation-link",
+      "isActive": "active"
+    },
+    "span": {
+      "classes": "nav-item-sub-opener",
+      "inBreadcrumb": [ null, "collapsed" ]
+    },
+    // Special target information (not really styling) usually on the span-tag
+    "data-bs-target": ".theme-submenu-[Menu.Id]-[Page.Id]"
+  },
+  "sidebar": {
+    "@inherits": "Mobile",
+    "a": {
+      // This is the only difference to Mobile
+      "classes": "nav-link"
+    }
+  }
+}
+```
 
 
 ### Short and Long Notations for True/False settings
 
-TODO:
+Most properties which indicate a binary true/false value like `isActive` or `hasChildren` can be configured two ways:
+
+* `"isActive": "some-class-when-active"`
+* `"isActive": ["active-class", "not-active-class"]`
+* `"isActive": [null, "not-active-class"]`
 
 
 ### Short and Long Notations for Complex Objects
 
-TODO:
+Certain objects have a long notation, but can be shortened to just a string or bool if it's obvious what is meant. For example, the `parts` in the `themes` section would be:
+
+```json
+"breadcrumbs": {
+  "show": true,
+  "design": "special-design-name",
+  "configuration": "special-config-name"
+}
+```
+
+But this can be abbreviated to:
+
+* `"breadcrumbs": true` - assumes show=true and design/configuration use the current name
+* `"breadcrumbs": "name"` - assumes show=true and the design/config use the specified name
+
+This setup also works for all the design settings where you can do:
+
+* `"container": "some string"` - in this case, classes/value get this, everyhing else is empty
+
 
 ## Intellisense using $schema
 
-To get help editing the file, add the `$schema` to your document. 
-Your editor (at least VS Code) will then help you fill in everything you need. 
+To get help editing the file, add the `$schema` to your document.
+Your editor (at least VS Code) will then help you fill in everything you need.
+
+```json
+"$schema": "https://2sic.github.io/cre8magic/schemas/2022-10/theme-configurations.schema.json"
+```

@@ -7,7 +7,7 @@ The only thing we usually must do, is:
 1. set some `class` properties - often based on the context (so the pane may need `pane-is-empty`)
 1. set some values - such as `data-bs-toggle`
 
-**cre8magic** makes this happen using parts:
+**cre8magic** makes this happen using these parts:
 
 1. The [theme.json](./theme-json.md) which has all the configurations
 1. The [Magic Settings](./magic-settings.md) which will parse the json and provide the parts we need
@@ -22,7 +22,7 @@ Basically all your controls must usually do is write HTML along these lines:
 ```html
 @inherits MagicContainer
 <!-- some code parts skipped for brevity -->
-<div id="@Id("container")" class='@Classes("container")'>
+<div id='@Id("container")' class='@Classes("container")'>
     <div class="container">
         <Oqtane.Themes.Controls.ModuleActions/>
         <ModuleInstance/>

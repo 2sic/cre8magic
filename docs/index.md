@@ -41,6 +41,12 @@ This means you can whatever you want, but there is a **lot of code** involved,
 >
 > Cre8Magic combines very simple Razor and lets you do everything through settings.
 
+Most layouts have very similar HTML, but do vary a bit.
+For example, it could have different CSS classes to give it the look you need
+or a different logo file.
+
+> imagine tweaking this at runtime (without compiling) 😏
+
 ## Overview
 
 This is how cre8magic enhances Oqtane so that your Theme can focus on the design:
@@ -72,19 +78,17 @@ Try the ToShine Theme Template, it will make things much easier to understand.
     👉🏾 see [Settings JSON file](./theme-json.md)  
     👉🏾 see [JSON schema](./schemas/2022-10/theme.json)
 
-1. Magic Menu  
-    👉🏾 See [Magic Menu](./magic-menu.md)
+1. [Magic Context](./magic-context.md)
 
-1. Magic Context  
-    👉🏾 See [Magic Context](./magic-context.md)
+1. [Magic Values, Classes and more](./magic-values.md)
 
-1. Magic Values, Classes and more
-    👉🏾 See [Magic Classes](./magic-values.md)
+1. [Magic Tokens](./magic-tokens.md)
 
-1. Magic Tokens  
-    👉🏾 See [Magic Tokens](./magic-tokens.md)
+1. [Magic Languages](./magic-languages.md)
 
-1. Magic Razor Base Classes  
+1. [Magic Menu](./magic-menu.md)
+
+1. **Magic Razor Base Classes**  
   _These are the important base classes which your Razor files will inherit.
   All have in common, that they know about the theme-wide `Settings` and
   provide helper methods to get things done easily and quickly,
@@ -103,7 +107,7 @@ Try the ToShine Theme Template, it will make things much easier to understand.
         1. `MagicControl` is for razor controls that has the Octane API (it inherits from `ThemeControlBase`)
         1. `MagicComponent` is for razor controls with just the basic Razor API (inherits from `ComponentBase`)
 
-1. Magic Razor Controls / Components  
+1. **Magic Razor Controls / Components**  
   _These are standalone controls for you to use, which you will normally just use but not inherit, as they already have their HTML output or something._  
   _Anything we refer to as a `Control` inherits from the Oqtane `ThemeControlBase`, while things we refer to as a `Component` inherit from the .net `ComponentBase`._
     * Functional Controls / Components
@@ -114,19 +118,6 @@ Try the ToShine Theme Template, it will make things much easier to understand.
         1. `MagicMenuDebug` a debug helper to see what configuration a menu has and why
         1. `MagicLanguagesDebug` a debug helper to see what configuration the laguages have
         1. `MagicThemeDebug` debug helper to see all the current settings on this theme
-
-1. Magic Languages WIP/TODO:
-
-TODO:
-
-
-Most layouts have very similar HTML, but do vary a bit.
-For example, it could have different CSS classes to give it the look you need
-or a different logo file.
-
-> imagine tweaking this at runtime (without compiling) 😏
-
-TODO: DOCS
 
 
 ---

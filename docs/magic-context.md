@@ -1,7 +1,7 @@
 # Cre8Magic – Magic Context
 
 The Magic Context adds a bunch of classes to the `<body>` or a wrapper `<div>` tag
-which contain information about the current state. 
+which contain information about the current state.
 
 This allows you to then write CSS rules, which change the look / feel of the page based on certain aspects.
 
@@ -42,7 +42,7 @@ Basically all this happens automatically, if your [json configuration](./theme-j
 }
 ```
 
-You can of course add your own rules with other placeholders to make this happen. 
+You can of course add your own rules with other placeholders to make this happen.
 
 ## Configuration
 
@@ -53,8 +53,8 @@ You can of course add your own rules with other placeholders to make this happen
 
 ## Missing Features
 
-As of 2022-10 there are no magic context classes for languages yet, as Oqtane doesn't fully support Multi-Language. 
-We'll add it as soon as possible. 
+As of 2022-10 there are no magic context classes for languages yet, as Oqtane doesn't fully support Multi-Language.
+We'll add it as soon as possible.
 
 ---
 
