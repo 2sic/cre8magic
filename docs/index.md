@@ -14,7 +14,7 @@ TODO: REPLACE logo
 It is heavily inspired by the Site/Page/Module model used in DNN.
 So it's almost ready to create awesome websites and CMS solutions. 
 
-But for that there were two missing pieces (☮️)...
+But there are two missing pieces (☮️) to create amazing websites:
 
 1. Real Content-Management features - which can be done with the extension [2sxc](https://2sxc.org)
 1. Tools to make designing themes fast and professional - enter: **Cre8Magic** 
@@ -52,12 +52,12 @@ Get the ToShine Theme Template and try it out, it will make things much easier t
 
 ## What's in the Magic Box
 
-1. **Magic Settings**: A Settings / Configuration System
+1. **Magic Settings**: A Settings / Configuration System  
     👉🏾 see [Magic Settings](./magic-settings.md)  
     👉🏾 see [Settings JSON file](./settings-json.md)  
     👉🏾 see [JSON schema](./schemas/2022-10/theme-configurations.schema.json)
 
-1. Magic Menu WIP/TODO:  
+1. Magic Menu  
     👉🏾 See [Magic Menu](./magic-menu.md)
 
 1. Magic Context  
@@ -72,6 +72,8 @@ Get the ToShine Theme Template and try it out, it will make things much easier t
 1. Magic Languages WIP/TODO:
 
 TODO:
+
+1. Magic Debug TODO:
 
 
 Most layouts have very similar HTML, but do vary a bit. 
