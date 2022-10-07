@@ -4,7 +4,7 @@ Below we'll give you an example of what you would normally have, and how it woul
 
 ## Example Problem: Smart Module Containers
 
-Let's assume you have a container which is a bunch of `div` tags and a bit of CSS. 
+Let's assume you have a container which is a bunch of `div` tags and a bit of CSS.
 In this example we have two features we are using
 
 1. a special ID for CSS targeting (for special cases where we wish to have CSS for a very specific module)
@@ -29,7 +29,7 @@ In this example we have two features we are using
 }
 ```
 
-Based on this example you can see, that there is a mix of logic and design which is 
+Based on this example you can see, that there is a mix of logic and design which is
 
 1. hard to read
 1. hard for a designer to develop
@@ -50,12 +50,12 @@ Here's how it works with Cre8Magic:
 </div>
 ```
 
-For the system to know what it should do, there are **Magic Settings** which are easy to manage. 
+For the system to know what it should do, there are **Magic Settings** which are easy to manage.
 Below we're only showing the settings relevant to this example, there are of course more:
 
 ```jsonc
 {
-"ThemeDesigns": {
+"themeDesigns": {
   "Default": {
       // ...a lot of settings not relevant for this example...
 
@@ -71,6 +71,7 @@ Below we're only showing the settings relevant to this example, there are of cou
   }
 }
 ```
+
 ## The Magic in the Background
 
 Cre8Magic will do a bunch of things in the background, such as:
@@ -97,6 +98,6 @@ Cre8Magic will do a bunch of things in the background, such as:
 
 ## TL;DR
 
-You got this far? Let's go back to home and start designing! 
+You got this far? Let's go back to home and start designing!
 
 👉🏾 [Home](../readme.md)
