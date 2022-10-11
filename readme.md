@@ -1,6 +1,5 @@
 <img width="100%" src="https://raw.githubusercontent.com/2sic/oqtane-cre8magic/main/docs/assets/cre8magic-logo.svg">
 
-TODO: REPLACE logo
 
 # cre8magic for Oqtane – Professional Theme Design
 

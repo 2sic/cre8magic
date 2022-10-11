@@ -2,7 +2,6 @@
 
 <img width="100%" src="./assets/cre8magic-logo.svg">
 
-TODO: REPLACE logo
 
 > &nbsp;
 >
