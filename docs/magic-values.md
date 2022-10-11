@@ -1,4 +1,4 @@
-# Cre8Magic – Magic Values, Classes and More
+# cre8magic – Magic Values, Classes and More
 
 Almost all design work is done using very few changes to the HTML.
 The only thing we usually must do, is:

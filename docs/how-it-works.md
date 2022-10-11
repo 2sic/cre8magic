@@ -1,6 +1,6 @@
-# Cre8Magic – How It Works
+# cre8magic – How It Works
 
-Below we'll give you an example of what you would normally have, and how it would be done with Cre8Magic.
+Below we'll give you an example of what you would normally have, and how it would be done with cre8magic.
 
 ## Example Problem: Smart Module Containers
 
@@ -36,9 +36,9 @@ Based on this example you can see, that there is a mix of logic and design which
 1. error prone
 1. hard to maintain
 
-## Simple with Cre8Magic
+## Simple with cre8magic
 
-Here's how it works with Cre8Magic:
+Here's how it works with cre8magic:
 
 ```razor
 @inherits MagicContainer
@@ -74,7 +74,7 @@ Below we're only showing the settings relevant to this example, there are of cou
 
 ## The Magic in the Background
 
-Cre8Magic will do a bunch of things in the background, such as:
+cre8magic will do a bunch of things in the background, such as:
 
 1. Load configuration from
     1. the DB targeting the page (WIP)
@@ -82,7 +82,7 @@ Cre8Magic will do a bunch of things in the background, such as:
     1. the DB targeting the site (WIP)
     1. JSON targeting all kinds of scenarios
     1. ~~defaults in your code~~ (not recommended)
-    1. final defaults in Cre8Magic
+    1. final defaults in cre8magic
 1. Flatten configurations to match the current theme
     1. Use names to find the configuration for the theme
     1. Use further names to find the configuration for each part, such as Menus, Breadcrumbs etc.

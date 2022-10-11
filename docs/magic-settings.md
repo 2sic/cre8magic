@@ -1,4 +1,4 @@
-# Cre8Magic – Magic Settings
+# cre8magic – Magic Settings
 
 **Magic Settings** allow you to move 95% of the theme code into some kind of configuration. 
 
@@ -32,7 +32,7 @@ _Note that we don't use `...Client` in the path, just the real namespace._
 
 Which file to use can be configured in the theme. 
 Normally you would use the same file for all variations of your theme, but the important thing is that the theme
-must give some initial configuration object to the Cre8Magic Services. 
+must give some initial configuration object to the cre8magic Services. 
 
 Here's how:
 

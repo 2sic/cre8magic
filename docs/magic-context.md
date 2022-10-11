@@ -1,4 +1,4 @@
-# Cre8Magic – Magic Context
+# cre8magic – Magic Context
 
 The Magic Context adds a bunch of classes to the `<body>` or a wrapper `<div>` tag
 which contain information about the current state.

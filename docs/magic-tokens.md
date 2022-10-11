@@ -1,4 +1,4 @@
-# Cre8Magic – Magic Tokens
+# cre8magic – Magic Tokens
 
 Most settings will be parsed through a tokens-engine which will convert all kinds of tokens such as `[Page.Id]` into their respective value.
 
@@ -7,7 +7,7 @@ For example, when parsing settings at the page level, `[Page...]` tokens will wo
 
 _Note: The list of tokens is still work in progress_
 
-## Purpose of Cre8Magic Tokens
+## Purpose of cre8magic Tokens
 
 The purpose of these tokens is for use in configurable values - such as classes on HTML tags.
 

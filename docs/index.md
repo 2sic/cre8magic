@@ -1,6 +1,6 @@
-# Cre8Magic for Oqtane – Professional Theme Design
+# cre8magic for Oqtane – Professional Theme Design
 
-<img width="100%" src="./assets/logo.svg">
+<img width="100%" src="./assets/cre8magic-logo.svg">
 
 TODO: REPLACE logo
 
@@ -17,10 +17,10 @@ So it's almost ready to create awesome websites and CMS solutions.
 But there are two missing pieces (☮️) to create amazing websites:
 
 1. Real Content-Management features - which can be done with the extension [2sxc](https://2sxc.org)
-1. Tools to make designing themes fast and professional - enter: **Cre8Magic**
+1. Tools to make designing themes fast and professional - enter: **cre8magic**
 
 
-## Cre8Magic makes Oqtane Designer-Friendly
+## cre8magic makes Oqtane Designer-Friendly
 
 As a designer, you need certain tools and workflows to be efficient, such as:
 
@@ -29,7 +29,7 @@ As a designer, you need certain tools and workflows to be efficient, such as:
     on the **how** (like C# code to create the menu)
 1. the ability to create variations of your work, such as other layouts which
     are similar
-1. every tool you add (such as Cre8Magic) should help, but never restrict
+1. every tool you add (such as cre8magic) should help, but never restrict
 
 These aspects are important for the productivity of every designer.
 Now if you've worked with Oqtane (or Blazor for that matter) you will quickly
@@ -37,9 +37,9 @@ Now if you've worked with Oqtane (or Blazor for that matter) you will quickly
 This means you can whatever you want, but there is a **lot of code** involved,
   and a **lot of time-consuming restarts**.
 
-> Cre8Magic takes care of all these problems 🚀
+> cre8magic takes care of all these problems 🚀
 >
-> Cre8Magic combines very simple Razor and lets you do everything through settings.
+> cre8magic combines very simple Razor and lets you do everything through settings.
 
 Most layouts have very similar HTML, but do vary a bit.
 For example, it could have different CSS classes to give it the look you need

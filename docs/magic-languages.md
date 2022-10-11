@@ -1,4 +1,4 @@
-# Cre8Magic – Magic Languages
+# cre8magic – Magic Languages
 
 The languages need three things to work as expected:
 

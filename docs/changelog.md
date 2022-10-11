@@ -1,4 +1,4 @@
-# Cre8Magic Change Log
+# cre8magic Change Log
 
 ## Version 0
 

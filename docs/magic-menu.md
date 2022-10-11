@@ -1,4 +1,4 @@
-# Cre8Magic – Magic Menu
+# cre8magic – Magic Menu
 
 A core challenge with any website is creating great menus.
 There are actually three distinct problems to solve:
