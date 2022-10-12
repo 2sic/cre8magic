@@ -17,6 +17,11 @@
       "description": "Enable/disable debug buttons for anonymous users so you can see debug in the anonymous-user state.",
       "default": false
     },
+    "detailed": {
+      "type": "boolean",
+      "description": "Enable/disable detailed debugging. ATM on menus only.",
+      "default": false
+    },
     "additionalProperties": false
   }
 }

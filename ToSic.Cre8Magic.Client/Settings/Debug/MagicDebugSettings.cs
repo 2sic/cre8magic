@@ -9,6 +9,9 @@ public class MagicDebugSettings
     public bool? Admin { get; set; }
     private const bool AdminDefault = true;
 
+    public bool? Detailed { get; set; }
+    private const bool DetailedDefault = false;
+
     public MagicDebugState GetState(object? target, bool isAdmin)
         => (target is not IHasDebugSettings debugTarget
                 ? this
