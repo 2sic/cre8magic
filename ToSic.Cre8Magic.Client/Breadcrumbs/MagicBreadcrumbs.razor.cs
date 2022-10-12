@@ -8,6 +8,18 @@ public abstract class MagicBreadcrumbs: MagicControl
     protected Page HomePage => _homePage ??= PageState.GetHomePage()!;
     private Page? _homePage;
 
-    protected List<Page> Breadcrumbs => _breadcrumbs ??= PageState.Breadcrumbs();
+    protected List<Page> Breadcrumbs
+    {
+        get
+        {
+            // Reset cache if the page has changed
+            if (_lastPageId != PageState.Page.PageId) _breadcrumbs = null;
+            _lastPageId = PageState.Page.PageId;
+            // Return cached or new breadcrumbs
+            return _breadcrumbs ??= PageState.Breadcrumbs();
+        }
+    }
+
+    private int? _lastPageId;
     private List<Page>? _breadcrumbs;
 }
