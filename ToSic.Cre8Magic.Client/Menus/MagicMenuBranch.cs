@@ -4,7 +4,7 @@ using Log = ToSic.Cre8Magic.Client.Logging.Log;
 
 namespace ToSic.Cre8Magic.Client.Menus;
 
-public class MagicMenuBranch //: IHasSettingsExceptions
+public class MagicMenuBranch
 {
     /// <summary>
     /// Root navigator object which has some data/logs for all navigators which spawned from it. 
@@ -15,6 +15,7 @@ public class MagicMenuBranch //: IHasSettingsExceptions
     private ITokenReplace? _nodeReplace;
 
     public string? Classes(string tag) => NodeReplace.Parse(Tree.Design.Classes(tag, this)).EmptyAsNull();
+    private string? _lastClasses;
 
     public string? Value(string key) => NodeReplace.Parse(Tree.Design.Value(key)).EmptyAsNull();
 

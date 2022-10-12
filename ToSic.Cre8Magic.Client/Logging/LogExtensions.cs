@@ -48,7 +48,7 @@ internal static class LogExtensions
         [CallerLineNumber] int cLine = 0) =>
         new(log, new(cPath, cName, cLine), false, parameters, message, startTimer);
 
-    public static LogCall<T> Fn<T>(this ILog log,
+    public static LogCall<T> Fn<T>(this ILog? log,
         string parameters = null,
         string message = null,
         bool startTimer = false,

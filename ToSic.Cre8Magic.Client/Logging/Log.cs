@@ -13,6 +13,4 @@ internal class Log: ILog
     }
 
     public int Depth { get; set; }
-
-    //public Log GetLog(string? prefix) => new(LogRoot, Depth + 1, prefix);
 }

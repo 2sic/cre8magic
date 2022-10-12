@@ -5,11 +5,11 @@ public class LogCallBase
     /// <summary>
     /// Keep constructor internal
     /// </summary>
-    internal LogCallBase(ILog log,
+    internal LogCallBase(ILog? log,
         CodeRef code,
         bool isProp,
-        string parameters = null,
-        string message = null,
+        string? parameters = null,
+        string? message = null,
         bool startTimer = false
         )
     {
@@ -29,7 +29,7 @@ public class LogCallBase
         //IsOpen = true;
     }
 
-    internal readonly ILog LogOrNull;
+    internal readonly ILog? LogOrNull;
 
     internal LogEntry? Entry { get; }
 
