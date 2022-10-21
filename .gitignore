@@ -5,3 +5,4 @@
 ToSic.Cre8Magic.Client/bin/
 ToSic.Cre8Magic.Client/obj/
 ToSic.Cre8Magic.Client/obj/staticwebassets.pack.sentinel
+InstallPackages/*.nupkg

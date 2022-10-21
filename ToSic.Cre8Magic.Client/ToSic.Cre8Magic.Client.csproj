@@ -1,19 +1,33 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
     <Version>0.0.1</Version>
-    <Authors>2sic</Authors>
-    <Company>2sic</Company>
+    <Authors>2sic internet solutions GmbH, Switzerland</Authors>
+    <Company>2sic internet solutions GmbH, Switzerland</Company>
     <Description>Theme Library for professional Oqtane Themes</Description>
     <Product>ToSic.Cre8Magic.Oqtane</Product>
-    <Copyright>2sic</Copyright>
+    <Copyright>Copyright MIT © 2sic 2022</Copyright>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>$(MSBuildProjectName).Oqtane</AssemblyName>
-	<PackageId>ToSic.Cre8Magic.Oqtane</PackageId>
+    <PackageId>ToSic.Cre8Magic.Oqtane</PackageId>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>cre8magic for Oqtane – Professional Theme Design</Title>
+    <PackageProjectUrl>https://2sic.github.io/cre8magic/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/2sic/cre8magic.git</RepositoryUrl>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 
   <ItemGroup>
@@ -26,6 +40,13 @@
     <PackageReference Include="Oqtane.Shared" Version="3.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Package\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
