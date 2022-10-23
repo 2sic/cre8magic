@@ -1,3 +1,11 @@
+---
+layout: page
+title: Magic Languages
+permalink: /magic-languages
+icon: fa-language
+order: 33
+---
+
 # cre8magic – Magic Languages
 
 The languages need three things to work as expected:

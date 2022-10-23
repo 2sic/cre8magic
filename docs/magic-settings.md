@@ -1,11 +1,19 @@
+---
+layout: page
+title: Magic Settings
+permalink: /magic-settings
+icon: fa-cog
+order: 20
+---
+
 # cre8magic – Magic Settings
 
-**Magic Settings** allow you to move 95% of the theme code into some kind of configuration. 
+**Magic Settings** allow you to move 95% of the theme code into some kind of configuration.
 
 ## Overview
 
 Basically the magic settings let you put a bunch of parameters in a JSON file.
-This file is then used by your Theme and it's Controls to 
+This file is then used by your Theme and it's Controls to
 
 * determine what Blazor files to use (like what Template should be used for the menu)
 * what to do with `class="..."` or `id="..."` in the HTML
@@ -13,12 +21,12 @@ This file is then used by your Theme and it's Controls to
 
 > This basic principle allows you to create and tweak amazing designs
 > without ever recompiling the Theme.
-> 
+>
 > It also allows you to create variations of your theme with the same Blazor files.
 
 ## Example JSON
 
-See [settings-json](./theme-json.md) to see an example file. 
+See [settings-json](./theme-json.md) to see an example file.
 
 ## The Configuration File
 
@@ -30,9 +38,9 @@ This is placed in your themes `wwwroot` folder like this:
 
 _Note that we don't use `...Client` in the path, just the real namespace._
 
-Which file to use can be configured in the theme. 
+Which file to use can be configured in the theme.
 Normally you would use the same file for all variations of your theme, but the important thing is that the theme
-must give some initial configuration object to the cre8magic Services. 
+must give some initial configuration object to the cre8magic Services.
 
 Here's how:
 
@@ -88,15 +96,15 @@ that's it ✌🏽
 
 ## How the Settings Work
 
-Internally the `MagicSettingsService` will be initialized automatically by the `MagicTheme` base class. 
+Internally the `MagicSettingsService` will be initialized automatically by the `MagicTheme` base class.
 It will then go and pick up the JSON file, parse it, do a bunch of magic and come back with a final `MagicSettings` object.
 This `MagicSettings` will then contain all the important settings for the current page/theme.
-It will also keep a reference to other settings such as `Menus` for which many configurations can exist. 
+It will also keep a reference to other settings such as `Menus` for which many configurations can exist.
 
 ## How the Settings are Broadcast
 
-A key feature of this system is that the settings are initially loaded in the theme, 
-and then broadcast to all controls used in that theme. 
+A key feature of this system is that the settings are initially loaded in the theme,
+and then broadcast to all controls used in that theme.
 
 To make this happen, the theme must wrap everything in a `MagicContextAndSettings` tag:
 

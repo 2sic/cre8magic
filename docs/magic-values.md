@@ -1,3 +1,11 @@
+---
+layout: page
+title: Magic Values
+permalink: /magic-values
+icon: fa-heart
+order: 31
+---
+
 # cre8magic – Magic Values, Classes and More
 
 Almost all design work is done using very few changes to the HTML.

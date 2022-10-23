@@ -1,3 +1,11 @@
+---
+layout: page
+title: JSON Settings File
+permalink: /json-settings-file
+icon: fa-file
+order: 21
+---
+
 # cre8magic – Magic Settings – JSON Settings File
 
 cre8magic uses JSON to enable fast and flexible configuration of your theme.
@@ -28,7 +36,7 @@ Here's a brief extract of such a configuration file
     "allowed": true,    // The most important setting - if this is false, nothing else will happen
     "admin": true,      // Enable everywhere for admin
     "anonymous": true,  // Enable everywhere for anonymous
-  }, 
+  },
 
   // Theme Configurations
   "themes": {

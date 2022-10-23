@@ -1,3 +1,11 @@
+---
+layout: page
+title: Change Log
+permalink: /change-log
+icon: fa-calendar
+order: 99
+---
+
 # cre8magic Change Log
 
 ## Version 0

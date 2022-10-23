@@ -1,3 +1,11 @@
+---
+layout: page
+title: Magic Menu
+permalink: /magic-menu
+icon: fa-bars
+order: 33
+---
+
 # cre8magic – Magic Menu
 
 A core challenge with any website is creating great menus.
@@ -120,7 +128,7 @@ This means a lot of things, but let's highlight some aspects:
 
 ## Missing Features
 
-1. As of now you cannot filter out specific pages.  
+1. As of now you cannot filter out specific pages.
   For this you would still need to write your own code or construct your nav-tree for special cases.
 1. You cannot link to page in another language, as Oqtane doesn't really have this concept yet.
 

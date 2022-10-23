@@ -1,3 +1,10 @@
+---
+layout: home
+title: Home
+icon: fa-home
+order: 1
+---
+
 # cre8magic for Oqtane – Professional Theme Design
 
 <img width="100%" src="./assets/cre8magic-logo.svg">
@@ -72,9 +79,9 @@ Try the ToShine Theme Template, it will make things much easier to understand.
 
 ## What's in the Magic Box
 
-1. **Magic Settings**: A Settings / Configuration System  
-    👉🏾 see [Magic Settings](./magic-settings.md)  
-    👉🏾 see [Settings JSON file](./theme-json.md)  
+1. **Magic Settings**: A Settings / Configuration System
+    👉🏾 see [Magic Settings](./magic-settings.md)
+    👉🏾 see [Settings JSON file](./theme-json.md)
     👉🏾 see [JSON schema](./schemas/2022-10/theme.json)
 
 1. [Magic Context](./magic-context.md)
@@ -87,7 +94,7 @@ Try the ToShine Theme Template, it will make things much easier to understand.
 
 1. [Magic Menu](./magic-menu.md)
 
-1. **Magic Razor Base Classes**  
+1. **Magic Razor Base Classes**
   _These are the important base classes which your Razor files will inherit.
   All have in common, that they know about the theme-wide `Settings` and
   provide helper methods to get things done easily and quickly,
@@ -101,13 +108,13 @@ Try the ToShine Theme Template, it will make things much easier to understand.
         1. `MagicMenuRoot` is the base for menu entry point, loading the configuration, nodes etc.
         1. `MagicMenuBase` is the base for each menu type, like _Horizontal_, _Vertical_, _Mobile_, ...
         1. `MagicLogin` is the base for login/logout icons and texts
-    * Generic Base Controls / Base Components  
+    * Generic Base Controls / Base Components
       _These are meant for any other custom controls that you have._
         1. `MagicControl` is for razor controls that has the Octane API (it inherits from `ThemeControlBase`)
         1. `MagicComponent` is for razor controls with just the basic Razor API (inherits from `ComponentBase`)
 
-1. **Magic Razor Controls / Components**  
-  _These are standalone controls for you to use, which you will normally just use but not inherit, as they already have their HTML output or something._  
+1. **Magic Razor Controls / Components**
+  _These are standalone controls for you to use, which you will normally just use but not inherit, as they already have their HTML output or something._
   _Anything we refer to as a `Control` inherits from the Oqtane `ThemeControlBase`, while things we refer to as a `Component` inherit from the .net `ComponentBase`._
     * Functional Controls / Components
         1. `MagicOqtaneControlPanel` a control which adds the main control panel for admins

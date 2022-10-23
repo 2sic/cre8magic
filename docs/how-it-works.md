@@ -1,3 +1,11 @@
+---
+layout: page
+title: How It Works
+permalink: /how-it-works
+icon: fa-map
+order: 2
+---
+
 # cre8magic – How It Works
 
 Below we'll give you an example of what you would normally have, and how it would be done with cre8magic.

@@ -1,3 +1,11 @@
+---
+layout: page
+title: Magic Context
+permalink: /magic-context
+icon: fa-magic
+order: 30
+---
+
 # cre8magic – Magic Context
 
 The Magic Context adds a bunch of classes to the `<body>` or a wrapper `<div>` tag
