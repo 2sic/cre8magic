@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Magic Context
 permalink: /magic-context
 icon: fa-magic

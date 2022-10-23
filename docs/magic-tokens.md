@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Magic Tokens
 permalink: /magic-tokens
 icon: fa-key

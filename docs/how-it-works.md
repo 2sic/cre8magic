@@ -1,5 +1,4 @@
 ---
-layout: page
 title: How It Works
 permalink: /how-it-works
 icon: fa-map

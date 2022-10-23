@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Magic Languages
 permalink: /magic-languages
 icon: fa-language

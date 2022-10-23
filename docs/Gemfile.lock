@@ -182,7 +182,6 @@ GEM
       jekyll (> 3.5, < 5.0)
       jekyll-github-metadata (~> 2.9)
       jekyll-seo-tag (~> 2.0)
-    jekyll-theme-prologue (0.3.3)
     jekyll-theme-slate (0.2.0)
       jekyll (> 3.5, < 5.0)
       jekyll-seo-tag (~> 2.0)
@@ -262,9 +261,8 @@ DEPENDENCIES
   eventmachine!
   github-pages
   http_parser.rb (~> 0.6.0)
-  jekyll (~> 3.9.2)
   jekyll-feed (~> 0.6)
-  jekyll-theme-prologue
+  jekyll-remote-theme
   tzinfo (>= 1, < 3)
   tzinfo-data
   wdm (~> 0.1.1)

@@ -1,8 +1,7 @@
 ---
-layout: home
 title: Home
 icon: fa-home
-order: 1
+order: 0
 ---
 
 # cre8magic for Oqtane – Professional Theme Design

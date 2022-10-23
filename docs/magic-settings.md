@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Magic Settings
 permalink: /magic-settings
 icon: fa-cog

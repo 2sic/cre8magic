@@ -1,5 +1,4 @@
 ---
-layout: page
 title: JSON Settings File
 permalink: /json-settings-file
 icon: fa-file

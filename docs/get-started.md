@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Get Started
 permalink: /get-started
 icon: fa-play

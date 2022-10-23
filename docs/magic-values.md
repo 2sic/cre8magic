@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Magic Values
 permalink: /magic-values
 icon: fa-heart

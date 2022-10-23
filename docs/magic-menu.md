@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Magic Menu
 permalink: /magic-menu
 icon: fa-bars

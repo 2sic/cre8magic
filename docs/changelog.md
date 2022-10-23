@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Change Log
 permalink: /change-log
 icon: fa-calendar
