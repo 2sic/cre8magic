@@ -18,7 +18,7 @@ But there are two missing pieces (☮️) to create amazing websites:
 >  
 > Cre8Magic combines very simple Razor code and lets you adjust everything through settings.
 >
-> 📖 [Check out the docs](https://2sic.github.io/cre8magic/)
+> 📖 [Check out the docs](https://cre8magic.blazor-cms.org/)
 
 ---
 
