@@ -127,6 +127,12 @@ Try the ToShine Theme Template, it will make things much easier to understand.
 
 ---
 
+### Documentation is hosted with GitHub Pages
+
+- [How to build jekyll locally?](./gh-pages.md)
+
+---
+
 ## History
 
 ⌛ See [change log](./changelog.md)
