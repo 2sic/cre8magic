@@ -1,5 +1,6 @@
 ﻿using Oqtane.Models;
 using Oqtane.Shared;
+using System.Threading.Tasks;
 using static Oqtane.Shared.ResourceType;
 
 // ReSharper disable once CheckNamespace
@@ -30,4 +31,10 @@ public abstract class MyThemeBase : MagicTheme
     public override MagicPackageSettings ThemePackageSettings => ThemeInfo.ThemePackageDefaults;
 
     public override string Panes => string.Join(",", PaneNames.Default, PaneNameHeader);
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await base.OnParametersSetAsync();
+
+    }
 }

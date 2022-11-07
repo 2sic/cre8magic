@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Oqtane.Services;
 
 namespace ToSic.Cre8Magic.Client.Themes;
 
@@ -46,6 +47,9 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     /// </summary>
     public abstract override string Panes { get; }
 
+    [Inject]
+    public IPageService? PageService { get; set; }
+
     /// <summary>
     /// Make a nicer theme path without the ".Client"
     /// </summary>
@@ -70,6 +74,14 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     /// Any inheriting class must specify what it will be. 
     /// </summary>
     public abstract MagicPackageSettings ThemePackageSettings { get; }
+
+    //protected override Task OnInitializedAsync()
+    //{
+    //    var task = base.OnInitializedAsync();
+    //    this.PageState.Page.Meta += "<script>console.log('test 2dm in head');</script>";
+        
+    //    return task;
+    //}
 
     protected override async Task OnParametersSetAsync()
     {

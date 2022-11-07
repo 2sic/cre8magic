@@ -7,6 +7,7 @@ import { initToTop } from './to-top';
 
 
 import './breadcrumbs';
+import { activateGtm } from './gtm';
 
 initToTop();
 
@@ -17,3 +18,5 @@ initMailDecrypt();
 initBreadcrumb();
 
 initOffCanvasEvents();
+
+activateGtm('GTM-T8W5TBL');

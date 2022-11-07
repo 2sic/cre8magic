@@ -4,3 +4,5 @@ bin/
 
 obj/
 node_modules/
+
+.temp_cache/

@@ -63,10 +63,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="src\theme-settings.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\cre8magic\ToSic.Cre8Magic.Client\ToSic.Cre8Magic.Client.csproj" />
   </ItemGroup>
 
