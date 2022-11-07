@@ -1,0 +1,83 @@
+﻿/* ---------- Breadcrumbs ---------- */
+// This defines everything about the breadcrumb.
+// It assumes that every breadcrumb will be wrapped in an element (usually <div>)
+// with the class theme-breadcrumbs (notice the trailing s)
+
+// Hide on Home
+.page-is-home .#{$prefix-breadcrumbs} {
+  display: none !important;
+}
+
+// General rules
+.#{$prefix-breadcrumbs} {
+  position: sticky;
+  top: 111px;
+  z-index: 10;
+  background: $white;
+
+  @include media-breakpoint-down(lg) {
+    top: 58px;
+  }
+
+  &.#{$prefix-breadcrumbs}-open {
+    .#{$prefix-breadcrumbs}-item {
+      display: block;
+    }
+  }
+
+  .#{$prefix-breadcrumbs}-item {
+    &:first-child {
+      a {
+        padding-left: 0;
+      }
+    }
+
+    &:last-child {
+      a {
+        color: $primary;
+        padding-right: 0;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+
+      &:last-child,
+      &:nth-last-child(2) {
+        display: block;
+      }
+    }
+
+    a {
+      color: $gray-600;
+      white-space: pre-wrap;
+      font-size: 14px;
+      padding: 0 5px;
+  
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .#{$prefix-breadcrumbs}-trigger {
+    cursor: pointer;
+    padding: 0 5px;
+
+    &:after {
+      content: '…';
+    }
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  .#{$prefix-breadcrumbs}-separator {
+    padding-left: 5px;
+
+    &:after {
+      content: '›';
+    }
+  }
+}

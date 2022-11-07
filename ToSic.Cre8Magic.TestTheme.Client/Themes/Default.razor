@@ -1,0 +1,70 @@
+@namespace ToSic.Cre8magic.TestTheme.Client
+@inherits MyThemeBase
+@*
+File Purpose:       Core theme file and Default variation
+Recommendations:    -
+Nice to know:
+    - Inherits from ThemeBase, which has some additional logic to make things happen
+    - The other theme files inherit from this, and will also use the HTML here
+*@
+@code
+{
+    public override string Name => "Default";
+    public override string Layout => "default";
+    protected override string MagicClasses => "floatwideheader";
+}
+@*
+    The MagicContextAndSettings wrapper does 2 things
+    1. It ensures that certain classes are added to the body or wrapper-div so that styles can be optimized by page, language, branch etc.
+       Note that the specifics are configured in the configuration
+    2. It will ensure that the object Settings are available on all child controls using <CascadingValue>
+*@
+<MagicContextAndSettings Settings="Settings">
+
+    @* Show any errors to the admin if something went wrong like when loading settings *@
+    <MagicExceptions></MagicExceptions>
+
+    @* Header with logo and navigation etc. *@
+    <Header></Header>
+    
+    @* Header Pane *@
+    <div id="@Id("sectionHeader")" class="@Classes("sectionHeader") @PaneClasses(PaneNameHeader)">
+        <Pane Name="@PaneNameHeader"/>
+    </div>
+    
+    @* Main Section *@
+    <main id="@Id("sectionMain")" class="@Classes("sectionMain")">
+
+        @* Show Breadcrumb if desired *@
+        @if (Settings.Show("breadcrumbs"))
+        {
+            <Breadcrumbs></Breadcrumbs>
+        }
+
+        @* If we show the Sidebar, then it must be side-by-side with the Content *@
+        @if (Settings.Show("menuSidebar"))
+        {
+            <div class="container">
+                <div class="row">
+                    <div class='@Classes("sidebarBody")'>
+                        <Pane Name="@PaneNames.Default"/>
+                        <MagicDynamicComponents Components="@MagicComponents"></MagicDynamicComponents>
+                    </div>
+                    <div class='@Classes("sidebarMenu")'>
+                        <div id="@Id("sidebarMenu-inner")" class="@Classes("sidebarMenu-inner")">
+                            <Menu ConfigName="@ThemeInfo.MenuSidebar"></Menu>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <Pane Name="@PaneNames.Default"/>
+            <MagicDynamicComponents Components="MagicComponents"></MagicDynamicComponents>
+        }
+
+        <ToTop></ToTop>
+    </main>
+    <Footer></Footer>
+</MagicContextAndSettings>

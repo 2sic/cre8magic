@@ -1,0 +1,33 @@
+﻿@inherits MagicMenu;
+@*
+File Purpose:       Show a standard horizontal menu - usually on the top of the page
+Recommendations:    
+    - Usually you won't change this file, but change the configuration in the JSON
+    - If you do plan to change this file, we recommend making a copy with a new name and add that name to the `Menu.razor`
+Nice to know:
+    - This menu create Bootstrap standard menus with dropdown functionality for sub-pages
+    - Calls itself recursively if there are sub-pages
+    - All the class attributes for `ul`, `li` and `a` come from configurations
+    - The configurations are smart, so they change the class depending on active etc.
+    - The `a` tag with the label is written in a way so there are no additional spaces
+*@
+@if (Menu.HasChildren)
+{
+    <ul class='@Menu.Classes("ul")'>
+        @foreach(var subMenu in Menu.Children)
+        {
+            <li class='@subMenu.Classes("li")'>
+                <a class='@subMenu.Classes("a")' href='@GetUrl(subMenu)'
+                   data-bs-toggle='@(subMenu.Page.HasChildren && subMenu.Page.IsClickable == false ? "dropdown" : "")'
+                   >@subMenu.Page.Name</a>
+
+                @if (subMenu.HasChildren)
+                {
+                    <MenuHorizontal Menu="@subMenu"></MenuHorizontal>
+                }
+            </li>
+        }
+        @* Debug Information as things can get complex *@
+        <MagicMenuDebug Menu="@Menu"></MagicMenuDebug>
+    </ul>
+}

@@ -1,0 +1,27 @@
+@implements Oqtane.Interfaces.ISettingsControl
+@attribute [OqtaneIgnore]
+
+<div class="container">
+
+    <p><h2>Menus</h2></p> 
+    
+    <NavigationSettings @ref="Main" ConfigName="Main"></NavigationSettings>
+    <NavigationSettings @ref="Mobile" ConfigName="Mobile"></NavigationSettings>
+    <NavigationSettings @ref="Sidebar" ConfigName="Sidebar"></NavigationSettings>
+
+</div>
+
+@code{
+    [Inject]
+    public ThemeSettingsServiceWIPToDo SettingsServiceWipToDo { get; set; }
+
+    NavigationSettings Main;
+    NavigationSettings Mobile;
+    NavigationSettings Sidebar;
+
+    public async Task UpdateSettings(){
+        await SettingsServiceWipToDo.UpdateAndSerializeSettings(Main.ConfigName, Main.ThemeSettings);
+        await SettingsServiceWipToDo.UpdateAndSerializeSettings(Mobile.ConfigName, Mobile.ThemeSettings);
+        await SettingsServiceWipToDo.UpdateAndSerializeSettings(Sidebar.ConfigName, Sidebar.ThemeSettings);
+    }
+}

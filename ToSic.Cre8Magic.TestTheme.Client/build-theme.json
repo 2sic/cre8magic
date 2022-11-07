@@ -1,0 +1,26 @@
+{
+  // oqtane theme name
+  "ThemeName": "ToSic.Cre8magic.TestTheme",
+
+  // path (relative or absolute) to your oqtane installation (iis physical path)
+  // no UNC paths allowed, FileManagerPlugin cant handle them atm
+  "OqtaneRoot": "../oqtane.framework/Oqtane.Server",
+  //"OqtaneRoot": "O:\\MyOqtaneApp\\Web",
+
+  /* 
+  path (relative or absolute) to your oqtane binaries; 
+  this equals your OqtaneRoot if you are using a release build from https://github.com/oqtane/oqtane.framework/releases 
+  */
+  "OqtaneBin": "../oqtane.framework/Oqtane.Server/bin/Debug/net6.0",
+
+  "Publish": {
+    // publish after watch build
+    "Watch": true,
+
+    // publish after build & pack
+    "Build": true,
+
+    // restart oqtane after publish
+    "RestartOqtane": true
+  }
+}

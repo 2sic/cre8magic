@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RazorLangVersion>3.0</RazorLangVersion>
+    <Version>0.0.1</Version>
+    <Authors>2sic</Authors>
+    <Company>2sic</Company>
+    <Description>Template Theme for professional Bootstrap 5 Designs</Description>
+    <Product>ToSic.Cre8magic.TestTheme</Product>
+    <Copyright>2sic</Copyright>
+    <AssemblyName>$(MSBuildProjectName).Oqtane</AssemblyName>
+    <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="src\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.3" PrivateAssets="all" />
+    <PackageReference Include="System.Net.Http.Json" Version="6.0.0" PrivateAssets="all" />
+    <PackageReference Include="Oqtane.Client" Version="3.2.0" PrivateAssets="all" />
+    <PackageReference Include="Oqtane.Shared" Version="3.2.0" PrivateAssets="all" />
+    <PackageReference Include="System.Runtime" Version="4.3.1" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="tsconfig.json">
+      <Pack>False</Pack>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Update="package.json">
+      <Pack>False</Pack>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Update="package-lock.json">
+      <Pack>False</Pack>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Update="build-theme.json">
+      <Pack>False</Pack>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\**\*.*">
+      <Pack>True</Pack>
+      <PackagePath>wwwroot</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\**" />
+    <Content Include="wwwroot\**" Watch="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\DO-NOT-WORK-IN-THIS-FOLDER.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="src\theme-settings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\cre8magic\ToSic.Cre8Magic.Client\ToSic.Cre8Magic.Client.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!-- there may be other elements here -->
+    <BlazorWebAssemblyEnableLinking>false</BlazorWebAssemblyEnableLinking>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="if $(ConfigurationName) == Release node src/build-scripts/clean.js &amp;&amp; npx webpack --env build" />
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if $(ConfigurationName) == Debug node src/build-scripts/publish-watch.js" />
+    <Exec Command="if $(ConfigurationName) == Release node src/build-scripts/dotnet-pack.js" />
+  </Target>
+
+</Project>

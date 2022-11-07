@@ -1,0 +1,26 @@
+﻿@namespace ToSic.Cre8magic.TestTheme.Client
+@inherits Default
+@using ToSic.Cre8magic.TestTheme.Client.Controls.Tests
+@*
+File Purpose:       Test skin to verify all kinds of navigation configurations
+Recommendations:    Delete when creating your own theme. 
+Nice to know:       Basically a copy of the Default.razor, but with a lot of TEST menus inside
+*@
+@code
+{
+    public override string Name => "Dev Test Navigation";
+    public override string Layout => "default";
+    protected override string MagicClasses => "centered";
+
+    // Add some test-navigation modules to the page
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        MagicComponents.Add(new(PaneNames.Default, typeof(TestMenus), null));
+    }
+
+}
+@{
+    // Razor internal method to build with the HTML of the base Default.razor
+    base.BuildRenderTree(__builder);
+}

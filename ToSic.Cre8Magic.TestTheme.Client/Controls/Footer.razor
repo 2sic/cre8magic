@@ -1,0 +1,38 @@
+﻿@*
+File Purpose:       Show the Footer in the Layout with address etc.
+Recommendations:    If you need icons like for 'tel', make sure you use inline SVGs
+Nice to know:       It's implemented as microdata which is why it has 'itemtype' or 'itemprop'
+TODO:
+- I18N
+- link imprint/privacy
+*@
+@code
+{
+    const string FooterPrefix = ClassPrefix + "-footer";
+}
+<footer id="@FooterPrefix">
+    @* TODO: @2tl - do we need this div? or can we put the class on the footer ? *@
+    <div class="container py-4 d-flex justify-content-md-between flex-column flex-md-row text-white">
+        <ul class="@FooterPrefix-address" itemscope itemtype="http://schema.org/LocalBusiness">
+            <li>
+                <strong itemprop="name">2shine DNN BS5 2sxc </strong>
+            </li>
+            <li>
+                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <span itemprop="streetAddress">Shine Road 77</span>,
+                    <span itemprop="postalCode">50355</span>
+                    <span itemprop="addressLocality">Shine City</span>,
+                    <span itemprop="addressCountry">Shine Country</span>
+                </span>
+            </li>
+            <li><a href="tel:+41817506777">+41 81 750 67 77</a></li>
+            <li>
+                <span data-madr1="shine" data-madr2="example" data-madr3="com" data-linktext=""></span>
+            </li>
+        </ul>
+        <div class="@FooterPrefix-imprint">
+            <ButtonLoginTextInvisible></ButtonLoginTextInvisible>
+            <Menu ConfigName="@ThemeInfo.MenuFooter"></Menu>
+        </div>
+    </div>
+</footer>

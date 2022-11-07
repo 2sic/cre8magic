@@ -1,0 +1,29 @@
+﻿@inherits MagicMenu;
+@*
+File Purpose:       Show a vertical menu, usually used for mobile or sidebar
+Recommendations:    See `MenuDefault.razor`
+Nice to know:       See `MenuDefault.razor`
+*@
+@if (Menu.HasChildren)
+{
+    <ul class='@Menu.Classes("ul")'>
+        @foreach(var subMenu in Menu.Children)
+        {
+            <li class='@subMenu.Classes("li")'>
+                <a class='@subMenu.Classes("a")' href='@GetUrl(subMenu)'
+                   >@subMenu.Page.Name</a>
+
+                @if (subMenu.HasChildren)
+                {
+                    <span class='@subMenu.Classes("span")'
+                          data-bs-toggle='collapse'
+                          data-bs-target='@subMenu.Value("data-bs-target")'
+                          aria-expanded='@subMenu.InBreadcrumb'></span>
+                    <MenuVertical Menu="@subMenu"></MenuVertical>
+                }
+            </li>
+        }
+        @* Debug Information as things can get complex *@
+        <MagicMenuDebug Menu="@Menu"></MagicMenuDebug>
+    </ul>
+}

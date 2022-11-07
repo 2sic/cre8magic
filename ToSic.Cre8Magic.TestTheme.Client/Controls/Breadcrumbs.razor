@@ -1,0 +1,22 @@
+﻿@inherits MagicBreadcrumbs
+@*
+File Purpose:       Show the Breadcrumb
+Recommendations:    -
+Nice to know:       Uses extension methods like GetHomePage() and GetBreadcrumb()
+*@
+<div class="container theme-breadcrumbs d-flex py-2" aria-label="breadcrumb">
+    <div class="theme-breadcrumbs-item">
+        <a aria-current="page" href="@NavigateUrl(HomePage.Path)">@HomePage.Name</a>
+    </div>
+
+    @* Show a ... ellipsis in mobile mode to toggle showing the rest of the breadcrumb *@
+    <div class="theme-breadcrumbs-trigger"></div>
+
+    @* Show an > arrow and the page name with link to it for each page in the breadcrumb *@
+    @foreach (var p in Breadcrumbs) {
+        <div class="theme-breadcrumbs-item">
+            <span class="theme-breadcrumbs-separator"></span>
+            <a href="@NavigateUrl(p.Path)">@p.Name</a>
+        </div>
+    }
+</div>

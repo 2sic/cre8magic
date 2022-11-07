@@ -1,12 +1,18 @@
 {
 	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../oqtane-theme-2shine-bs5"
-		}
-	],
+    {
+      "path": "."
+    },
+    {
+      "path": "ToSic.Cre8Magic.TestTheme.Client"
+    },
+    {
+      "path": "docs"
+    },
+    {
+      "path": "ToSic.Cre8Magic.Client"
+    }
+  ],
   "settings": {
     "files.associations": {
       "*.json": "jsonc"

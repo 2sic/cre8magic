@@ -1,0 +1,22 @@
+@inherits MagicLanguageMenu
+@using System.Globalization
+@*
+File Purpose:       Show the Language Navigation / Selector
+Recommendations:    -
+Nice to know:       
+    - The languages available are handed in from the Header file
+      ...if the list is empty, it will use the site definition
+      ...otherwise it will use the values specified for order/label of languages
+*@
+@if (Show == true)
+{
+    <ul class='@ClassesOrDefault("languages-ul", "theme-languages")'>
+        @foreach (var lang in Languages)
+        {
+            <li class='@Classes(lang, "languages-li")'>
+                <a href="#" @onclick="@(async _ => await SetLanguage(lang.Culture))" title="@lang.Description">@lang.Label</a>
+            </li>
+        }
+    </ul>
+    <MagicLanguageDebug Show="Show == true" Languages="Languages" LanguageService="LanguageService" ></MagicLanguageDebug>
+}

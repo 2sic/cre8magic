@@ -1,0 +1,28 @@
+@inherits MagicContainer
+@*
+File Purpose:       Container for normal modules.
+Recommendations:    -
+Nice to know:
+    1. Will not show a title or anything, so the output is really clean
+    2. Adds a special class to show that the module is not yet published
+    3. Has a background-container with another div which is the container which allows for cool full-width background CSS
+    4. When showing admin-modules, will automatically use the admin container
+*@
+@code
+{
+    public override string Name => "Default (for Default and Admin modules)";
+}
+
+@if (UseAdminContainer)
+{
+    <SystemContainer></SystemContainer>
+}
+else
+{
+    <div id="@Id("container")" class='@Classes("container")'>
+        <div class="container">
+            <Oqtane.Themes.Controls.ModuleActions/>
+            <ModuleInstance/>
+        </div>
+    </div>
+}

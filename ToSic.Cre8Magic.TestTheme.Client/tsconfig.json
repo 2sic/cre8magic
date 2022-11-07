@@ -1,0 +1,15 @@
+{
+  // This is the default TS Config for the ambient output
+  // Please check the /src/scripts/interop for the configuration of that module build
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Recommended",
+  "include": ["./src/scripts/ambient/*.ts", "./src/scripts/shared/*.ts"],
+}

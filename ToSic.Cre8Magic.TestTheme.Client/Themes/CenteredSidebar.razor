@@ -1,0 +1,21 @@
+﻿@namespace ToSic.Cre8magic.TestTheme.Client
+@inherits Default
+@*
+File Purpose:       Theme which shows the content *centered* on the page with a *sidebar*
+Recommendations:    -
+Nice to know:
+    - Inherits from the Default.razor, so all code is there
+    - The few variables below adjust how the Default.razor will create the output
+      ...but most of it is just some body classes + show/hide certain menus
+    - It needs the BuildRenderTree to basically just run the base class
+*@
+@code
+{
+    public override string Name => "Centered with Sidebar";
+    public override string Layout => "sidebar"; // special
+    protected override string MagicClasses => "centered";
+}
+@{
+    // Razor internal method to build with the HTML of the base Default.razor
+    base.BuildRenderTree(__builder);
+}
