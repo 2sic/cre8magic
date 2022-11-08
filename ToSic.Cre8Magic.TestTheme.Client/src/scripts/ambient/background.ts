@@ -16,7 +16,5 @@ initBreadcrumb();
 
 initOffCanvasEvents();
 
-// activateGtm('GTM-T8W5TBL');
-
 buildCre8magicGtm();
 window.cre8magic.gtm.activate('GTM-T8W5TBL');
