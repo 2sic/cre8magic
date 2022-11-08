@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using Oqtane.UI;
+using ToSic.Cre8Magic.Client.Analytics;
 using ToSic.Cre8Magic.Client.Settings.Json;
 using static ToSic.Cre8Magic.Client.MagicConstants;
 
@@ -86,6 +87,10 @@ public class MagicSettingsService: IHasSettingsExceptions
     }
 
     private readonly NamedSettings<MagicSettings> _currentSettingsCache = new();
+
+    internal NamedSettingsReader<MagicAnalyticsSettings> Analytics => _analytics ??=
+        new(this, MagicAnalyticsSettings.Defaults, cat => cat.Analytics);
+    private NamedSettingsReader<MagicAnalyticsSettings>? _analytics;
 
     private NamedSettingsReader<MagicThemeSettings> Theme => _getTheme ??=
         new(this, MagicThemeSettings.Defaults, cat => cat.Themes,

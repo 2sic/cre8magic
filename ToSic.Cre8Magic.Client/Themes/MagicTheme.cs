@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
-using Oqtane.Services;
+using ToSic.Cre8Magic.Client.Analytics;
 
 namespace ToSic.Cre8Magic.Client.Themes;
 
@@ -47,9 +47,6 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     /// </summary>
     public abstract override string Panes { get; }
 
-    [Inject]
-    public IPageService? PageService { get; set; }
-
     /// <summary>
     /// Make a nicer theme path without the ".Client"
     /// </summary>
@@ -75,13 +72,7 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
     /// </summary>
     public abstract MagicPackageSettings ThemePackageSettings { get; }
 
-    //protected override Task OnInitializedAsync()
-    //{
-    //    var task = base.OnInitializedAsync();
-    //    this.PageState.Page.Meta += "<script>console.log('test 2dm in head');</script>";
-        
-    //    return task;
-    //}
+    [Inject] public MagicAnalyticsService? MagicAnalytics { get; set; }
 
     protected override async Task OnParametersSetAsync()
     {
@@ -93,10 +84,19 @@ public abstract class MagicTheme : Oqtane.Themes.ThemeBase, IMagicControlWithSet
             StateHasChanged();
     }
 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+        // Track page views
+        if (MagicAnalytics != null)
+            await MagicAnalytics.TrackPage(Settings, firstRender);
+    }
+
     /// <summary>
     /// Special classes for divs surrounding panes pane, especially to indicate when it's empty
     /// </summary>
-    protected string PaneClasses(string paneName) => Settings?.ThemeDesigner.PaneClasses(paneName);
+    protected string? PaneClasses(string paneName) => Settings?.ThemeDesigner.PaneClasses(paneName);
 
     public string? Classes(string target) => Settings?.ThemeDesigner.Classes(target);
 

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Authors>2sic internet solutions GmbH, Switzerland</Authors>
     <Company>2sic internet solutions GmbH, Switzerland</Company>
     <Description>Theme Library for professional Oqtane Themes</Description>

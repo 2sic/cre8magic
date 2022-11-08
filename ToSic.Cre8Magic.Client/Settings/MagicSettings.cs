@@ -1,5 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 using Oqtane.UI;
+using ToSic.Cre8Magic.Client.Analytics;
 using static System.StringComparer;
 
 namespace ToSic.Cre8Magic.Client.Settings;
@@ -60,10 +61,15 @@ public class MagicSettings: IHasSettingsExceptions, IHasDebugSettings
     /// <returns></returns>
     internal string? ConfigurationName(string name) => Theme.Parts.TryGetValue(name, out var value) ? value.Configuration : null;
 
-    public MagicThemeDesignSettings ThemeDesign => _td ??= Service.ThemeDesign.Find(Theme.Design ?? Name, Name);
+    internal string ConfigurationNameOrDefault(string name) => ConfigurationName(name) ?? Name;
+
+    public MagicAnalyticsSettings Analytics => _a ??= Service.Analytics.Find(ConfigurationNameOrDefault(nameof(Analytics)), Name);
+    private MagicAnalyticsSettings? _a;
+
+    public MagicThemeDesignSettings ThemeDesign => _td ??= Service.ThemeDesign.Find(Theme.Design ?? ConfigurationNameOrDefault(nameof(Theme.Design)), Name);
     private MagicThemeDesignSettings? _td;
 
-    public MagicLanguagesSettings Languages => _l ??= Service.Languages.Find(ConfigurationName(nameof(Languages)) ?? Name, Name);
+    public MagicLanguagesSettings Languages => _l ??= Service.Languages.Find(ConfigurationNameOrDefault(nameof(Languages)), Name);
     private MagicLanguagesSettings? _l;
 
     public Dictionary<string, string> DebugSources { get; } = new(InvariantCultureIgnoreCase);

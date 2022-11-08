@@ -10,7 +10,7 @@ export function initBreadcrumb() {
   var breadCrumbTrigger = document.querySelector(`.${prefixBreadcrumbs}-trigger`);
   if(breadCrumbTrigger != null) {
     breadCrumbTrigger.addEventListener('click', () => {
-      console.log(document.querySelector(`.${prefixBreadcrumbs}`))
+      if (debug) console.log(document.querySelector(`.${prefixBreadcrumbs}`))
       document.querySelector(`.${prefixBreadcrumbs}`).classList.toggle(`${prefixBreadcrumbs}-open`)
     })
   }

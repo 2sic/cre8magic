@@ -4,10 +4,7 @@ import { initOffCanvasEvents } from './menu';
 import { initBreadcrumb } from './breadcrumbs';
 import { openPdfInNewWindow } from './pdf-in-new-window';
 import { initToTop } from './to-top';
-
-
-import './breadcrumbs';
-import { activateGtm } from './gtm';
+import { buildCre8magicGtm } from './gtm';
 
 initToTop();
 
@@ -19,4 +16,7 @@ initBreadcrumb();
 
 initOffCanvasEvents();
 
-activateGtm('GTM-T8W5TBL');
+// activateGtm('GTM-T8W5TBL');
+
+buildCre8magicGtm();
+window.cre8magic.gtm.activate('GTM-T8W5TBL');

@@ -1,4 +1,6 @@
 ﻿
+using ToSic.Cre8Magic.Client.Analytics;
+
 namespace ToSic.Cre8Magic.Client.Settings;
 
 /// <summary>
@@ -23,7 +25,10 @@ public class MagicSettingsCatalog: IHasDebugSettings
     /// </summary>
     public string Source { get; set; } = SourceDefault;
 
+    public NamedSettings<MagicAnalyticsSettings> Analytics { get; set; } = new();
+
     public NamedSettings<MagicThemeSettings> Themes { get; set; } = new();
+
     public NamedSettings<MagicThemeDesignSettings> ThemeDesigns { get; set; } = new();
 
     public NamedSettings<MagicContainerSettings> Containers { get; set; } = new();

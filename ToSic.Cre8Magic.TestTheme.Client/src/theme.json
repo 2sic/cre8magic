@@ -38,6 +38,10 @@
       "design": "=",
       "logo": "[Theme.Url]/assets/logo.svg",
       "languagesMin": 2,
+      // "gtmId": "GTM-T8W5TBL",
+      // "gtmTrackPageView": true,
+      // "gtmTrackPageViewJs": "window.cre8magic.gtm.pageView",
+      // "GtmTrackPageViewEvent": "blazor_page_view",
       "parts": {
         // Show breadcrumbs. Note that on home it won't be visible due to CSS rules + MagicContext)
         "breadcrumbs": true,
@@ -142,6 +146,17 @@
     }
   },
 
+  "analytics": {
+    // As of now, only "default" is supported
+    "default": {
+      "gtmId": "GTM-T8W5TBL",
+      "pageViewTrack": true,
+      "pageViewTrackFirst": false,
+      // "PageViewJs": "window.cre8magic.gtm.pageView",
+      // "PageViewJs": "gtag",
+      "PageViewEvent": "blazor_page_view",
+    }
+  },
 
   // ********************
   // Languages Configurations
