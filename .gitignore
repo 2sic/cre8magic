@@ -2,10 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-ToSic.Cre8Magic.Client/bin/
-ToSic.Cre8Magic.Client/obj/
-ToSic.Cre8Magic.Client/obj/staticwebassets.pack.sentinel
+bin/
+obj/
 InstallPackages/*.nupkg
-
-
 **/.vs/

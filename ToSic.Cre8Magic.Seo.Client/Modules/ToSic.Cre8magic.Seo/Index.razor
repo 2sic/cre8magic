@@ -1,0 +1,40 @@
+@namespace ToSic.Cre8magic.Seo
+@using ToSic.Cre8magic.Seo.Shared.Utils
+@inherits ModuleBase
+@inject NavigationManager NavigationManager
+@inject IStringLocalizer<Index> Localizer
+
+<div class="container">
+    <div class="row mb-1 align-items-center">
+        <Label Class="col-sm-3" HelpText="Submit the Site Map to Google for better search optimization." ResourceKey="Name">Sitemap URL</Label>
+        <div class="col-sm-9">
+            <a class="btn btn-secondary" href="@SiteMapGeneratorUtils.SiteMapUrl(PageState.Alias)" target="_blank">@SiteMapGeneratorUtils.SiteMapUrl(PageState.Alias)</a>
+        </div>
+    </div>
+    <div class="row mb-1 align-items-center">
+        <div class="col-sm-12">
+            <textarea class="form-control" id="sitemapTextarea" rows="12"><?xml version="1.0" encoding="utf-8" ?>@SiteMapGeneratorUtils.GenerateSiteMapXml(PageState.Alias, PageState.Pages)</textarea>
+        </div>
+    </div>
+</div>
+
+@code {
+    public override List<Resource> Resources => new List<Resource>()
+    {
+        new Resource { ResourceType = ResourceType.Stylesheet, Url = ModulePath() + "Module.css" },
+        new Resource { ResourceType = ResourceType.Script, Url = ModulePath() + "Module.js" }
+    };
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            //_Cre8magicSeos = await Cre8magicSeoService.GetCre8magicSeosAsync(ModuleState.ModuleId);
+        }
+        catch (Exception ex)
+        {
+            await logger.LogError(ex, "Error Loading Cre8magicSeo {Error}", ex.Message);
+            AddModuleMessage(Localizer["Message.LoadError"], MessageType.Error);
+        }
+    }
+}
