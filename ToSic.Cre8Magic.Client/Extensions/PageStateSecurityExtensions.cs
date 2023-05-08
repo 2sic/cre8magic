@@ -25,6 +25,6 @@ public static class PageStateSecurityExtensions
         => module.UseAdminContainer || module.ModuleType.Contains(".Admin.");
 
     internal static bool IsPublished(this Module module)
-        => UserSecurity.ContainsRole(module.Permissions, PermissionNames.View, RoleNames.Everyone);
+        => UserSecurity.ContainsRole(module.PermissionList, PermissionNames.View, RoleNames.Everyone);
 
 }
