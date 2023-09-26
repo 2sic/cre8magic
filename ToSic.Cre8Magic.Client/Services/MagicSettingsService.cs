@@ -78,7 +78,7 @@ public class MagicSettingsService: IHasSettingsExceptions
         foreach (var source in sources.Skip(1))
         {
             // get new json
-            var lowerPriority = JsonSerializer.Serialize(source, JsonMerger.OptionsForPreMerge);
+            var lowerPriority = JsonSerializer.Serialize(source, JsonMerger.GetNewOptionsForPreMerge());
             var merged = JsonMerger.Merge(priority, lowerPriority);
             priority = merged;
         }

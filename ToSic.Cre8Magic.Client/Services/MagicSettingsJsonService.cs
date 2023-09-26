@@ -12,7 +12,7 @@ public class MagicSettingsJsonService : IHasSettingsExceptions
         {
             var jsonString = File.ReadAllText(jsonFileName);
                 
-            var result = JsonSerializer.Deserialize<MagicSettingsCatalog>(jsonString, new JsonSerializerOptions(JsonMerger.OptionsForPreMerge)
+            var result = JsonSerializer.Deserialize<MagicSettingsCatalog>(jsonString, new JsonSerializerOptions(JsonMerger.GetNewOptionsForPreMerge())
             {
                 PropertyNameCaseInsensitive = true,
                 //ReadCommentHandling = JsonCommentHandling.Skip,

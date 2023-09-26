@@ -10,7 +10,7 @@ namespace ToSic.Cre8Magic.Client.Settings.Json;
 /// </summary>
 internal class JsonMerger
 {
-    public static JsonSerializerOptions OptionsForPreMerge = new()
+    public static JsonSerializerOptions GetNewOptionsForPreMerge() => new()
     {
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
         Converters =
@@ -35,11 +35,11 @@ internal class JsonMerger
 
     public static TType Merge<TType>(TType priority, TType fallback, Func<string, string>? optionalProcessing = null)
     {
-        var priorityJson = JsonSerializer.Serialize(priority, OptionsForPreMerge);
-        var lessJson = fallback == null ? null : JsonSerializer.Serialize(fallback, OptionsForPreMerge);
+        var priorityJson = JsonSerializer.Serialize(priority, GetNewOptionsForPreMerge());
+        var lessJson = fallback == null ? null : JsonSerializer.Serialize(fallback, GetNewOptionsForPreMerge());
         var merged = lessJson == null ? priorityJson : Merge(priorityJson, lessJson);
         var processed = optionalProcessing?.Invoke(merged) ?? merged;
-        var result = JsonSerializer.Deserialize<TType>(processed, OptionsForPreMerge);
+        var result = JsonSerializer.Deserialize<TType>(processed, GetNewOptionsForPreMerge());
         return result!;
     }
 
