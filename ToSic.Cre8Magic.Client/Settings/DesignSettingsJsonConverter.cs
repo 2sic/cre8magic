@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Nodes;
+using Microsoft.Extensions.Logging;
 using ToSic.Cre8Magic.Client.Settings.Json;
 
 namespace ToSic.Cre8Magic.Client.Settings;
@@ -18,9 +19,9 @@ public class DesignSettingsJsonConverter<T> : JsonConverterBase<T> where T : Des
     /// but removed at other times to use default conversion.
     /// That is only possible if it's not used in a POCO attribute, but added in the serializer options.
     /// </summary>
-    private DesignSettingsJsonConverter() {}
+    private DesignSettingsJsonConverter(ILogger logger) : base(logger) {}
 
-    public static DesignSettingsJsonConverter<T> GetNew() => new();
+    public static DesignSettingsJsonConverter<T> GetNew(ILogger logger) => new(logger);
 
     public override void Write(Utf8JsonWriter writer, T? pair, JsonSerializerOptions options) =>
         // Copy options to remove this serializer, then serialize with default method
@@ -29,6 +30,7 @@ public class DesignSettingsJsonConverter<T> : JsonConverterBase<T> where T : Des
 
     public override T? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
+        Logger.LogTrace($"Reading {typeof(T)} / {typeToConvert}.");
         var jsonNode = JsonNode.Parse(ref reader);
 
         const string errArray = "Error unexpected data - array instead of string or object";

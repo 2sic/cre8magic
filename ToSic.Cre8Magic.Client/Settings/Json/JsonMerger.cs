@@ -2,6 +2,7 @@
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Microsoft.Extensions.Logging;
 
 namespace ToSic.Cre8Magic.Client.Settings.Json;
 
@@ -10,17 +11,17 @@ namespace ToSic.Cre8Magic.Client.Settings.Json;
 /// </summary>
 internal class JsonMerger
 {
-    public static JsonSerializerOptions GetNewOptionsForPreMerge() => new()
+    public static JsonSerializerOptions GetNewOptionsForPreMerge(ILogger logger) => new()
     {
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
         Converters =
         {
-            PairOnOffJsonConverter.GetNew(),
-            DesignSettingsJsonConverter<DesignSetting>.GetNew(),
+            PairOnOffJsonConverter.GetNew(logger),
+            DesignSettingsJsonConverter<DesignSetting>.GetNew(logger),
             // DesignSettingsJsonConverter<DesignSettingActive>.GetNew(),
-            DesignSettingsJsonConverter<MagicMenuDesign>.GetNew(),
+            DesignSettingsJsonConverter<MagicMenuDesign>.GetNew(logger),
             // DesignSettingsJsonConverter<MagicContainerDesignSettingsItem>.GetNew(),
-            ThemePartJsonConverter.GetNew(),
+            ThemePartJsonConverter.GetNew(logger),
         },
         ReadCommentHandling = JsonCommentHandling.Skip,
         AllowTrailingCommas = true,
@@ -33,13 +34,14 @@ internal class JsonMerger
         return result!;
     }
 
-    public static TType Merge<TType>(TType priority, TType fallback, Func<string, string>? optionalProcessing = null)
+    public static TType Merge<TType>(TType priority, TType fallback, ILogger logger,
+        Func<string, string>? optionalProcessing = null)
     {
-        var priorityJson = JsonSerializer.Serialize(priority, GetNewOptionsForPreMerge());
-        var lessJson = fallback == null ? null : JsonSerializer.Serialize(fallback, GetNewOptionsForPreMerge());
+        var priorityJson = JsonSerializer.Serialize(priority, GetNewOptionsForPreMerge(logger));
+        var lessJson = fallback == null ? null : JsonSerializer.Serialize(fallback, GetNewOptionsForPreMerge(logger));
         var merged = lessJson == null ? priorityJson : Merge(priorityJson, lessJson);
         var processed = optionalProcessing?.Invoke(merged) ?? merged;
-        var result = JsonSerializer.Deserialize<TType>(processed, GetNewOptionsForPreMerge());
+        var result = JsonSerializer.Deserialize<TType>(processed, GetNewOptionsForPreMerge(logger));
         return result!;
     }
 

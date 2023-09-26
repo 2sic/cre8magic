@@ -1,4 +1,5 @@
-﻿using Oqtane.Models;
+﻿using Microsoft.Extensions.Logging;
+using Oqtane.Models;
 using ToSic.Cre8Magic.Client.Settings.Json;
 
 namespace ToSic.Cre8Magic.Client.Menus;
@@ -8,6 +9,13 @@ namespace ToSic.Cre8Magic.Client.Menus;
 /// </summary>
 public class MagicMenuBuilder: MagicServiceWithSettingsBase
 {
+    public ILogger Logger { get; }
+
+    public MagicMenuBuilder(ILogger<MagicMenuBuilder> logger)
+    {
+        Logger = logger;
+    }
+    
     private const string MenuSettingPrefix = "menu-";
 
     public MagicMenuTree GetTree(MagicMenuSettings config, List<Page> menuPages)
@@ -32,7 +40,7 @@ public class MagicMenuBuilder: MagicServiceWithSettingsBase
         // If the user didn't specify a config name in the Parameters or the config name
         // isn't contained in the json file the normal parameter are given to the service
         var menuSettings = settingsSvc.MenuSettings.Find(configName);
-        config = JsonMerger.Merge(config, menuSettings);
+        config = JsonMerger.Merge(config, menuSettings, Logger);
 
         // See if we have a default configuration for CSS which should be applied
         var menuDesign = Settings.DesignName(configName);

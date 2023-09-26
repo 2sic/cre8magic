@@ -1,10 +1,18 @@
-﻿using System.Text.Json;
+﻿using Microsoft.Extensions.Logging;
+using System.Text.Json;
 using ToSic.Cre8Magic.Client.Settings.Json;
 
 namespace ToSic.Cre8Magic.Client.Services;
 
 public class MagicSettingsJsonService : IHasSettingsExceptions
 {
+    public ILogger<MagicSettingsJsonService> Logger { get; }
+
+    public MagicSettingsJsonService(ILogger<MagicSettingsJsonService> logger)
+    {
+        Logger = logger;
+    }
+    
     public MagicSettingsCatalog LoadJson(MagicPackageSettings themeConfig)
     {
         var jsonFileName = $"{themeConfig.WwwRoot}/{themeConfig.Url}/{themeConfig.SettingsJsonFile}";
@@ -12,7 +20,7 @@ public class MagicSettingsJsonService : IHasSettingsExceptions
         {
             var jsonString = File.ReadAllText(jsonFileName);
                 
-            var result = JsonSerializer.Deserialize<MagicSettingsCatalog>(jsonString, new JsonSerializerOptions(JsonMerger.GetNewOptionsForPreMerge())
+            var result = JsonSerializer.Deserialize<MagicSettingsCatalog>(jsonString, new JsonSerializerOptions(JsonMerger.GetNewOptionsForPreMerge(Logger))
             {
                 PropertyNameCaseInsensitive = true,
                 //ReadCommentHandling = JsonCommentHandling.Skip,

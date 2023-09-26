@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Logging;
 using ToSic.Cre8Magic.Client.Analytics;
 
 namespace ToSic.Cre8Magic.Client.Services;
@@ -24,5 +25,7 @@ public class Startup : Oqtane.Services.IClientStartup
 
         // Analytics - new in 0.0.2
         services.TryAddTransient<MagicAnalyticsService>();
+
+        services.TryAddTransient<MagicMenuBuilder>();
     }
 }

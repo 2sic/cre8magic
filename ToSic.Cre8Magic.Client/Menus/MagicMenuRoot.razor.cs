@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Logging;
+using Oqtane.Themes.Controls;
 
 namespace ToSic.Cre8Magic.Client.Menus;
 
@@ -29,7 +31,9 @@ public abstract class MagicMenuRoot: MagicMenuBase
 
     protected MagicMenuTree? Menu { get; private set; }
 
-    protected MagicMenuBuilder? MenuTreeService { get; set; } = new();
+    [Inject] public ILogger<Menu>? Logger { get; set; }
+
+    [Inject] public MagicMenuBuilder? MenuTreeService { get; set; } // = new ();
 
     /// <summary>
     /// Detect if the menu is configured for vertical.

@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Nodes;
+using Microsoft.Extensions.Logging;
 using ToSic.Cre8Magic.Client.Settings.Json;
 
 namespace ToSic.Cre8Magic.Client.Themes.Settings;
@@ -18,9 +19,9 @@ public class ThemePartJsonConverter : JsonConverterBase<MagicThemePartSettings>
     /// but removed at other times to use default conversion.
     /// That is only possible if it's not used in a POCO attribute, but added in the serializer options.
     /// </summary>
-    private ThemePartJsonConverter() {}
+    private ThemePartJsonConverter(ILogger logger) : base(logger) {}
 
-    public static ThemePartJsonConverter GetNew() => new();
+    public static ThemePartJsonConverter GetNew(ILogger logger) => new(logger);
 
     public override void Write(Utf8JsonWriter writer, MagicThemePartSettings? part, JsonSerializerOptions options)
     {

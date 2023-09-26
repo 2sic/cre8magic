@@ -49,7 +49,7 @@ internal class NamedSettingsReader<TPart> where TPart: class, new()
 
         if (_defaults.Foundation == null) return priority;
 
-        var merged = Merge(priority, _defaults.Foundation, _jsonProcessing?.Invoke(realName));
+        var merged = Merge(priority, _defaults.Foundation, _parent.Logger, _jsonProcessing?.Invoke(realName));
         return merged!;
     }
 
@@ -58,7 +58,7 @@ internal class NamedSettingsReader<TPart> where TPart: class, new()
         var addition = FindPart(name);
         return addition == null 
             ? priority 
-            : Merge(priority, addition, _jsonProcessing?.Invoke(realName));
+            : Merge(priority, addition, _parent.Logger, _jsonProcessing?.Invoke(realName));
     }
 
     private readonly NamedSettings<TPart> _cache = new();

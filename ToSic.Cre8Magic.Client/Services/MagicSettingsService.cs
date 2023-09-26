@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using Microsoft.Extensions.Logging;
 using Oqtane.UI;
 using ToSic.Cre8Magic.Client.Analytics;
 using ToSic.Cre8Magic.Client.Settings.Json;
@@ -14,9 +15,10 @@ public class MagicSettingsService: IHasSettingsExceptions
     /// <summary>
     /// Constructor
     /// </summary>
-    public MagicSettingsService(MagicSettingsJsonService jsonService)
+    public MagicSettingsService(MagicSettingsJsonService jsonService, ILogger<MagicSettingsService> logger)
     {
         Json = jsonService;
+        Logger = logger;
     }
 
     public MagicSettingsService InitSettings(MagicPackageSettings themeSettings)
@@ -38,6 +40,7 @@ public class MagicSettingsService: IHasSettingsExceptions
     private MagicPackageSettings? _settings;
 
     private MagicSettingsJsonService Json { get; }
+    public ILogger<MagicSettingsService> Logger { get; }
 
     public MagicSettings CurrentSettings(PageState pageState, string? name, string bodyClasses)
     {
@@ -78,7 +81,7 @@ public class MagicSettingsService: IHasSettingsExceptions
         foreach (var source in sources.Skip(1))
         {
             // get new json
-            var lowerPriority = JsonSerializer.Serialize(source, JsonMerger.GetNewOptionsForPreMerge());
+            var lowerPriority = JsonSerializer.Serialize(source, JsonMerger.GetNewOptionsForPreMerge(Logger));
             var merged = JsonMerger.Merge(priority, lowerPriority);
             priority = merged;
         }
