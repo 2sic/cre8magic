@@ -40,13 +40,14 @@ public class PairOnOffJsonConverter : JsonConverterBase<PairOnOff>
 
     public override PairOnOff? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
+        Logger.LogInformation($"2sic# Reading PairOnOffJsonConverter / {typeToConvert}.");
         var x = JsonNode.Parse(ref reader);
         return x switch
         {
             null => null,
             JsonArray jArray => ConvertArray(jArray),
             JsonValue jValue => new() { On = jValue.ToString() },
-            JsonObject jObject => ConvertObject(jObject, options),
+            JsonObject jObject => ConvertObject(jObject, GetOptionsWithoutThisConverter(options)),
             _ => new() { On = "error", Off = "error" },
         };
     }

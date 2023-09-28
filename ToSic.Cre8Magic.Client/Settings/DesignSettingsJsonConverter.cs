@@ -30,7 +30,7 @@ public class DesignSettingsJsonConverter<T> : JsonConverterBase<T> where T : Des
 
     public override T? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        Logger.LogTrace($"Reading {typeof(T)} / {typeToConvert}.");
+        Logger.LogInformation($"2sic# Reading DesignSettingsJsonConverter {typeof(T)} / {typeToConvert}.");
         var jsonNode = JsonNode.Parse(ref reader);
 
         const string errArray = "Error unexpected data - array instead of string or object";
@@ -39,7 +39,7 @@ public class DesignSettingsJsonConverter<T> : JsonConverterBase<T> where T : Des
             null => null,
             JsonArray _ => ConvertValue(errArray),
             JsonValue jValue => ConvertValue(jValue.ToString()),
-            JsonObject jObject => ConvertObject(jObject, options),
+            JsonObject jObject => ConvertObject(jObject, GetOptionsWithoutThisConverter(options)),
             _ => null,
         };
     }

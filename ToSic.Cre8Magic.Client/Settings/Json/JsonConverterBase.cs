@@ -1,34 +1,62 @@
-﻿using System.Text.Json;
+﻿using System.Runtime.CompilerServices;
+using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using Microsoft.Extensions.Logging;
 
 namespace ToSic.Cre8Magic.Client.Settings.Json;
 
-public abstract class JsonConverterBase<T>: JsonConverter<T>
+public abstract class JsonConverterBase<T> : JsonConverter<T>
 {
     public ILogger Logger { get; }
 
     protected JsonConverterBase(ILogger logger) => Logger = logger;
 
+    private static readonly ConditionalWeakTable<JsonConverterBase<T>, BoxedBool> ConverterFlags = new();
+
+    private bool IsInsideConverter
+    {
+        get => ConverterFlags.GetValue(this, _ => new BoxedBool()).Value;
+        set => ConverterFlags.GetOrCreateValue(this).Value = value;
+    }
+
+    private class BoxedBool
+    {
+        public bool Value;
+    }
 
     protected JsonSerializerOptions GetOptionsWithoutThisConverter(JsonSerializerOptions options)
     {
+        if (IsInsideConverter)
+        {
+            Logger.LogInformation("2sic# Already inside converter {Converter}", this);
+            return options; // Return the original options if we're already inside the converter
+        }
+
         JsonSerializerOptions optionsWithoutConverter = new(options);
-        optionsWithoutConverter.Converters.Remove(this);
+        if (!optionsWithoutConverter.Converters.Remove(this))
+            Logger.LogWarning("2sic# Could not remove converter {Converter} from options", this);
+        else
+            Logger.LogInformation("2sic# Removed converter {Converter} from options", this);
         return optionsWithoutConverter;
     }
-    
+
     protected T? ConvertObject(JsonObject jsonObject, JsonSerializerOptions options)
     {
         try
         {
-            Logger.LogTrace("Deserializing {Type} from {Json}", typeof(T), jsonObject);
-            return jsonObject.Deserialize<T>(GetOptionsWithoutThisConverter(options));
+            Logger.LogInformation("2sic# Deserializing {Type} from {Json}", typeof(T), jsonObject);
+
+            IsInsideConverter = true;
+            var result = jsonObject.Deserialize<T>(GetOptionsWithoutThisConverter(options));
+            IsInsideConverter = false;
+
+            return result;
         }
         catch
         {
-            Logger.LogError("Error while deserializing {Type} from {Json}", typeof(T), jsonObject);
+            Logger.LogError("2sic# Error while deserializing {Type} from {Json}", typeof(T), jsonObject);
+            IsInsideConverter = false; // Ensure the flag is reset even if an exception occurs
             throw;
         }
     }
