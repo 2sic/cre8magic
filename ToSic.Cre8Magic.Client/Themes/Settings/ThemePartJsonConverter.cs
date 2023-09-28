@@ -39,7 +39,7 @@ public class ThemePartJsonConverter : JsonConverterBase<MagicThemePartSettings>
 
     public override MagicThemePartSettings? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        Logger.LogInformation($"2sic# Reading ThemePartJsonConverter / {typeToConvert}.");
+        Logger.LogInformation($"cre8magic# Reading ThemePartJsonConverter / {typeToConvert}.");
         var x = JsonNode.Parse(ref reader);
         return x switch
         {

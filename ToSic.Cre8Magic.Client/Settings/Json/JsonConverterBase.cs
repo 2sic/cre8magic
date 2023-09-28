@@ -29,15 +29,15 @@ public abstract class JsonConverterBase<T> : JsonConverter<T>
     {
         if (IsInsideConverter)
         {
-            Logger.LogInformation("2sic# Already inside converter {Converter}", this);
+            Logger.LogInformation("cre8magic# Already inside converter {Converter}", this);
             return options; // Return the original options if we're already inside the converter
         }
 
         JsonSerializerOptions optionsWithoutConverter = new(options);
         if (!optionsWithoutConverter.Converters.Remove(this))
-            Logger.LogWarning("2sic# Could not remove converter {Converter} from options", this);
+            Logger.LogWarning("cre8magic# Could not remove converter {Converter} from options", this);
         else
-            Logger.LogInformation("2sic# Removed converter {Converter} from options", this);
+            Logger.LogInformation("cre8magic# Removed converter {Converter} from options", this);
         return optionsWithoutConverter;
     }
 
@@ -45,7 +45,7 @@ public abstract class JsonConverterBase<T> : JsonConverter<T>
     {
         try
         {
-            Logger.LogInformation("2sic# Deserializing {Type} from {Json}", typeof(T), jsonObject);
+            Logger.LogInformation("cre8magic# Deserializing {Type} from {Json}", typeof(T), jsonObject);
 
             IsInsideConverter = true;
             var result = jsonObject.Deserialize<T>(GetOptionsWithoutThisConverter(options));
@@ -55,7 +55,7 @@ public abstract class JsonConverterBase<T> : JsonConverter<T>
         }
         catch
         {
-            Logger.LogError("2sic# Error while deserializing {Type} from {Json}", typeof(T), jsonObject);
+            Logger.LogError("cre8magic# Error while deserializing {Type} from {Json}", typeof(T), jsonObject);
             IsInsideConverter = false; // Ensure the flag is reset even if an exception occurs
             throw;
         }

@@ -40,7 +40,7 @@ public class PairOnOffJsonConverter : JsonConverterBase<PairOnOff>
 
     public override PairOnOff? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        Logger.LogInformation($"2sic# Reading PairOnOffJsonConverter / {typeToConvert}.");
+        Logger.LogInformation($"cre8magic# Reading PairOnOffJsonConverter / {typeToConvert}.");
         var x = JsonNode.Parse(ref reader);
         return x switch
         {
