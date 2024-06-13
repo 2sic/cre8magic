@@ -22,7 +22,7 @@ if (!themeConfig.OqtaneBin) {
     themeConfig.OqtaneRoot,
     "bin",
     "Debug",
-    "net6.0"
+    "net8.0"
   );
 }
 
