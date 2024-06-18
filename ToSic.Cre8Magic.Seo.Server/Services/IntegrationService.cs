@@ -34,7 +34,7 @@ namespace ToSic.Cre8magic.Seo.Server.Services
             var site = sites.GetSite(alias.SiteId);
             if (site == null) return -1;
 
-            sites.CreatePages(site, AdminSiteMapPage());
+            sites.CreatePages(site, AdminSiteMapPage(), alias);
             return alias.SiteId;
         }
 
