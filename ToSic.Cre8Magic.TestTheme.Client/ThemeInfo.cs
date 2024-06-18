@@ -25,6 +25,7 @@ public class ThemeInfo : ITheme
         //ThemeSettingsType = typeof(ThemeSettingsUi.Settings).AssemblyQualifiedName,
         //ContainerSettingsType = "Oqtane.Theme.ToSic.ContainerSettings, Oqtane.Theme.ToSic.Oqtane",
         PackageName = "ToSic.Cre8magic.TestTheme",
+        Dependencies = typeof(MagicTheme).AssemblyQualifiedName
     };
 
     #region Menu Names for this Theme, used in various Razor files
