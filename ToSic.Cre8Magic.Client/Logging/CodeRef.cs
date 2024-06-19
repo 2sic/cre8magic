@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using Oqtane.Documentation;
 
-namespace ToSic.Cre8Magic.Client.Logging;
+namespace ToSic.Cre8magic.Client.Logging;
 
 /// <summary>
 /// Reference to code - containing the path to the file, the method name and the line in the code. 

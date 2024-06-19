@@ -7,12 +7,12 @@
     <Authors>2sic internet solutions GmbH, Switzerland</Authors>
     <Company>2sic internet solutions GmbH, Switzerland</Company>
     <Description>Theme Library for professional Oqtane Themes</Description>
-    <Product>ToSic.Cre8Magic.Oqtane</Product>
+    <Product>ToSic.Cre8magic.Oqtane</Product>
     <Copyright>Copyright MIT © 2sic 2024</Copyright>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>$(MSBuildProjectName).Oqtane</AssemblyName>
-    <PackageId>ToSic.Cre8Magic.Oqtane</PackageId>
+    <PackageId>ToSic.Cre8magic.Oqtane</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>cre8magic for Oqtane – Professional Theme Design</Title>
     <PackageProjectUrl>https://2sic.github.io/cre8magic/</PackageProjectUrl>

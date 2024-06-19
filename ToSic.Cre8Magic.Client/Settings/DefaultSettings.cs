@@ -1,6 +1,6 @@
-﻿using static ToSic.Cre8Magic.Client.MagicTokens;
+﻿using static ToSic.Cre8magic.Client.MagicTokens;
 
-namespace ToSic.Cre8Magic.Client.Settings;
+namespace ToSic.Cre8magic.Client.Settings;
 
 internal class DefaultSettings
 {

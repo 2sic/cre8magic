@@ -1,11 +1,11 @@
 ﻿using System.Text.Json;
 using Microsoft.Extensions.Logging;
 using Oqtane.UI;
-using ToSic.Cre8Magic.Client.Analytics;
-using ToSic.Cre8Magic.Client.Settings.Json;
-using static ToSic.Cre8Magic.Client.MagicConstants;
+using ToSic.Cre8magic.Client.Analytics;
+using ToSic.Cre8magic.Client.Settings.Json;
+using static ToSic.Cre8magic.Client.MagicConstants;
 
-namespace ToSic.Cre8Magic.Client.Services;
+namespace ToSic.Cre8magic.Client.Services;
 
 /// <summary>
 /// Service which consolidates settings made in the UI, in the JSON and falls back to coded defaults.

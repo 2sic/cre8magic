@@ -1,4 +1,4 @@
-﻿namespace ToSic.Cre8Magic.Client.Menus;
+﻿namespace ToSic.Cre8magic.Client.Menus;
 
 internal class MagicPageInfo
 {

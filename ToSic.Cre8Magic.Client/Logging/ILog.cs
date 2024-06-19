@@ -1,4 +1,4 @@
-﻿namespace ToSic.Cre8Magic.Client.Logging;
+﻿namespace ToSic.Cre8magic.Client.Logging;
 
 internal interface ILog
 {

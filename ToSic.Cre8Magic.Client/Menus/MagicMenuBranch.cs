@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Oqtane.Models;
-using Log = ToSic.Cre8Magic.Client.Logging.Log;
+using Log = ToSic.Cre8magic.Client.Logging.Log;
 
-namespace ToSic.Cre8Magic.Client.Menus;
+namespace ToSic.Cre8magic.Client.Menus;
 
 public class MagicMenuBranch
 {

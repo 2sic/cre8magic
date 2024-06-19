@@ -4,13 +4,13 @@
       "path": "."
     },
     {
-      "path": "ToSic.Cre8Magic.TestTheme.Client"
+      "path": "ToSic.Cre8magic.TestTheme.Client"
     },
     {
       "path": "docs"
     },
     {
-      "path": "ToSic.Cre8Magic.Client"
+      "path": "ToSic.Cre8magic.Client"
     }
   ],
   "settings": {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
-using ToSic.Cre8Magic.Client.Analytics;
+using ToSic.Cre8magic.Client.Analytics;
 
-namespace ToSic.Cre8Magic.Client.Services;
+namespace ToSic.Cre8magic.Client.Services;
 
 public class Startup : Oqtane.Services.IClientStartup
 {

@@ -1,6 +1,6 @@
 ﻿using Oqtane.Models;
 
-namespace ToSic.Cre8Magic.Client.Containers.Settings;
+namespace ToSic.Cre8magic.Client.Containers.Settings;
 
 internal class ContainerDesigner: ThemeDesigner
 {

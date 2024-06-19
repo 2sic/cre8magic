@@ -4,7 +4,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.Extensions.Logging;
 
-namespace ToSic.Cre8Magic.Client.Settings.Json;
+namespace ToSic.Cre8magic.Client.Settings.Json;
 
 /// <summary>
 /// Inspired by https://github.com/dotnet/runtime/issues/31433

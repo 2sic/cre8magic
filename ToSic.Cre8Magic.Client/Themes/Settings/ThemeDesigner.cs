@@ -1,4 +1,4 @@
-﻿namespace ToSic.Cre8Magic.Client.Themes.Settings;
+﻿namespace ToSic.Cre8magic.Client.Themes.Settings;
 
 /// <summary>
 /// Special helper to figure out what classes should be applied to the page. 

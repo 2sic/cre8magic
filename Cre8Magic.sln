@@ -9,19 +9,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oqtane.Shared", "..\oqtane.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oqtane.Client", "..\oqtane.framework\Oqtane.Client\Oqtane.Client.csproj", "{F9DDCE29-CFA2-4F78-B47D-F483D4D736CA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8Magic.Client", "ToSic.Cre8Magic.Client\ToSic.Cre8Magic.Client.csproj", "{46071FC8-7CF2-4062-A0F3-C726EDFB01D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Client", "ToSic.Cre8magic.Client\ToSic.Cre8magic.Client.csproj", "{46071FC8-7CF2-4062-A0F3-C726EDFB01D6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.TestTheme.Client", "ToSic.Cre8Magic.TestTheme.Client\ToSic.Cre8magic.TestTheme.Client.csproj", "{6C0E5200-23A6-4BF3-9DE4-87CD4E6294AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.TestTheme.Client", "ToSic.Cre8magic.TestTheme.Client\ToSic.Cre8magic.TestTheme.Client.csproj", "{6C0E5200-23A6-4BF3-9DE4-87CD4E6294AD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Seo", "Seo", "{824EF736-6C32-4362-8CCC-F72737A8361B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToSic.Cre8magic.Seo", "ToSic.Cre8magic.Seo", "{824EF736-6C32-4362-8CCC-F72737A8361B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Seo.Server", "ToSic.Cre8Magic.Seo.Server\ToSic.Cre8magic.Seo.Server.csproj", "{83556A82-1FDE-49EA-84D5-7E1C5555A27D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Seo.Server", "ToSic.Cre8magic.Seo.Server\ToSic.Cre8magic.Seo.Server.csproj", "{83556A82-1FDE-49EA-84D5-7E1C5555A27D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Seo.Shared", "ToSic.Cre8Magic.Seo.Shared\ToSic.Cre8magic.Seo.Shared.csproj", "{85BD4E6D-CB2B-49CF-875A-8C3B03C08B47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Seo.Shared", "ToSic.Cre8magic.Seo.Shared\ToSic.Cre8magic.Seo.Shared.csproj", "{85BD4E6D-CB2B-49CF-875A-8C3B03C08B47}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Seo.Package", "ToSic.Cre8Magic.Seo.Package\ToSic.Cre8magic.Seo.Package.csproj", "{50286956-C89A-45FE-A5DF-46C2D43D0058}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Seo.Package", "ToSic.Cre8magic.Seo.Package\ToSic.Cre8magic.Seo.Package.csproj", "{50286956-C89A-45FE-A5DF-46C2D43D0058}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Seo.Client", "ToSic.Cre8Magic.Seo.Client\ToSic.Cre8magic.Seo.Client.csproj", "{E6F72F58-A18F-424F-B70D-DEA3D201CB7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Seo.Client", "ToSic.Cre8magic.Seo.Client\ToSic.Cre8magic.Seo.Client.csproj", "{E6F72F58-A18F-424F-B70D-DEA3D201CB7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

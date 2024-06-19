@@ -1,4 +1,4 @@
-﻿namespace ToSic.Cre8Magic.Client;
+﻿namespace ToSic.Cre8magic.Client;
 
 public class MagicConstants
 {
@@ -13,5 +13,5 @@ public class MagicConstants
     public const string MenuHorizontal = "Horizontal";
     public const string MenuVertical = "Vertical";
 
-    public const string PackageId = "ToSic.Cre8Magic.Oqtane";
+    public const string PackageId = "ToSic.Cre8magic.Oqtane";
 }

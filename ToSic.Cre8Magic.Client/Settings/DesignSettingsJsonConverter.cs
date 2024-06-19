@@ -1,9 +1,9 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Nodes;
 using Microsoft.Extensions.Logging;
-using ToSic.Cre8Magic.Client.Settings.Json;
+using ToSic.Cre8magic.Client.Settings.Json;
 
-namespace ToSic.Cre8Magic.Client.Settings;
+namespace ToSic.Cre8magic.Client.Settings;
 
 /// <summary>
 /// Important: NEVER use this on a 

@@ -1,4 +1,4 @@
-﻿namespace ToSic.Cre8Magic.Client.Settings.Debug;
+﻿namespace ToSic.Cre8magic.Client.Settings.Debug;
 
 /// <summary>
 /// Current debug state - show/enabled yes no

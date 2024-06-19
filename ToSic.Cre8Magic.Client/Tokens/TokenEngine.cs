@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace ToSic.Cre8Magic.Client.Tokens;
+namespace ToSic.Cre8magic.Client.Tokens;
 
 /// <summary>
 /// Basic token engine which takes a list of token replacers and runs them.
