@@ -1,6 +1,6 @@
-﻿using static ToSic.Cre8Magic.Client.MagicConstants;
+﻿using static ToSic.Cre8magic.Client.MagicConstants;
 
-namespace ToSic.Cre8Magic.Client.Themes.Settings;
+namespace ToSic.Cre8magic.Client.Themes.Settings;
 
 public class MagicThemeSettings: SettingsWithInherit, IHasDebugSettings
 {

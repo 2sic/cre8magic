@@ -1,4 +1,4 @@
-﻿namespace ToSic.Cre8Magic.Client.Tokens;
+﻿namespace ToSic.Cre8magic.Client.Tokens;
 
 internal interface ITokenReplace
 {

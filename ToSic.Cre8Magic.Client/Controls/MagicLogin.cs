@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Localization;
 using Oqtane;
 
-namespace ToSic.Cre8Magic.Client.Controls
+namespace ToSic.Cre8magic.Client.Controls
 {
     public abstract class MagicLogin: Oqtane.Themes.Controls.LoginBase, IMagicControlWithSettings
     {

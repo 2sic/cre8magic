@@ -1,4 +1,4 @@
-﻿namespace ToSic.Cre8Magic.Client.Themes.Settings;
+﻿namespace ToSic.Cre8magic.Client.Themes.Settings;
 
 public class MagicThemePartSettings
 {

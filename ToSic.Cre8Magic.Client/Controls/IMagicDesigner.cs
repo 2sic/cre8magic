@@ -1,4 +1,4 @@
-﻿namespace ToSic.Cre8Magic.Client.Controls;
+﻿namespace ToSic.Cre8magic.Client.Controls;
 
 public interface IMagicDesigner
 {

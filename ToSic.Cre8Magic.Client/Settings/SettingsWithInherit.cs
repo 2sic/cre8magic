@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace ToSic.Cre8Magic.Client.Settings;
+namespace ToSic.Cre8magic.Client.Settings;
 
 public abstract class SettingsWithInherit: IInherit
 {

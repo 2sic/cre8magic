@@ -1,8 +1,8 @@
-﻿using static ToSic.Cre8Magic.Client.MagicConstants;
-using static ToSic.Cre8Magic.Client.Settings.Json.JsonMerger;
-using static ToSic.Cre8Magic.Client.Settings.SettingsWithInherit;
+﻿using static ToSic.Cre8magic.Client.MagicConstants;
+using static ToSic.Cre8magic.Client.Settings.Json.JsonMerger;
+using static ToSic.Cre8magic.Client.Settings.SettingsWithInherit;
 
-namespace ToSic.Cre8Magic.Client.Services;
+namespace ToSic.Cre8magic.Client.Services;
 
 internal class NamedSettingsReader<TPart> where TPart: class, new()
 {

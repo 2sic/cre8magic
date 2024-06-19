@@ -1,7 +1,7 @@
 ﻿using Oqtane.Models;
 using Oqtane.UI;
 
-namespace ToSic.Cre8Magic.Client;
+namespace ToSic.Cre8magic.Client;
 
 public static class PageStateMenuExtensions
 {

@@ -1,4 +1,4 @@
-﻿namespace ToSic.Cre8Magic.Client.Settings.Debug;
+﻿namespace ToSic.Cre8magic.Client.Settings.Debug;
 
 internal interface IHasDebugSettings
 {

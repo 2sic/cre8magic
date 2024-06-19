@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace ToSic.Cre8Magic.Client.Menus;
+// TODO: adapt Cre8magic everywhere
+namespace ToSic.Cre8magic.Client.Menus;
 
 public abstract class MagicMenuBase: Oqtane.Themes.Controls.MenuBase, IMagicControlWithSettings
 {

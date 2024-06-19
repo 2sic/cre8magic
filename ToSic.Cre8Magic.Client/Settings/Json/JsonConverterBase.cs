@@ -4,7 +4,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using Microsoft.Extensions.Logging;
 
-namespace ToSic.Cre8Magic.Client.Settings.Json;
+namespace ToSic.Cre8magic.Client.Settings.Json;
 
 public abstract class JsonConverterBase<T> : JsonConverter<T>
 {

@@ -1,6 +1,6 @@
 ﻿using static System.StringComparer;
 
-namespace ToSic.Cre8Magic.Client;
+namespace ToSic.Cre8magic.Client;
 
 public static class DictionaryExtensions
 {

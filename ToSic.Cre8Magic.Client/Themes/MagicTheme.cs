@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
-using ToSic.Cre8Magic.Client.Analytics;
+using ToSic.Cre8magic.Client.Analytics;
 
-namespace ToSic.Cre8Magic.Client.Themes;
+namespace ToSic.Cre8magic.Client.Themes;
 
 /// <summary>
 /// Base class for our themes. It's responsible for

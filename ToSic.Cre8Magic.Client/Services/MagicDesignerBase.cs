@@ -1,4 +1,4 @@
-﻿namespace ToSic.Cre8Magic.Client.Services;
+﻿namespace ToSic.Cre8magic.Client.Services;
 
 internal abstract class MagicDesignerBase: MagicServiceWithSettingsBase, IMagicDesigner
 {

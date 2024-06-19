@@ -1,7 +1,7 @@
 ﻿
-using ToSic.Cre8Magic.Client.Analytics;
+using ToSic.Cre8magic.Client.Analytics;
 
-namespace ToSic.Cre8Magic.Client.Settings;
+namespace ToSic.Cre8magic.Client.Settings;
 
 /// <summary>
 /// This is a catalog of all kinds of configurations.

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace ToSic.Cre8Magic.Client.Controls;
+namespace ToSic.Cre8magic.Client.Controls;
 
 /// <summary>
 /// Non-Oqtane Blazor component with Settings as base for your controls

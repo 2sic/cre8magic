@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace ToSic.Cre8Magic.Client.Controls;
+namespace ToSic.Cre8magic.Client.Controls;
 
 public interface IMagicControlWithSettings: IHasMagicSettings, IMagicDesigner
 {

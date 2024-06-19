@@ -14,9 +14,9 @@ But there are two missing pieces (☮️) to create amazing websites:
 1. Real Content-Management features - which can be done with the extension [2sxc](https://2sxc.org)
 1. Tools to make designing themes fast and professional - enter: **cre8magic**
 
-> 🎨🖌️🎨 Cre8Magic makes Oqtane Designer-Friendly 🎨🖌️🎨
+> 🎨🖌️🎨 Cre8magic makes Oqtane Designer-Friendly 🎨🖌️🎨
 >  
-> Cre8Magic combines very simple Razor code and lets you adjust everything through settings.
+> Cre8magic combines very simple Razor code and lets you adjust everything through settings.
 >
 > 📖 [Check out the docs](https://cre8magic.blazor-cms.org/)
 

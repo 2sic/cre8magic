@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Oqtane.Themes;
 
-namespace ToSic.Cre8Magic.Client.Controls;
+namespace ToSic.Cre8magic.Client.Controls;
 
 /// <summary>
 /// Oqtane Blazor Control with Settings

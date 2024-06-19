@@ -1,9 +1,9 @@
 ﻿using System.Text.Json.Serialization;
 using Oqtane.UI;
-using ToSic.Cre8Magic.Client.Analytics;
+using ToSic.Cre8magic.Client.Analytics;
 using static System.StringComparer;
 
-namespace ToSic.Cre8Magic.Client.Settings;
+namespace ToSic.Cre8magic.Client.Settings;
 
 /// <summary>
 /// The current settings of a page.

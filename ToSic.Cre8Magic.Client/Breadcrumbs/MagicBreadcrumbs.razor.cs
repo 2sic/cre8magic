@@ -1,6 +1,6 @@
 ﻿using Oqtane.Models;
 
-namespace ToSic.Cre8Magic.Client.Breadcrumbs;
+namespace ToSic.Cre8magic.Client.Breadcrumbs;
 
 public abstract class MagicBreadcrumbs: MagicControl
 {

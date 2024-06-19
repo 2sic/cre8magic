@@ -1,7 +1,7 @@
 ﻿using Microsoft.JSInterop;
-using static ToSic.Cre8Magic.Client.Services.DoStuff;
+using static ToSic.Cre8magic.Client.Services.DoStuff;
 
-namespace ToSic.Cre8Magic.Client.Analytics
+namespace ToSic.Cre8magic.Client.Analytics
 {
     public class MagicAnalyticsService
     {

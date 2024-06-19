@@ -1,4 +1,4 @@
-﻿namespace ToSic.Cre8Magic.Client.Languages.Settings;
+﻿namespace ToSic.Cre8magic.Client.Languages.Settings;
 
 internal class LanguagesDesigner: ThemeDesigner
 {
