@@ -20,7 +20,7 @@ public class ThemeInfo : ITheme
     public Theme Theme => new()
     {
         Name = "cre8magic Test Theme",
-        Version = "0.0.1",
+        Version = "0.3.1",
         // Settings still very WIP
         //ThemeSettingsType = typeof(ThemeSettingsUi.Settings).AssemblyQualifiedName,
         //ContainerSettingsType = "Oqtane.Theme.ToSic.ContainerSettings, Oqtane.Theme.ToSic.Oqtane",

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>ToSic.Cre8magic.TestTheme.Client.Oqtane</id>
-    <version>0.0.2</version>
+    <version>0.3.1</version>
     <authors>2sic internet solutions GmbH, Switzerland</authors>
     <owners>2sic internet solutions GmbH, Switzerland</owners>
     <title>2Shine Bootstrap5 Theme for Oqtane</title>
