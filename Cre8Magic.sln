@@ -9,11 +9,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oqtane.Shared", "..\oqtane.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oqtane.Client", "..\oqtane.framework\Oqtane.Client\Oqtane.Client.csproj", "{F9DDCE29-CFA2-4F78-B47D-F483D4D736CA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8Magic.Client", "ToSic.Cre8Magic.Client\ToSic.Cre8Magic.Client.csproj", "{46071FC8-7CF2-4062-A0F3-C726EDFB01D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Client", "ToSic.Cre8Magic.Client\ToSic.Cre8magic.Client.csproj", "{46071FC8-7CF2-4062-A0F3-C726EDFB01D6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.TestTheme.Client", "ToSic.Cre8magic.TestTheme.Client\ToSic.Cre8magic.TestTheme.Client.csproj", "{6C0E5200-23A6-4BF3-9DE4-87CD4E6294AD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Seo", "Seo", "{824EF736-6C32-4362-8CCC-F72737A8361B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Seo.Client", "ToSic.Cre8magic.Seo.Client\ToSic.Cre8magic.Seo.Client.csproj", "{08C0572F-852E-483A-98B6-68414436B413}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Seo.Package", "ToSic.Cre8magic.Seo.Package\ToSic.Cre8magic.Seo.Package.csproj", "{54670747-7E30-4006-BC49-E01F8C886302}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Seo.Server", "ToSic.Cre8magic.Seo.Server\ToSic.Cre8magic.Seo.Server.csproj", "{D1EB66B0-F9F6-4502-ADE6-481B3ADE379D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToSic.Cre8magic.Seo.Shared", "ToSic.Cre8magic.Seo.Shared\ToSic.Cre8magic.Seo.Shared.csproj", "{50EEB267-7B9E-4D2E-BACB-C433AFED03C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,9 +49,31 @@ Global
 		{6C0E5200-23A6-4BF3-9DE4-87CD4E6294AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C0E5200-23A6-4BF3-9DE4-87CD4E6294AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C0E5200-23A6-4BF3-9DE4-87CD4E6294AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08C0572F-852E-483A-98B6-68414436B413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08C0572F-852E-483A-98B6-68414436B413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08C0572F-852E-483A-98B6-68414436B413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08C0572F-852E-483A-98B6-68414436B413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54670747-7E30-4006-BC49-E01F8C886302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54670747-7E30-4006-BC49-E01F8C886302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54670747-7E30-4006-BC49-E01F8C886302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54670747-7E30-4006-BC49-E01F8C886302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1EB66B0-F9F6-4502-ADE6-481B3ADE379D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1EB66B0-F9F6-4502-ADE6-481B3ADE379D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1EB66B0-F9F6-4502-ADE6-481B3ADE379D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1EB66B0-F9F6-4502-ADE6-481B3ADE379D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50EEB267-7B9E-4D2E-BACB-C433AFED03C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50EEB267-7B9E-4D2E-BACB-C433AFED03C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50EEB267-7B9E-4D2E-BACB-C433AFED03C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50EEB267-7B9E-4D2E-BACB-C433AFED03C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{08C0572F-852E-483A-98B6-68414436B413} = {824EF736-6C32-4362-8CCC-F72737A8361B}
+		{54670747-7E30-4006-BC49-E01F8C886302} = {824EF736-6C32-4362-8CCC-F72737A8361B}
+		{D1EB66B0-F9F6-4502-ADE6-481B3ADE379D} = {824EF736-6C32-4362-8CCC-F72737A8361B}
+		{50EEB267-7B9E-4D2E-BACB-C433AFED03C1} = {824EF736-6C32-4362-8CCC-F72737A8361B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1D016F15-46FE-4726-8DFD-2E4FD4DC7668}

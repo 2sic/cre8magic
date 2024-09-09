@@ -63,7 +63,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\cre8magic\ToSic.Cre8magic.Client\ToSic.Cre8magic.Client.csproj" />
+    <ProjectReference Include="..\ToSic.Cre8magic.Client\ToSic.Cre8magic.Client.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
