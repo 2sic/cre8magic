@@ -16,7 +16,7 @@ Documentation use GitHub Pages supported theme: [Hacker](https://github.com/page
 ## Prerequisites
 
 - [Install Ruby and Jekyll](https://jekyllrb.com/docs/installation/)
-    - Download and install a Ruby+Devkit version from RubyInstaller Downloads, eg. `rubyinstaller-devkit-2.7.6-1-x64.exe` or `winget install -e --id RubyInstallerTeam.RubyWithDevKit.2.7`.
+    - Download and install a Ruby+Devkit version from RubyInstaller Downloads, eg. `rubyinstaller-devkit-2.7.6-1-x64.exe` (or `winget install -e --id RubyInstallerTeam.RubyWithDevKit.2.7`, `ridk install`).
         - use default options for installation
         - in last step, choose option [3] `MSYS2 and MINGW development tool chain`
         - `gem install jekyll bundler`

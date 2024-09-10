@@ -14,7 +14,7 @@
     <repository type="git" url="https://github.com/2sic/cre8magic.git" branch="master" />
     <iconUrl>https://github.com/2sic/cre8magic/blob/main/Client/Package/icon.png</iconUrl>
     <icon>icon.png</icon>
-    <tags>oqtane module</tags>
+    <tags>oqtane theme</tags>
     <readme>readme.md</readme>
     <releaseNotes>https://github.com/2sic/cre8magic/releases</releaseNotes>
     <summary>The only Oqtane Theme for passionate designers</summary>
