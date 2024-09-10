@@ -1,0 +1,30 @@
+@namespace ToSic.Theme.Cre8magicTests
+@using ToSic.Cre8magic.Client.Menus
+@using ToSic.Cre8magic.Client.Services
+@inherits ThemeControlBase;
+@inject MagicPageService MagicPageService
+
+@code{
+    [Parameter, EditorRequired]
+    public MagicMenuBranch Menu { get; set; }
+}
+@{
+    MagicPageService.Init(PageState);
+}
+
+<ul>
+    @foreach (var subMenu in Menu.Children)
+    {
+        <li>
+            <a href='@MagicPageService.GetUrl(subMenu.Page)'
+               target='@MagicPageService.GetTarget(subMenu.Page)'
+            >@subMenu.Page.Name</a>
+            @if (subMenu.HasChildren)
+            {
+                <C8mMenu Menu="@subMenu" />
+            }
+        </li>
+    }
+</ul>
+
+

@@ -1,5 +1,6 @@
 ﻿using Oqtane.Models;
 using Oqtane.UI;
+using ToSic.Cre8magic.Client.Models;
 using static ToSic.Cre8magic.Client.MagicTokens;
 using static System.StringComparison;
 
@@ -27,7 +28,7 @@ internal class PageTokens: ITokenReplace
     public string Parse(string classes)
     {
         if (!classes.HasValue()) return classes;
-        var page = Page ?? PageState.Page;
+        var page = Page ?? PageState.Page/*.ToMagicPage()*/;
         var result = classes
             .Replace(PageId, $"{page.PageId}", InvariantCultureIgnoreCase);
 

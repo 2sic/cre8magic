@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -18,8 +18,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Oqtane.Client" Version="5.1.0" />
-    <PackageReference Include="Oqtane.Shared" Version="5.1.0" />
+    <PackageReference Include="Oqtane.Client" Version="5.1.2" />
+    <PackageReference Include="Oqtane.Shared" Version="5.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ToSic.Cre8Magic.Client\ToSic.Cre8magic.Client.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

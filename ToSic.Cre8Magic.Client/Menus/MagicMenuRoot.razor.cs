@@ -45,7 +45,8 @@ public abstract class MagicMenuRoot: MagicMenuBase
     protected override async Task OnParametersSetAsync()
     {
         await base.OnParametersSetAsync();
-        MenuTreeService!.InitSettings(Settings);
+
+        MenuTreeService?.InitSettings(Settings);
 
         var menuSettings = MenuSettings ?? new MagicMenuSettings
         {

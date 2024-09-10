@@ -19,11 +19,6 @@ public class MagicMenuBranch
 
     public string? Value(string key) => NodeReplace.Parse(Tree.Design.Value(key)).EmptyAsNull();
 
-    /// <summary>
-    /// Menu Level relative to the start of the menu (always starts with 1)
-    /// </summary>
-    public int Level { get; }
-
     public MagicMenuBranch(MagicMenuTree tree, int level, Page page, string debugPrefix): this(page, level)
     {
         Tree = tree;
@@ -40,7 +35,12 @@ public class MagicMenuBranch
     /// <summary>
     /// Current Page
     /// </summary>
-    public Page Page { get; }
+    public Page Page { get; protected set; }
+
+    /// <summary>
+    /// Menu Level relative to the start of the menu (always starts with 1)
+    /// </summary>
+    public int Level { get; protected set; }
 
     internal Log Log { get; set; }
 

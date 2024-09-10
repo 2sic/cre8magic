@@ -12,8 +12,6 @@ namespace ToSic.Theme.Cre8magicTests
             Name = "ToSic Cre8magicTests",
             Version = "1.0.0",
             PackageName = "ToSic.Theme.Cre8magicTests",
-            ThemeSettingsType = "ToSic.Theme.Cre8magicTests.ThemeSettings, ToSic.Theme.Cre8magicTests.Client.Oqtane",
-            ContainerSettingsType = "ToSic.Theme.Cre8magicTests.ContainerSettings, ToSic.Theme.Cre8magicTests.Client.Oqtane",
             Resources = new List<Resource>()
             {
 		        // obtained from https://cdnjs.com/libraries

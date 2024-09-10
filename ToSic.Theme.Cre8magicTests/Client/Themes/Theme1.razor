@@ -1,14 +1,69 @@
 @namespace ToSic.Theme.Cre8magicTests
+@using ToSic.Cre8magic.Client.Menus
 @inherits ThemeBase
 @inject ISettingService SettingService
+@inject MagicMenuTree MagicMenuTree
+
+@code {
+    public const string TopLevelWithSubpagesId = "97";
+}
 
 <main role="main">
-    <nav class="navbar navbar-dark bg-primary fixed-top">
-        <Logo /><Menu Orientation="Horizontal" />
+    <nav class="navbar navbar-dark bg-primary">
+        <Logo />
+
         <div class="controls ms-auto">
             <div class="controls-group"><UserProfile ShowRegister="@_register" /> <Login ShowLogin="@_login"  /> <ControlPanel ButtonClass="btn-outline-light" /></div>
         </div>
     </nav>
+
+    <div class="navbar-expand-lg">
+        <h2>No Settings</h2>
+        <h3>Basic Menu without Setting, name none</h3>
+        <BasicMenu Menu='MagicMenuTree.Init(PageState)' />
+        <hr/>
+
+        <h2>Various Settings</h2>
+        <h3>Only one specific page, no other params</h3>
+        <BasicMenu Menu='new MagicMenuTree().Init(PageState).Setup(new() { Start = TopLevelWithSubpagesId })'></BasicMenu>
+
+        <h3>Only one specific page, Depth = 0</h3>
+        <BasicMenu Menu='new MagicMenuTree().Init(PageState).Setup(new() { Start = TopLevelWithSubpagesId, Depth = 0 })'></BasicMenu>
+
+        <h3>Only one specific page, Depth = 2</h3>
+        <BasicMenu Menu='new MagicMenuTree().Init(PageState).Setup(new() { Start = TopLevelWithSubpagesId, Depth = 2 })'></BasicMenu>
+
+        <hr/>
+        <h2>Start at current level</h2>
+        <h3>Current level only (should only show one page...)</h3>
+        <BasicMenu Menu='new MagicMenuTree().Init(PageState).Setup(new() { Start = "." })'></BasicMenu>
+
+        <h3>Current level with children</h3>
+        <BasicMenu Menu='new MagicMenuTree().Init(PageState).Setup(new() { Start = ".", Depth = 1 })'></BasicMenu>
+
+        <h3>Current level children only</h3>
+        <BasicMenu Menu='new MagicMenuTree().Init(PageState).Setup(new() { Start = ".", Children = true, Depth = 0 })'></BasicMenu>
+
+        <h3>Parent level only</h3>
+        <BasicMenu Menu='new MagicMenuTree().Init(PageState).Setup(new() { Start = ".", Level = -1, Depth = 0 })'></BasicMenu>
+
+        <h3>Current from Root Level 1, no children</h3>
+        <BasicMenu Menu='new MagicMenuTree().Init(PageState).Setup(new() { Start = ".", Level = 1, Children = false, Depth = 0 })'></BasicMenu>
+        <h3>Current from Root Level 1, children</h3>
+        <BasicMenu Menu='new MagicMenuTree().Init(PageState).Setup(new() { Start = ".", Level = 1, Children = true, Depth = 0 })'></BasicMenu>
+        <h3>Current from Root Level 1, no-children Depth 1</h3>
+        <BasicMenu Menu='new MagicMenuTree().Init(PageState).Setup(new() { Start = ".", Level = 1, Children = false, Depth = 1 })'></BasicMenu>
+
+        <h3>Current from Root Level 2</h3>
+        <BasicMenu Menu='new MagicMenuTree().Init(PageState).Setup(new() { Start = ".", Level = 2, Children = true, Depth = 0 })'></BasicMenu>
+
+        <hr/>
+        <h2>Start with specific numbers</h2>
+        <h3>Specific Pages Listed here (Home, myPage, Login)</h3>
+        <BasicMenu Menu='new MagicMenuTree().Init(PageState).Setup(new() { Start = "1, 3, 5!" })'></BasicMenu>
+
+    </div>
+
     <div class="content">
         <div class="container">
             <div class="row">

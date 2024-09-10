@@ -27,5 +27,8 @@ public class Startup : Oqtane.Services.IClientStartup
         services.TryAddTransient<MagicAnalyticsService>();
 
         services.TryAddTransient<MagicMenuBuilder>();
+
+        services.TryAddTransient<MagicPageService>();
+        services.TryAddTransient<MagicMenuTree>();
     }
 }

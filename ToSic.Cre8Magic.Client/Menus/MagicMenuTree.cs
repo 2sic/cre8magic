@@ -7,25 +7,99 @@ public class MagicMenuTree : MagicMenuBranch
 {
     public const char PageForced = '!';
 
-    public MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<Page> menuPages, List<string> messages)
-        : base(magicSettings.PageState.Page, 1)
+    //private readonly MagicPageService _magicPageService;
+
+    /// <summary>
+    /// Constructor usually for DI
+    /// </summary>
+    /// <param name="magicPageService"></param>
+    /// <remarks>
+    /// Getting PageState in constructor DI breaks the Oqtane, so we have to get it in Init method
+    /// </remarks>
+    public MagicMenuTree(/*PageState pageState, *//*MagicPageService magicPageService*/)
+        : base(/*pageState.Page*/null, 1)
     {
         Log = LogRoot.GetLog("Root");
-        Log.A($"Start for Page: {magicSettings.PageState.Page.PageId}; Level: 0");
-        MagicSettings = magicSettings;
-        PageState = magicSettings.PageState;
-        Settings = settings;
-        AllPages = magicSettings.PageState.Pages;
-        MenuPages = menuPages;
-        Debug = messages ?? new();
+        Log.A($"Start for Page:{null}; Level:1");
+        //_magicPageService = magicPageService;
+        //Init(pageState);
     }
 
-    public MagicMenuSettings Settings { get; }
-    private MagicSettings MagicSettings { get; }
-    public PageState PageState { get; }
+    #region Init
 
-    internal TokenEngine PageTokenEngine(Page page)
+    public MagicMenuTree Init(PageState pageState)
     {
+        Log.A($"Init for Page:{pageState.Page.PageId}; Level:0");
+
+        PageState = pageState;
+
+        // update base class
+        Page = PageState.Page;
+        Level = 1;
+
+        // update dependency MagicPageService
+        //_magicPageService.Init(PageState);
+
+        // update dependent properties
+        AllPages = PageState.Pages;
+        MenuPages = new MagicPageService().Init(PageState).MenuPages.ToList();
+        Settings = MagicMenuSettings.Defaults.Fallback;
+        Debug = new();
+
+        return this;
+    }
+
+    public MagicMenuTree Setup(MagicSettings? magicSettings, MagicMenuSettings? settings, List<Page>? menuPages = null, List<string>? messages = null)
+    {
+        Log.A($"Init for Page:{PageState.Page.PageId}; Level:0");
+
+        if (magicSettings != null) SetMagicSettings(magicSettings);
+        if (settings != null) Setup(settings);
+        if (menuPages != null) SetMenuPages(menuPages);
+        if (messages != null) SetMessages(messages);
+
+        return this;
+    }
+
+    public MagicMenuTree SetMagicSettings(MagicSettings magicSettings)
+    {
+        Log.A($"Init MagicSettings PageId:{magicSettings.PageState.Page.PageId}; Level:0");
+        MagicSettings = magicSettings!;
+        return Init(MagicSettings.PageState);
+    }
+
+    public MagicMenuTree Setup(MagicMenuSettings settings)
+    {
+        Log.A($"Init MagicMenuSettings Start:{settings.Start}; Level:{settings.Level}");
+        Settings = settings;
+        return this;
+    }
+
+    public MagicMenuTree SetMenuPages(List<Page> menuPages)
+    {
+        Log.A($"Init menuPages:{menuPages.Count}");
+        MenuPages = menuPages;
+        return this;
+    }
+
+    public MagicMenuTree SetMessages(List<string> messages)
+    {
+        Log.A($"Init messages:{messages.Count}");
+        Debug = messages;
+        return this;
+    }
+    #endregion
+
+
+    public MagicMenuSettings Settings { get; private set; }
+    public PageState PageState { get; private set; }
+
+
+    private MagicSettings? MagicSettings { get; set; } // TODO: stv move this to better place because it is MagicSettings part
+
+    internal TokenEngine? PageTokenEngine(Page page) // TODO: stv move this to better place because it is MagicSettings part
+    {
+        if (MagicSettings == null) return null;
         var originalPage = (PageTokens)MagicSettings.Tokens.Parsers.First(p => p.NameId == PageTokens.NameIdConstant);
         originalPage = originalPage.Modified(page, menuId: MenuId);
         return MagicSettings.Tokens.SwapParser(originalPage);
@@ -34,13 +108,13 @@ public class MagicMenuTree : MagicMenuBranch
     /// <summary>
     /// List of all pages - even these which would currently not be shown in the menu.
     /// </summary>
-    internal List<Page> AllPages { get; }
+    internal List<Page> AllPages { get; private set; }
 
     /// <summary>
     /// Pages in the menu according to Oqtane pre-processing
     /// Should be limited to pages which should be in the menu, visible and permissions ok. 
     /// </summary>
-    internal List<Page> MenuPages;
+    internal List<Page> MenuPages { get; private set; }
 
     internal override MagicMenuTree Tree => this;
 
@@ -56,7 +130,7 @@ public class MagicMenuTree : MagicMenuBranch
     public int Depth => _depth ??= Settings.Depth ?? MagicMenuSettings.LevelDepthFallback;
     private int? _depth;
 
-    public List<string> Debug { get; }
+    public List<string> Debug { get; private set; }
 
     internal LogRoot LogRoot { get; } = new();
 

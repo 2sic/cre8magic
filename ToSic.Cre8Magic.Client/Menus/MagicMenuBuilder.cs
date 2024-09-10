@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Oqtane.Models;
+using Oqtane.UI;
 using ToSic.Cre8magic.Client.Settings.Json;
 
 namespace ToSic.Cre8magic.Client.Menus;
@@ -7,15 +8,11 @@ namespace ToSic.Cre8magic.Client.Menus;
 /// <summary>
 /// Will create a MenuTree based on the current pages information and configuration
 /// </summary>
-public class MagicMenuBuilder: MagicServiceWithSettingsBase
+public class MagicMenuBuilder(MagicMenuTree magicMenuTree, ILogger<MagicMenuBuilder> logger) : MagicServiceWithSettingsBase
 {
-    public ILogger Logger { get; }
 
-    public MagicMenuBuilder(ILogger<MagicMenuBuilder> logger)
-    {
-        Logger = logger;
-    }
-    
+    public ILogger Logger { get; } = logger;
+
     private const string MenuSettingPrefix = "menu-";
 
     public MagicMenuTree GetTree(MagicMenuSettings config, List<Page> menuPages)
@@ -68,6 +65,6 @@ public class MagicMenuBuilder: MagicServiceWithSettingsBase
         else
             messages.Add("Design rules already set");
 
-        return new(Settings, config, menuPages, messages);
+        return magicMenuTree.Setup(Settings, config, menuPages, messages);
     }
 }
