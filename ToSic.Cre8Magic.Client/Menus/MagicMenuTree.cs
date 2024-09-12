@@ -68,10 +68,18 @@ public class MagicMenuTree : MagicMenuBranch
         return Init(MagicSettings.PageState);
     }
 
-    public MagicMenuTree Setup(MagicMenuSettings settings)
+    /// <summary>
+    /// Helper for shorter razor syntax
+    /// </summary>
+    /// <param name="settings">MagicMenuSettings</param>
+    /// <returns>MagicMenuTree clone</returns>
+    public MagicMenuTree New(MagicMenuSettings? settings = null) 
+        => ((MagicMenuTree)this.MemberwiseClone()).Setup(settings);
+
+    public MagicMenuTree Setup(MagicMenuSettings? settings)
     {
-        Log.A($"Init MagicMenuSettings Start:{settings.Start}; Level:{settings.Level}");
-        Settings = settings;
+        Log.A($"Init MagicMenuSettings Start:{settings?.Start}; Level:{settings?.Level}");
+        if (settings != null) Settings = settings;
         return this;
     }
 
@@ -127,7 +135,7 @@ public class MagicMenuTree : MagicMenuBranch
     public override string MenuId => _menuId ??= Settings?.MenuId ?? "error-menu-id";
     private string? _menuId;
 
-    public int Depth => _depth ??= Settings.Depth ?? MagicMenuSettings.LevelDepthFallback;
+    public int Depth => _depth ??= Settings?.Depth ?? MagicMenuSettings.LevelDepthFallback;
     private int? _depth;
 
     public List<string> Debug { get; private set; }
