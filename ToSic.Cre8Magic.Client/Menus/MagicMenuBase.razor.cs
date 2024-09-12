@@ -3,7 +3,7 @@
 // TODO: adapt Cre8magic everywhere
 namespace ToSic.Cre8magic.Client.Menus;
 
-public abstract class MagicMenuBase: Oqtane.Themes.Controls.MenuBase, IMagicControlWithSettings
+public abstract class MagicMenuBase: Oqtane.Themes.Controls.MenuBase, IMagicControlWithSettings // TODO: stv use ThemeControlBase instead MenuBase and use MenuPageService that replaces MenuBase
 {
     [CascadingParameter] public MagicSettings Settings { get; set; }
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Logging;
 using Oqtane.Themes.Controls;
+using ToSic.Cre8magic.Client.Models;
 
 namespace ToSic.Cre8magic.Client.Menus;
 
@@ -61,7 +62,7 @@ public abstract class MagicMenuRoot: MagicMenuBase
             Template = Template,
         };
 
-        Menu = MenuTreeService?.GetTree(menuSettings, MenuPages.ToList());
+        Menu = MenuTreeService?.GetTree(menuSettings, MenuPages.ToMagicPages().ToList());
     }
 
 }

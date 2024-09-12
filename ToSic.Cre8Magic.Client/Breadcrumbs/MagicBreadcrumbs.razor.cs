@@ -1,14 +1,14 @@
-﻿using Oqtane.Models;
+﻿using ToSic.Cre8magic.Client.Models;
 
 namespace ToSic.Cre8magic.Client.Breadcrumbs;
 
 public abstract class MagicBreadcrumbs: MagicControl
 {
     // The home page - never changes during runtime, so we can cache it
-    protected Page HomePage => _homePage ??= PageState.GetHomePage()!;
-    private Page? _homePage;
+    protected MagicPage HomePage => _homePage ??= PageState.GetHomePage()!;
+    private MagicPage? _homePage;
 
-    protected List<Page> Breadcrumbs
+    protected List<MagicPage> Breadcrumbs
     {
         get
         {
@@ -21,5 +21,5 @@ public abstract class MagicBreadcrumbs: MagicControl
     }
 
     private int? _lastPageId;
-    private List<Page>? _breadcrumbs;
+    private List<MagicPage>? _breadcrumbs;
 }

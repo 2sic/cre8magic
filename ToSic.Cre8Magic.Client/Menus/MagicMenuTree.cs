@@ -1,5 +1,6 @@
 ﻿using Oqtane.Models;
 using Oqtane.UI;
+using ToSic.Cre8magic.Client.Models;
 
 namespace ToSic.Cre8magic.Client.Menus;
 
@@ -34,14 +35,14 @@ public class MagicMenuTree : MagicMenuBranch
         PageState = pageState;
 
         // update base class
-        Page = PageState.Page;
+        Page = PageState.Page.ToMagicPage();
         Level = 1;
 
         // update dependency MagicPageService
         //_magicPageService.Init(PageState);
 
         // update dependent properties
-        AllPages = PageState.Pages;
+        AllPages = PageState.Pages.ToMagicPages().ToList();
         MenuPages = new MagicPageService().Init(PageState).MenuPages.ToList();
         Settings = MagicMenuSettings.Defaults.Fallback;
         Debug = new();
@@ -49,7 +50,7 @@ public class MagicMenuTree : MagicMenuBranch
         return this;
     }
 
-    public MagicMenuTree Setup(MagicSettings? magicSettings, MagicMenuSettings? settings, List<Page>? menuPages = null, List<string>? messages = null)
+    public MagicMenuTree Setup(MagicSettings? magicSettings, MagicMenuSettings? settings, List<MagicPage>? menuPages = null, List<string>? messages = null)
     {
         Log.A($"Init for Page:{PageState.Page.PageId}; Level:0");
 
@@ -83,7 +84,7 @@ public class MagicMenuTree : MagicMenuBranch
         return this;
     }
 
-    public MagicMenuTree SetMenuPages(List<Page> menuPages)
+    public MagicMenuTree SetMenuPages(List<MagicPage> menuPages)
     {
         Log.A($"Init menuPages:{menuPages.Count}");
         MenuPages = menuPages;
@@ -105,7 +106,7 @@ public class MagicMenuTree : MagicMenuBranch
 
     private MagicSettings? MagicSettings { get; set; } // TODO: stv move this to better place because it is MagicSettings part
 
-    internal TokenEngine? PageTokenEngine(Page page) // TODO: stv move this to better place because it is MagicSettings part
+    internal TokenEngine? PageTokenEngine(MagicPage page) // TODO: stv move this to better place because it is MagicSettings part
     {
         if (MagicSettings == null) return null;
         var originalPage = (PageTokens)MagicSettings.Tokens.Parsers.First(p => p.NameId == PageTokens.NameIdConstant);
@@ -116,21 +117,21 @@ public class MagicMenuTree : MagicMenuBranch
     /// <summary>
     /// List of all pages - even these which would currently not be shown in the menu.
     /// </summary>
-    internal List<Page> AllPages { get; private set; }
+    internal List<MagicPage> AllPages { get; private set; }
 
     /// <summary>
     /// Pages in the menu according to Oqtane pre-processing
     /// Should be limited to pages which should be in the menu, visible and permissions ok. 
     /// </summary>
-    internal List<Page> MenuPages { get; private set; }
+    internal List<MagicPage> MenuPages { get; private set; }
 
     internal override MagicMenuTree Tree => this;
 
     internal MenuDesigner Design => _menuCss ??= new(this, Settings);
     private MenuDesigner? _menuCss;
 
-    internal List<Page> Breadcrumb => _breadcrumb ??= AllPages.Breadcrumbs(Page).ToList();
-    private List<Page>? _breadcrumb;
+    internal List<MagicPage> Breadcrumb => _breadcrumb ??= AllPages.Breadcrumbs(Page).ToList();
+    private List<MagicPage>? _breadcrumb;
 
     public override string MenuId => _menuId ??= Settings?.MenuId ?? "error-menu-id";
     private string? _menuId;
@@ -142,11 +143,11 @@ public class MagicMenuTree : MagicMenuBranch
 
     internal LogRoot LogRoot { get; } = new();
 
-    protected override List<Page> GetChildPages() => GetRootPages();
+    protected override List<MagicPage> GetChildPages() => GetRootPages();
 
-    protected List<Page> GetRootPages()
+    protected List<MagicPage> GetRootPages()
     {
-        var l = Log.Fn<List<Page>>($"{Page.PageId}");
+        var l = Log.Fn<List<MagicPage>>($"{Page.PageId}");
         // Give empty list if we shouldn't display it
         if (Settings.Display == false)
             return l.Return(new(), "Display == false, don't show");
@@ -165,18 +166,18 @@ public class MagicMenuTree : MagicMenuBranch
         return l.Return(startPages, LogPageList(startPages));
     }
 
-    internal List<Page> FindStartPageOfManyRules(StartNodeRule[] startingPoints)
+    internal List<MagicPage> FindStartPageOfManyRules(StartNodeRule[] startingPoints)
     {
-        var l = Log.Fn<List<Page>>(string.Join(',', startingPoints.Select(p => p.Id)));
+        var l = Log.Fn<List<MagicPage>>(string.Join(',', startingPoints.Select(p => p.Id)));
         var result = startingPoints.SelectMany(FindStartPagesOfOneRule)
             .Where(p => p != null)
             .ToList();
         return l.Return(result, LogPageList(result));
     }
 
-    private List<Page> FindStartPagesOfOneRule(StartNodeRule n)
+    private List<MagicPage> FindStartPagesOfOneRule(StartNodeRule n)
     {
-        var l = Log.Fn<List<Page>>($"Include hidden pages: {n.Force}; Mode: {n.ModeInfo}");
+        var l = Log.Fn<List<MagicPage>>($"Include hidden pages: {n.Force}; Mode: {n.ModeInfo}");
 
         // Start by getting all the anchors - the pages to start from, before we know about children or not
         // Three cases: root, current, ...
@@ -189,9 +190,9 @@ public class MagicMenuTree : MagicMenuBranch
         return l.Return(result, LogPageList(result));
     }
 
-    private List<Page> FindInitialAnchorPages(StartNodeRule n)
+    private List<MagicPage> FindInitialAnchorPages(StartNodeRule n)
     {
-        var l = Log.Fn<List<Page>>();
+        var l = Log.Fn<List<MagicPage>>();
         var source = n.Force ? Tree.AllPages : Tree.MenuPages;
         switch (n.ModeInfo)
         {
@@ -210,13 +211,13 @@ public class MagicMenuTree : MagicMenuBranch
                 // If coming from the top, level 1 means top level, so skip one less
                 var skipDown = n.Level - 1;
                 var fromTop = source.Breadcrumbs(Page).Skip(skipDown).FirstOrDefault();
-                var fromTopResult = fromTop == null ? new() : new List<Page> { fromTop };
+                var fromTopResult = fromTop == null ? new() : new List<MagicPage> { fromTop };
                 return l.Return(fromTopResult, $"from root to breadcrumb by {skipDown}");
             case StartMode.Current when n.Level < 0:
                 // If going up, must change skip to normal
                 var skipUp = Math.Abs(n.Level);
                 var fromCurrent = source.GetAncestors(Page).ToList().Skip(skipUp).FirstOrDefault();
-                var result = fromCurrent == null ? new() : new List<Page> { fromCurrent };
+                var result = fromCurrent == null ? new() : new List<MagicPage> { fromCurrent };
                 return l.Return(result, $"up the ancestors by {skipUp}");
             default:
                 return l.Return(new(), "nothing");
@@ -224,10 +225,10 @@ public class MagicMenuTree : MagicMenuBranch
     }
 
 
-    private List<Page> GetRelatedPagesByLevel(Page referencePage, int level)
+    private List<MagicPage> GetRelatedPagesByLevel(MagicPage referencePage, int level)
     {
-        var l = Log.Fn<List<Page>>($"{referencePage.PageId}; {level}");
-        List<Page> result;
+        var l = Log.Fn<List<MagicPage>>($"{referencePage.PageId}; {level}");
+        List<MagicPage> result;
         switch (level)
         {
             case -1:

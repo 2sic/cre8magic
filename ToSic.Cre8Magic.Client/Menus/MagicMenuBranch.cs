@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Oqtane.Models;
+using ToSic.Cre8magic.Client.Models;
 using Log = ToSic.Cre8magic.Client.Logging.Log;
 
 namespace ToSic.Cre8magic.Client.Menus;
@@ -15,18 +15,18 @@ public class MagicMenuBranch
     private ITokenReplace? _nodeReplace;
 
     public string? Classes(string tag) => NodeReplace.Parse(Tree.Design.Classes(tag, this)).EmptyAsNull();
-    private string? _lastClasses;
+    //private string? _lastClasses;
 
     public string? Value(string key) => NodeReplace.Parse(Tree.Design.Value(key)).EmptyAsNull();
 
-    public MagicMenuBranch(MagicMenuTree tree, int level, Page page, string debugPrefix): this(page, level)
+    public MagicMenuBranch(MagicMenuTree tree, int level, MagicPage page, string debugPrefix): this(page, level)
     {
         Tree = tree;
         Log = tree.LogRoot.GetLog(debugPrefix);
         var _ = PageInfo;   // Access page info early on to make logging nicer
     }
 
-    protected MagicMenuBranch(Page page, int level)
+    protected MagicMenuBranch(MagicPage page, int level)
     {
         Page = page;
         Level = level;
@@ -35,7 +35,7 @@ public class MagicMenuBranch
     /// <summary>
     /// Current Page
     /// </summary>
-    public Page Page { get; protected set; }
+    public MagicPage Page { get; protected set; }
 
     /// <summary>
     /// Menu Level relative to the start of the menu (always starts with 1)
@@ -44,7 +44,7 @@ public class MagicMenuBranch
 
     internal Log Log { get; set; }
 
-    protected string LogPageList(List<Page>? pages) =>
+    protected string LogPageList(List<MagicPage>? pages) =>
         pages?.Any() == true ? $"{pages.Count} pages [" + string.Join(",", pages.Select(p => p.PageId)) + "]" : "(no pages)";
 
     /// <summary>
@@ -99,9 +99,9 @@ public class MagicMenuBranch
 
     private const string ErrPageNotFound = "Error: Page not found";
 
-    protected virtual List<Page> GetChildPages()
+    protected virtual List<MagicPage> GetChildPages()
     {
-        var l = Log.Fn<List<Page>>();
+        var l = Log.Fn<List<MagicPage>>();
         if (Page == null)
             return l.Return(new() { ErrPage(-1, ErrPageNotFound) }, ErrPageNotFound);
 
@@ -109,9 +109,9 @@ public class MagicMenuBranch
         return l.Return(result, LogPageList(result));
     }
 
-    protected List<Page> ChildrenOf(int pageId)
+    protected List<MagicPage> ChildrenOf(int pageId)
     {
-        var l = Log.Fn<List<Page>>(pageId.ToString());
+        var l = Log.Fn<List<MagicPage>>(pageId.ToString());
         var result = Tree.MenuPages.Where(p => p.ParentId == pageId).ToList();
         return l.Return(result, LogPageList(result));
     }
@@ -120,5 +120,5 @@ public class MagicMenuBranch
     //    => Tree.MenuPages.Where(p => pageIds.Contains(p.PageId)).ToList();
 
 
-    protected static Page ErrPage(int id, string message) => new() { PageId = id, Name = message };
+    protected static MagicPage ErrPage(int id, string message) => new(new() { PageId = id, Name = message });
 }

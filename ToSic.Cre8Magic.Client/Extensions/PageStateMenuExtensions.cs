@@ -1,27 +1,27 @@
-﻿using Oqtane.Models;
-using Oqtane.UI;
+﻿using Oqtane.UI;
+using ToSic.Cre8magic.Client.Models;
 
 namespace ToSic.Cre8magic.Client;
 
 public static class PageStateMenuExtensions
 {
-    internal static Page? GetHomePage(this PageState pageState) => pageState.Pages.Find(p => p.Path == "");
+    internal static MagicPage? GetHomePage(this PageState pageState) => pageState.Pages.Find(p => p.Path == "")?.ToMagicPage();
 
     internal static bool CurrentPageIsHome(this PageState pageState) => pageState?.Page.Path == "";
 
-    internal static List<Page> Breadcrumbs(this PageState pageState, Page? page = null)
+    internal static List<MagicPage> Breadcrumbs(this PageState pageState, MagicPage? page = null)
         => GetAncestors(pageState, page).Reverse().ToList();
 
-    internal static List<Page> Breadcrumbs(this List<Page> pages, Page page)
+    internal static List<MagicPage> Breadcrumbs(this List<MagicPage> pages, MagicPage page)
         => GetAncestors(pages, page).Reverse().ToList();
 
-    internal static List<Page> Ancestors(this PageState pageState, Page? page = null)
+    internal static List<MagicPage> Ancestors(this PageState pageState, MagicPage? page = null)
         => GetAncestors(pageState, page).ToList();
 
-    private static IEnumerable<Page> GetAncestors(PageState pageState, Page? page = null) 
-        => GetAncestors(pageState.Pages, page ?? pageState.Page);
+    private static IEnumerable<MagicPage> GetAncestors(PageState pageState, MagicPage? page = null) 
+        => GetAncestors(pageState.Pages.ToMagicPages().ToList(), page ?? pageState.Page.ToMagicPage());
 
-    internal static IEnumerable<Page> GetAncestors(this List<Page> pages, Page? page)
+    internal static IEnumerable<MagicPage> GetAncestors(this List<MagicPage> pages, MagicPage? page)
     {
         while (page != null)
         {

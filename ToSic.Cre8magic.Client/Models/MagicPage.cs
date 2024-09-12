@@ -4,6 +4,9 @@ namespace ToSic.Cre8magic.Client.Models
 {
     public class MagicPage(Page originalPage)
     {
+        /// <summary>
+        /// Original Oqtane page wrapped in MagicPage.
+        /// </summary>
         public Page OriginalPage { get; } = originalPage;
 
         /// <summary>

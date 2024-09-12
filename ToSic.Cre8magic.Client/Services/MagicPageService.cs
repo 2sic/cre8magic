@@ -1,7 +1,7 @@
-﻿using Oqtane.Models;
-using Oqtane.Security;
+﻿using Oqtane.Security;
 using Oqtane.Shared;
 using Oqtane.UI;
+using ToSic.Cre8magic.Client.Models;
 
 namespace ToSic.Cre8magic.Client.Services
 {
@@ -32,17 +32,17 @@ namespace ToSic.Cre8magic.Client.Services
         } 
         #endregion
 
-        public IEnumerable<Page> MenuPages => GetMenuPages();
+        public IEnumerable<MagicPage> MenuPages => GetMenuPages();
 
-        public string GetTarget(Page page) 
+        public string GetTarget(MagicPage page) 
             => page.Url?.StartsWith("http") == true ? "_new" : string.Empty;
 
-        public string GetUrl(Page page) 
+        public string GetUrl(MagicPage page) 
             => (page.IsClickable) 
                 ? string.IsNullOrEmpty(page.Url) ? NavigateUrl(page.Path) : page.Url
                 : "javascript:void(0)";
 
-        private IEnumerable<Page> GetMenuPages()
+        private IEnumerable<MagicPage> GetMenuPages()
         {
             if (_pageState == null)
                 throw new InvalidOperationException("PageState is null. Probably missing initialization with Init(PageState).");
@@ -53,7 +53,7 @@ namespace ToSic.Cre8magic.Client.Services
                 if (page.Level <= securityLevel && UserSecurity.IsAuthorized(_pageState.User, PermissionNames.View, page.PermissionList))
                 {
                     securityLevel = int.MaxValue;
-                    yield return page/*.ToMagicPage()*/;
+                    yield return page.ToMagicPage();
                 }
                 else if (securityLevel == int.MaxValue)
                 {

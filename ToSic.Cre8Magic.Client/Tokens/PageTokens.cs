@@ -1,8 +1,7 @@
-﻿using Oqtane.Models;
-using Oqtane.UI;
+﻿using Oqtane.UI;
 using ToSic.Cre8magic.Client.Models;
-using static ToSic.Cre8magic.Client.MagicTokens;
 using static System.StringComparison;
+using static ToSic.Cre8magic.Client.MagicTokens;
 
 namespace ToSic.Cre8magic.Client.Tokens;
 
@@ -10,12 +9,12 @@ internal class PageTokens: ITokenReplace
 {
     public const string NameIdConstant = nameof(PageTokens);
     public PageState PageState { get; }
-    public Page? Page { get; }
+    public MagicPage? Page { get; }
     private readonly string? _bodyClasses;
     private readonly string? _menuId;
     public string NameId => NameIdConstant;
 
-    public PageTokens(PageState pageState, Page? page = null, string? bodyClasses = null, string? menuId = null)
+    public PageTokens(PageState pageState, MagicPage? page = null, string? bodyClasses = null, string? menuId = null)
     {
         PageState = pageState;
         Page = page;
@@ -23,12 +22,12 @@ internal class PageTokens: ITokenReplace
         _menuId = menuId;
     }
 
-    public PageTokens Modified(Page page, string? menuId = null) => new(PageState, page, _bodyClasses, menuId ?? _menuId);
+    public PageTokens Modified(MagicPage page, string? menuId = null) => new(PageState, page, _bodyClasses, menuId ?? _menuId);
 
     public string Parse(string classes)
     {
         if (!classes.HasValue()) return classes;
-        var page = Page ?? PageState.Page/*.ToMagicPage()*/;
+        var page = Page ?? PageState.Page.ToMagicPage();
         var result = classes
             .Replace(PageId, $"{page.PageId}", InvariantCultureIgnoreCase);
 

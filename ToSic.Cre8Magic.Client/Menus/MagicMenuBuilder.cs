@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using Oqtane.Models;
-using Oqtane.UI;
+using ToSic.Cre8magic.Client.Models;
 using ToSic.Cre8magic.Client.Settings.Json;
 
 namespace ToSic.Cre8magic.Client.Menus;
@@ -15,7 +14,7 @@ public class MagicMenuBuilder(MagicMenuTree magicMenuTree, ILogger<MagicMenuBuil
 
     private const string MenuSettingPrefix = "menu-";
 
-    public MagicMenuTree GetTree(MagicMenuSettings config, List<Page> menuPages)
+    public MagicMenuTree GetTree(MagicMenuSettings config, List<MagicPage> menuPages)
     {
         var settingsSvc = Settings!.Service;
         var messages = new List<string>();

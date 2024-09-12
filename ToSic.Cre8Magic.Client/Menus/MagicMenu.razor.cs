@@ -11,6 +11,6 @@ public abstract class MagicMenu : MagicMenuBase
     [Parameter, EditorRequired] public MagicMenuBranch Menu { get; set; }
 #pragma warning restore CS8618
 
-    public string GetUrl(MagicMenuBranch branch) => GetUrl(branch.Page);
+    public string GetUrl(MagicMenuBranch branch) => GetUrl(branch.Page.OriginalPage);
 
 }
