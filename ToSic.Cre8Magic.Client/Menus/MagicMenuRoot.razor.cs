@@ -62,7 +62,7 @@ public abstract class MagicMenuRoot: MagicMenuBase
             Template = Template,
         };
 
-        Menu = MenuTreeService?.GetTree(menuSettings, MenuPages.ToMagicPages().ToList());
+        Menu = MenuTreeService?.GetTree(menuSettings, MenuPages.ToMagicPages(PageState).ToList());
     }
 
 }

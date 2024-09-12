@@ -1,5 +1,4 @@
-﻿using Oqtane.Models;
-using Oqtane.UI;
+﻿using Oqtane.UI;
 using ToSic.Cre8magic.Client.Models;
 
 namespace ToSic.Cre8magic.Client.Menus;
@@ -8,8 +7,6 @@ public class MagicMenuTree : MagicMenuBranch
 {
     public const char PageForced = '!';
 
-    //private readonly MagicPageService _magicPageService;
-
     /// <summary>
     /// Constructor usually for DI
     /// </summary>
@@ -17,12 +14,10 @@ public class MagicMenuTree : MagicMenuBranch
     /// <remarks>
     /// Getting PageState in constructor DI breaks the Oqtane, so we have to get it in Init method
     /// </remarks>
-    public MagicMenuTree(/*PageState pageState, *//*MagicPageService magicPageService*/)
-        : base(/*pageState.Page*/null, 1)
+    public MagicMenuTree(/*PageState pageState*/): base(/*pageState.Page*/null, 1)
     {
         Log = LogRoot.GetLog("Root");
         Log.A($"Start for Page:{null}; Level:1");
-        //_magicPageService = magicPageService;
         //Init(pageState);
     }
 
@@ -35,15 +30,12 @@ public class MagicMenuTree : MagicMenuBranch
         PageState = pageState;
 
         // update base class
-        Page = PageState.Page.ToMagicPage();
+        Page = PageState.Page.ToMagicPage(PageState);
         Level = 1;
 
-        // update dependency MagicPageService
-        //_magicPageService.Init(PageState);
-
         // update dependent properties
-        AllPages = PageState.Pages.ToMagicPages().ToList();
-        MenuPages = new MagicPageService().Init(PageState).MenuPages.ToList();
+        AllPages = PageState.Pages.ToMagicPages(PageState).ToList();
+        MenuPages = Page.MenuPages.ToList();
         Settings = MagicMenuSettings.Defaults.Fallback;
         Debug = new();
 

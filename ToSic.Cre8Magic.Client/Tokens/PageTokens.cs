@@ -27,7 +27,7 @@ internal class PageTokens: ITokenReplace
     public string Parse(string classes)
     {
         if (!classes.HasValue()) return classes;
-        var page = Page ?? PageState.Page.ToMagicPage();
+        var page = Page ?? PageState.Page.ToMagicPage(PageState);
         var result = classes
             .Replace(PageId, $"{page.PageId}", InvariantCultureIgnoreCase);
 

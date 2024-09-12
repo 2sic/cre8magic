@@ -5,7 +5,7 @@ namespace ToSic.Cre8magic.Client;
 
 public static class PageStateMenuExtensions
 {
-    internal static MagicPage? GetHomePage(this PageState pageState) => pageState.Pages.Find(p => p.Path == "")?.ToMagicPage();
+    internal static MagicPage? GetHomePage(this PageState pageState) => pageState.Pages.Find(p => p.Path == "")?.ToMagicPage(pageState);
 
     internal static bool CurrentPageIsHome(this PageState pageState) => pageState?.Page.Path == "";
 
@@ -19,7 +19,7 @@ public static class PageStateMenuExtensions
         => GetAncestors(pageState, page).ToList();
 
     private static IEnumerable<MagicPage> GetAncestors(PageState pageState, MagicPage? page = null) 
-        => GetAncestors(pageState.Pages.ToMagicPages().ToList(), page ?? pageState.Page.ToMagicPage());
+        => GetAncestors(pageState.Pages.ToMagicPages(pageState).ToList(), page ?? pageState.Page.ToMagicPage(pageState));
 
     internal static IEnumerable<MagicPage> GetAncestors(this List<MagicPage> pages, MagicPage? page)
     {

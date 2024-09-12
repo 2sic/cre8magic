@@ -53,7 +53,7 @@ namespace ToSic.Cre8magic.Client.Services
                 if (page.Level <= securityLevel && UserSecurity.IsAuthorized(_pageState.User, PermissionNames.View, page.PermissionList))
                 {
                     securityLevel = int.MaxValue;
-                    yield return page.ToMagicPage();
+                    yield return page.ToMagicPage(this);
                 }
                 else if (securityLevel == int.MaxValue)
                 {

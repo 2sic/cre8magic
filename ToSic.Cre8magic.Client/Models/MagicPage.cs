@@ -5,6 +5,18 @@ namespace ToSic.Cre8magic.Client.Models
     public class MagicPage(Page originalPage)
     {
         /// <summary>
+        /// Connect to the MagicPageService to get additional information about the page.
+        /// </summary>
+        /// <param name="magicPageService"></param>
+        /// <returns></returns>
+        public MagicPage Init(MagicPageService magicPageService)
+        {
+            _magicPageService = magicPageService;
+            return this;
+        }
+        private MagicPageService _magicPageService;
+
+        /// <summary>
         /// Original Oqtane page wrapped in MagicPage.
         /// </summary>
         public Page OriginalPage { get; } = originalPage;
@@ -63,5 +75,11 @@ namespace ToSic.Cre8magic.Client.Models
         public int Level => OriginalPage.Level;
 
         public bool HasChildren => OriginalPage.HasChildren;
+
+        public string Target() => _magicPageService.GetTarget(this);
+
+        public string Link() => _magicPageService.GetUrl(this);
+
+        public IEnumerable<MagicPage> MenuPages => _magicPageService.MenuPages;
     }
 }
