@@ -5,7 +5,7 @@ namespace ToSic.Cre8magic.Client.Menus.Settings;
 /// <summary>
 /// Special helper to provide Css classes to menus
 /// </summary>
-internal class MenuDesigner
+internal class MenuDesigner : IMenuDesigner
 {
     public MenuDesigner(MagicMenuTree tree, MagicMenuSettings menuConfig)
     {
@@ -19,17 +19,6 @@ internal class MenuDesigner
     internal List<NamedSettings<MagicMenuDesign>> DesignSettingsList { get; }
     private ILog? Log { get; }
 
-    public string Value(string key)
-    {
-        var l = Log.Fn<string>(key);
-        var configsForKey = ConfigsForTag(key)
-            .Select(c => c.Value)
-            .Where(v => v.HasValue())
-            .ToList();
-
-        return l.ReturnAndLog(string.Join(" ", configsForKey));
-    }
-
     public string Classes(string tag, MagicMenuPage page)
     {
         var l = Log.Fn<string>($"{nameof(tag)}: {tag}, page: {page.Page.PageId} \"{page.Page.Name}\"");
@@ -38,6 +27,17 @@ internal class MenuDesigner
             ? ListToClasses(TagClasses(page, configsForTag))
             : "";
         return l.ReturnAndLog(result);
+    }
+
+    public string Value(string key, MagicMenuPage page)
+    {
+        var l = Log.Fn<string>(key);
+        var configsForKey = ConfigsForTag(key)
+            .Select(c => c.Value)
+            .Where(v => v.HasValue())
+            .ToList();
+
+        return l.ReturnAndLog(string.Join(" ", configsForKey));
     }
 
     private List<MagicMenuDesign> ConfigsForTag(string tag) =>

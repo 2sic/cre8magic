@@ -119,8 +119,8 @@ public class MagicMenuTree : MagicMenuPage
 
     internal override MagicMenuTree Tree => this;
 
-    internal MenuDesigner Design => _menuCss ??= new(this, Settings);
-    private MenuDesigner? _menuCss;
+    internal IMenuDesigner Design => _menuCss ??= new MenuDesigner(this, Settings);
+    private IMenuDesigner? _menuCss;
 
     internal List<MagicPage> Breadcrumb => _breadcrumb ??= AllPages.Breadcrumbs(Page).ToList();
     private List<MagicPage>? _breadcrumb;

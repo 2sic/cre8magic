@@ -17,7 +17,7 @@ public class MagicMenuPage
     public string? Classes(string tag) => NodeReplace.Parse(Tree.Design.Classes(tag, this)).EmptyAsNull();
     //private string? _lastClasses;
 
-    public string? Value(string key) => NodeReplace.Parse(Tree.Design.Value(key)).EmptyAsNull();
+    public string? Value(string key) => NodeReplace.Parse(Tree.Design.Value(key, this)).EmptyAsNull();
 
     public MagicMenuPage(MagicMenuTree tree, int level, MagicPage page, string debugPrefix): this(page, level)
     {
