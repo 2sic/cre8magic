@@ -5,7 +5,7 @@ namespace ToSic.Cre8magic.Client.Menus.Settings;
 /// <summary>
 /// Special helper to provide Css classes to menus
 /// </summary>
-internal class MenuDesigner : IMenuDesigner
+public class MenuDesigner : IMenuDesigner
 {
     public MenuDesigner(MagicMenuTree tree, MagicMenuSettings menuConfig)
     {

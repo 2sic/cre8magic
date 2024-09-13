@@ -1,5 +1,6 @@
 @namespace ToSic.Theme.Cre8magicTests
 @using ToSic.Cre8magic.Client.Menus
+@using ToSic.Cre8magic.Client.Menus.Settings
 @inherits ThemeBase
 @inject ISettingService SettingService
 @inject MagicMenuTree MagicMenuTree
@@ -28,7 +29,7 @@
 
         <h2>Various Settings</h2>
         <h3>Only one specific page, no other params</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = TopLevelWithSubpagesId })'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = TopLevelWithSubpagesId }).Designer(new MenuDesigner(MagicMenuTree, MagicMenuTree.Settings))'></BasicMenu>
 
         <h3>Only one specific page, Depth = 0</h3>
         <BasicMenu Menu='MagicMenuTree.New(new() { Start = TopLevelWithSubpagesId, Depth = 0 })'></BasicMenu>

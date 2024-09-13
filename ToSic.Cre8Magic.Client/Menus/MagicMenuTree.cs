@@ -37,6 +37,7 @@ public class MagicMenuTree : MagicMenuPage
         AllPages = PageState.Pages.ToMagicPages(PageState).ToList();
         MenuPages = Page.MenuPages.ToList();
         Settings = MagicMenuSettings.Defaults.Fallback;
+        Design = new MenuDesigner(this, Settings);
         Debug = new();
 
         return this;
@@ -89,6 +90,14 @@ public class MagicMenuTree : MagicMenuPage
         Debug = messages;
         return this;
     }
+
+    public MagicMenuTree Designer(IMenuDesigner menuDesigner)
+    {
+        Log.A($"Init MenuDesigner:{menuDesigner != null}");
+        Design = menuDesigner;
+        return this;
+    }
+
     #endregion
 
 
@@ -119,8 +128,7 @@ public class MagicMenuTree : MagicMenuPage
 
     internal override MagicMenuTree Tree => this;
 
-    internal IMenuDesigner Design => _menuCss ??= new MenuDesigner(this, Settings);
-    private IMenuDesigner? _menuCss;
+    internal IMenuDesigner Design { get; private set; }
 
     internal List<MagicPage> Breadcrumb => _breadcrumb ??= AllPages.Breadcrumbs(Page).ToList();
     private List<MagicPage>? _breadcrumb;
