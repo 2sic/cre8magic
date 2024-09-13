@@ -36,7 +36,7 @@ internal class PageTokens: ITokenReplace
 
         result = result
             .Replace(PageParentId, page.ParentId != null ? $"{page.ParentId}" : None)
-            .Replace(SiteId, $"{page.SiteId}", InvariantCultureIgnoreCase)
+            .Replace(SiteId, $"{page.OriginalPage.SiteId}", InvariantCultureIgnoreCase)
             .Replace(LayoutVariation, _bodyClasses ?? None)
             .Replace(MenuLevel, $"{page.Level + 1}")
             .Replace(MenuId, _menuId ?? None);

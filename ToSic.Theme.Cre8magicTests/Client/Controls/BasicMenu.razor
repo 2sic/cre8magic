@@ -11,7 +11,7 @@
     @foreach (var subMenu in Menu.Children)
     {
         <li>
-            <a href="@subMenu.Page.Link()" target="@subMenu.Page.Target()">@subMenu.Page.Name</a>
+            <a href="@subMenu.Page.Link" target="@subMenu.Page.Target">@subMenu.Page.Name</a>
             @if (subMenu.HasChildren)
             {
                 <BasicMenu Menu="@subMenu" />

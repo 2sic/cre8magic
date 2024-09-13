@@ -10,7 +10,7 @@ Nice to know:       See `MenuDefault.razor`
         @foreach(var subMenu in Menu.Children)
         {
             <li class='@subMenu.Classes("li")'>
-                <a class='@subMenu.Classes("a")' href='@GetUrl(subMenu)'
+                <a class='@subMenu.Classes("a")' href='@subMenu.Page.Link' target='@subMenu.Page.Target'
                    >@subMenu.Page.Name</a>
 
                 @if (subMenu.HasChildren)
