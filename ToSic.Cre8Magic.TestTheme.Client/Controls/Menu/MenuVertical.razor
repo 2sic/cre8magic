@@ -7,19 +7,19 @@ Nice to know:       See `MenuDefault.razor`
 @if (Menu.HasChildren)
 {
     <ul class='@Menu.Classes("ul")'>
-        @foreach(var subMenu in Menu.Children)
+        @foreach(var menuPage in Menu.Children)
         {
-            <li class='@subMenu.Classes("li")'>
-                <a class='@subMenu.Classes("a")' href='@subMenu.Page.Link' target='@subMenu.Page.Target'
-                   >@subMenu.Page.Name</a>
+            <li class='@menuPage.Classes("li")'>
+                <a class='@menuPage.Classes("a")' href='@menuPage.Page.Link' target='@menuPage.Page.Target'
+                   >@menuPage.Page.Name</a>
 
-                @if (subMenu.HasChildren)
+                @if (menuPage.HasChildren)
                 {
-                    <span class='@subMenu.Classes("span")'
+                    <span class='@menuPage.Classes("span")'
                           data-bs-toggle='collapse'
-                          data-bs-target='@subMenu.Value("data-bs-target")'
-                          aria-expanded='@subMenu.InBreadcrumb'></span>
-                    <MenuVertical Menu="@subMenu"></MenuVertical>
+                          data-bs-target='@menuPage.Value("data-bs-target")'
+                          aria-expanded='@menuPage.InBreadcrumb'></span>
+                    <MenuVertical Menu="@menuPage"></MenuVertical>
                 }
             </li>
         }

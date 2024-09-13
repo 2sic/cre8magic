@@ -14,16 +14,16 @@ Nice to know:
 @if (Menu.HasChildren)
 {
     <ul class='@Menu.Classes("ul")'>
-        @foreach(var subMenu in Menu.Children)
+        @foreach(var menuPage in Menu.Children)
         {
-            <li class='@subMenu.Classes("li")'>
-                <a class='@subMenu.Classes("a")' href='@subMenu.Page.Link' target='@subMenu.Page.Target'
-                   data-bs-toggle='@(subMenu.Page.HasChildren && subMenu.Page.IsClickable == false ? "dropdown" : "")'
-                   >@subMenu.Page.Name</a>
+            <li class='@menuPage.Classes("li")'>
+                <a class='@menuPage.Classes("a")' href='@menuPage.Page.Link' target='@menuPage.Page.Target'
+                   data-bs-toggle='@(menuPage.Page.HasChildren && menuPage.Page.IsClickable == false ? "dropdown" : "")'
+                   >@menuPage.Page.Name</a>
 
-                @if (subMenu.HasChildren)
+                @if (menuPage.HasChildren)
                 {
-                    <MenuHorizontal Menu="@subMenu"></MenuHorizontal>
+                    <MenuHorizontal Menu="@menuPage"></MenuHorizontal>
                 }
             </li>
         }

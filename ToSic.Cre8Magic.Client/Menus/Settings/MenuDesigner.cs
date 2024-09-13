@@ -30,12 +30,12 @@ internal class MenuDesigner
         return l.ReturnAndLog(string.Join(" ", configsForKey));
     }
 
-    public string Classes(string tag, MagicMenuBranch branch)
+    public string Classes(string tag, MagicMenuPage page)
     {
-        var l = Log.Fn<string>($"{nameof(tag)}: {tag}, page: {branch.Page.PageId} \"{branch.Page.Name}\"");
+        var l = Log.Fn<string>($"{nameof(tag)}: {tag}, page: {page.Page.PageId} \"{page.Page.Name}\"");
         var configsForTag = ConfigsForTag(tag);
         var result = configsForTag.Any()
-            ? ListToClasses(TagClasses(branch, configsForTag))
+            ? ListToClasses(TagClasses(page, configsForTag))
             : "";
         return l.ReturnAndLog(result);
     }
@@ -46,7 +46,7 @@ internal class MenuDesigner
             .Where(c => c is { })
             .ToList()!;
 
-    private List<string?> TagClasses(MagicMenuBranch branch, IReadOnlyCollection<MagicMenuDesign> configs)
+    private List<string?> TagClasses(MagicMenuPage page, IReadOnlyCollection<MagicMenuDesign> configs)
     {
         var classes = new List<string?>();
 
@@ -58,16 +58,16 @@ internal class MenuDesigner
 
         AddIfAny(configs.Select(c => c.Classes));
         AddIfAny(configs.Select(c => c.Classes));
-        AddIfAny(configs.Select(c => c.IsActive.Get(branch.IsActive)));
-        AddIfAny(configs.Select(c => c.HasChildren.Get(branch.HasChildren)));
-        AddIfAny(configs.Select(c => c.IsDisabled.Get(!branch.Page.IsClickable)));
-        AddIfAny(configs.Select(c => c.InBreadcrumb.Get(branch.InBreadcrumb)));
+        AddIfAny(configs.Select(c => c.IsActive.Get(page.IsActive)));
+        AddIfAny(configs.Select(c => c.HasChildren.Get(page.HasChildren)));
+        AddIfAny(configs.Select(c => c.IsDisabled.Get(!page.Page.IsClickable)));
+        AddIfAny(configs.Select(c => c.InBreadcrumb.Get(page.InBreadcrumb)));
 
         // See if there are any css for this level or for not-specified levels
         var levelCss = configs
             .Select(c => c.ByLevel == null
                 ? null
-                : c.ByLevel.TryGetValue(branch.Level, out var levelClasses)
+                : c.ByLevel.TryGetValue(page.Level, out var levelClasses)
                     ? levelClasses
                     : c.ByLevel.TryGetValue(MagicTokens.ByLevelOtherKey, out var levelClassesDefault)
                         ? levelClassesDefault

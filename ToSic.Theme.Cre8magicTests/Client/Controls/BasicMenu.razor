@@ -4,17 +4,17 @@
 
 @code{
     [Parameter, EditorRequired]
-    public MagicMenuBranch Menu { get; set; }
+    public MagicMenuPage Menu { get; set; }
 }
 
 <ul>
-    @foreach (var subMenu in Menu.Children)
+    @foreach (var menuPage in Menu.Children)
     {
         <li>
-            <a href="@subMenu.Page.Link" target="@subMenu.Page.Target">@subMenu.Page.Name</a>
-            @if (subMenu.HasChildren)
+            <a href="@menuPage.Page.Link" target="@menuPage.Page.Target">@menuPage.Page.Name</a>
+            @if (menuPage.HasChildren)
             {
-                <BasicMenu Menu="@subMenu" />
+                <BasicMenu Menu="@menuPage" />
             }
         </li>
     }

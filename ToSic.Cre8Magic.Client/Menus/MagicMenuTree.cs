@@ -3,7 +3,7 @@ using ToSic.Cre8magic.Client.Models;
 
 namespace ToSic.Cre8magic.Client.Menus;
 
-public class MagicMenuTree : MagicMenuBranch
+public class MagicMenuTree : MagicMenuPage
 {
     public const char PageForced = '!';
 

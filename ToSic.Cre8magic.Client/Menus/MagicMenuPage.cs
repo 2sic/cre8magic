@@ -4,7 +4,7 @@ using Log = ToSic.Cre8magic.Client.Logging.Log;
 
 namespace ToSic.Cre8magic.Client.Menus;
 
-public class MagicMenuBranch
+public class MagicMenuPage
 {
     /// <summary>
     /// Root navigator object which has some data/logs for all navigators which spawned from it. 
@@ -19,14 +19,14 @@ public class MagicMenuBranch
 
     public string? Value(string key) => NodeReplace.Parse(Tree.Design.Value(key)).EmptyAsNull();
 
-    public MagicMenuBranch(MagicMenuTree tree, int level, MagicPage page, string debugPrefix): this(page, level)
+    public MagicMenuPage(MagicMenuTree tree, int level, MagicPage page, string debugPrefix): this(page, level)
     {
         Tree = tree;
         Log = tree.LogRoot.GetLog(debugPrefix);
         var _ = PageInfo;   // Access page info early on to make logging nicer
     }
 
-    protected MagicMenuBranch(MagicPage page, int level)
+    protected MagicMenuPage(MagicPage page, int level)
     {
         Page = page;
         Level = level;
@@ -76,23 +76,23 @@ public class MagicMenuBranch
 
     public virtual string MenuId => Tree.MenuId;
 
-    public IList<MagicMenuBranch> Children => _children ??= GetChildren();
-    private IList<MagicMenuBranch>? _children;
+    public IList<MagicMenuPage> Children => _children ??= GetChildren();
+    private IList<MagicMenuPage>? _children;
 
     /// <summary>
     /// Retrieve the children the first time it's needed.
     /// </summary>
     /// <returns></returns>
     [return: NotNull]
-    protected List<MagicMenuBranch> GetChildren()
+    protected List<MagicMenuPage> GetChildren()
     {
-        var l = Log.Fn<List<MagicMenuBranch>>($"{nameof(Level)}: {Level}");
+        var l = Log.Fn<List<MagicMenuPage>>($"{nameof(Level)}: {Level}");
         var levelsRemaining = Tree.Depth - (Level - 1 /* Level is 1 based, so -1 */);
         if (levelsRemaining < 0)
             return l.Return(new(), "remaining levels 0 - return empty");
         
         var children = GetChildPages()
-            .Select(page => new MagicMenuBranch(Tree, Level + 1, page, $"{Log.Prefix}>{Page.PageId}"))
+            .Select(page => new MagicMenuPage(Tree, Level + 1, page, $"{Log.Prefix}>{Page.PageId}"))
             .ToList();
         return l.Return(children, $"{children.Count}");
     }
