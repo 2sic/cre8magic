@@ -90,6 +90,48 @@ div.app-moduleactions a.dropdown-toggle, div.app-moduleactions div.dropdown-menu
   mix-blend-mode: difference;
 }
 
+
+/* Menu Navigation Styles for Levels 1 to 6 */
+
+/* Level 1 - Deep Blue Background */
+.level1 .nav-link {
+    background-color: hsl(240, 100%, 30%); /* Deep Blue */
+    color: #ffffff; /* White text for contrast */
+}
+
+/* Level 2 - Slightly Lighter Blue Background */
+.level2 .nav-link {
+    background-color: hsl(240, 100%, 40%); /* Slightly Lighter Blue */
+    color: #ffffff;
+}
+
+/* Level 3 - Medium Blue Background */
+.level3 .nav-link {
+    background-color: hsl(240, 100%, 50%); /* Medium Blue */
+    color: #ffffff;
+}
+
+/* Level 4 - Light Blue Background */
+.level4 .nav-link {
+    background-color: hsl(240, 100%, 60%); /* Light Blue */
+    color: #000000; /* Black text for contrast */
+}
+
+/* Level 5 - Lighter Blue Background */
+.level5 .nav-link {
+    background-color: hsl(240, 100%, 70%); /* Lighter Blue */
+    color: #000000;
+}
+
+/* Level 6 - Very Light Blue Background */
+.level6 .nav-link {
+    background-color: hsl(240, 100%, 80%); /* Very Light Blue */
+    color: #000000;
+}
+
+
+
+
 @media (max-width: 767.98px) {
 
     .app-menu {
@@ -121,3 +163,5 @@ div.app-moduleactions a.dropdown-toggle, div.app-moduleactions div.dropdown-menu
         top: 60px;
     }
 }
+
+

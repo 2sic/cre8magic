@@ -1,6 +1,7 @@
 @namespace ToSic.Theme.Cre8magicTests
 @using ToSic.Cre8magic.Client.Menus
 @using ToSic.Cre8magic.Client.Menus.Settings
+@using ToSic.Theme.Cre8magicTests.Client
 @inherits ThemeBase
 @inject ISettingService SettingService
 @inject MagicMenuTree MagicMenuTree
@@ -29,42 +30,42 @@
 
         <h2>Various Settings</h2>
         <h3>Only one specific page, no other params</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = TopLevelWithSubpagesId }).Designer(new MenuDesigner(MagicMenuTree, MagicMenuTree.Settings))'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = TopLevelWithSubpagesId }).Designer(new BasicMenuDesigner())'></BasicMenu>
 
         <h3>Only one specific page, Depth = 0</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = TopLevelWithSubpagesId, Depth = 0 })'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = TopLevelWithSubpagesId, Depth = 0 }).Designer(new BasicMenuDesigner())'></BasicMenu>
 
         <h3>Only one specific page, Depth = 2</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = TopLevelWithSubpagesId, Depth = 2 })'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = TopLevelWithSubpagesId, Depth = 2 }).Designer(new BasicMenuDesigner())'></BasicMenu>
 
         <hr/>
         <h2>Start at current level</h2>
         <h3>Current level only (should only show one page...)</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = "." })'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = "." }).Designer(new BasicMenuDesigner())'></BasicMenu>
 
         <h3>Current level with children</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Depth = 1 })'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Depth = 1 }).Designer(new BasicMenuDesigner())'></BasicMenu>
 
         <h3>Current level children only</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Children = true, Depth = 0 })'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Children = true, Depth = 0 }).Designer(new BasicMenuDesigner())'></BasicMenu>
 
         <h3>Parent level only</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Level = -1, Depth = 0 })'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Level = -1, Depth = 0 }).Designer(new BasicMenuDesigner())'></BasicMenu>
 
         <h3>Current from Root Level 1, no children</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Level = 1, Children = false, Depth = 0 })'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Level = 1, Children = false, Depth = 0 }).Designer(new BasicMenuDesigner())'></BasicMenu>
         <h3>Current from Root Level 1, children</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Level = 1, Children = true, Depth = 0 })'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Level = 1, Children = true, Depth = 0 }).Designer(new BasicMenuDesigner())'></BasicMenu>
         <h3>Current from Root Level 1, no-children Depth 1</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Level = 1, Children = false, Depth = 1 })'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Level = 1, Children = false, Depth = 1 }).Designer(new BasicMenuDesigner())'></BasicMenu>
 
         <h3>Current from Root Level 2</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Level = 2, Children = true, Depth = 0 })'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = ".", Level = 2, Children = true, Depth = 0 }).Designer(new BasicMenuDesigner())'></BasicMenu>
 
         <hr/>
         <h2>Start with specific numbers</h2>
         <h3>Specific Pages Listed here (Home, myPage, Login)</h3>
-        <BasicMenu Menu='MagicMenuTree.New(new() { Start = "1, 3, 5!" })'></BasicMenu>
+        <BasicMenu Menu='MagicMenuTree.New(new() { Start = "1, 3, 5!" }).Designer(new BasicMenuDesigner())'></BasicMenu>
 
     </div>
 

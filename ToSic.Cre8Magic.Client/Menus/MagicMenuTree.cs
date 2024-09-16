@@ -14,7 +14,7 @@ public class MagicMenuTree : MagicMenuPage
     /// <remarks>
     /// Getting PageState in constructor DI breaks the Oqtane, so we have to get it in Init method
     /// </remarks>
-    public MagicMenuTree(/*PageState pageState*/): base(/*pageState.Page*/null, 1)
+    public MagicMenuTree(/*PageState pageState*/) : base(/*pageState.Page*/null, 1)
     {
         Log = LogRoot.GetLog("Root");
         Log.A($"Start for Page:{null}; Level:1");
@@ -67,7 +67,7 @@ public class MagicMenuTree : MagicMenuPage
     /// </summary>
     /// <param name="settings">MagicMenuSettings</param>
     /// <returns>MagicMenuTree clone</returns>
-    public MagicMenuTree New(MagicMenuSettings? settings = null) 
+    public MagicMenuTree New(MagicMenuSettings? settings = null)
         => ((MagicMenuTree)this.MemberwiseClone()).Setup(settings);
 
     public MagicMenuTree Setup(MagicMenuSettings? settings)
@@ -109,7 +109,13 @@ public class MagicMenuTree : MagicMenuPage
 
     internal TokenEngine? PageTokenEngine(MagicPage page) // TODO: stv move this to better place because it is MagicSettings part
     {
-        if (MagicSettings == null) return null;
+        // fallback without MagicSettings return just TokenEngine with PageTokens
+        if (MagicSettings == null)
+            return new TokenEngine(new()
+                {
+                    new PageTokens(PageState, page),
+                });
+
         var originalPage = (PageTokens)MagicSettings.Tokens.Parsers.First(p => p.NameId == PageTokens.NameIdConstant);
         originalPage = originalPage.Modified(page, menuId: MenuId);
         return MagicSettings.Tokens.SwapParser(originalPage);
@@ -262,7 +268,7 @@ public class MagicMenuTree : MagicMenuPage
                 if (important) fromNode = fromNode.TrimEnd(PageForced);
                 fromNode = fromNode.Trim();
                 int.TryParse(fromNode, out var id);
-                return new StartNodeRule { Id = id, From = fromNode, Force = important, ShowChildren = showChildren, Level = level};
+                return new StartNodeRule { Id = id, From = fromNode, Force = important, ShowChildren = showChildren, Level = level };
             })
             .Where(n => n != null)
             .ToArray() as StartNodeRule[];
