@@ -1,11 +1,47 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using Oqtane.UI;
+using System.Diagnostics.CodeAnalysis;
 using ToSic.Cre8magic.Client.Models;
 using Log = ToSic.Cre8magic.Client.Logging.Log;
 
 namespace ToSic.Cre8magic.Client.Menus;
 
-public class MagicMenuPage
+/// <summary>
+/// Represents a menu page in the MagicMenu system.
+/// </summary>
+/// <remarks>
+/// Can't provide PageState from DI because that breaks Oqtane.
+/// </remarks>
+public class MagicMenuPage : MagicPage
 {
+    /// <summary>
+    /// Initializes a new instance of the <see cref="MagicMenuPage"/> class.
+    /// </summary>
+    /// <param name="page">The original page.</param>
+    /// <param name="level">The menu level.</param>
+    /// <param name="pageState">The page state.</param>
+    /// <param name="tree">The magic menu tree.</param>
+    /// <param name="debugPrefix">The debug prefix.</param>
+    protected MagicMenuPage(MagicPage page, int level, PageState pageState, MagicMenuTree tree = null, string debugPrefix = null) : base(page.OriginalPage, pageState)
+    {
+        Page = page;
+        Level = level;
+
+        if (tree == null) return;
+        Tree = tree;
+        Log = tree.LogRoot.GetLog(debugPrefix);
+        var _ = PageInfo;   // Access page info early on to make logging nicer
+    }
+
+    /// <summary>
+    /// Current Page
+    /// </summary>
+    public MagicPage Page { get; protected init; }
+
+    /// <summary>
+    /// Menu Level relative to the start of the menu (always starts with 1)
+    /// </summary>
+    public int Level { get; protected init; }
+
     /// <summary>
     /// Root navigator object which has some data/logs for all navigators which spawned from it. 
     /// </summary>
@@ -14,33 +50,19 @@ public class MagicMenuPage
     private ITokenReplace NodeReplace => _nodeReplace ??= Tree.PageTokenEngine(Page);
     private ITokenReplace? _nodeReplace;
 
+    /// <summary>
+    /// Get css class for tag.
+    /// </summary>
+    /// <param name="tag"></param>
+    /// <returns></returns>
     public string? Classes(string tag) => NodeReplace.Parse(Tree.Design.Classes(tag, this)).EmptyAsNull();
-    //private string? _lastClasses;
 
+    /// <summary>
+    /// Get attribute value.
+    /// </summary>
+    /// <param name="key"></param>
+    /// <returns></returns>
     public string? Value(string key) => NodeReplace.Parse(Tree.Design.Value(key, this)).EmptyAsNull();
-
-    public MagicMenuPage(MagicMenuTree tree, int level, MagicPage page, string debugPrefix): this(page, level)
-    {
-        Tree = tree;
-        Log = tree.LogRoot.GetLog(debugPrefix);
-        var _ = PageInfo;   // Access page info early on to make logging nicer
-    }
-
-    protected MagicMenuPage(MagicPage page, int level)
-    {
-        Page = page;
-        Level = level;
-    }
-
-    /// <summary>
-    /// Current Page
-    /// </summary>
-    public MagicPage Page { get; protected set; }
-
-    /// <summary>
-    /// Menu Level relative to the start of the menu (always starts with 1)
-    /// </summary>
-    public int Level { get; protected set; }
 
     internal Log Log { get; set; }
 
@@ -62,20 +84,35 @@ public class MagicMenuPage
                 IsActive = Page.PageId == Tree.Page.PageId,
                 InBreadcrumb = Tree.Breadcrumb.Contains(Page),
             };
-            return l.Return(_pI, $"Name: '{Page.Name}': {_pI.Log}"); 
+            return l.Return(_pI, $"Name: '{Page.Name}': {_pI.Log}");
         }
     }
 
     private MagicPageInfo? _pI;
 
+    /// <summary>
+    /// Determines if there are sub-pages. True if this page has sub-pages.
+    /// </summary>
     public bool HasChildren => PageInfo.HasChildren;
 
+    /// <summary>
+    /// Determine if the menu page is current page.
+    /// </summary>
     public bool IsActive => PageInfo.IsActive;
 
+    /// <summary>
+    /// Determine if the menu page is in the breadcrumb.
+    /// </summary>
     public bool InBreadcrumb => PageInfo.InBreadcrumb;
 
+    /// <summary>
+    /// The ID of the menu item
+    /// </summary>
     public virtual string MenuId => Tree.MenuId;
 
+    /// <summary>
+    /// Get children of the current menu page.
+    /// </summary>
     public IList<MagicMenuPage> Children => _children ??= GetChildren();
     private IList<MagicMenuPage>? _children;
 
@@ -90,9 +127,9 @@ public class MagicMenuPage
         var levelsRemaining = Tree.Depth - (Level - 1 /* Level is 1 based, so -1 */);
         if (levelsRemaining < 0)
             return l.Return(new(), "remaining levels 0 - return empty");
-        
+
         var children = GetChildPages()
-            .Select(page => new MagicMenuPage(Tree, Level + 1, page, $"{Log.Prefix}>{Page.PageId}"))
+            .Select(page => new MagicMenuPage(page, Level + 1, PageState, Tree, $"{Log.Prefix}>{Page.PageId}"))
             .ToList();
         return l.Return(children, $"{children.Count}");
     }
@@ -120,5 +157,5 @@ public class MagicMenuPage
     //    => Tree.MenuPages.Where(p => pageIds.Contains(p.PageId)).ToList();
 
 
-    protected static MagicPage ErrPage(int id, string message) => new(new() { PageId = id, Name = message });
+    protected MagicPage ErrPage(int id, string message) => new(new() { PageId = id, Name = message }, PageState);
 }

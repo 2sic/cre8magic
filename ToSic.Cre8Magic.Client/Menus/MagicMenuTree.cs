@@ -7,27 +7,10 @@ public class MagicMenuTree : MagicMenuPage
 {
     public const char PageForced = '!';
 
-    /// <summary>
-    /// Constructor usually for DI
-    /// </summary>
-    /// <param name="magicPageService"></param>
-    /// <remarks>
-    /// Getting PageState in constructor DI breaks the Oqtane, so we have to get it in Init method
-    /// </remarks>
-    public MagicMenuTree(/*PageState pageState*/) : base(/*pageState.Page*/null, 1)
+    public MagicMenuTree(PageState pageState) : base(pageState.Page.ToMagicPage(pageState), 1, pageState)
     {
         Log = LogRoot.GetLog("Root");
-        Log.A($"Start for Page:{null}; Level:1");
-        //Init(pageState);
-    }
-
-    #region Init
-
-    public MagicMenuTree Init(PageState pageState)
-    {
-        Log.A($"Init for Page:{pageState.Page.PageId}; Level:0");
-
-        PageState = pageState;
+        Log.A($"Start with PageState for Page:{pageState.Page.PageId}; Level:1");
 
         // update base class
         Page = PageState.Page.ToMagicPage(PageState);
@@ -39,36 +22,19 @@ public class MagicMenuTree : MagicMenuPage
         Settings = MagicMenuSettings.Defaults.Fallback;
         Design = new MenuDesigner(this, Settings);
         Debug = new();
-
-        return this;
     }
 
-    public MagicMenuTree Setup(MagicSettings? magicSettings, MagicMenuSettings? settings, List<MagicPage>? menuPages = null, List<string>? messages = null)
+    internal MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<MagicPage>? menuPages = null, List<string>? messages = null) : this(magicSettings.PageState)
     {
-        Log.A($"Init for Page:{PageState.Page.PageId}; Level:0");
+        Log.A($"Start with MagicSettings for Page:{PageState.Page.PageId}; Level:1");
 
-        if (magicSettings != null) SetMagicSettings(magicSettings);
-        if (settings != null) Setup(settings);
+        MagicSettings = magicSettings;
+        Settings = settings;
         if (menuPages != null) SetMenuPages(menuPages);
         if (messages != null) SetMessages(messages);
-
-        return this;
     }
 
-    public MagicMenuTree SetMagicSettings(MagicSettings magicSettings)
-    {
-        Log.A($"Init MagicSettings PageId:{magicSettings.PageState.Page.PageId}; Level:0");
-        MagicSettings = magicSettings!;
-        return Init(MagicSettings.PageState);
-    }
-
-    /// <summary>
-    /// Helper for shorter razor syntax
-    /// </summary>
-    /// <param name="settings">MagicMenuSettings</param>
-    /// <returns>MagicMenuTree clone</returns>
-    public MagicMenuTree New(MagicMenuSettings? settings = null)
-        => ((MagicMenuTree)this.MemberwiseClone()).Setup(settings);
+    #region Init
 
     public MagicMenuTree Setup(MagicMenuSettings? settings)
     {
@@ -102,8 +68,6 @@ public class MagicMenuTree : MagicMenuPage
 
 
     public MagicMenuSettings Settings { get; private set; }
-    public PageState PageState { get; private set; }
-
 
     private MagicSettings? MagicSettings { get; set; } // TODO: stv move this to better place because it is MagicSettings part
 

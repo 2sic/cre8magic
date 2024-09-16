@@ -11,7 +11,7 @@
     @foreach (var menuPage in Menu.Children)
     {
         <li class='@menuPage.Classes("li")'>
-            <a class='@menuPage.Classes("a")' href="@menuPage.Page.Link" target="@menuPage.Page.Target">@menuPage.Page.Name</a>
+            <a class='@menuPage.Classes("a")' href="@menuPage.Link" target="@menuPage.Target">@menuPage.Name</a>
             @if (menuPage.HasChildren)
             {
                 <span class='@menuPage.Classes("span")'></span>

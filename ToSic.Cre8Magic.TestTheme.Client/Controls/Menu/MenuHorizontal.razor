@@ -17,9 +17,9 @@ Nice to know:
         @foreach(var menuPage in Menu.Children)
         {
             <li class='@menuPage.Classes("li")'>
-                <a class='@menuPage.Classes("a")' href='@menuPage.Page.Link' target='@menuPage.Page.Target'
-                   data-bs-toggle='@(menuPage.Page.HasChildren && menuPage.Page.IsClickable == false ? "dropdown" : "")'
-                   >@menuPage.Page.Name</a>
+                <a class='@menuPage.Classes("a")' href='@menuPage.Link' target='@menuPage.Target'
+                   data-bs-toggle='@(menuPage.HasChildren && menuPage.IsClickable == false ? "dropdown" : "")'
+                   >@menuPage.Name</a>
 
                 @if (menuPage.HasChildren)
                 {
