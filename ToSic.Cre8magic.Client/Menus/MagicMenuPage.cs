@@ -26,16 +26,13 @@ public class MagicMenuPage : MagicPage
         Page = page;
         Level = level;
 
-        _pageState = pageState;
-        _magicPageService = new MagicPageService(pageState);
-        MenuPages = _magicPageService.MenuPages; // Menu pages for the current user.
+        PageState = pageState;
+        MagicPageService = new MagicPageService(pageState);
 
         if (tree == null) return;
         Tree = tree;
         Log = tree.LogRoot.GetLog(debugPrefix);
         var _ = PageInfo;   // Access page info early on to make logging nicer
-
-
     }
 
     /// <summary>
@@ -43,25 +40,18 @@ public class MagicMenuPage : MagicPage
     /// It is based on the core 'oqtane.framework\Oqtane.Client\Themes\Controls\Theme\MenuBase.cs'
     /// but it favors composition over inheritance.
     /// </summary>
-    private readonly MagicPageService _magicPageService;
+    private protected readonly MagicPageService MagicPageService;
 
     /// <summary>
     /// PageState id dependency that provides information about the current page,
     /// also it is used by derived classes MagicMenuPage, MagicMenuThree
     /// </summary>
-    protected PageState PageState => _pageState ?? throw new InvalidOperationException("PageState is null.");
-    private readonly PageState _pageState;
-
-    /// <summary>
-    /// Pages in the menu according to Oqtane pre-processing
-    /// Should be limited to pages which should be in the menu, visible and permissions ok. 
-    /// </summary>
-    public IEnumerable<MagicPage> MenuPages { get; set; }
+    protected PageState PageState { get; }
 
     /// <summary>
     /// Current Page
     /// </summary>
-    public MagicPage Page { get; protected init; }
+    public MagicPage Page { get; init; }
 
     /// <summary>
     /// Menu Level relative to the start of the menu (always starts with 1)
@@ -139,12 +129,12 @@ public class MagicMenuPage : MagicPage
     /// <summary>
     /// Link to this page.
     /// </summary>
-    public string Link => _magicPageService.GetUrl(this);
+    public string Link => MagicPageService.GetUrl(this);
 
     /// <summary>
     /// Target for link to this page.
     /// </summary>
-    public string Target => _magicPageService.GetTarget(this);
+    public string Target => MagicPageService.GetTarget(this);
 
     /// <summary>
     /// Get children of the current menu page.

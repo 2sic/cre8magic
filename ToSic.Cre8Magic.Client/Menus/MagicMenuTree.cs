@@ -18,6 +18,7 @@ public class MagicMenuTree : MagicMenuPage
 
         // update dependent properties
         AllPages = PageState.Pages.ToMagicPages().ToList();
+        MenuPages = MagicPageService.MenuPages; // Menu pages for the current user.
         Settings = MagicMenuSettings.Defaults.Fallback;
         Design = new MenuDesigner(this, Settings);
         Debug = new();
@@ -87,6 +88,12 @@ public class MagicMenuTree : MagicMenuPage
     /// List of all pages - even these which would currently not be shown in the menu.
     /// </summary>
     internal List<MagicPage> AllPages { get; private set; }
+
+    /// <summary>
+    /// Pages in the menu according to Oqtane pre-processing
+    /// Should be limited to pages which should be in the menu, visible and permissions ok. 
+    /// </summary>
+    internal IEnumerable<MagicPage> MenuPages { get; private set; }
 
     internal override MagicMenuTree Tree => this;
 
