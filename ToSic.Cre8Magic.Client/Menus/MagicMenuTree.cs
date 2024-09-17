@@ -12,9 +12,6 @@ public class MagicMenuTree : MagicMenuPage
         Log = LogRoot.GetLog("Root");
         Log.A($"Start with PageState for Page:{pageState.Page.PageId}; Level:1");
 
-        // update base class
-        Level = 1;
-
         // update dependent properties
         AllPages = PageState.Pages.ToMagicPages().ToList();
         MenuPages = MagicPageService.MenuPages; // Menu pages for the current user.

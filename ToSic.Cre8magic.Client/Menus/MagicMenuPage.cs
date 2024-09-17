@@ -23,8 +23,7 @@ public class MagicMenuPage : MagicPage
     /// <param name="debugPrefix">The debug prefix.</param>
     protected MagicMenuPage(MagicPage page, int level, PageState pageState, MagicMenuTree tree = null, string debugPrefix = null) : base(page.OriginalPage)
     {
-        Level = level;
-
+        Level = level; // menu level
         PageState = pageState;
         MagicPageService = new MagicPageService(pageState);
 
@@ -50,7 +49,10 @@ public class MagicMenuPage : MagicPage
     /// <summary>
     /// Menu Level relative to the start of the menu (always starts with 1)
     /// </summary>
-    public int Level { get; protected init; }
+    /// <remarks>
+    /// This is not the same as Oqtane Page.Level (witch exists in base class).
+    /// </remarks>
+    public new int Level { get; init; }
 
     /// <summary>
     /// Root navigator object which has some data/logs for all navigators which spawned from it. 
