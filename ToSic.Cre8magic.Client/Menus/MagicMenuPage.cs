@@ -23,7 +23,6 @@ public class MagicMenuPage : MagicPage
     /// <param name="debugPrefix">The debug prefix.</param>
     protected MagicMenuPage(MagicPage page, int level, PageState pageState, MagicMenuTree tree = null, string debugPrefix = null) : base(page.OriginalPage)
     {
-        Page = page;
         Level = level;
 
         PageState = pageState;
@@ -49,11 +48,6 @@ public class MagicMenuPage : MagicPage
     protected PageState PageState { get; }
 
     /// <summary>
-    /// Current Page
-    /// </summary>
-    public MagicPage Page { get; init; }
-
-    /// <summary>
     /// Menu Level relative to the start of the menu (always starts with 1)
     /// </summary>
     public int Level { get; protected init; }
@@ -63,7 +57,7 @@ public class MagicMenuPage : MagicPage
     /// </summary>
     internal virtual MagicMenuTree Tree { get; }
 
-    private ITokenReplace NodeReplace => _nodeReplace ??= Tree.PageTokenEngine(Page);
+    private ITokenReplace NodeReplace => _nodeReplace ??= Tree.PageTokenEngine(this);
     private ITokenReplace? _nodeReplace;
 
     /// <summary>
@@ -93,14 +87,14 @@ public class MagicMenuPage : MagicPage
         get
         {
             if (_pI != null) return _pI;
-            var l = Log.Fn<MagicPageInfo>($"Page: {Page.PageId}");
+            var l = Log.Fn<MagicPageInfo>($"Page: {PageId}");
             _pI = new()
             {
                 HasChildren = Children.Any(),
-                IsActive = Page.PageId == Tree.Page.PageId,
-                InBreadcrumb = Tree.Breadcrumb.Contains(Page),
+                IsActive = PageId == Tree.PageId,
+                InBreadcrumb = Tree.Breadcrumb.Contains(this),
             };
-            return l.Return(_pI, $"Name: '{Page.Name}': {_pI.Log}");
+            return l.Return(_pI, $"Name: '{Name}': {_pI.Log}");
         }
     }
 
@@ -155,7 +149,7 @@ public class MagicMenuPage : MagicPage
             return l.Return(new(), "remaining levels 0 - return empty");
 
         var children = GetChildPages()
-            .Select(page => new MagicMenuPage(page, Level + 1, PageState, Tree, $"{Log.Prefix}>{Page.PageId}"))
+            .Select(page => new MagicMenuPage(page, Level + 1, PageState, Tree, $"{Log.Prefix}>{PageId}"))
             .ToList();
         return l.Return(children, $"{children.Count}");
     }
@@ -165,10 +159,8 @@ public class MagicMenuPage : MagicPage
     protected virtual List<MagicPage> GetChildPages()
     {
         var l = Log.Fn<List<MagicPage>>();
-        if (Page == null)
-            return l.Return(new() { ErrPage(-1, ErrPageNotFound) }, ErrPageNotFound);
 
-        var result = ChildrenOf(Page.PageId);
+        var result = ChildrenOf(PageId);
         return l.Return(result, LogPageList(result));
     }
 

@@ -21,7 +21,7 @@ public class MenuDesigner : IMenuDesigner
 
     public string Classes(string tag, MagicMenuPage page)
     {
-        var l = Log.Fn<string>($"{nameof(tag)}: {tag}, page: {page.Page.PageId} \"{page.Page.Name}\"");
+        var l = Log.Fn<string>($"{nameof(tag)}: {tag}, page: {page.PageId} \"{page.Name}\"");
         var configsForTag = ConfigsForTag(tag);
         var result = configsForTag.Any()
             ? ListToClasses(TagClasses(page, configsForTag))
@@ -60,7 +60,7 @@ public class MenuDesigner : IMenuDesigner
         AddIfAny(configs.Select(c => c.Classes));
         AddIfAny(configs.Select(c => c.IsActive.Get(page.IsActive)));
         AddIfAny(configs.Select(c => c.HasChildren.Get(page.HasChildren)));
-        AddIfAny(configs.Select(c => c.IsDisabled.Get(!page.Page.IsClickable)));
+        AddIfAny(configs.Select(c => c.IsDisabled.Get(!page.IsClickable)));
         AddIfAny(configs.Select(c => c.InBreadcrumb.Get(page.InBreadcrumb)));
 
         // See if there are any css for this level or for not-specified levels

@@ -13,7 +13,6 @@ public class MagicMenuTree : MagicMenuPage
         Log.A($"Start with PageState for Page:{pageState.Page.PageId}; Level:1");
 
         // update base class
-        Page = PageState.Page.ToMagicPage();
         Level = 1;
 
         // update dependent properties
@@ -99,7 +98,7 @@ public class MagicMenuTree : MagicMenuPage
 
     internal IMenuDesigner Design { get; private set; }
 
-    internal List<MagicPage> Breadcrumb => _breadcrumb ??= AllPages.Breadcrumbs(Page).ToList();
+    internal List<MagicPage> Breadcrumb => _breadcrumb ??= AllPages.Breadcrumbs(this).ToList();
     private List<MagicPage>? _breadcrumb;
 
     public override string MenuId => _menuId ??= Settings?.MenuId ?? "error-menu-id";
@@ -116,7 +115,7 @@ public class MagicMenuTree : MagicMenuPage
 
     protected List<MagicPage> GetRootPages()
     {
-        var l = Log.Fn<List<MagicPage>>($"{Page.PageId}");
+        var l = Log.Fn<List<MagicPage>>($"{PageId}");
         // Give empty list if we shouldn't display it
         if (Settings.Display == false)
             return l.Return(new(), "Display == false, don't show");
@@ -171,7 +170,7 @@ public class MagicMenuTree : MagicMenuPage
                 return l.Return(source.Where(p => p.Level == 0).ToList(), "Home/root");
             // Level 0 means current level / current page
             case StartMode.Current when n.Level == 0:
-                return l.Return(new() { Page }, "Current page");
+                return l.Return(new() { this }, "Current page");
             // Level 1 means top-level pages. If we don't want the level1 children, we want the top-level items
             // TODO: CHECK WHAT LEVEL Oqtane actually gives us, is 1 the top?
             case StartMode.Current when n.Level == 1 && !n.ShowChildren:
@@ -179,13 +178,13 @@ public class MagicMenuTree : MagicMenuPage
             case StartMode.Current when n.Level > 0:
                 // If coming from the top, level 1 means top level, so skip one less
                 var skipDown = n.Level - 1;
-                var fromTop = source.Breadcrumbs(Page).Skip(skipDown).FirstOrDefault();
+                var fromTop = source.Breadcrumbs(this).Skip(skipDown).FirstOrDefault();
                 var fromTopResult = fromTop == null ? new() : new List<MagicPage> { fromTop };
                 return l.Return(fromTopResult, $"from root to breadcrumb by {skipDown}");
             case StartMode.Current when n.Level < 0:
                 // If going up, must change skip to normal
                 var skipUp = Math.Abs(n.Level);
-                var fromCurrent = source.GetAncestors(Page).ToList().Skip(skipUp).FirstOrDefault();
+                var fromCurrent = source.GetAncestors(this).ToList().Skip(skipUp).FirstOrDefault();
                 var result = fromCurrent == null ? new() : new List<MagicPage> { fromCurrent };
                 return l.Return(result, $"up the ancestors by {skipUp}");
             default:
