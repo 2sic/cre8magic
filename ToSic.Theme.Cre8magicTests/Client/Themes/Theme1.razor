@@ -1,4 +1,5 @@
 @namespace ToSic.Theme.Cre8magicTests
+@using ToSic.Cre8magic.Client.Breadcrumbs
 @using ToSic.Cre8magic.Client.Menus
 @using ToSic.Cre8magic.Client.Models
 @using ToSic.Theme.Cre8magicTests.Client
@@ -11,8 +12,10 @@
     public IEnumerable<MagicPage> GetCustomMenuPages()
     {
         List<int> pageIds = [97, 98, 99];
-        return PageState.Site.Pages.Where(p => pageIds.Contains(p.PageId)).ToMagicPages();
+        return PageState.Pages.Where(p => pageIds.Contains(p.PageId)).ToMagicPages();
     }
+
+    public const int PageWithDeepBreadcrumb = 308;
 }
 
 <main role="main">
@@ -24,11 +27,27 @@
         </div>
     </nav>
 
-    <BasicBreadcrump></BasicBreadcrump>
+    <h1>Breadcrumb</h1>
+
+    <h2>No Settings</h2>
+    <h3>Basic Breadcrumb without Setting</h3>
+    <BasicBreadcrumb Breadcrumb="new MagicBreadcrumb(PageState)"></BasicBreadcrumb>
 
     <hr/>
 
+    <h2>Settings</h2>
+    <h3>Basic Breadcrumb with Settings, PageId of page with deep breadcrumb</h3>
+    <BasicBreadcrumb Breadcrumb="new MagicBreadcrumb(PageState).Setup(PageWithDeepBreadcrumb)"></BasicBreadcrumb>
+
+    <hr/>
+
+
+
+
+    <h1>Menu</h1>
+
     <div class="navbar-expand-lg">
+        
         <h2>No Settings</h2>
         <h3>Basic Menu without Setting, name none</h3>
         <BasicMenu Menu='new MagicMenuTree(PageState)' />

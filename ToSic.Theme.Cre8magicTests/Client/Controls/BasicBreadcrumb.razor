@@ -1,0 +1,15 @@
+﻿@namespace ToSic.Theme.Cre8magicTests
+@using ToSic.Cre8magic.Client.Breadcrumbs
+@inherits ThemeControlBase;
+
+@code {
+    [Parameter, EditorRequired]
+    public MagicBreadcrumb Breadcrumb { get; set; }
+}
+<div>
+    @foreach (var magicPage in Breadcrumb.Breadcrumbs)
+    {
+        <span> / </span>
+        <a href="@NavigateUrl(magicPage.Path)">@magicPage.Name</a>
+    }
+</div>
