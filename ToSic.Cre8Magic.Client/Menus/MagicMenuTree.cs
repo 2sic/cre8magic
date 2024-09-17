@@ -7,17 +7,17 @@ public class MagicMenuTree : MagicMenuPage
 {
     public const char PageForced = '!';
 
-    public MagicMenuTree(PageState pageState) : base(pageState.Page.ToMagicPage(pageState), 1, pageState)
+    public MagicMenuTree(PageState pageState) : base(pageState.Page.ToMagicPage(), 1, pageState)
     {
         Log = LogRoot.GetLog("Root");
         Log.A($"Start with PageState for Page:{pageState.Page.PageId}; Level:1");
 
         // update base class
-        Page = PageState.Page.ToMagicPage(PageState);
+        Page = PageState.Page.ToMagicPage();
         Level = 1;
 
         // update dependent properties
-        AllPages = PageState.Pages.ToMagicPages(PageState).ToList();
+        AllPages = PageState.Pages.ToMagicPages().ToList();
         Settings = MagicMenuSettings.Defaults.Fallback;
         Design = new MenuDesigner(this, Settings);
         Debug = new();
@@ -74,10 +74,9 @@ public class MagicMenuTree : MagicMenuPage
     {
         // fallback without MagicSettings return just TokenEngine with PageTokens
         if (MagicSettings == null)
-            return new TokenEngine(new()
-                {
-                    new PageTokens(PageState, page),
-                });
+            return new TokenEngine([
+                new PageTokens(PageState, page)
+            ]);
 
         var originalPage = (PageTokens)MagicSettings.Tokens.Parsers.First(p => p.NameId == PageTokens.NameIdConstant);
         originalPage = originalPage.Modified(page, menuId: MenuId);

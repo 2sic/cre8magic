@@ -11,7 +11,7 @@
     public IEnumerable<MagicPage> GetCustomMenuPages()
     {
         List<int> pageIds = [97, 98, 99];
-        return PageState.Site.Pages.Where(p => pageIds.Contains(p.PageId)).ToMagicPages(PageState);
+        return PageState.Site.Pages.Where(p => pageIds.Contains(p.PageId)).ToMagicPages();
     }
 }
 

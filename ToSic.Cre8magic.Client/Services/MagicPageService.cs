@@ -15,16 +15,29 @@ namespace ToSic.Cre8magic.Client.Services
     /// </remarks>
     internal class MagicPageService(PageState pageState)
     {
+        /// <summary>
+        /// Pages in the menu according to Oqtane pre-processing
+        /// Should be limited to pages which should be in the menu, visible and permissions ok. 
+        /// </summary>
         public IEnumerable<MagicPage> MenuPages => GetMenuPages();
 
-        public string GetTarget(MagicPage page) 
-            => page.Url?.StartsWith("http") == true ? "_new" : string.Empty;
-
+        /// <summary>
+        /// Link to page.
+        /// </summary>
         public string GetUrl(MagicPage page) 
             => (page.IsClickable) 
                 ? string.IsNullOrEmpty(page.Url) ? NavigateUrl(page.Path) : page.Url
                 : "javascript:void(0)";
 
+        /// <summary>
+        /// Target for link to page.
+        /// </summary>
+        /// <param name="page"></param>
+        /// <returns></returns>
+        public string GetTarget(MagicPage page)
+            => page.Url?.StartsWith("http") == true ? "_new" : string.Empty;
+
+        #region Private methods
         private IEnumerable<MagicPage> GetMenuPages()
         {
             if (pageState == null)
@@ -36,7 +49,7 @@ namespace ToSic.Cre8magic.Client.Services
                 if (page.Level <= securityLevel && UserSecurity.IsAuthorized(pageState.User, PermissionNames.View, page.PermissionList))
                 {
                     securityLevel = int.MaxValue;
-                    yield return page.ToMagicPage(pageState);
+                    yield return page.ToMagicPage();
                 }
                 else if (securityLevel == int.MaxValue)
                 {
@@ -45,7 +58,8 @@ namespace ToSic.Cre8magic.Client.Services
             }
         }
 
-        private string NavigateUrl(string path, string parameters = "") 
-            => Utilities.NavigateUrl(pageState.Alias.Path, path, parameters);
+        private string NavigateUrl(string path, string parameters = "")
+            => Utilities.NavigateUrl(pageState.Alias.Path, path, parameters); 
+        #endregion
     }
 }

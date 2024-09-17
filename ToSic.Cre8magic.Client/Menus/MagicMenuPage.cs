@@ -21,16 +21,42 @@ public class MagicMenuPage : MagicPage
     /// <param name="pageState">The page state.</param>
     /// <param name="tree">The magic menu tree.</param>
     /// <param name="debugPrefix">The debug prefix.</param>
-    protected MagicMenuPage(MagicPage page, int level, PageState pageState, MagicMenuTree tree = null, string debugPrefix = null) : base(page.OriginalPage, pageState)
+    protected MagicMenuPage(MagicPage page, int level, PageState pageState, MagicMenuTree tree = null, string debugPrefix = null) : base(page.OriginalPage)
     {
         Page = page;
         Level = level;
+
+        _pageState = pageState;
+        _magicPageService = new MagicPageService(pageState);
+        MenuPages = _magicPageService.MenuPages; // Menu pages for the current user.
 
         if (tree == null) return;
         Tree = tree;
         Log = tree.LogRoot.GetLog(debugPrefix);
         var _ = PageInfo;   // Access page info early on to make logging nicer
+
+
     }
+
+    /// <summary>
+    /// This service provides functionality for the menu control.
+    /// It is based on the core 'oqtane.framework\Oqtane.Client\Themes\Controls\Theme\MenuBase.cs'
+    /// but it favors composition over inheritance.
+    /// </summary>
+    private readonly MagicPageService _magicPageService;
+
+    /// <summary>
+    /// PageState id dependency that provides information about the current page,
+    /// also it is used by derived classes MagicMenuPage, MagicMenuThree
+    /// </summary>
+    protected PageState PageState => _pageState ?? throw new InvalidOperationException("PageState is null.");
+    private readonly PageState _pageState;
+
+    /// <summary>
+    /// Pages in the menu according to Oqtane pre-processing
+    /// Should be limited to pages which should be in the menu, visible and permissions ok. 
+    /// </summary>
+    public IEnumerable<MagicPage> MenuPages { get; set; }
 
     /// <summary>
     /// Current Page
@@ -111,6 +137,16 @@ public class MagicMenuPage : MagicPage
     public virtual string MenuId => Tree.MenuId;
 
     /// <summary>
+    /// Link to this page.
+    /// </summary>
+    public string Link => _magicPageService.GetUrl(this);
+
+    /// <summary>
+    /// Target for link to this page.
+    /// </summary>
+    public string Target => _magicPageService.GetTarget(this);
+
+    /// <summary>
     /// Get children of the current menu page.
     /// </summary>
     public IList<MagicMenuPage> Children => _children ??= GetChildren();
@@ -157,5 +193,5 @@ public class MagicMenuPage : MagicPage
     //    => Tree.MenuPages.Where(p => pageIds.Contains(p.PageId)).ToList();
 
 
-    protected MagicPage ErrPage(int id, string message) => new(new() { PageId = id, Name = message }, PageState);
+    protected MagicPage ErrPage(int id, string message) => new(new() { PageId = id, Name = message });
 }
