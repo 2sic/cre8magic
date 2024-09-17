@@ -105,7 +105,7 @@ public class MagicMenuPage : MagicPage
     /// <summary>
     /// Determines if there are sub-pages. True if this page has sub-pages.
     /// </summary>
-    public bool HasChildren => PageInfo.HasChildren;
+    public new bool HasChildren => PageInfo.HasChildren;
 
     /// <summary>
     /// Determine if the menu page is current page.
