@@ -1,11 +1,18 @@
 @namespace ToSic.Theme.Cre8magicTests
 @using ToSic.Cre8magic.Client.Menus
+@using ToSic.Cre8magic.Client.Models
 @using ToSic.Theme.Cre8magicTests.Client
 @inherits ThemeBase
 @inject ISettingService SettingService
 
 @code {
     public const string TopLevelWithSubpagesId = "97";
+
+    public IEnumerable<MagicPage> GetCustomMenuPages()
+    {
+        List<int> pageIds = [97, 98, 99];
+        return PageState.Site.Pages.Where(p => pageIds.Contains(p.PageId)).ToMagicPages(PageState);
+    }
 }
 
 <main role="main">
@@ -21,6 +28,16 @@
         <h2>No Settings</h2>
         <h3>Basic Menu without Setting, name none</h3>
         <BasicMenu Menu='new MagicMenuTree(PageState)' />
+        <hr/>
+
+        <hr/>
+        <h2>Set MenuPages</h2>
+        <h3>Custom menu pages (97, 98, 99)</h3>
+        <BasicMenu Menu='new MagicMenuTree(PageState).SetMenuPages(GetCustomMenuPages())'></BasicMenu>
+
+        <h2>Set Designer</h2>
+        <h3>BasicMenuDesigner</h3>
+        <BasicMenu Menu='new MagicMenuTree(PageState).Designer(new BasicMenuDesigner())' />
         <hr/>
 
         <h2>Various Settings</h2>
