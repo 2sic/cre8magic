@@ -77,8 +77,6 @@ public class MenuDesigner : IMenuDesigner
         return classes;
     }
 
-
-
     private string ListToClasses(IEnumerable<string?> original)
         => string.Join(" ", original.Where(s => !s.IsNullOrEmpty())).Replace("  ", " ");
 }

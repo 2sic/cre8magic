@@ -18,13 +18,12 @@ public class MagicMenuTree : MagicMenuPage
 
         // update dependent properties
         AllPages = PageState.Pages.ToMagicPages(PageState).ToList();
-        MenuPages = Page.MenuPages.ToList();
         Settings = MagicMenuSettings.Defaults.Fallback;
         Design = new MenuDesigner(this, Settings);
         Debug = new();
     }
 
-    internal MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, List<MagicPage>? menuPages = null, List<string>? messages = null) : this(magicSettings.PageState)
+    internal MagicMenuTree(MagicSettings magicSettings, MagicMenuSettings settings, IEnumerable<MagicPage>? menuPages = null, List<string>? messages = null) : this(magicSettings.PageState)
     {
         Log.A($"Start with MagicSettings for Page:{PageState.Page.PageId}; Level:1");
 
@@ -43,9 +42,9 @@ public class MagicMenuTree : MagicMenuPage
         return this;
     }
 
-    public MagicMenuTree SetMenuPages(List<MagicPage> menuPages)
+    public MagicMenuTree SetMenuPages(IEnumerable<MagicPage> menuPages)
     {
-        Log.A($"Init menuPages:{menuPages.Count}");
+        Log.A($"Init menuPages:{menuPages.Count()}");
         MenuPages = menuPages;
         return this;
     }
@@ -89,12 +88,6 @@ public class MagicMenuTree : MagicMenuPage
     /// List of all pages - even these which would currently not be shown in the menu.
     /// </summary>
     internal List<MagicPage> AllPages { get; private set; }
-
-    /// <summary>
-    /// Pages in the menu according to Oqtane pre-processing
-    /// Should be limited to pages which should be in the menu, visible and permissions ok. 
-    /// </summary>
-    internal List<MagicPage> MenuPages { get; private set; }
 
     internal override MagicMenuTree Tree => this;
 
@@ -163,7 +156,7 @@ public class MagicMenuTree : MagicMenuPage
     private List<MagicPage> FindInitialAnchorPages(StartNodeRule n)
     {
         var l = Log.Fn<List<MagicPage>>();
-        var source = n.Force ? Tree.AllPages : Tree.MenuPages;
+        var source = n.Force ? Tree.AllPages : Tree.MenuPages.ToList();
         switch (n.ModeInfo)
         {
             case StartMode.PageId:
