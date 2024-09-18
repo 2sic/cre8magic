@@ -6,10 +6,12 @@
     [Parameter, EditorRequired]
     public MagicBreadcrumb Breadcrumb { get; set; }
 }
-<div>
-    @foreach (var magicPage in Breadcrumb.Breadcrumbs)
-    {
-        <span> / </span>
-        <a href="@NavigateUrl(magicPage.Path)">@magicPage.Name</a>
-    }
-</div>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        @foreach (var item in Breadcrumb.Breadcrumbs)
+        {
+            <li class="breadcrumb-item"><a href="@NavigateUrl(item.Path)">@item.Name</a></li>
+        }
+        <li class="breadcrumb-item active" aria-current="page">@Breadcrumb.CurrentPage.Name</li>
+    </ol>
+</nav>

@@ -9,7 +9,7 @@ namespace ToSic.Cre8magic.Client.Breadcrumbs
 
         public MagicBreadcrumb Setup(MagicPage currentPage)
         {
-            _currentPage = currentPage;
+            CurrentPage = currentPage;
             return this;
         }
 
@@ -22,22 +22,23 @@ namespace ToSic.Cre8magic.Client.Breadcrumbs
 
         public MagicBreadcrumb Setup(int currentPageId)
         {
-            _currentPage = pageState.Pages.FirstOrDefault(p => p.PageId == currentPageId)?.ToMagicPage() ?? _homePage;
+            CurrentPage = pageState.Pages.FirstOrDefault(p => p.PageId == currentPageId)?.ToMagicPage() ?? _homePage;
             return this;
         }
+
+        public MagicPage CurrentPage = pageState.Page.ToMagicPage();
 
         public List<MagicPage> Breadcrumbs => GetBreadcrumbs();
         //public List<MagicPage> Breadcrumbs => pageState.Breadcrumbs(_currentPage).ToList();
 
         #region Private Methods
-        private MagicPage _currentPage = pageState.Page.ToMagicPage();
 
         private readonly MagicPage _homePage = pageState.Pages.First(p => p.Path == "").ToMagicPage();
 
         private List<MagicPage> GetBreadcrumbs(MagicPage? page = null)
         {
-            var currentPage = page ?? _currentPage;
-            var breadcrumbs = new List<MagicPage>() { currentPage };
+            var currentPage = page ?? CurrentPage;
+            var breadcrumbs = new List<MagicPage>();
 
             if (_homePage.PageId == currentPage.PageId) return breadcrumbs;
 
