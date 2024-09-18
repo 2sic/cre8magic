@@ -1,5 +1,6 @@
 @namespace ToSic.Theme.Cre8magicTests
 @using ToSic.Cre8magic.Client.Breadcrumbs
+@using ToSic.Cre8magic.Client.Breadcrumbs.Settings
 @using ToSic.Cre8magic.Client.Menus
 @using ToSic.Cre8magic.Client.Models
 @using ToSic.Theme.Cre8magicTests.Client
@@ -37,7 +38,7 @@
 
     <h2>Settings</h2>
     <h3>Basic Breadcrumb with Settings, PageId of page with deep breadcrumb</h3>
-    <BasicBreadcrumb Breadcrumb="new MagicBreadcrumb(PageState).Setup(PageWithDeepBreadcrumb)"></BasicBreadcrumb>
+    <BasicBreadcrumb Breadcrumb="new MagicBreadcrumb(PageState).Setup(new() { Start = PageWithDeepBreadcrumb })"></BasicBreadcrumb>
 
     <hr/>
 

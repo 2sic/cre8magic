@@ -8,10 +8,10 @@
 }
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        @foreach (var item in Breadcrumb.Breadcrumbs)
+        @foreach (var item in Breadcrumb.Items)
         {
             <li class="breadcrumb-item"><a href="@NavigateUrl(item.Path)">@item.Name</a></li>
         }
-        <li class="breadcrumb-item active" aria-current="page">@Breadcrumb.CurrentPage.Name</li>
+        <li class="breadcrumb-item active" aria-current="page">@Breadcrumb.StartPage.Name</li>
     </ol>
 </nav>
