@@ -70,6 +70,6 @@ namespace ToSic.Cre8magic.Client.Breadcrumbs
         /// <summary>
         /// Target for link to this page.
         /// </summary>
-        public string Target => MagicPageService.GetTarget(this);
+        public string? Target => MagicPageService.GetTarget(this).EmptyAsNull();
     }
 }

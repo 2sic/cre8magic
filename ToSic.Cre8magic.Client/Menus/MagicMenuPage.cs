@@ -130,7 +130,7 @@ public class MagicMenuPage : MagicPage
     /// <summary>
     /// Target for link to this page.
     /// </summary>
-    public string Target => MagicPageService.GetTarget(this);
+    public string? Target => MagicPageService.GetTarget(this).EmptyAsNull();
 
     /// <summary>
     /// Get children of the current menu page.
