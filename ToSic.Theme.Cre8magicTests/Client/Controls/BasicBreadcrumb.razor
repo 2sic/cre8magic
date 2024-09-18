@@ -7,11 +7,17 @@
     public MagicBreadcrumb Breadcrumb { get; set; }
 }
 <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
+    <ol class='@Breadcrumb.Classes("ol")'>
         @foreach (var item in Breadcrumb.Items)
         {
-            <li class="breadcrumb-item"><a href="@NavigateUrl(item.Path)">@item.Name</a></li>
+            <li class='@item.Classes("li")' aria-current='@item.Value("aria-current")'>
+                @if (item.IsActive)
+                {
+                    @item.Name
+                } else {
+                    <a href="@item.Link">@item.Name</a>
+                }
+            </li>
         }
-        <li class="breadcrumb-item active" aria-current="page">@Breadcrumb.StartPage.Name</li>
     </ol>
 </nav>

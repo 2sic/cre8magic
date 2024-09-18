@@ -10,10 +10,16 @@ namespace ToSic.Cre8magic.Client.Breadcrumbs
         /// </summary>
         /// <param name="pageState">The page state.</param>
         /// <param name="page">The original page.</param>
-        public MagicBreadcrumbItem(PageState pageState, MagicPage? page = null) : base(page?.OriginalPage ?? pageState.Page)
+        public MagicBreadcrumbItem(PageState pageState, MagicPage? page = null, MagicBreadcrumb? breadcrumb = null) : base(page?.OriginalPage ?? pageState.Page)
         {
             PageState = pageState;
             MagicPageService = new MagicPageService(pageState);
+            Breadcrumb = breadcrumb;
+
+            if (page != null && breadcrumb != null)
+                IsActive = (page.PageId == breadcrumb.PageId);
+            else
+                IsActive = true;
         }
 
         /// <summary>
@@ -37,7 +43,7 @@ namespace ToSic.Cre8magic.Client.Breadcrumbs
         /// <summary>
         /// Determine if the breadcrumb item is current page.
         /// </summary>
-        public bool IsActive => PageId == Breadcrumb.PageId;
+        public bool IsActive { get; } = false;
 
         private ITokenReplace NodeReplace => _nodeReplace ??= Breadcrumb.PageTokenEngine(this);
         private ITokenReplace? _nodeReplace;

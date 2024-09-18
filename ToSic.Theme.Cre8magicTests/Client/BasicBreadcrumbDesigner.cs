@@ -6,39 +6,23 @@ namespace ToSic.Theme.Cre8magicTests.Client
 {
     internal class BasicBreadcrumbDesigner : IBreadcrumbDesigner
     {
-        public string Classes(string tag, MagicBreadcrumbItem page)
+        public string Classes(string tag, MagicBreadcrumbItem item)
         {
             // List to store CSS class names
             var classes = new List<string>();
 
-            // Base class for the current level
-            var levelClass = $"level{page.Level}";
-            classes.Add(levelClass);
-
             // Additional classes based on the HTML tag
             switch (tag.ToLower())
             {
-                case "ul":
-                    // Use 'nav' class from Bootstrap
-                    classes.Add("nav");
-                    // For nested menus, add 'flex-column' to stack items vertically
-                    if (page.Level > 1) classes.Add("flex-column");
+                case "ol":
+                    // Use 'breadcrumb' class from Bootstrap
+                    classes.Add("breadcrumb");
                     break;
 
                 case "li":
-                    // Use 'nav-item' class from Bootstrap
-                    classes.Add("nav-item");
-                    break;
-
-                case "a":
-                    // Use 'nav-link' class from Bootstrap
-                    classes.Add("nav-link");
-                    // If the page is active, add 'active' class
-                    if (page.IsActive) classes.Add("active");
-                    break;
-
-                case "span":
-                    // Add any specific classes for 'span' elements if needed
+                    // Use 'breadcrumb-item' class from Bootstrap
+                    classes.Add("breadcrumb-item");
+                    if (item.IsActive) classes.Add("active");
                     break;
 
                 default:
@@ -50,9 +34,11 @@ namespace ToSic.Theme.Cre8magicTests.Client
             return string.Join(" ", classes);
         }
 
-        public string Value(string key, MagicBreadcrumbItem page)
-        {
-            return "yyy";
-        }
+        public string Value(string key, MagicBreadcrumbItem item) 
+            => key.ToLower() switch
+            {
+                "aria-current" => item.IsActive ? "page" : "",
+                _ => ""
+            };
     }
 }

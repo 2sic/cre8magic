@@ -69,16 +69,16 @@ namespace ToSic.Cre8magic.Client.Breadcrumbs
         private List<MagicBreadcrumbItem> GetBreadcrumbs(MagicPage? page = null)
         {
             var currentPage = page ?? StartPage;
-            var breadcrumbs = new List<MagicBreadcrumbItem>();
+            var breadcrumbs = new List<MagicBreadcrumbItem>() { new (PageState, currentPage, this) };
 
             if (_homePage.PageId == currentPage.PageId) return breadcrumbs;
 
-            breadcrumbs.Insert(0, new MagicBreadcrumbItem(PageState, _homePage));
+            breadcrumbs.Insert(0, new (PageState, _homePage, this));
 
             var parentPage = PageState.Pages.FirstOrDefault(p => p.PageId == currentPage.ParentId);
             while (parentPage != null && _homePage.PageId != parentPage.PageId)
             {
-                breadcrumbs.Insert(1, new MagicBreadcrumbItem(PageState, parentPage!.ToMagicPage()));
+                breadcrumbs.Insert(1, new (PageState, parentPage!.ToMagicPage(), this));
                 parentPage = PageState.Pages.FirstOrDefault(p => p.PageId == parentPage.ParentId);
             }
             return breadcrumbs;
