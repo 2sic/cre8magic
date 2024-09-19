@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Models
+  commentId: N:ToSic.Cre8magic.Client.Models
+  id: ToSic.Cre8magic.Client.Models
+  children:
+  - ToSic.Cre8magic.Client.Models.MagicPage
+  - ToSic.Cre8magic.Client.Models.MagicPageExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Models
+  nameWithType: ToSic.Cre8magic.Client.Models
+  fullName: ToSic.Cre8magic.Client.Models
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Models.MagicPage
+  commentId: T:ToSic.Cre8magic.Client.Models.MagicPage
+  parent: ToSic.Cre8magic.Client.Models
+  href: ToSic.Cre8magic.Client.Models.MagicPage.html
+  name: MagicPage
+  nameWithType: MagicPage
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage
+- uid: ToSic.Cre8magic.Client.Models.MagicPageExtensions
+  commentId: T:ToSic.Cre8magic.Client.Models.MagicPageExtensions
+  href: ToSic.Cre8magic.Client.Models.MagicPageExtensions.html
+  name: MagicPageExtensions
+  nameWithType: MagicPageExtensions
+  fullName: ToSic.Cre8magic.Client.Models.MagicPageExtensions
+- uid: ToSic.Cre8magic.Client.Models
+  commentId: N:ToSic.Cre8magic.Client.Models
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Models
+  nameWithType: ToSic.Cre8magic.Client.Models
+  fullName: ToSic.Cre8magic.Client.Models
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Models
+    name: Models
+    href: ToSic.Cre8magic.Client.Models.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Models
+    name: Models
+    href: ToSic.Cre8magic.Client.Models.html

@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Logging
+  commentId: N:ToSic.Cre8magic.Client.Logging
+  id: ToSic.Cre8magic.Client.Logging
+  children:
+  - ToSic.Cre8magic.Client.Logging.CodeRef
+  - ToSic.Cre8magic.Client.Logging.LogCall
+  - ToSic.Cre8magic.Client.Logging.LogCallBase
+  - ToSic.Cre8magic.Client.Logging.LogCall`1
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Logging
+  nameWithType: ToSic.Cre8magic.Client.Logging
+  fullName: ToSic.Cre8magic.Client.Logging
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Logging.CodeRef
+  commentId: T:ToSic.Cre8magic.Client.Logging.CodeRef
+  href: ToSic.Cre8magic.Client.Logging.CodeRef.html
+  name: CodeRef
+  nameWithType: CodeRef
+  fullName: ToSic.Cre8magic.Client.Logging.CodeRef
+- uid: ToSic.Cre8magic.Client.Logging.LogCall
+  commentId: T:ToSic.Cre8magic.Client.Logging.LogCall
+  href: ToSic.Cre8magic.Client.Logging.LogCall.html
+  name: LogCall
+  nameWithType: LogCall
+  fullName: ToSic.Cre8magic.Client.Logging.LogCall
+- uid: ToSic.Cre8magic.Client.Logging.LogCallBase
+  commentId: T:ToSic.Cre8magic.Client.Logging.LogCallBase
+  parent: ToSic.Cre8magic.Client.Logging
+  href: ToSic.Cre8magic.Client.Logging.LogCallBase.html
+  name: LogCallBase
+  nameWithType: LogCallBase
+  fullName: ToSic.Cre8magic.Client.Logging.LogCallBase
+- uid: ToSic.Cre8magic.Client.Logging.LogCall`1
+  commentId: T:ToSic.Cre8magic.Client.Logging.LogCall`1
+  href: ToSic.Cre8magic.Client.Logging.LogCall-1.html
+  name: LogCall<T>
+  nameWithType: LogCall<T>
+  fullName: ToSic.Cre8magic.Client.Logging.LogCall<T>
+  nameWithType.vb: LogCall(Of T)
+  fullName.vb: ToSic.Cre8magic.Client.Logging.LogCall(Of T)
+  name.vb: LogCall(Of T)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Logging.LogCall`1
+    name: LogCall
+    href: ToSic.Cre8magic.Client.Logging.LogCall-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Logging.LogCall`1
+    name: LogCall
+    href: ToSic.Cre8magic.Client.Logging.LogCall-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ToSic.Cre8magic.Client.Logging
+  commentId: N:ToSic.Cre8magic.Client.Logging
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Logging
+  nameWithType: ToSic.Cre8magic.Client.Logging
+  fullName: ToSic.Cre8magic.Client.Logging
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Logging
+    name: Logging
+    href: ToSic.Cre8magic.Client.Logging.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Logging
+    name: Logging
+    href: ToSic.Cre8magic.Client.Logging.html

@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.JsModules
+  commentId: N:ToSic.Cre8magic.Client.JsModules
+  id: ToSic.Cre8magic.Client.JsModules
+  children:
+  - ToSic.Cre8magic.Client.JsModules.MagicJsServiceBase
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.JsModules
+  nameWithType: ToSic.Cre8magic.Client.JsModules
+  fullName: ToSic.Cre8magic.Client.JsModules
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.JsModules.MagicJsServiceBase
+  commentId: T:ToSic.Cre8magic.Client.JsModules.MagicJsServiceBase
+  parent: ToSic.Cre8magic.Client.JsModules
+  href: ToSic.Cre8magic.Client.JsModules.MagicJsServiceBase.html
+  name: MagicJsServiceBase
+  nameWithType: MagicJsServiceBase
+  fullName: ToSic.Cre8magic.Client.JsModules.MagicJsServiceBase
+- uid: ToSic.Cre8magic.Client.JsModules
+  commentId: N:ToSic.Cre8magic.Client.JsModules
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.JsModules
+  nameWithType: ToSic.Cre8magic.Client.JsModules
+  fullName: ToSic.Cre8magic.Client.JsModules
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.JsModules
+    name: JsModules
+    href: ToSic.Cre8magic.Client.JsModules.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.JsModules
+    name: JsModules
+    href: ToSic.Cre8magic.Client.JsModules.html

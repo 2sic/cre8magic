@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Languages
+  commentId: N:ToSic.Cre8magic.Client.Languages
+  id: ToSic.Cre8magic.Client.Languages
+  children:
+  - ToSic.Cre8magic.Client.Languages.MagicLanguageMenu
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Languages
+  nameWithType: ToSic.Cre8magic.Client.Languages
+  fullName: ToSic.Cre8magic.Client.Languages
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Languages.MagicLanguageMenu
+  commentId: T:ToSic.Cre8magic.Client.Languages.MagicLanguageMenu
+  href: ToSic.Cre8magic.Client.Languages.MagicLanguageMenu.html
+  name: MagicLanguageMenu
+  nameWithType: MagicLanguageMenu
+  fullName: ToSic.Cre8magic.Client.Languages.MagicLanguageMenu

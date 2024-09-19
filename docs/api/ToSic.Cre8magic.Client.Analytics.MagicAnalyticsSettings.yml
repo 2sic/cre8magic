@@ -1,0 +1,610 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+  commentId: T:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+  id: MagicAnalyticsSettings
+  parent: ToSic.Cre8magic.Client.Analytics
+  children:
+  - ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.GtmId
+  - ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewEvent
+  - ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewJs
+  - ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrack
+  - ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrackFirst
+  langs:
+  - csharp
+  - vb
+  name: MagicAnalyticsSettings
+  nameWithType: MagicAnalyticsSettings
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+  type: Class
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Analytics/MagicAnalyticsSettings.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: MagicAnalyticsSettings
+    path: ../ToSic.Cre8magic.Client/Analytics/MagicAnalyticsSettings.cs
+    startLine: 2
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Analytics
+  syntax:
+    content: 'public class MagicAnalyticsSettings : SettingsWithInherit'
+    content.vb: Public Class MagicAnalyticsSettings Inherits SettingsWithInherit
+  inheritance:
+  - System.Object
+  - ToSic.Cre8magic.Client.Settings.SettingsWithInherit
+  inheritedMembers:
+  - ToSic.Cre8magic.Client.Settings.SettingsWithInherit.Inherits
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.GtmId
+  commentId: P:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.GtmId
+  id: GtmId
+  parent: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+  langs:
+  - csharp
+  - vb
+  name: GtmId
+  nameWithType: MagicAnalyticsSettings.GtmId
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.GtmId
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Analytics/MagicAnalyticsSettings.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: GtmId
+    path: ../ToSic.Cre8magic.Client/Analytics/MagicAnalyticsSettings.cs
+    startLine: 6
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Analytics
+  syntax:
+    content: public string? GtmId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GtmId As String
+  overload: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.GtmId*
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrack
+  commentId: P:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrack
+  id: PageViewTrack
+  parent: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+  langs:
+  - csharp
+  - vb
+  name: PageViewTrack
+  nameWithType: MagicAnalyticsSettings.PageViewTrack
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrack
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Analytics/MagicAnalyticsSettings.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: PageViewTrack
+    path: ../ToSic.Cre8magic.Client/Analytics/MagicAnalyticsSettings.cs
+    startLine: 8
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Analytics
+  syntax:
+    content: public bool? PageViewTrack { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property PageViewTrack As Boolean?
+  overload: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrack*
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrackFirst
+  commentId: P:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrackFirst
+  id: PageViewTrackFirst
+  parent: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+  langs:
+  - csharp
+  - vb
+  name: PageViewTrackFirst
+  nameWithType: MagicAnalyticsSettings.PageViewTrackFirst
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrackFirst
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Analytics/MagicAnalyticsSettings.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: PageViewTrackFirst
+    path: ../ToSic.Cre8magic.Client/Analytics/MagicAnalyticsSettings.cs
+    startLine: 10
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Analytics
+  syntax:
+    content: public bool? PageViewTrackFirst { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property PageViewTrackFirst As Boolean?
+  overload: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrackFirst*
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewJs
+  commentId: P:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewJs
+  id: PageViewJs
+  parent: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+  langs:
+  - csharp
+  - vb
+  name: PageViewJs
+  nameWithType: MagicAnalyticsSettings.PageViewJs
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewJs
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Analytics/MagicAnalyticsSettings.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: PageViewJs
+    path: ../ToSic.Cre8magic.Client/Analytics/MagicAnalyticsSettings.cs
+    startLine: 12
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Analytics
+  syntax:
+    content: public string? PageViewJs { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PageViewJs As String
+  overload: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewJs*
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewEvent
+  commentId: P:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewEvent
+  id: PageViewEvent
+  parent: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+  langs:
+  - csharp
+  - vb
+  name: PageViewEvent
+  nameWithType: MagicAnalyticsSettings.PageViewEvent
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewEvent
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Analytics/MagicAnalyticsSettings.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: PageViewEvent
+    path: ../ToSic.Cre8magic.Client/Analytics/MagicAnalyticsSettings.cs
+    startLine: 14
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Analytics
+  syntax:
+    content: public string? PageViewEvent { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PageViewEvent As String
+  overload: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewEvent*
+references:
+- uid: ToSic.Cre8magic.Client.Analytics
+  commentId: N:ToSic.Cre8magic.Client.Analytics
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Analytics
+  nameWithType: ToSic.Cre8magic.Client.Analytics
+  fullName: ToSic.Cre8magic.Client.Analytics
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Analytics
+    name: Analytics
+    href: ToSic.Cre8magic.Client.Analytics.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Analytics
+    name: Analytics
+    href: ToSic.Cre8magic.Client.Analytics.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ToSic.Cre8magic.Client.Settings.SettingsWithInherit
+  commentId: T:ToSic.Cre8magic.Client.Settings.SettingsWithInherit
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.SettingsWithInherit.html
+  name: SettingsWithInherit
+  nameWithType: SettingsWithInherit
+  fullName: ToSic.Cre8magic.Client.Settings.SettingsWithInherit
+- uid: ToSic.Cre8magic.Client.Settings.SettingsWithInherit.Inherits
+  commentId: P:ToSic.Cre8magic.Client.Settings.SettingsWithInherit.Inherits
+  parent: ToSic.Cre8magic.Client.Settings.SettingsWithInherit
+  href: ToSic.Cre8magic.Client.Settings.SettingsWithInherit.html#ToSic_Cre8magic_Client_Settings_SettingsWithInherit_Inherits
+  name: Inherits
+  nameWithType: SettingsWithInherit.Inherits
+  fullName: ToSic.Cre8magic.Client.Settings.SettingsWithInherit.Inherits
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ToSic.Cre8magic.Client.Settings
+  commentId: N:ToSic.Cre8magic.Client.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Settings
+  nameWithType: ToSic.Cre8magic.Client.Settings
+  fullName: ToSic.Cre8magic.Client.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.GtmId*
+  commentId: Overload:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.GtmId
+  href: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.html#ToSic_Cre8magic_Client_Analytics_MagicAnalyticsSettings_GtmId
+  name: GtmId
+  nameWithType: MagicAnalyticsSettings.GtmId
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.GtmId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrack*
+  commentId: Overload:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrack
+  href: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.html#ToSic_Cre8magic_Client_Analytics_MagicAnalyticsSettings_PageViewTrack
+  name: PageViewTrack
+  nameWithType: MagicAnalyticsSettings.PageViewTrack
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrack
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrackFirst*
+  commentId: Overload:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrackFirst
+  href: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.html#ToSic_Cre8magic_Client_Analytics_MagicAnalyticsSettings_PageViewTrackFirst
+  name: PageViewTrackFirst
+  nameWithType: MagicAnalyticsSettings.PageViewTrackFirst
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewTrackFirst
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewJs*
+  commentId: Overload:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewJs
+  href: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.html#ToSic_Cre8magic_Client_Analytics_MagicAnalyticsSettings_PageViewJs
+  name: PageViewJs
+  nameWithType: MagicAnalyticsSettings.PageViewJs
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewJs
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewEvent*
+  commentId: Overload:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewEvent
+  href: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.html#ToSic_Cre8magic_Client_Analytics_MagicAnalyticsSettings_PageViewEvent
+  name: PageViewEvent
+  nameWithType: MagicAnalyticsSettings.PageViewEvent
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.PageViewEvent

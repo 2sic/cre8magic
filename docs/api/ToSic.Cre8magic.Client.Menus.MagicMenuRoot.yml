@@ -1,0 +1,3492 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  id: MagicMenuRoot
+  parent: ToSic.Cre8magic.Client.Menus
+  children:
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Children
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.ConfigName
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Debug
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Depth
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Design
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Display
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsHorizontal
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsVertical
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Level
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Logger
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Menu
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuId
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuSettings
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuTreeService
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.OnParametersSetAsync
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Start
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Template
+  langs:
+  - csharp
+  - vb
+  name: MagicMenuRoot
+  nameWithType: MagicMenuRoot
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  type: Class
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: MagicMenuRoot
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 10
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  summary: Base class for Razor menus
+  example: []
+  syntax:
+    content: 'public abstract class MagicMenuRoot : MagicMenuBase, IComponent, IHandleEvent, IHandleAfterRender, IThemeControl, IMagicControlWithSettings, IHasMagicSettings, IMagicDesigner'
+    content.vb: Public MustInherit Class MagicMenuRoot Inherits MagicMenuBase Implements IComponent, IHandleEvent, IHandleAfterRender, IThemeControl, IMagicControlWithSettings, IHasMagicSettings, IMagicDesigner
+  inheritance:
+  - System.Object
+  - Microsoft.AspNetCore.Components.ComponentBase
+  - Oqtane.Themes.ThemeBase
+  - Oqtane.Themes.ThemeControlBase
+  - Oqtane.Themes.Controls.MenuBase
+  - ToSic.Cre8magic.Client.Menus.MagicMenuBase
+  implements:
+  - Microsoft.AspNetCore.Components.IComponent
+  - Microsoft.AspNetCore.Components.IHandleEvent
+  - Microsoft.AspNetCore.Components.IHandleAfterRender
+  - Oqtane.Themes.IThemeControl
+  - ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings
+  - ToSic.Cre8magic.Client.Settings.IHasMagicSettings
+  - ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  inheritedMembers:
+  - ToSic.Cre8magic.Client.Menus.MagicMenuBase.Settings
+  - ToSic.Cre8magic.Client.Menus.MagicMenuBase.Classes(System.String)
+  - ToSic.Cre8magic.Client.Menus.MagicMenuBase.Value(System.String)
+  - ToSic.Cre8magic.Client.Menus.MagicMenuBase.Id(System.String)
+  - Oqtane.Themes.Controls.MenuBase.GetTarget(Oqtane.Models.Page)
+  - Oqtane.Themes.Controls.MenuBase.GetUrl(Oqtane.Models.Page)
+  - Oqtane.Themes.Controls.MenuBase.MenuPages
+  - Oqtane.Themes.ThemeBase.OnAfterRenderAsync(System.Boolean)
+  - Oqtane.Themes.ThemeBase.ThemePath
+  - Oqtane.Themes.ThemeBase.NavigateUrl
+  - Oqtane.Themes.ThemeBase.NavigateUrl(System.String)
+  - Oqtane.Themes.ThemeBase.NavigateUrl(System.Boolean)
+  - Oqtane.Themes.ThemeBase.NavigateUrl(System.String,System.Boolean)
+  - Oqtane.Themes.ThemeBase.NavigateUrl(System.String,System.String)
+  - Oqtane.Themes.ThemeBase.EditUrl(System.Int32,System.String)
+  - Oqtane.Themes.ThemeBase.EditUrl(System.Int32,System.String,System.String)
+  - Oqtane.Themes.ThemeBase.EditUrl(System.String,System.Int32,System.String,System.String)
+  - Oqtane.Themes.ThemeBase.FileUrl(System.String,System.String)
+  - Oqtane.Themes.ThemeBase.FileUrl(System.String,System.String,System.Boolean)
+  - Oqtane.Themes.ThemeBase.FileUrl(System.Int32)
+  - Oqtane.Themes.ThemeBase.FileUrl(System.Int32,System.Boolean)
+  - Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32)
+  - Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32,System.String)
+  - Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.Boolean)
+  - Oqtane.Themes.ThemeBase.SetPageTitle(System.String)
+  - Oqtane.Themes.ThemeBase.AddHeadContent(System.String)
+  - Oqtane.Themes.ThemeBase.AddScript(Oqtane.Models.Resource)
+  - Oqtane.Themes.ThemeBase.ScrollToPageTop
+  - Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias,Oqtane.Shared.LogLevel,System.String,System.Exception,System.String,System.Object[])
+  - Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias,Oqtane.Shared.LogLevel,Oqtane.Enums.LogFunction,System.Exception,System.String,System.Object[])
+  - Oqtane.Themes.ThemeBase.ContentUrl(System.Int32)
+  - Oqtane.Themes.ThemeBase.ContentUrl(System.Int32,System.Boolean)
+  - Oqtane.Themes.ThemeBase.LoggingService
+  - Oqtane.Themes.ThemeBase.JSRuntime
+  - Oqtane.Themes.ThemeBase.SiteState
+  - Oqtane.Themes.ThemeBase.PageState
+  - Oqtane.Themes.ThemeBase.Name
+  - Oqtane.Themes.ThemeBase.Thumbnail
+  - Oqtane.Themes.ThemeBase.Panes
+  - Oqtane.Themes.ThemeBase.Resources
+  - Microsoft.AspNetCore.Components.ComponentBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  - Microsoft.AspNetCore.Components.ComponentBase.OnInitialized
+  - Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
+  - Microsoft.AspNetCore.Components.ComponentBase.OnParametersSet
+  - Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged
+  - Microsoft.AspNetCore.Components.ComponentBase.ShouldRender
+  - Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)
+  - Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Action)
+  - Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Func{System.Threading.Tasks.Task})
+  - Microsoft.AspNetCore.Components.ComponentBase.DispatchExceptionAsync(System.Exception)
+  - Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuSettings
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuSettings
+  id: MenuSettings
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: MenuSettings
+  nameWithType: MagicMenuRoot.MenuSettings
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuSettings
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: MenuSettings
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 16
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  summary: >-
+    Complex object with all settings.
+
+    If this is used, all other settings will be ignored.
+  example: []
+  syntax:
+    content: >-
+      [Parameter]
+
+      public MagicMenuSettings? MenuSettings { get; set; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings
+    content.vb: >-
+      <Parameter>
+
+      Public Property MenuSettings As MagicMenuSettings
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuSettings*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.ParameterAttribute
+    ctor: Microsoft.AspNetCore.Components.ParameterAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuId
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuId
+  id: MenuId
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: MenuId
+  nameWithType: MagicMenuRoot.MenuId
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuId
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: MenuId
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 18
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: >-
+      [Parameter]
+
+      public string? MenuId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Parameter>
+
+      Public Property MenuId As String
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuId*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.ParameterAttribute
+    ctor: Microsoft.AspNetCore.Components.ParameterAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.ConfigName
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.ConfigName
+  id: ConfigName
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: ConfigName
+  nameWithType: MagicMenuRoot.ConfigName
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.ConfigName
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: ConfigName
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 19
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: >-
+      [Parameter]
+
+      public string? ConfigName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Parameter>
+
+      Public Property ConfigName As String
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.ConfigName*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.ParameterAttribute
+    ctor: Microsoft.AspNetCore.Components.ParameterAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Children
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Children
+  id: Children
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: Children
+  nameWithType: MagicMenuRoot.Children
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Children
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Children
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 22
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: >-
+      [Parameter]
+
+      public bool? Children { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <Parameter>
+
+      Public Property Children As Boolean?
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Children*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.ParameterAttribute
+    ctor: Microsoft.AspNetCore.Components.ParameterAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Debug
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Debug
+  id: Debug
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: Debug
+  nameWithType: MagicMenuRoot.Debug
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Debug
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Debug
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 23
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: >-
+      [Parameter]
+
+      public bool? Debug { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <Parameter>
+
+      Public Property Debug As Boolean?
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Debug*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.ParameterAttribute
+    ctor: Microsoft.AspNetCore.Components.ParameterAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Depth
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Depth
+  id: Depth
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: Depth
+  nameWithType: MagicMenuRoot.Depth
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Depth
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Depth
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 24
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: >-
+      [Parameter]
+
+      public int? Depth { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: >-
+      <Parameter>
+
+      Public Property Depth As Integer?
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Depth*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.ParameterAttribute
+    ctor: Microsoft.AspNetCore.Components.ParameterAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Display
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Display
+  id: Display
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: Display
+  nameWithType: MagicMenuRoot.Display
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Display
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Display
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 25
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: >-
+      [Parameter]
+
+      public bool? Display { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <Parameter>
+
+      Public Property Display As Boolean?
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Display*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.ParameterAttribute
+    ctor: Microsoft.AspNetCore.Components.ParameterAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Level
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Level
+  id: Level
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: MagicMenuRoot.Level
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Level
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Level
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 26
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: >-
+      [Parameter]
+
+      public int? Level { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: >-
+      <Parameter>
+
+      Public Property Level As Integer?
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Level*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.ParameterAttribute
+    ctor: Microsoft.AspNetCore.Components.ParameterAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Start
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Start
+  id: Start
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: Start
+  nameWithType: MagicMenuRoot.Start
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Start
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Start
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 27
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: >-
+      [Parameter]
+
+      public string? Start { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Parameter>
+
+      Public Property Start As String
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Start*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.ParameterAttribute
+    ctor: Microsoft.AspNetCore.Components.ParameterAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Design
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Design
+  id: Design
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: Design
+  nameWithType: MagicMenuRoot.Design
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Design
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Design
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 28
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: >-
+      [Parameter]
+
+      public string? Design { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Parameter>
+
+      Public Property Design As String
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Design*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.ParameterAttribute
+    ctor: Microsoft.AspNetCore.Components.ParameterAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Template
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Template
+  id: Template
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: Template
+  nameWithType: MagicMenuRoot.Template
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Template
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Template
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 30
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: >-
+      [Parameter]
+
+      public string? Template { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Parameter>
+
+      Public Property Template As String
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Template*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.ParameterAttribute
+    ctor: Microsoft.AspNetCore.Components.ParameterAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Menu
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Menu
+  id: Menu
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: Menu
+  nameWithType: MagicMenuRoot.Menu
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Menu
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Menu
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 32
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: protected MagicMenuTree? Menu { get; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Menus.MagicMenuTree
+    content.vb: Protected Property Menu As MagicMenuTree
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Menu*
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Logger
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Logger
+  id: Logger
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: Logger
+  nameWithType: MagicMenuRoot.Logger
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Logger
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Logger
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 34
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: >-
+      [Inject]
+
+      public ILogger<Menu>? Logger { get; set; }
+    parameters: []
+    return:
+      type: Microsoft.Extensions.Logging.ILogger{Oqtane.Themes.Controls.Menu}
+    content.vb: >-
+      <Inject>
+
+      Public Property Logger As ILogger(Of Menu)
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Logger*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.InjectAttribute
+    ctor: Microsoft.AspNetCore.Components.InjectAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuTreeService
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuTreeService
+  id: MenuTreeService
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: MenuTreeService
+  nameWithType: MagicMenuRoot.MenuTreeService
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuTreeService
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: MenuTreeService
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 36
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: >-
+      [Inject]
+
+      public MagicMenuBuilder? MenuTreeService { get; set; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+    content.vb: >-
+      <Inject>
+
+      Public Property MenuTreeService As MagicMenuBuilder
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuTreeService*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.InjectAttribute
+    ctor: Microsoft.AspNetCore.Components.InjectAttribute.#ctor
+    arguments: []
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsVertical
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsVertical
+  id: IsVertical
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: IsVertical
+  nameWithType: MagicMenuRoot.IsVertical
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsVertical
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: IsVertical
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 42
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  summary: >-
+    Detect if the menu is configured for vertical.
+
+    For the most common 2 kinds of menu options.
+  example: []
+  syntax:
+    content: protected bool IsVertical { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Protected ReadOnly Property IsVertical As Boolean
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsVertical*
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsHorizontal
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsHorizontal
+  id: IsHorizontal
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: IsHorizontal
+  nameWithType: MagicMenuRoot.IsHorizontal
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsHorizontal
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: IsHorizontal
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 43
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: protected bool IsHorizontal { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Protected ReadOnly Property IsHorizontal As Boolean
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsHorizontal*
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.OnParametersSetAsync
+  commentId: M:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.OnParametersSetAsync
+  id: OnParametersSetAsync
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  langs:
+  - csharp
+  - vb
+  name: OnParametersSetAsync()
+  nameWithType: MagicMenuRoot.OnParametersSetAsync()
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.OnParametersSetAsync()
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: OnParametersSetAsync
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuRoot.razor.cs
+    startLine: 45
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  summary: >-
+    Method invoked when the component has received parameters from its parent in
+
+    the render tree, and the incoming values have been assigned to properties.
+  example: []
+  syntax:
+    content: protected override Task OnParametersSetAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> representing any asynchronous operation.
+    content.vb: Protected Overrides Function OnParametersSetAsync() As Task
+  overridden: Microsoft.AspNetCore.Components.ComponentBase.OnParametersSetAsync
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.OnParametersSetAsync*
+references:
+- uid: ToSic.Cre8magic.Client.Menus
+  commentId: N:ToSic.Cre8magic.Client.Menus
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Menus
+  nameWithType: ToSic.Cre8magic.Client.Menus
+  fullName: ToSic.Cre8magic.Client.Menus
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.AspNetCore.Components.ComponentBase
+  commentId: T:Microsoft.AspNetCore.Components.ComponentBase
+  parent: Microsoft.AspNetCore.Components
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase
+  name: ComponentBase
+  nameWithType: ComponentBase
+  fullName: Microsoft.AspNetCore.Components.ComponentBase
+- uid: Oqtane.Themes.ThemeBase
+  commentId: T:Oqtane.Themes.ThemeBase
+  parent: Oqtane.Themes
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: ThemeBase
+  nameWithType: ThemeBase
+  fullName: Oqtane.Themes.ThemeBase
+- uid: Oqtane.Themes.ThemeControlBase
+  commentId: T:Oqtane.Themes.ThemeControlBase
+  parent: Oqtane.Themes
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeControlBase.cs
+  name: ThemeControlBase
+  nameWithType: ThemeControlBase
+  fullName: Oqtane.Themes.ThemeControlBase
+- uid: Oqtane.Themes.Controls.MenuBase
+  commentId: T:Oqtane.Themes.Controls.MenuBase
+  parent: Oqtane.Themes.Controls
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/Controls/Theme/MenuBase.cs
+  name: MenuBase
+  nameWithType: MenuBase
+  fullName: Oqtane.Themes.Controls.MenuBase
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBase
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenuBase
+  parent: ToSic.Cre8magic.Client.Menus
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuBase.html
+  name: MagicMenuBase
+  nameWithType: MagicMenuBase
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBase
+- uid: Microsoft.AspNetCore.Components.IComponent
+  commentId: T:Microsoft.AspNetCore.Components.IComponent
+  parent: Microsoft.AspNetCore.Components
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.icomponent
+  name: IComponent
+  nameWithType: IComponent
+  fullName: Microsoft.AspNetCore.Components.IComponent
+- uid: Microsoft.AspNetCore.Components.IHandleEvent
+  commentId: T:Microsoft.AspNetCore.Components.IHandleEvent
+  parent: Microsoft.AspNetCore.Components
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.ihandleevent
+  name: IHandleEvent
+  nameWithType: IHandleEvent
+  fullName: Microsoft.AspNetCore.Components.IHandleEvent
+- uid: Microsoft.AspNetCore.Components.IHandleAfterRender
+  commentId: T:Microsoft.AspNetCore.Components.IHandleAfterRender
+  parent: Microsoft.AspNetCore.Components
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.ihandleafterrender
+  name: IHandleAfterRender
+  nameWithType: IHandleAfterRender
+  fullName: Microsoft.AspNetCore.Components.IHandleAfterRender
+- uid: Oqtane.Themes.IThemeControl
+  commentId: T:Oqtane.Themes.IThemeControl
+  parent: Oqtane.Themes
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Interfaces/IThemeControl.cs
+  name: IThemeControl
+  nameWithType: IThemeControl
+  fullName: Oqtane.Themes.IThemeControl
+- uid: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings
+  commentId: T:ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings
+  parent: ToSic.Cre8magic.Client.Controls
+  href: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings.html
+  name: IMagicControlWithSettings
+  nameWithType: IMagicControlWithSettings
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings
+- uid: ToSic.Cre8magic.Client.Settings.IHasMagicSettings
+  commentId: T:ToSic.Cre8magic.Client.Settings.IHasMagicSettings
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.IHasMagicSettings.html
+  name: IHasMagicSettings
+  nameWithType: IHasMagicSettings
+  fullName: ToSic.Cre8magic.Client.Settings.IHasMagicSettings
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  commentId: T:ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  parent: ToSic.Cre8magic.Client.Controls
+  href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html
+  name: IMagicDesigner
+  nameWithType: IMagicDesigner
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Settings
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuBase.Settings
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuBase
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuBase.html#ToSic_Cre8magic_Client_Menus_MagicMenuBase_Settings
+  name: Settings
+  nameWithType: MagicMenuBase.Settings
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Settings
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Classes(System.String)
+  commentId: M:ToSic.Cre8magic.Client.Menus.MagicMenuBase.Classes(System.String)
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuBase
+  isExternal: true
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuBase.html#ToSic_Cre8magic_Client_Menus_MagicMenuBase_Classes_System_String_
+  name: Classes(string)
+  nameWithType: MagicMenuBase.Classes(string)
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Classes(string)
+  nameWithType.vb: MagicMenuBase.Classes(String)
+  fullName.vb: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Classes(String)
+  name.vb: Classes(String)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Classes(System.String)
+    name: Classes
+    href: ToSic.Cre8magic.Client.Menus.MagicMenuBase.html#ToSic_Cre8magic_Client_Menus_MagicMenuBase_Classes_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Classes(System.String)
+    name: Classes
+    href: ToSic.Cre8magic.Client.Menus.MagicMenuBase.html#ToSic_Cre8magic_Client_Menus_MagicMenuBase_Classes_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Value(System.String)
+  commentId: M:ToSic.Cre8magic.Client.Menus.MagicMenuBase.Value(System.String)
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuBase
+  isExternal: true
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuBase.html#ToSic_Cre8magic_Client_Menus_MagicMenuBase_Value_System_String_
+  name: Value(string)
+  nameWithType: MagicMenuBase.Value(string)
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Value(string)
+  nameWithType.vb: MagicMenuBase.Value(String)
+  fullName.vb: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Value(String)
+  name.vb: Value(String)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Value(System.String)
+    name: Value
+    href: ToSic.Cre8magic.Client.Menus.MagicMenuBase.html#ToSic_Cre8magic_Client_Menus_MagicMenuBase_Value_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Value(System.String)
+    name: Value
+    href: ToSic.Cre8magic.Client.Menus.MagicMenuBase.html#ToSic_Cre8magic_Client_Menus_MagicMenuBase_Value_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Id(System.String)
+  commentId: M:ToSic.Cre8magic.Client.Menus.MagicMenuBase.Id(System.String)
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuBase
+  isExternal: true
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuBase.html#ToSic_Cre8magic_Client_Menus_MagicMenuBase_Id_System_String_
+  name: Id(string)
+  nameWithType: MagicMenuBase.Id(string)
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Id(string)
+  nameWithType.vb: MagicMenuBase.Id(String)
+  fullName.vb: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Id(String)
+  name.vb: Id(String)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Id(System.String)
+    name: Id
+    href: ToSic.Cre8magic.Client.Menus.MagicMenuBase.html#ToSic_Cre8magic_Client_Menus_MagicMenuBase_Id_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Menus.MagicMenuBase.Id(System.String)
+    name: Id
+    href: ToSic.Cre8magic.Client.Menus.MagicMenuBase.html#ToSic_Cre8magic_Client_Menus_MagicMenuBase_Id_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Oqtane.Themes.Controls.MenuBase.GetTarget(Oqtane.Models.Page)
+  commentId: M:Oqtane.Themes.Controls.MenuBase.GetTarget(Oqtane.Models.Page)
+  parent: Oqtane.Themes.Controls.MenuBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/Controls/Theme/MenuBase.cs
+  name: GetTarget(Page)
+  nameWithType: MenuBase.GetTarget(Page)
+  fullName: Oqtane.Themes.Controls.MenuBase.GetTarget(Oqtane.Models.Page)
+  spec.csharp:
+  - uid: Oqtane.Themes.Controls.MenuBase.GetTarget(Oqtane.Models.Page)
+    name: GetTarget
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/Controls/Theme/MenuBase.cs
+  - name: (
+  - uid: Oqtane.Models.Page
+    name: Page
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Models/Page.cs
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.Controls.MenuBase.GetTarget(Oqtane.Models.Page)
+    name: GetTarget
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/Controls/Theme/MenuBase.cs
+  - name: (
+  - uid: Oqtane.Models.Page
+    name: Page
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Models/Page.cs
+  - name: )
+- uid: Oqtane.Themes.Controls.MenuBase.GetUrl(Oqtane.Models.Page)
+  commentId: M:Oqtane.Themes.Controls.MenuBase.GetUrl(Oqtane.Models.Page)
+  parent: Oqtane.Themes.Controls.MenuBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/Controls/Theme/MenuBase.cs
+  name: GetUrl(Page)
+  nameWithType: MenuBase.GetUrl(Page)
+  fullName: Oqtane.Themes.Controls.MenuBase.GetUrl(Oqtane.Models.Page)
+  spec.csharp:
+  - uid: Oqtane.Themes.Controls.MenuBase.GetUrl(Oqtane.Models.Page)
+    name: GetUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/Controls/Theme/MenuBase.cs
+  - name: (
+  - uid: Oqtane.Models.Page
+    name: Page
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Models/Page.cs
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.Controls.MenuBase.GetUrl(Oqtane.Models.Page)
+    name: GetUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/Controls/Theme/MenuBase.cs
+  - name: (
+  - uid: Oqtane.Models.Page
+    name: Page
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Models/Page.cs
+  - name: )
+- uid: Oqtane.Themes.Controls.MenuBase.MenuPages
+  commentId: P:Oqtane.Themes.Controls.MenuBase.MenuPages
+  parent: Oqtane.Themes.Controls.MenuBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/Controls/Theme/MenuBase.cs
+  name: MenuPages
+  nameWithType: MenuBase.MenuPages
+  fullName: Oqtane.Themes.Controls.MenuBase.MenuPages
+- uid: Oqtane.Themes.ThemeBase.OnAfterRenderAsync(System.Boolean)
+  commentId: M:Oqtane.Themes.ThemeBase.OnAfterRenderAsync(System.Boolean)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: OnAfterRenderAsync(bool)
+  nameWithType: ThemeBase.OnAfterRenderAsync(bool)
+  fullName: Oqtane.Themes.ThemeBase.OnAfterRenderAsync(bool)
+  nameWithType.vb: ThemeBase.OnAfterRenderAsync(Boolean)
+  fullName.vb: Oqtane.Themes.ThemeBase.OnAfterRenderAsync(Boolean)
+  name.vb: OnAfterRenderAsync(Boolean)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.OnAfterRenderAsync(System.Boolean)
+    name: OnAfterRenderAsync
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.OnAfterRenderAsync(System.Boolean)
+    name: OnAfterRenderAsync
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.ThemePath
+  commentId: M:Oqtane.Themes.ThemeBase.ThemePath
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: ThemePath()
+  nameWithType: ThemeBase.ThemePath()
+  fullName: Oqtane.Themes.ThemeBase.ThemePath()
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.ThemePath
+    name: ThemePath
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.ThemePath
+    name: ThemePath
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.NavigateUrl
+  commentId: M:Oqtane.Themes.ThemeBase.NavigateUrl
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: NavigateUrl()
+  nameWithType: ThemeBase.NavigateUrl()
+  fullName: Oqtane.Themes.ThemeBase.NavigateUrl()
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.NavigateUrl
+    name: NavigateUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.NavigateUrl
+    name: NavigateUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.NavigateUrl(System.String)
+  commentId: M:Oqtane.Themes.ThemeBase.NavigateUrl(System.String)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: NavigateUrl(string)
+  nameWithType: ThemeBase.NavigateUrl(string)
+  fullName: Oqtane.Themes.ThemeBase.NavigateUrl(string)
+  nameWithType.vb: ThemeBase.NavigateUrl(String)
+  fullName.vb: Oqtane.Themes.ThemeBase.NavigateUrl(String)
+  name.vb: NavigateUrl(String)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.NavigateUrl(System.String)
+    name: NavigateUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.NavigateUrl(System.String)
+    name: NavigateUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.NavigateUrl(System.Boolean)
+  commentId: M:Oqtane.Themes.ThemeBase.NavigateUrl(System.Boolean)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: NavigateUrl(bool)
+  nameWithType: ThemeBase.NavigateUrl(bool)
+  fullName: Oqtane.Themes.ThemeBase.NavigateUrl(bool)
+  nameWithType.vb: ThemeBase.NavigateUrl(Boolean)
+  fullName.vb: Oqtane.Themes.ThemeBase.NavigateUrl(Boolean)
+  name.vb: NavigateUrl(Boolean)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.NavigateUrl(System.Boolean)
+    name: NavigateUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.NavigateUrl(System.Boolean)
+    name: NavigateUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.NavigateUrl(System.String,System.Boolean)
+  commentId: M:Oqtane.Themes.ThemeBase.NavigateUrl(System.String,System.Boolean)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: NavigateUrl(string, bool)
+  nameWithType: ThemeBase.NavigateUrl(string, bool)
+  fullName: Oqtane.Themes.ThemeBase.NavigateUrl(string, bool)
+  nameWithType.vb: ThemeBase.NavigateUrl(String, Boolean)
+  fullName.vb: Oqtane.Themes.ThemeBase.NavigateUrl(String, Boolean)
+  name.vb: NavigateUrl(String, Boolean)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.NavigateUrl(System.String,System.Boolean)
+    name: NavigateUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.NavigateUrl(System.String,System.Boolean)
+    name: NavigateUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.NavigateUrl(System.String,System.String)
+  commentId: M:Oqtane.Themes.ThemeBase.NavigateUrl(System.String,System.String)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: NavigateUrl(string, string)
+  nameWithType: ThemeBase.NavigateUrl(string, string)
+  fullName: Oqtane.Themes.ThemeBase.NavigateUrl(string, string)
+  nameWithType.vb: ThemeBase.NavigateUrl(String, String)
+  fullName.vb: Oqtane.Themes.ThemeBase.NavigateUrl(String, String)
+  name.vb: NavigateUrl(String, String)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.NavigateUrl(System.String,System.String)
+    name: NavigateUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.NavigateUrl(System.String,System.String)
+    name: NavigateUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.EditUrl(System.Int32,System.String)
+  commentId: M:Oqtane.Themes.ThemeBase.EditUrl(System.Int32,System.String)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: EditUrl(int, string)
+  nameWithType: ThemeBase.EditUrl(int, string)
+  fullName: Oqtane.Themes.ThemeBase.EditUrl(int, string)
+  nameWithType.vb: ThemeBase.EditUrl(Integer, String)
+  fullName.vb: Oqtane.Themes.ThemeBase.EditUrl(Integer, String)
+  name.vb: EditUrl(Integer, String)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.EditUrl(System.Int32,System.String)
+    name: EditUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.EditUrl(System.Int32,System.String)
+    name: EditUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.EditUrl(System.Int32,System.String,System.String)
+  commentId: M:Oqtane.Themes.ThemeBase.EditUrl(System.Int32,System.String,System.String)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: EditUrl(int, string, string)
+  nameWithType: ThemeBase.EditUrl(int, string, string)
+  fullName: Oqtane.Themes.ThemeBase.EditUrl(int, string, string)
+  nameWithType.vb: ThemeBase.EditUrl(Integer, String, String)
+  fullName.vb: Oqtane.Themes.ThemeBase.EditUrl(Integer, String, String)
+  name.vb: EditUrl(Integer, String, String)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.EditUrl(System.Int32,System.String,System.String)
+    name: EditUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.EditUrl(System.Int32,System.String,System.String)
+    name: EditUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.EditUrl(System.String,System.Int32,System.String,System.String)
+  commentId: M:Oqtane.Themes.ThemeBase.EditUrl(System.String,System.Int32,System.String,System.String)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: EditUrl(string, int, string, string)
+  nameWithType: ThemeBase.EditUrl(string, int, string, string)
+  fullName: Oqtane.Themes.ThemeBase.EditUrl(string, int, string, string)
+  nameWithType.vb: ThemeBase.EditUrl(String, Integer, String, String)
+  fullName.vb: Oqtane.Themes.ThemeBase.EditUrl(String, Integer, String, String)
+  name.vb: EditUrl(String, Integer, String, String)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.EditUrl(System.String,System.Int32,System.String,System.String)
+    name: EditUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.EditUrl(System.String,System.Int32,System.String,System.String)
+    name: EditUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.FileUrl(System.String,System.String)
+  commentId: M:Oqtane.Themes.ThemeBase.FileUrl(System.String,System.String)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: FileUrl(string, string)
+  nameWithType: ThemeBase.FileUrl(string, string)
+  fullName: Oqtane.Themes.ThemeBase.FileUrl(string, string)
+  nameWithType.vb: ThemeBase.FileUrl(String, String)
+  fullName.vb: Oqtane.Themes.ThemeBase.FileUrl(String, String)
+  name.vb: FileUrl(String, String)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.FileUrl(System.String,System.String)
+    name: FileUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.FileUrl(System.String,System.String)
+    name: FileUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.FileUrl(System.String,System.String,System.Boolean)
+  commentId: M:Oqtane.Themes.ThemeBase.FileUrl(System.String,System.String,System.Boolean)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: FileUrl(string, string, bool)
+  nameWithType: ThemeBase.FileUrl(string, string, bool)
+  fullName: Oqtane.Themes.ThemeBase.FileUrl(string, string, bool)
+  nameWithType.vb: ThemeBase.FileUrl(String, String, Boolean)
+  fullName.vb: Oqtane.Themes.ThemeBase.FileUrl(String, String, Boolean)
+  name.vb: FileUrl(String, String, Boolean)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.FileUrl(System.String,System.String,System.Boolean)
+    name: FileUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.FileUrl(System.String,System.String,System.Boolean)
+    name: FileUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.FileUrl(System.Int32)
+  commentId: M:Oqtane.Themes.ThemeBase.FileUrl(System.Int32)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: FileUrl(int)
+  nameWithType: ThemeBase.FileUrl(int)
+  fullName: Oqtane.Themes.ThemeBase.FileUrl(int)
+  nameWithType.vb: ThemeBase.FileUrl(Integer)
+  fullName.vb: Oqtane.Themes.ThemeBase.FileUrl(Integer)
+  name.vb: FileUrl(Integer)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.FileUrl(System.Int32)
+    name: FileUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.FileUrl(System.Int32)
+    name: FileUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.FileUrl(System.Int32,System.Boolean)
+  commentId: M:Oqtane.Themes.ThemeBase.FileUrl(System.Int32,System.Boolean)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: FileUrl(int, bool)
+  nameWithType: ThemeBase.FileUrl(int, bool)
+  fullName: Oqtane.Themes.ThemeBase.FileUrl(int, bool)
+  nameWithType.vb: ThemeBase.FileUrl(Integer, Boolean)
+  fullName.vb: Oqtane.Themes.ThemeBase.FileUrl(Integer, Boolean)
+  name.vb: FileUrl(Integer, Boolean)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.FileUrl(System.Int32,System.Boolean)
+    name: FileUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.FileUrl(System.Int32,System.Boolean)
+    name: FileUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32)
+  commentId: M:Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: ImageUrl(int, int, int)
+  nameWithType: ThemeBase.ImageUrl(int, int, int)
+  fullName: Oqtane.Themes.ThemeBase.ImageUrl(int, int, int)
+  nameWithType.vb: ThemeBase.ImageUrl(Integer, Integer, Integer)
+  fullName.vb: Oqtane.Themes.ThemeBase.ImageUrl(Integer, Integer, Integer)
+  name.vb: ImageUrl(Integer, Integer, Integer)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32)
+    name: ImageUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32)
+    name: ImageUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32,System.String)
+  commentId: M:Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32,System.String)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: ImageUrl(int, int, int, string)
+  nameWithType: ThemeBase.ImageUrl(int, int, int, string)
+  fullName: Oqtane.Themes.ThemeBase.ImageUrl(int, int, int, string)
+  nameWithType.vb: ThemeBase.ImageUrl(Integer, Integer, Integer, String)
+  fullName.vb: Oqtane.Themes.ThemeBase.ImageUrl(Integer, Integer, Integer, String)
+  name.vb: ImageUrl(Integer, Integer, Integer, String)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32,System.String)
+    name: ImageUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32,System.String)
+    name: ImageUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.Boolean)
+  commentId: M:Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.Boolean)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: ImageUrl(int, int, int, string, string, string, int, bool)
+  nameWithType: ThemeBase.ImageUrl(int, int, int, string, string, string, int, bool)
+  fullName: Oqtane.Themes.ThemeBase.ImageUrl(int, int, int, string, string, string, int, bool)
+  nameWithType.vb: ThemeBase.ImageUrl(Integer, Integer, Integer, String, String, String, Integer, Boolean)
+  fullName.vb: Oqtane.Themes.ThemeBase.ImageUrl(Integer, Integer, Integer, String, String, String, Integer, Boolean)
+  name.vb: ImageUrl(Integer, Integer, Integer, String, String, String, Integer, Boolean)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.Boolean)
+    name: ImageUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.ImageUrl(System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.Boolean)
+    name: ImageUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.SetPageTitle(System.String)
+  commentId: M:Oqtane.Themes.ThemeBase.SetPageTitle(System.String)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: SetPageTitle(string)
+  nameWithType: ThemeBase.SetPageTitle(string)
+  fullName: Oqtane.Themes.ThemeBase.SetPageTitle(string)
+  nameWithType.vb: ThemeBase.SetPageTitle(String)
+  fullName.vb: Oqtane.Themes.ThemeBase.SetPageTitle(String)
+  name.vb: SetPageTitle(String)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.SetPageTitle(System.String)
+    name: SetPageTitle
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.SetPageTitle(System.String)
+    name: SetPageTitle
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.AddHeadContent(System.String)
+  commentId: M:Oqtane.Themes.ThemeBase.AddHeadContent(System.String)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: AddHeadContent(string)
+  nameWithType: ThemeBase.AddHeadContent(string)
+  fullName: Oqtane.Themes.ThemeBase.AddHeadContent(string)
+  nameWithType.vb: ThemeBase.AddHeadContent(String)
+  fullName.vb: Oqtane.Themes.ThemeBase.AddHeadContent(String)
+  name.vb: AddHeadContent(String)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.AddHeadContent(System.String)
+    name: AddHeadContent
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.AddHeadContent(System.String)
+    name: AddHeadContent
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.AddScript(Oqtane.Models.Resource)
+  commentId: M:Oqtane.Themes.ThemeBase.AddScript(Oqtane.Models.Resource)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: AddScript(Resource)
+  nameWithType: ThemeBase.AddScript(Resource)
+  fullName: Oqtane.Themes.ThemeBase.AddScript(Oqtane.Models.Resource)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.AddScript(Oqtane.Models.Resource)
+    name: AddScript
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: Oqtane.Models.Resource
+    name: Resource
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Models/Resource.cs
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.AddScript(Oqtane.Models.Resource)
+    name: AddScript
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: Oqtane.Models.Resource
+    name: Resource
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Models/Resource.cs
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.ScrollToPageTop
+  commentId: M:Oqtane.Themes.ThemeBase.ScrollToPageTop
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: ScrollToPageTop()
+  nameWithType: ThemeBase.ScrollToPageTop()
+  fullName: Oqtane.Themes.ThemeBase.ScrollToPageTop()
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.ScrollToPageTop
+    name: ScrollToPageTop
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.ScrollToPageTop
+    name: ScrollToPageTop
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias,Oqtane.Shared.LogLevel,System.String,System.Exception,System.String,System.Object[])
+  commentId: M:Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias,Oqtane.Shared.LogLevel,System.String,System.Exception,System.String,System.Object[])
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: Log(Alias, LogLevel, string, Exception, string, params object[])
+  nameWithType: ThemeBase.Log(Alias, LogLevel, string, Exception, string, params object[])
+  fullName: Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias, Oqtane.Shared.LogLevel, string, System.Exception, string, params object[])
+  nameWithType.vb: ThemeBase.Log(Alias, LogLevel, String, Exception, String, ParamArray Object())
+  fullName.vb: Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias, Oqtane.Shared.LogLevel, String, System.Exception, String, ParamArray Object())
+  name.vb: Log(Alias, LogLevel, String, Exception, String, ParamArray Object())
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias,Oqtane.Shared.LogLevel,System.String,System.Exception,System.String,System.Object[])
+    name: Log
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: Oqtane.Models.Alias
+    name: Alias
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Models/Alias.cs
+  - name: ','
+  - name: " "
+  - uid: Oqtane.Shared.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Enums/LogLevel.cs
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias,Oqtane.Shared.LogLevel,System.String,System.Exception,System.String,System.Object[])
+    name: Log
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: Oqtane.Models.Alias
+    name: Alias
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Models/Alias.cs
+  - name: ','
+  - name: " "
+  - uid: Oqtane.Shared.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Enums/LogLevel.cs
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias,Oqtane.Shared.LogLevel,Oqtane.Enums.LogFunction,System.Exception,System.String,System.Object[])
+  commentId: M:Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias,Oqtane.Shared.LogLevel,Oqtane.Enums.LogFunction,System.Exception,System.String,System.Object[])
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: Log(Alias, LogLevel, LogFunction, Exception, string, params object[])
+  nameWithType: ThemeBase.Log(Alias, LogLevel, LogFunction, Exception, string, params object[])
+  fullName: Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias, Oqtane.Shared.LogLevel, Oqtane.Enums.LogFunction, System.Exception, string, params object[])
+  nameWithType.vb: ThemeBase.Log(Alias, LogLevel, LogFunction, Exception, String, ParamArray Object())
+  fullName.vb: Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias, Oqtane.Shared.LogLevel, Oqtane.Enums.LogFunction, System.Exception, String, ParamArray Object())
+  name.vb: Log(Alias, LogLevel, LogFunction, Exception, String, ParamArray Object())
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias,Oqtane.Shared.LogLevel,Oqtane.Enums.LogFunction,System.Exception,System.String,System.Object[])
+    name: Log
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: Oqtane.Models.Alias
+    name: Alias
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Models/Alias.cs
+  - name: ','
+  - name: " "
+  - uid: Oqtane.Shared.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Enums/LogLevel.cs
+  - name: ','
+  - name: " "
+  - uid: Oqtane.Enums.LogFunction
+    name: LogFunction
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Enums/LogFunction.cs
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.Log(Oqtane.Models.Alias,Oqtane.Shared.LogLevel,Oqtane.Enums.LogFunction,System.Exception,System.String,System.Object[])
+    name: Log
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: Oqtane.Models.Alias
+    name: Alias
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Models/Alias.cs
+  - name: ','
+  - name: " "
+  - uid: Oqtane.Shared.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Enums/LogLevel.cs
+  - name: ','
+  - name: " "
+  - uid: Oqtane.Enums.LogFunction
+    name: LogFunction
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Enums/LogFunction.cs
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.ContentUrl(System.Int32)
+  commentId: M:Oqtane.Themes.ThemeBase.ContentUrl(System.Int32)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: ContentUrl(int)
+  nameWithType: ThemeBase.ContentUrl(int)
+  fullName: Oqtane.Themes.ThemeBase.ContentUrl(int)
+  nameWithType.vb: ThemeBase.ContentUrl(Integer)
+  fullName.vb: Oqtane.Themes.ThemeBase.ContentUrl(Integer)
+  name.vb: ContentUrl(Integer)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.ContentUrl(System.Int32)
+    name: ContentUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.ContentUrl(System.Int32)
+    name: ContentUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.ContentUrl(System.Int32,System.Boolean)
+  commentId: M:Oqtane.Themes.ThemeBase.ContentUrl(System.Int32,System.Boolean)
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: ContentUrl(int, bool)
+  nameWithType: ThemeBase.ContentUrl(int, bool)
+  fullName: Oqtane.Themes.ThemeBase.ContentUrl(int, bool)
+  nameWithType.vb: ThemeBase.ContentUrl(Integer, Boolean)
+  fullName.vb: Oqtane.Themes.ThemeBase.ContentUrl(Integer, Boolean)
+  name.vb: ContentUrl(Integer, Boolean)
+  spec.csharp:
+  - uid: Oqtane.Themes.ThemeBase.ContentUrl(System.Int32,System.Boolean)
+    name: ContentUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Oqtane.Themes.ThemeBase.ContentUrl(System.Int32,System.Boolean)
+    name: ContentUrl
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Oqtane.Themes.ThemeBase.LoggingService
+  commentId: P:Oqtane.Themes.ThemeBase.LoggingService
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: LoggingService
+  nameWithType: ThemeBase.LoggingService
+  fullName: Oqtane.Themes.ThemeBase.LoggingService
+- uid: Oqtane.Themes.ThemeBase.JSRuntime
+  commentId: P:Oqtane.Themes.ThemeBase.JSRuntime
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: JSRuntime
+  nameWithType: ThemeBase.JSRuntime
+  fullName: Oqtane.Themes.ThemeBase.JSRuntime
+- uid: Oqtane.Themes.ThemeBase.SiteState
+  commentId: P:Oqtane.Themes.ThemeBase.SiteState
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: SiteState
+  nameWithType: ThemeBase.SiteState
+  fullName: Oqtane.Themes.ThemeBase.SiteState
+- uid: Oqtane.Themes.ThemeBase.PageState
+  commentId: P:Oqtane.Themes.ThemeBase.PageState
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: PageState
+  nameWithType: ThemeBase.PageState
+  fullName: Oqtane.Themes.ThemeBase.PageState
+- uid: Oqtane.Themes.ThemeBase.Name
+  commentId: P:Oqtane.Themes.ThemeBase.Name
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: Name
+  nameWithType: ThemeBase.Name
+  fullName: Oqtane.Themes.ThemeBase.Name
+- uid: Oqtane.Themes.ThemeBase.Thumbnail
+  commentId: P:Oqtane.Themes.ThemeBase.Thumbnail
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: Thumbnail
+  nameWithType: ThemeBase.Thumbnail
+  fullName: Oqtane.Themes.ThemeBase.Thumbnail
+- uid: Oqtane.Themes.ThemeBase.Panes
+  commentId: P:Oqtane.Themes.ThemeBase.Panes
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: Panes
+  nameWithType: ThemeBase.Panes
+  fullName: Oqtane.Themes.ThemeBase.Panes
+- uid: Oqtane.Themes.ThemeBase.Resources
+  commentId: P:Oqtane.Themes.ThemeBase.Resources
+  parent: Oqtane.Themes.ThemeBase
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/ThemeBase.cs
+  name: Resources
+  nameWithType: ThemeBase.Resources
+  fullName: Oqtane.Themes.ThemeBase.Resources
+- uid: Microsoft.AspNetCore.Components.ComponentBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree
+  name: BuildRenderTree(RenderTreeBuilder)
+  nameWithType: ComponentBase.BuildRenderTree(RenderTreeBuilder)
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+    name: BuildRenderTree
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree
+  - name: (
+  - uid: Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder
+    name: RenderTreeBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+    name: BuildRenderTree
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree
+  - name: (
+  - uid: Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder
+    name: RenderTreeBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder
+  - name: )
+- uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitialized
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.OnInitialized
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitialized
+  name: OnInitialized()
+  nameWithType: ComponentBase.OnInitialized()
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.OnInitialized()
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitialized
+    name: OnInitialized
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitialized
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitialized
+    name: OnInitialized
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitialized
+  - name: (
+  - name: )
+- uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitializedasync
+  name: OnInitializedAsync()
+  nameWithType: ComponentBase.OnInitializedAsync()
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync()
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
+    name: OnInitializedAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitializedasync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnInitializedAsync
+    name: OnInitializedAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.oninitializedasync
+  - name: (
+  - name: )
+- uid: Microsoft.AspNetCore.Components.ComponentBase.OnParametersSet
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.OnParametersSet
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.onparametersset
+  name: OnParametersSet()
+  nameWithType: ComponentBase.OnParametersSet()
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.OnParametersSet()
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnParametersSet
+    name: OnParametersSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.onparametersset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnParametersSet
+    name: OnParametersSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.onparametersset
+  - name: (
+  - name: )
+- uid: Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged
+  name: StateHasChanged()
+  nameWithType: ComponentBase.StateHasChanged()
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged()
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged
+    name: StateHasChanged
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged
+    name: StateHasChanged
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.statehaschanged
+  - name: (
+  - name: )
+- uid: Microsoft.AspNetCore.Components.ComponentBase.ShouldRender
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.ShouldRender
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.shouldrender
+  name: ShouldRender()
+  nameWithType: ComponentBase.ShouldRender()
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.ShouldRender()
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.ShouldRender
+    name: ShouldRender
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.shouldrender
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.ShouldRender
+    name: ShouldRender
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.shouldrender
+  - name: (
+  - name: )
+- uid: Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrender
+  name: OnAfterRender(bool)
+  nameWithType: ComponentBase.OnAfterRender(bool)
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(bool)
+  nameWithType.vb: ComponentBase.OnAfterRender(Boolean)
+  fullName.vb: Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(Boolean)
+  name.vb: OnAfterRender(Boolean)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)
+    name: OnAfterRender
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrender
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnAfterRender(System.Boolean)
+    name: OnAfterRender
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.onafterrender
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Action)
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Action)
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-action)
+  name: InvokeAsync(Action)
+  nameWithType: ComponentBase.InvokeAsync(Action)
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Action)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Action)
+    name: InvokeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-action)
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Action)
+    name: InvokeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-action)
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Func{System.Threading.Tasks.Task})
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Func{System.Threading.Tasks.Task})
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-func((system-threading-tasks-task)))
+  name: InvokeAsync(Func<Task>)
+  nameWithType: ComponentBase.InvokeAsync(Func<Task>)
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Func<System.Threading.Tasks.Task>)
+  nameWithType.vb: ComponentBase.InvokeAsync(Func(Of Task))
+  fullName.vb: Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Func(Of System.Threading.Tasks.Task))
+  name.vb: InvokeAsync(Func(Of Task))
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Func{System.Threading.Tasks.Task})
+    name: InvokeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-func((system-threading-tasks-task)))
+  - name: (
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.InvokeAsync(System.Func{System.Threading.Tasks.Task})
+    name: InvokeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.invokeasync#microsoft-aspnetcore-components-componentbase-invokeasync(system-func((system-threading-tasks-task)))
+  - name: (
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: )
+  - name: )
+- uid: Microsoft.AspNetCore.Components.ComponentBase.DispatchExceptionAsync(System.Exception)
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.DispatchExceptionAsync(System.Exception)
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.dispatchexceptionasync
+  name: DispatchExceptionAsync(Exception)
+  nameWithType: ComponentBase.DispatchExceptionAsync(Exception)
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.DispatchExceptionAsync(System.Exception)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.DispatchExceptionAsync(System.Exception)
+    name: DispatchExceptionAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.dispatchexceptionasync
+  - name: (
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.DispatchExceptionAsync(System.Exception)
+    name: DispatchExceptionAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.dispatchexceptionasync
+  - name: (
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+- uid: Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.setparametersasync
+  name: SetParametersAsync(ParameterView)
+  nameWithType: ComponentBase.SetParametersAsync(ParameterView)
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+    name: SetParametersAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.setparametersasync
+  - name: (
+  - uid: Microsoft.AspNetCore.Components.ParameterView
+    name: ParameterView
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.parameterview
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.SetParametersAsync(Microsoft.AspNetCore.Components.ParameterView)
+    name: SetParametersAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.setparametersasync
+  - name: (
+  - uid: Microsoft.AspNetCore.Components.ParameterView
+    name: ParameterView
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.parameterview
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.AspNetCore.Components
+  commentId: N:Microsoft.AspNetCore.Components
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Components
+  nameWithType: Microsoft.AspNetCore.Components
+  fullName: Microsoft.AspNetCore.Components
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Components
+    name: Components
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Components
+    name: Components
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components
+- uid: Oqtane.Themes
+  commentId: N:Oqtane.Themes
+  isExternal: true
+  name: Oqtane.Themes
+  nameWithType: Oqtane.Themes
+  fullName: Oqtane.Themes
+  spec.csharp:
+  - uid: Oqtane
+    name: Oqtane
+    isExternal: true
+  - name: .
+  - uid: Oqtane.Themes
+    name: Themes
+    isExternal: true
+  spec.vb:
+  - uid: Oqtane
+    name: Oqtane
+    isExternal: true
+  - name: .
+  - uid: Oqtane.Themes
+    name: Themes
+    isExternal: true
+- uid: Oqtane.Themes.Controls
+  commentId: N:Oqtane.Themes.Controls
+  isExternal: true
+  name: Oqtane.Themes.Controls
+  nameWithType: Oqtane.Themes.Controls
+  fullName: Oqtane.Themes.Controls
+  spec.csharp:
+  - uid: Oqtane
+    name: Oqtane
+    isExternal: true
+  - name: .
+  - uid: Oqtane.Themes
+    name: Themes
+    isExternal: true
+  - name: .
+  - uid: Oqtane.Themes.Controls
+    name: Controls
+    isExternal: true
+  spec.vb:
+  - uid: Oqtane
+    name: Oqtane
+    isExternal: true
+  - name: .
+  - uid: Oqtane.Themes
+    name: Themes
+    isExternal: true
+  - name: .
+  - uid: Oqtane.Themes.Controls
+    name: Controls
+    isExternal: true
+- uid: ToSic.Cre8magic.Client.Controls
+  commentId: N:ToSic.Cre8magic.Client.Controls
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Controls
+  nameWithType: ToSic.Cre8magic.Client.Controls
+  fullName: ToSic.Cre8magic.Client.Controls
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Controls
+    name: Controls
+    href: ToSic.Cre8magic.Client.Controls.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Controls
+    name: Controls
+    href: ToSic.Cre8magic.Client.Controls.html
+- uid: ToSic.Cre8magic.Client.Settings
+  commentId: N:ToSic.Cre8magic.Client.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Settings
+  nameWithType: ToSic.Cre8magic.Client.Settings
+  fullName: ToSic.Cre8magic.Client.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuSettings*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuSettings
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_MenuSettings
+  name: MenuSettings
+  nameWithType: MagicMenuRoot.MenuSettings
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuSettings
+- uid: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings
+  commentId: T:ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings
+  parent: ToSic.Cre8magic.Client.Menus.Settings
+  href: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings.html
+  name: MagicMenuSettings
+  nameWithType: MagicMenuSettings
+  fullName: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings
+- uid: ToSic.Cre8magic.Client.Menus.Settings
+  commentId: N:ToSic.Cre8magic.Client.Menus.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Menus.Settings
+  nameWithType: ToSic.Cre8magic.Client.Menus.Settings
+  fullName: ToSic.Cre8magic.Client.Menus.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Menus.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Menus.Settings.html
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuId*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuId
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_MenuId
+  name: MenuId
+  nameWithType: MagicMenuRoot.MenuId
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.ConfigName*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.ConfigName
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_ConfigName
+  name: ConfigName
+  nameWithType: MagicMenuRoot.ConfigName
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.ConfigName
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Children*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Children
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_Children
+  name: Children
+  nameWithType: MagicMenuRoot.Children
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Children
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Debug*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Debug
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_Debug
+  name: Debug
+  nameWithType: MagicMenuRoot.Debug
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Debug
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Depth*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Depth
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_Depth
+  name: Depth
+  nameWithType: MagicMenuRoot.Depth
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Depth
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Display*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Display
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_Display
+  name: Display
+  nameWithType: MagicMenuRoot.Display
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Display
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Level*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Level
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_Level
+  name: Level
+  nameWithType: MagicMenuRoot.Level
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Level
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Start*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Start
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_Start
+  name: Start
+  nameWithType: MagicMenuRoot.Start
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Start
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Design*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Design
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_Design
+  name: Design
+  nameWithType: MagicMenuRoot.Design
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Design
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Template*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Template
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_Template
+  name: Template
+  nameWithType: MagicMenuRoot.Template
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Template
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Menu*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Menu
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_Menu
+  name: Menu
+  nameWithType: MagicMenuRoot.Menu
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Menu
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuTree
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenuTree
+  parent: ToSic.Cre8magic.Client.Menus
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuTree.html
+  name: MagicMenuTree
+  nameWithType: MagicMenuTree
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuTree
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Logger*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Logger
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_Logger
+  name: Logger
+  nameWithType: MagicMenuRoot.Logger
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.Logger
+- uid: Microsoft.Extensions.Logging.ILogger{Oqtane.Themes.Controls.Menu}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Oqtane.Themes.Controls.Menu}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<Menu>
+  nameWithType: ILogger<Menu>
+  fullName: Microsoft.Extensions.Logging.ILogger<Oqtane.Themes.Controls.Menu>
+  nameWithType.vb: ILogger(Of Menu)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Oqtane.Themes.Controls.Menu)
+  name.vb: ILogger(Of Menu)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Oqtane.Themes.Controls.Menu
+    name: Menu
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/Controls/Theme/Menu.razor
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Oqtane.Themes.Controls.Menu
+    name: Menu
+    isExternal: true
+    href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Themes/Controls/Theme/Menu.razor
+  - name: )
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuTreeService*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuTreeService
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_MenuTreeService
+  name: MenuTreeService
+  nameWithType: MagicMenuRoot.MenuTreeService
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.MenuTreeService
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+  parent: ToSic.Cre8magic.Client.Menus
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.html
+  name: MagicMenuBuilder
+  nameWithType: MagicMenuBuilder
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsVertical*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsVertical
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_IsVertical
+  name: IsVertical
+  nameWithType: MagicMenuRoot.IsVertical
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsVertical
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsHorizontal*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsHorizontal
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_IsHorizontal
+  name: IsHorizontal
+  nameWithType: MagicMenuRoot.IsHorizontal
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.IsHorizontal
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Microsoft.AspNetCore.Components.ComponentBase.OnParametersSetAsync
+  commentId: M:Microsoft.AspNetCore.Components.ComponentBase.OnParametersSetAsync
+  parent: Microsoft.AspNetCore.Components.ComponentBase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.onparameterssetasync
+  name: OnParametersSetAsync()
+  nameWithType: ComponentBase.OnParametersSetAsync()
+  fullName: Microsoft.AspNetCore.Components.ComponentBase.OnParametersSetAsync()
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnParametersSetAsync
+    name: OnParametersSetAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.onparameterssetasync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Components.ComponentBase.OnParametersSetAsync
+    name: OnParametersSetAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.onparameterssetasync
+  - name: (
+  - name: )
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.OnParametersSetAsync*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuRoot.OnParametersSetAsync
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html#ToSic_Cre8magic_Client_Menus_MagicMenuRoot_OnParametersSetAsync
+  name: OnParametersSetAsync
+  nameWithType: MagicMenuRoot.OnParametersSetAsync
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.OnParametersSetAsync
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

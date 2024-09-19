@@ -1,0 +1,812 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Services.LanguageService
+  commentId: T:ToSic.Cre8magic.Client.Services.LanguageService
+  id: LanguageService
+  parent: ToSic.Cre8magic.Client.Services
+  children:
+  - ToSic.Cre8magic.Client.Services.LanguageService.#ctor(Microsoft.AspNetCore.Components.NavigationManager,Microsoft.JSInterop.IJSRuntime,Oqtane.Services.ILanguageService)
+  - ToSic.Cre8magic.Client.Services.LanguageService.LanguagesToShow(System.Int32)
+  - ToSic.Cre8magic.Client.Services.LanguageService.SetCultureAsync(System.String)
+  - ToSic.Cre8magic.Client.Services.LanguageService.ShowMenu(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: LanguageService
+  nameWithType: LanguageService
+  fullName: ToSic.Cre8magic.Client.Services.LanguageService
+  type: Class
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Services/LanguageService.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: LanguageService
+    path: ../ToSic.Cre8magic.Client/Services/LanguageService.cs
+    startLine: 16
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Services
+  syntax:
+    content: 'public class LanguageService : MagicServiceWithSettingsBase'
+    content.vb: Public Class LanguageService Inherits MagicServiceWithSettingsBase
+  inheritance:
+  - System.Object
+  - ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  inheritedMembers:
+  - ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.InitSettings(ToSic.Cre8magic.Client.Settings.MagicSettings)
+  - ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.Settings
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ToSic.Cre8magic.Client.Services.LanguageService.#ctor(Microsoft.AspNetCore.Components.NavigationManager,Microsoft.JSInterop.IJSRuntime,Oqtane.Services.ILanguageService)
+  commentId: M:ToSic.Cre8magic.Client.Services.LanguageService.#ctor(Microsoft.AspNetCore.Components.NavigationManager,Microsoft.JSInterop.IJSRuntime,Oqtane.Services.ILanguageService)
+  id: '#ctor(Microsoft.AspNetCore.Components.NavigationManager,Microsoft.JSInterop.IJSRuntime,Oqtane.Services.ILanguageService)'
+  parent: ToSic.Cre8magic.Client.Services.LanguageService
+  langs:
+  - csharp
+  - vb
+  name: LanguageService(NavigationManager, IJSRuntime, ILanguageService)
+  nameWithType: LanguageService.LanguageService(NavigationManager, IJSRuntime, ILanguageService)
+  fullName: ToSic.Cre8magic.Client.Services.LanguageService.LanguageService(Microsoft.AspNetCore.Components.NavigationManager, Microsoft.JSInterop.IJSRuntime, Oqtane.Services.ILanguageService)
+  type: Constructor
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Services/LanguageService.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: .ctor
+    path: ../ToSic.Cre8magic.Client/Services/LanguageService.cs
+    startLine: 18
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Services
+  syntax:
+    content: public LanguageService(NavigationManager navigation, IJSRuntime jsRuntime, ILanguageService oqtLanguages)
+    parameters:
+    - id: navigation
+      type: Microsoft.AspNetCore.Components.NavigationManager
+    - id: jsRuntime
+      type: Microsoft.JSInterop.IJSRuntime
+    - id: oqtLanguages
+      type: Oqtane.Services.ILanguageService
+    content.vb: Public Sub New(navigation As NavigationManager, jsRuntime As IJSRuntime, oqtLanguages As ILanguageService)
+  overload: ToSic.Cre8magic.Client.Services.LanguageService.#ctor*
+  nameWithType.vb: LanguageService.New(NavigationManager, IJSRuntime, ILanguageService)
+  fullName.vb: ToSic.Cre8magic.Client.Services.LanguageService.New(Microsoft.AspNetCore.Components.NavigationManager, Microsoft.JSInterop.IJSRuntime, Oqtane.Services.ILanguageService)
+  name.vb: New(NavigationManager, IJSRuntime, ILanguageService)
+- uid: ToSic.Cre8magic.Client.Services.LanguageService.ShowMenu(System.Int32)
+  commentId: M:ToSic.Cre8magic.Client.Services.LanguageService.ShowMenu(System.Int32)
+  id: ShowMenu(System.Int32)
+  parent: ToSic.Cre8magic.Client.Services.LanguageService
+  langs:
+  - csharp
+  - vb
+  name: ShowMenu(int)
+  nameWithType: LanguageService.ShowMenu(int)
+  fullName: ToSic.Cre8magic.Client.Services.LanguageService.ShowMenu(int)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Services/LanguageService.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: ShowMenu
+    path: ../ToSic.Cre8magic.Client/Services/LanguageService.cs
+    startLine: 30
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Services
+  syntax:
+    content: public Task<bool> ShowMenu(int siteId)
+    parameters:
+    - id: siteId
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function ShowMenu(siteId As Integer) As Task(Of Boolean)
+  overload: ToSic.Cre8magic.Client.Services.LanguageService.ShowMenu*
+  nameWithType.vb: LanguageService.ShowMenu(Integer)
+  fullName.vb: ToSic.Cre8magic.Client.Services.LanguageService.ShowMenu(Integer)
+  name.vb: ShowMenu(Integer)
+- uid: ToSic.Cre8magic.Client.Services.LanguageService.LanguagesToShow(System.Int32)
+  commentId: M:ToSic.Cre8magic.Client.Services.LanguageService.LanguagesToShow(System.Int32)
+  id: LanguagesToShow(System.Int32)
+  parent: ToSic.Cre8magic.Client.Services.LanguageService
+  langs:
+  - csharp
+  - vb
+  name: LanguagesToShow(int)
+  nameWithType: LanguageService.LanguagesToShow(int)
+  fullName: ToSic.Cre8magic.Client.Services.LanguageService.LanguagesToShow(int)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Services/LanguageService.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: LanguagesToShow
+    path: ../ToSic.Cre8magic.Client/Services/LanguageService.cs
+    startLine: 36
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Services
+  syntax:
+    content: public Task<List<MagicLanguage>> LanguagesToShow(int siteId)
+    parameters:
+    - id: siteId
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage}}
+    content.vb: Public Function LanguagesToShow(siteId As Integer) As Task(Of List(Of MagicLanguage))
+  overload: ToSic.Cre8magic.Client.Services.LanguageService.LanguagesToShow*
+  nameWithType.vb: LanguageService.LanguagesToShow(Integer)
+  fullName.vb: ToSic.Cre8magic.Client.Services.LanguageService.LanguagesToShow(Integer)
+  name.vb: LanguagesToShow(Integer)
+- uid: ToSic.Cre8magic.Client.Services.LanguageService.SetCultureAsync(System.String)
+  commentId: M:ToSic.Cre8magic.Client.Services.LanguageService.SetCultureAsync(System.String)
+  id: SetCultureAsync(System.String)
+  parent: ToSic.Cre8magic.Client.Services.LanguageService
+  langs:
+  - csharp
+  - vb
+  name: SetCultureAsync(string)
+  nameWithType: LanguageService.SetCultureAsync(string)
+  fullName: ToSic.Cre8magic.Client.Services.LanguageService.SetCultureAsync(string)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Services/LanguageService.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: SetCultureAsync
+    path: ../ToSic.Cre8magic.Client/Services/LanguageService.cs
+    startLine: 83
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Services
+  syntax:
+    content: public Task SetCultureAsync(string culture)
+    parameters:
+    - id: culture
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function SetCultureAsync(culture As String) As Task
+  overload: ToSic.Cre8magic.Client.Services.LanguageService.SetCultureAsync*
+  nameWithType.vb: LanguageService.SetCultureAsync(String)
+  fullName.vb: ToSic.Cre8magic.Client.Services.LanguageService.SetCultureAsync(String)
+  name.vb: SetCultureAsync(String)
+references:
+- uid: ToSic.Cre8magic.Client.Services
+  commentId: N:ToSic.Cre8magic.Client.Services
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Services
+  nameWithType: ToSic.Cre8magic.Client.Services
+  fullName: ToSic.Cre8magic.Client.Services
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Services
+    name: Services
+    href: ToSic.Cre8magic.Client.Services.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Services
+    name: Services
+    href: ToSic.Cre8magic.Client.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  commentId: T:ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  parent: ToSic.Cre8magic.Client.Services
+  href: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.html
+  name: MagicServiceWithSettingsBase
+  nameWithType: MagicServiceWithSettingsBase
+  fullName: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+- uid: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.InitSettings(ToSic.Cre8magic.Client.Settings.MagicSettings)
+  commentId: M:ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.InitSettings(ToSic.Cre8magic.Client.Settings.MagicSettings)
+  parent: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  href: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.html#ToSic_Cre8magic_Client_Services_MagicServiceWithSettingsBase_InitSettings_ToSic_Cre8magic_Client_Settings_MagicSettings_
+  name: InitSettings(MagicSettings)
+  nameWithType: MagicServiceWithSettingsBase.InitSettings(MagicSettings)
+  fullName: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.InitSettings(ToSic.Cre8magic.Client.Settings.MagicSettings)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.InitSettings(ToSic.Cre8magic.Client.Settings.MagicSettings)
+    name: InitSettings
+    href: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.html#ToSic_Cre8magic_Client_Services_MagicServiceWithSettingsBase_InitSettings_ToSic_Cre8magic_Client_Settings_MagicSettings_
+  - name: (
+  - uid: ToSic.Cre8magic.Client.Settings.MagicSettings
+    name: MagicSettings
+    href: ToSic.Cre8magic.Client.Settings.MagicSettings.html
+  - name: )
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.InitSettings(ToSic.Cre8magic.Client.Settings.MagicSettings)
+    name: InitSettings
+    href: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.html#ToSic_Cre8magic_Client_Services_MagicServiceWithSettingsBase_InitSettings_ToSic_Cre8magic_Client_Settings_MagicSettings_
+  - name: (
+  - uid: ToSic.Cre8magic.Client.Settings.MagicSettings
+    name: MagicSettings
+    href: ToSic.Cre8magic.Client.Settings.MagicSettings.html
+  - name: )
+- uid: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.Settings
+  commentId: P:ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.Settings
+  parent: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  href: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.html#ToSic_Cre8magic_Client_Services_MagicServiceWithSettingsBase_Settings
+  name: Settings
+  nameWithType: MagicServiceWithSettingsBase.Settings
+  fullName: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.Settings
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ToSic.Cre8magic.Client.Services.LanguageService.#ctor*
+  commentId: Overload:ToSic.Cre8magic.Client.Services.LanguageService.#ctor
+  href: ToSic.Cre8magic.Client.Services.LanguageService.html#ToSic_Cre8magic_Client_Services_LanguageService__ctor_Microsoft_AspNetCore_Components_NavigationManager_Microsoft_JSInterop_IJSRuntime_Oqtane_Services_ILanguageService_
+  name: LanguageService
+  nameWithType: LanguageService.LanguageService
+  fullName: ToSic.Cre8magic.Client.Services.LanguageService.LanguageService
+  nameWithType.vb: LanguageService.New
+  fullName.vb: ToSic.Cre8magic.Client.Services.LanguageService.New
+  name.vb: New
+- uid: Microsoft.AspNetCore.Components.NavigationManager
+  commentId: T:Microsoft.AspNetCore.Components.NavigationManager
+  parent: Microsoft.AspNetCore.Components
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.navigationmanager
+  name: NavigationManager
+  nameWithType: NavigationManager
+  fullName: Microsoft.AspNetCore.Components.NavigationManager
+- uid: Microsoft.JSInterop.IJSRuntime
+  commentId: T:Microsoft.JSInterop.IJSRuntime
+  parent: Microsoft.JSInterop
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.jsinterop.ijsruntime
+  name: IJSRuntime
+  nameWithType: IJSRuntime
+  fullName: Microsoft.JSInterop.IJSRuntime
+- uid: Oqtane.Services.ILanguageService
+  commentId: T:Oqtane.Services.ILanguageService
+  parent: Oqtane.Services
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Client/Services/Interfaces/ILanguageService.cs
+  name: ILanguageService
+  nameWithType: ILanguageService
+  fullName: Oqtane.Services.ILanguageService
+- uid: Microsoft.AspNetCore.Components
+  commentId: N:Microsoft.AspNetCore.Components
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Components
+  nameWithType: Microsoft.AspNetCore.Components
+  fullName: Microsoft.AspNetCore.Components
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Components
+    name: Components
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Components
+    name: Components
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components
+- uid: Microsoft.JSInterop
+  commentId: N:Microsoft.JSInterop
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.JSInterop
+  nameWithType: Microsoft.JSInterop
+  fullName: Microsoft.JSInterop
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.JSInterop
+    name: JSInterop
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.jsinterop
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.JSInterop
+    name: JSInterop
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.jsinterop
+- uid: Oqtane.Services
+  commentId: N:Oqtane.Services
+  isExternal: true
+  name: Oqtane.Services
+  nameWithType: Oqtane.Services
+  fullName: Oqtane.Services
+  spec.csharp:
+  - uid: Oqtane
+    name: Oqtane
+    isExternal: true
+  - name: .
+  - uid: Oqtane.Services
+    name: Services
+    isExternal: true
+  spec.vb:
+  - uid: Oqtane
+    name: Oqtane
+    isExternal: true
+  - name: .
+  - uid: Oqtane.Services
+    name: Services
+    isExternal: true
+- uid: ToSic.Cre8magic.Client.Services.LanguageService.ShowMenu*
+  commentId: Overload:ToSic.Cre8magic.Client.Services.LanguageService.ShowMenu
+  href: ToSic.Cre8magic.Client.Services.LanguageService.html#ToSic_Cre8magic_Client_Services_LanguageService_ShowMenu_System_Int32_
+  name: ShowMenu
+  nameWithType: LanguageService.ShowMenu
+  fullName: ToSic.Cre8magic.Client.Services.LanguageService.ShowMenu
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: ToSic.Cre8magic.Client.Services.LanguageService.LanguagesToShow*
+  commentId: Overload:ToSic.Cre8magic.Client.Services.LanguageService.LanguagesToShow
+  href: ToSic.Cre8magic.Client.Services.LanguageService.html#ToSic_Cre8magic_Client_Services_LanguageService_LanguagesToShow_System_Int32_
+  name: LanguagesToShow
+  nameWithType: LanguageService.LanguagesToShow
+  fullName: ToSic.Cre8magic.Client.Services.LanguageService.LanguagesToShow
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<MagicLanguage>>
+  nameWithType: Task<List<MagicLanguage>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage>>
+  nameWithType.vb: Task(Of List(Of MagicLanguage))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage))
+  name.vb: Task(Of List(Of MagicLanguage))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage
+    name: MagicLanguage
+    href: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage
+    name: MagicLanguage
+    href: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage.html
+  - name: )
+  - name: )
+- uid: ToSic.Cre8magic.Client.Services.LanguageService.SetCultureAsync*
+  commentId: Overload:ToSic.Cre8magic.Client.Services.LanguageService.SetCultureAsync
+  href: ToSic.Cre8magic.Client.Services.LanguageService.html#ToSic_Cre8magic_Client_Services_LanguageService_SetCultureAsync_System_String_
+  name: SetCultureAsync
+  nameWithType: LanguageService.SetCultureAsync
+  fullName: ToSic.Cre8magic.Client.Services.LanguageService.SetCultureAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task

@@ -1,0 +1,820 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Models.MagicPage
+  commentId: T:ToSic.Cre8magic.Client.Models.MagicPage
+  id: MagicPage
+  parent: ToSic.Cre8magic.Client.Models
+  children:
+  - ToSic.Cre8magic.Client.Models.MagicPage.#ctor(Oqtane.Models.Page)
+  - ToSic.Cre8magic.Client.Models.MagicPage.HasChildren
+  - ToSic.Cre8magic.Client.Models.MagicPage.IsClickable
+  - ToSic.Cre8magic.Client.Models.MagicPage.Level
+  - ToSic.Cre8magic.Client.Models.MagicPage.Name
+  - ToSic.Cre8magic.Client.Models.MagicPage.OriginalPage
+  - ToSic.Cre8magic.Client.Models.MagicPage.PageId
+  - ToSic.Cre8magic.Client.Models.MagicPage.ParentId
+  - ToSic.Cre8magic.Client.Models.MagicPage.Path
+  - ToSic.Cre8magic.Client.Models.MagicPage.Url
+  langs:
+  - csharp
+  - vb
+  name: MagicPage
+  nameWithType: MagicPage
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage
+  type: Class
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Models/MagicPage.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: MagicPage
+    path: ../ToSic.Cre8magic.Client/Models/MagicPage.cs
+    startLine: 8
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Models
+  summary: Wrapper for the Oqtane Page.
+  example: []
+  syntax:
+    content: public class MagicPage
+    content.vb: Public Class MagicPage
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+  - ToSic.Cre8magic.Client.Menus.MagicMenuPage
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.#ctor(Oqtane.Models.Page)
+  commentId: M:ToSic.Cre8magic.Client.Models.MagicPage.#ctor(Oqtane.Models.Page)
+  id: '#ctor(Oqtane.Models.Page)'
+  parent: ToSic.Cre8magic.Client.Models.MagicPage
+  langs:
+  - csharp
+  - vb
+  name: MagicPage(Page)
+  nameWithType: MagicPage.MagicPage(Page)
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.MagicPage(Oqtane.Models.Page)
+  type: Constructor
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Models/MagicPage.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: .ctor
+    path: ../ToSic.Cre8magic.Client/Models/MagicPage.cs
+    startLine: 8
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Models
+  summary: Wrapper for the Oqtane Page.
+  example: []
+  syntax:
+    content: public MagicPage(Page originalPage)
+    parameters:
+    - id: originalPage
+      type: Oqtane.Models.Page
+      description: ''
+    content.vb: Public Sub New(originalPage As Page)
+  overload: ToSic.Cre8magic.Client.Models.MagicPage.#ctor*
+  nameWithType.vb: MagicPage.New(Page)
+  fullName.vb: ToSic.Cre8magic.Client.Models.MagicPage.New(Oqtane.Models.Page)
+  name.vb: New(Page)
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.OriginalPage
+  commentId: P:ToSic.Cre8magic.Client.Models.MagicPage.OriginalPage
+  id: OriginalPage
+  parent: ToSic.Cre8magic.Client.Models.MagicPage
+  langs:
+  - csharp
+  - vb
+  name: OriginalPage
+  nameWithType: MagicPage.OriginalPage
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.OriginalPage
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Models/MagicPage.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: OriginalPage
+    path: ../ToSic.Cre8magic.Client/Models/MagicPage.cs
+    startLine: 13
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Models
+  summary: Original Oqtane page wrapped in MagicPage.
+  example: []
+  syntax:
+    content: public Page OriginalPage { get; }
+    parameters: []
+    return:
+      type: Oqtane.Models.Page
+    content.vb: Public ReadOnly Property OriginalPage As Page
+  overload: ToSic.Cre8magic.Client.Models.MagicPage.OriginalPage*
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.PageId
+  commentId: P:ToSic.Cre8magic.Client.Models.MagicPage.PageId
+  id: PageId
+  parent: ToSic.Cre8magic.Client.Models.MagicPage
+  langs:
+  - csharp
+  - vb
+  name: PageId
+  nameWithType: MagicPage.PageId
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.PageId
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Models/MagicPage.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: PageId
+    path: ../ToSic.Cre8magic.Client/Models/MagicPage.cs
+    startLine: 18
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Models
+  summary: Id of the Page
+  example: []
+  syntax:
+    content: public int PageId { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property PageId As Integer
+  overload: ToSic.Cre8magic.Client.Models.MagicPage.PageId*
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.ParentId
+  commentId: P:ToSic.Cre8magic.Client.Models.MagicPage.ParentId
+  id: ParentId
+  parent: ToSic.Cre8magic.Client.Models.MagicPage
+  langs:
+  - csharp
+  - vb
+  name: ParentId
+  nameWithType: MagicPage.ParentId
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.ParentId
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Models/MagicPage.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: ParentId
+    path: ../ToSic.Cre8magic.Client/Models/MagicPage.cs
+    startLine: 23
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Models
+  summary: Reference to the parent <xref href="Oqtane.Models.Page" data-throw-if-not-resolved="false"></xref> if it has one.
+  example: []
+  syntax:
+    content: public int? ParentId { get; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public ReadOnly Property ParentId As Integer?
+  overload: ToSic.Cre8magic.Client.Models.MagicPage.ParentId*
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.Path
+  commentId: P:ToSic.Cre8magic.Client.Models.MagicPage.Path
+  id: Path
+  parent: ToSic.Cre8magic.Client.Models.MagicPage
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: MagicPage.Path
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.Path
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Models/MagicPage.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Path
+    path: ../ToSic.Cre8magic.Client/Models/MagicPage.cs
+    startLine: 28
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Models
+  summary: Path of the page.
+  example: []
+  syntax:
+    content: public string Path { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Path As String
+  overload: ToSic.Cre8magic.Client.Models.MagicPage.Path*
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.Name
+  commentId: P:ToSic.Cre8magic.Client.Models.MagicPage.Name
+  id: Name
+  parent: ToSic.Cre8magic.Client.Models.MagicPage
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: MagicPage.Name
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.Name
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Models/MagicPage.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Name
+    path: ../ToSic.Cre8magic.Client/Models/MagicPage.cs
+    startLine: 33
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Models
+  summary: Page Name.
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: ToSic.Cre8magic.Client.Models.MagicPage.Name*
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.Url
+  commentId: P:ToSic.Cre8magic.Client.Models.MagicPage.Url
+  id: Url
+  parent: ToSic.Cre8magic.Client.Models.MagicPage
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: MagicPage.Url
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.Url
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Models/MagicPage.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Url
+    path: ../ToSic.Cre8magic.Client/Models/MagicPage.cs
+    startLine: 38
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Models
+  summary: Full URL to this page.
+  example: []
+  syntax:
+    content: public string Url { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Url As String
+  overload: ToSic.Cre8magic.Client.Models.MagicPage.Url*
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.IsClickable
+  commentId: P:ToSic.Cre8magic.Client.Models.MagicPage.IsClickable
+  id: IsClickable
+  parent: ToSic.Cre8magic.Client.Models.MagicPage
+  langs:
+  - csharp
+  - vb
+  name: IsClickable
+  nameWithType: MagicPage.IsClickable
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.IsClickable
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Models/MagicPage.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: IsClickable
+    path: ../ToSic.Cre8magic.Client/Models/MagicPage.cs
+    startLine: 43
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Models
+  summary: Link in site navigation is enabled or disabled.
+  example: []
+  syntax:
+    content: public bool IsClickable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsClickable As Boolean
+  overload: ToSic.Cre8magic.Client.Models.MagicPage.IsClickable*
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.Level
+  commentId: P:ToSic.Cre8magic.Client.Models.MagicPage.Level
+  id: Level
+  parent: ToSic.Cre8magic.Client.Models.MagicPage
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: MagicPage.Level
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.Level
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Models/MagicPage.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Level
+    path: ../ToSic.Cre8magic.Client/Models/MagicPage.cs
+    startLine: 48
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Models
+  summary: Current page level from the top of the Menu
+  example: []
+  syntax:
+    content: public int Level { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Level As Integer
+  overload: ToSic.Cre8magic.Client.Models.MagicPage.Level*
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.HasChildren
+  commentId: P:ToSic.Cre8magic.Client.Models.MagicPage.HasChildren
+  id: HasChildren
+  parent: ToSic.Cre8magic.Client.Models.MagicPage
+  langs:
+  - csharp
+  - vb
+  name: HasChildren
+  nameWithType: MagicPage.HasChildren
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.HasChildren
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Models/MagicPage.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: HasChildren
+    path: ../ToSic.Cre8magic.Client/Models/MagicPage.cs
+    startLine: 53
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Models
+  summary: Determines if there are sub-pages. True if this page has sub-pages.
+  example: []
+  syntax:
+    content: public bool HasChildren { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property HasChildren As Boolean
+  overload: ToSic.Cre8magic.Client.Models.MagicPage.HasChildren*
+references:
+- uid: ToSic.Cre8magic.Client.Models
+  commentId: N:ToSic.Cre8magic.Client.Models
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Models
+  nameWithType: ToSic.Cre8magic.Client.Models
+  fullName: ToSic.Cre8magic.Client.Models
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Models
+    name: Models
+    href: ToSic.Cre8magic.Client.Models.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Models
+    name: Models
+    href: ToSic.Cre8magic.Client.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.#ctor*
+  commentId: Overload:ToSic.Cre8magic.Client.Models.MagicPage.#ctor
+  href: ToSic.Cre8magic.Client.Models.MagicPage.html#ToSic_Cre8magic_Client_Models_MagicPage__ctor_Oqtane_Models_Page_
+  name: MagicPage
+  nameWithType: MagicPage.MagicPage
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.MagicPage
+  nameWithType.vb: MagicPage.New
+  fullName.vb: ToSic.Cre8magic.Client.Models.MagicPage.New
+  name.vb: New
+- uid: Oqtane.Models.Page
+  commentId: T:Oqtane.Models.Page
+  parent: Oqtane.Models
+  isExternal: true
+  href: https://github.com/sbwalker/oqtane.framework/blob/9a7a53405124c2ac000cc8b33e0f194ffc16e58d/Oqtane.Shared/Models/Page.cs
+  name: Page
+  nameWithType: Page
+  fullName: Oqtane.Models.Page
+- uid: Oqtane.Models
+  commentId: N:Oqtane.Models
+  isExternal: true
+  name: Oqtane.Models
+  nameWithType: Oqtane.Models
+  fullName: Oqtane.Models
+  spec.csharp:
+  - uid: Oqtane
+    name: Oqtane
+    isExternal: true
+  - name: .
+  - uid: Oqtane.Models
+    name: Models
+    isExternal: true
+  spec.vb:
+  - uid: Oqtane
+    name: Oqtane
+    isExternal: true
+  - name: .
+  - uid: Oqtane.Models
+    name: Models
+    isExternal: true
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.OriginalPage*
+  commentId: Overload:ToSic.Cre8magic.Client.Models.MagicPage.OriginalPage
+  href: ToSic.Cre8magic.Client.Models.MagicPage.html#ToSic_Cre8magic_Client_Models_MagicPage_OriginalPage
+  name: OriginalPage
+  nameWithType: MagicPage.OriginalPage
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.OriginalPage
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.PageId*
+  commentId: Overload:ToSic.Cre8magic.Client.Models.MagicPage.PageId
+  href: ToSic.Cre8magic.Client.Models.MagicPage.html#ToSic_Cre8magic_Client_Models_MagicPage_PageId
+  name: PageId
+  nameWithType: MagicPage.PageId
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.PageId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.ParentId*
+  commentId: Overload:ToSic.Cre8magic.Client.Models.MagicPage.ParentId
+  href: ToSic.Cre8magic.Client.Models.MagicPage.html#ToSic_Cre8magic_Client_Models_MagicPage_ParentId
+  name: ParentId
+  nameWithType: MagicPage.ParentId
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.ParentId
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.Path*
+  commentId: Overload:ToSic.Cre8magic.Client.Models.MagicPage.Path
+  href: ToSic.Cre8magic.Client.Models.MagicPage.html#ToSic_Cre8magic_Client_Models_MagicPage_Path
+  name: Path
+  nameWithType: MagicPage.Path
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.Path
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.Name*
+  commentId: Overload:ToSic.Cre8magic.Client.Models.MagicPage.Name
+  href: ToSic.Cre8magic.Client.Models.MagicPage.html#ToSic_Cre8magic_Client_Models_MagicPage_Name
+  name: Name
+  nameWithType: MagicPage.Name
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.Name
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.Url*
+  commentId: Overload:ToSic.Cre8magic.Client.Models.MagicPage.Url
+  href: ToSic.Cre8magic.Client.Models.MagicPage.html#ToSic_Cre8magic_Client_Models_MagicPage_Url
+  name: Url
+  nameWithType: MagicPage.Url
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.Url
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.IsClickable*
+  commentId: Overload:ToSic.Cre8magic.Client.Models.MagicPage.IsClickable
+  href: ToSic.Cre8magic.Client.Models.MagicPage.html#ToSic_Cre8magic_Client_Models_MagicPage_IsClickable
+  name: IsClickable
+  nameWithType: MagicPage.IsClickable
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.IsClickable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.Level*
+  commentId: Overload:ToSic.Cre8magic.Client.Models.MagicPage.Level
+  href: ToSic.Cre8magic.Client.Models.MagicPage.html#ToSic_Cre8magic_Client_Models_MagicPage_Level
+  name: Level
+  nameWithType: MagicPage.Level
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.Level
+- uid: ToSic.Cre8magic.Client.Models.MagicPage.HasChildren*
+  commentId: Overload:ToSic.Cre8magic.Client.Models.MagicPage.HasChildren
+  href: ToSic.Cre8magic.Client.Models.MagicPage.html#ToSic_Cre8magic_Client_Models_MagicPage_HasChildren
+  name: HasChildren
+  nameWithType: MagicPage.HasChildren
+  fullName: ToSic.Cre8magic.Client.Models.MagicPage.HasChildren

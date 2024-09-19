@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Languages.Settings
+  commentId: N:ToSic.Cre8magic.Client.Languages.Settings
+  id: ToSic.Cre8magic.Client.Languages.Settings
+  children:
+  - ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage
+  - ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Languages.Settings
+  nameWithType: ToSic.Cre8magic.Client.Languages.Settings
+  fullName: ToSic.Cre8magic.Client.Languages.Settings
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage
+  commentId: T:ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage
+  parent: ToSic.Cre8magic.Client.Languages.Settings
+  href: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage.html
+  name: MagicLanguage
+  nameWithType: MagicLanguage
+  fullName: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguage
+- uid: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings
+  commentId: T:ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings
+  parent: ToSic.Cre8magic.Client.Languages.Settings
+  href: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings.html
+  name: MagicLanguagesSettings
+  nameWithType: MagicLanguagesSettings
+  fullName: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings
+- uid: ToSic.Cre8magic.Client.Languages.Settings
+  commentId: N:ToSic.Cre8magic.Client.Languages.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Languages.Settings
+  nameWithType: ToSic.Cre8magic.Client.Languages.Settings
+  fullName: ToSic.Cre8magic.Client.Languages.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Languages
+    name: Languages
+    href: ToSic.Cre8magic.Client.Languages.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Languages.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Languages.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Languages
+    name: Languages
+    href: ToSic.Cre8magic.Client.Languages.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Languages.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Languages.Settings.html

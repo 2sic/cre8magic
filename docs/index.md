@@ -1,4 +1,4 @@
----
+_layout: landing
 title: Home
 icon: fa-home
 order: 0

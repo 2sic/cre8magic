@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Containers.Settings
+  commentId: N:ToSic.Cre8magic.Client.Containers.Settings
+  id: ToSic.Cre8magic.Client.Containers.Settings
+  children:
+  - ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Containers.Settings
+  nameWithType: ToSic.Cre8magic.Client.Containers.Settings
+  fullName: ToSic.Cre8magic.Client.Containers.Settings
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings
+  commentId: T:ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings
+  href: ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings.html
+  name: MagicContainerSettings
+  nameWithType: MagicContainerSettings
+  fullName: ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings

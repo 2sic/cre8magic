@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Settings.IHasMagicSettings
+  commentId: T:ToSic.Cre8magic.Client.Settings.IHasMagicSettings
+  id: IHasMagicSettings
+  parent: ToSic.Cre8magic.Client.Settings
+  children:
+  - ToSic.Cre8magic.Client.Settings.IHasMagicSettings.Settings
+  langs:
+  - csharp
+  - vb
+  name: IHasMagicSettings
+  nameWithType: IHasMagicSettings
+  fullName: ToSic.Cre8magic.Client.Settings.IHasMagicSettings
+  type: Interface
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/IHasMagicSettings.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: IHasMagicSettings
+    path: ../ToSic.Cre8magic.Client/Settings/IHasMagicSettings.cs
+    startLine: 2
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  syntax:
+    content: public interface IHasMagicSettings
+    content.vb: Public Interface IHasMagicSettings
+- uid: ToSic.Cre8magic.Client.Settings.IHasMagicSettings.Settings
+  commentId: P:ToSic.Cre8magic.Client.Settings.IHasMagicSettings.Settings
+  id: Settings
+  parent: ToSic.Cre8magic.Client.Settings.IHasMagicSettings
+  langs:
+  - csharp
+  - vb
+  name: Settings
+  nameWithType: IHasMagicSettings.Settings
+  fullName: ToSic.Cre8magic.Client.Settings.IHasMagicSettings.Settings
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/IHasMagicSettings.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Settings
+    path: ../ToSic.Cre8magic.Client/Settings/IHasMagicSettings.cs
+    startLine: 4
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  syntax:
+    content: MagicSettings Settings { get; set; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Settings.MagicSettings
+    content.vb: Property Settings As MagicSettings
+  overload: ToSic.Cre8magic.Client.Settings.IHasMagicSettings.Settings*
+references:
+- uid: ToSic.Cre8magic.Client.Settings
+  commentId: N:ToSic.Cre8magic.Client.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Settings
+  nameWithType: ToSic.Cre8magic.Client.Settings
+  fullName: ToSic.Cre8magic.Client.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+- uid: ToSic.Cre8magic.Client.Settings.IHasMagicSettings.Settings*
+  commentId: Overload:ToSic.Cre8magic.Client.Settings.IHasMagicSettings.Settings
+  href: ToSic.Cre8magic.Client.Settings.IHasMagicSettings.html#ToSic_Cre8magic_Client_Settings_IHasMagicSettings_Settings
+  name: Settings
+  nameWithType: IHasMagicSettings.Settings
+  fullName: ToSic.Cre8magic.Client.Settings.IHasMagicSettings.Settings
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettings
+  commentId: T:ToSic.Cre8magic.Client.Settings.MagicSettings
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.MagicSettings.html
+  name: MagicSettings
+  nameWithType: MagicSettings
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettings

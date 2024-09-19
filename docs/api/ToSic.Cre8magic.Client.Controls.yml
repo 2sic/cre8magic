@@ -1,0 +1,99 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Controls
+  commentId: N:ToSic.Cre8magic.Client.Controls
+  id: ToSic.Cre8magic.Client.Controls
+  children:
+  - ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings
+  - ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  - ToSic.Cre8magic.Client.Controls.MagicComponent
+  - ToSic.Cre8magic.Client.Controls.MagicControl
+  - ToSic.Cre8magic.Client.Controls.MagicDynamicComponent
+  - ToSic.Cre8magic.Client.Controls.MagicLogin
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Controls
+  nameWithType: ToSic.Cre8magic.Client.Controls
+  fullName: ToSic.Cre8magic.Client.Controls
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings
+  commentId: T:ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings
+  parent: ToSic.Cre8magic.Client.Controls
+  href: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings.html
+  name: IMagicControlWithSettings
+  nameWithType: IMagicControlWithSettings
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  commentId: T:ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  parent: ToSic.Cre8magic.Client.Controls
+  href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html
+  name: IMagicDesigner
+  nameWithType: IMagicDesigner
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+- uid: ToSic.Cre8magic.Client.Controls.MagicComponent
+  commentId: T:ToSic.Cre8magic.Client.Controls.MagicComponent
+  href: ToSic.Cre8magic.Client.Controls.MagicComponent.html
+  name: MagicComponent
+  nameWithType: MagicComponent
+  fullName: ToSic.Cre8magic.Client.Controls.MagicComponent
+- uid: ToSic.Cre8magic.Client.Controls.MagicControl
+  commentId: T:ToSic.Cre8magic.Client.Controls.MagicControl
+  parent: ToSic.Cre8magic.Client.Controls
+  href: ToSic.Cre8magic.Client.Controls.MagicControl.html
+  name: MagicControl
+  nameWithType: MagicControl
+  fullName: ToSic.Cre8magic.Client.Controls.MagicControl
+- uid: ToSic.Cre8magic.Client.Controls.MagicDynamicComponent
+  commentId: T:ToSic.Cre8magic.Client.Controls.MagicDynamicComponent
+  href: ToSic.Cre8magic.Client.Controls.MagicDynamicComponent.html
+  name: MagicDynamicComponent
+  nameWithType: MagicDynamicComponent
+  fullName: ToSic.Cre8magic.Client.Controls.MagicDynamicComponent
+- uid: ToSic.Cre8magic.Client.Controls.MagicLogin
+  commentId: T:ToSic.Cre8magic.Client.Controls.MagicLogin
+  href: ToSic.Cre8magic.Client.Controls.MagicLogin.html
+  name: MagicLogin
+  nameWithType: MagicLogin
+  fullName: ToSic.Cre8magic.Client.Controls.MagicLogin
+- uid: ToSic.Cre8magic.Client.Controls
+  commentId: N:ToSic.Cre8magic.Client.Controls
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Controls
+  nameWithType: ToSic.Cre8magic.Client.Controls
+  fullName: ToSic.Cre8magic.Client.Controls
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Controls
+    name: Controls
+    href: ToSic.Cre8magic.Client.Controls.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Controls
+    name: Controls
+    href: ToSic.Cre8magic.Client.Controls.html

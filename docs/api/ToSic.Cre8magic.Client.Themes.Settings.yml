@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Themes.Settings
+  commentId: N:ToSic.Cre8magic.Client.Themes.Settings
+  id: ToSic.Cre8magic.Client.Themes.Settings
+  children:
+  - ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings
+  - ToSic.Cre8magic.Client.Themes.Settings.MagicThemePartSettings
+  - ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings
+  - ToSic.Cre8magic.Client.Themes.Settings.ThemePartJsonConverter
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Themes.Settings
+  nameWithType: ToSic.Cre8magic.Client.Themes.Settings
+  fullName: ToSic.Cre8magic.Client.Themes.Settings
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings
+  commentId: T:ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings
+  parent: ToSic.Cre8magic.Client.Themes.Settings
+  href: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings.html
+  name: MagicThemeDesignSettings
+  nameWithType: MagicThemeDesignSettings
+  fullName: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings
+- uid: ToSic.Cre8magic.Client.Themes.Settings.MagicThemePartSettings
+  commentId: T:ToSic.Cre8magic.Client.Themes.Settings.MagicThemePartSettings
+  parent: ToSic.Cre8magic.Client.Themes.Settings
+  href: ToSic.Cre8magic.Client.Themes.Settings.MagicThemePartSettings.html
+  name: MagicThemePartSettings
+  nameWithType: MagicThemePartSettings
+  fullName: ToSic.Cre8magic.Client.Themes.Settings.MagicThemePartSettings
+- uid: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings
+  commentId: T:ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings
+  parent: ToSic.Cre8magic.Client.Themes.Settings
+  href: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings.html
+  name: MagicThemeSettings
+  nameWithType: MagicThemeSettings
+  fullName: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings
+- uid: ToSic.Cre8magic.Client.Themes.Settings.ThemePartJsonConverter
+  commentId: T:ToSic.Cre8magic.Client.Themes.Settings.ThemePartJsonConverter
+  parent: ToSic.Cre8magic.Client.Themes.Settings
+  href: ToSic.Cre8magic.Client.Themes.Settings.ThemePartJsonConverter.html
+  name: ThemePartJsonConverter
+  nameWithType: ThemePartJsonConverter
+  fullName: ToSic.Cre8magic.Client.Themes.Settings.ThemePartJsonConverter
+- uid: ToSic.Cre8magic.Client.Themes.Settings
+  commentId: N:ToSic.Cre8magic.Client.Themes.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Themes.Settings
+  nameWithType: ToSic.Cre8magic.Client.Themes.Settings
+  fullName: ToSic.Cre8magic.Client.Themes.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Themes
+    name: Themes
+    href: ToSic.Cre8magic.Client.Themes.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Themes.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Themes.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Themes
+    name: Themes
+    href: ToSic.Cre8magic.Client.Themes.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Themes.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Themes.Settings.html

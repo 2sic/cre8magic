@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8Magic.Client
+  commentId: N:ToSic.Cre8Magic.Client
+  id: ToSic.Cre8Magic.Client
+  children:
+  - ToSic.Cre8Magic.Client._Imports
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8Magic.Client
+  nameWithType: ToSic.Cre8Magic.Client
+  fullName: ToSic.Cre8Magic.Client
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8Magic.Client._Imports
+  commentId: T:ToSic.Cre8Magic.Client._Imports
+  href: ToSic.Cre8Magic.Client._Imports.html
+  name: _Imports
+  nameWithType: _Imports
+  fullName: ToSic.Cre8Magic.Client._Imports

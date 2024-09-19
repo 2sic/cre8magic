@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client
+  commentId: N:ToSic.Cre8magic.Client
+  id: ToSic.Cre8magic.Client
+  children:
+  - ToSic.Cre8magic.Client.DictionaryExtensions
+  - ToSic.Cre8magic.Client.MagicConstants
+  - ToSic.Cre8magic.Client.MagicTokens
+  - ToSic.Cre8magic.Client.PageStateMenuExtensions
+  - ToSic.Cre8magic.Client.PageStateSecurityExtensions
+  - ToSic.Cre8magic.Client.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client
+  nameWithType: ToSic.Cre8magic.Client
+  fullName: ToSic.Cre8magic.Client
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.DictionaryExtensions
+  commentId: T:ToSic.Cre8magic.Client.DictionaryExtensions
+  href: ToSic.Cre8magic.Client.DictionaryExtensions.html
+  name: DictionaryExtensions
+  nameWithType: DictionaryExtensions
+  fullName: ToSic.Cre8magic.Client.DictionaryExtensions
+- uid: ToSic.Cre8magic.Client.PageStateMenuExtensions
+  commentId: T:ToSic.Cre8magic.Client.PageStateMenuExtensions
+  href: ToSic.Cre8magic.Client.PageStateMenuExtensions.html
+  name: PageStateMenuExtensions
+  nameWithType: PageStateMenuExtensions
+  fullName: ToSic.Cre8magic.Client.PageStateMenuExtensions
+- uid: ToSic.Cre8magic.Client.PageStateSecurityExtensions
+  commentId: T:ToSic.Cre8magic.Client.PageStateSecurityExtensions
+  href: ToSic.Cre8magic.Client.PageStateSecurityExtensions.html
+  name: PageStateSecurityExtensions
+  nameWithType: PageStateSecurityExtensions
+  fullName: ToSic.Cre8magic.Client.PageStateSecurityExtensions
+- uid: ToSic.Cre8magic.Client.StringExtensions
+  commentId: T:ToSic.Cre8magic.Client.StringExtensions
+  href: ToSic.Cre8magic.Client.StringExtensions.html
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: ToSic.Cre8magic.Client.StringExtensions
+- uid: ToSic.Cre8magic.Client.MagicConstants
+  commentId: T:ToSic.Cre8magic.Client.MagicConstants
+  href: ToSic.Cre8magic.Client.MagicConstants.html
+  name: MagicConstants
+  nameWithType: MagicConstants
+  fullName: ToSic.Cre8magic.Client.MagicConstants
+- uid: ToSic.Cre8magic.Client.MagicTokens
+  commentId: T:ToSic.Cre8magic.Client.MagicTokens
+  href: ToSic.Cre8magic.Client.MagicTokens.html
+  name: MagicTokens
+  nameWithType: MagicTokens
+  fullName: ToSic.Cre8magic.Client.MagicTokens

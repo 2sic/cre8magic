@@ -1,0 +1,544 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Logging.CodeRef
+  commentId: T:ToSic.Cre8magic.Client.Logging.CodeRef
+  id: CodeRef
+  parent: ToSic.Cre8magic.Client.Logging
+  children:
+  - ToSic.Cre8magic.Client.Logging.CodeRef.#ctor(System.Boolean,System.String,System.String,System.Int32)
+  - ToSic.Cre8magic.Client.Logging.CodeRef.#ctor(System.String,System.String,System.Int32)
+  - ToSic.Cre8magic.Client.Logging.CodeRef.Line
+  - ToSic.Cre8magic.Client.Logging.CodeRef.Name
+  - ToSic.Cre8magic.Client.Logging.CodeRef.Path
+  langs:
+  - csharp
+  - vb
+  name: CodeRef
+  nameWithType: CodeRef
+  fullName: ToSic.Cre8magic.Client.Logging.CodeRef
+  type: Class
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Logging/CodeRef.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: CodeRef
+    path: ../ToSic.Cre8magic.Client/Logging/CodeRef.cs
+    startLine: 8
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Logging
+  summary: Reference to code - containing the path to the file, the method name and the line in the code.
+  example: []
+  syntax:
+    content: >-
+      [InternalApi_DoNotUse_MayChangeWithoutNotice("this is just fyi")]
+
+      public class CodeRef
+    content.vb: >-
+      <InternalApi_DoNotUse_MayChangeWithoutNotice("this is just fyi")>
+
+      Public Class CodeRef
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Oqtane.Documentation.InternalApi_DoNotUse_MayChangeWithoutNotice
+    ctor: Oqtane.Documentation.InternalApi_DoNotUse_MayChangeWithoutNotice.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: this is just fyi
+- uid: ToSic.Cre8magic.Client.Logging.CodeRef.Path
+  commentId: F:ToSic.Cre8magic.Client.Logging.CodeRef.Path
+  id: Path
+  parent: ToSic.Cre8magic.Client.Logging.CodeRef
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: CodeRef.Path
+  fullName: ToSic.Cre8magic.Client.Logging.CodeRef.Path
+  type: Field
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Logging/CodeRef.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Path
+    path: ../ToSic.Cre8magic.Client/Logging/CodeRef.cs
+    startLine: 14
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Logging
+  summary: Path to the code file
+  example: []
+  syntax:
+    content: public string Path
+    return:
+      type: System.String
+    content.vb: Public Path As String
+- uid: ToSic.Cre8magic.Client.Logging.CodeRef.Name
+  commentId: F:ToSic.Cre8magic.Client.Logging.CodeRef.Name
+  id: Name
+  parent: ToSic.Cre8magic.Client.Logging.CodeRef
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: CodeRef.Name
+  fullName: ToSic.Cre8magic.Client.Logging.CodeRef.Name
+  type: Field
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Logging/CodeRef.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Name
+    path: ../ToSic.Cre8magic.Client/Logging/CodeRef.cs
+    startLine: 19
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Logging
+  summary: Name of the method/property accessed
+  example: []
+  syntax:
+    content: public string Name
+    return:
+      type: System.String
+    content.vb: Public Name As String
+- uid: ToSic.Cre8magic.Client.Logging.CodeRef.Line
+  commentId: F:ToSic.Cre8magic.Client.Logging.CodeRef.Line
+  id: Line
+  parent: ToSic.Cre8magic.Client.Logging.CodeRef
+  langs:
+  - csharp
+  - vb
+  name: Line
+  nameWithType: CodeRef.Line
+  fullName: ToSic.Cre8magic.Client.Logging.CodeRef.Line
+  type: Field
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Logging/CodeRef.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Line
+    path: ../ToSic.Cre8magic.Client/Logging/CodeRef.cs
+    startLine: 24
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Logging
+  summary: Line of code where the code was running
+  example: []
+  syntax:
+    content: public int Line
+    return:
+      type: System.Int32
+    content.vb: Public Line As Integer
+- uid: ToSic.Cre8magic.Client.Logging.CodeRef.#ctor(System.String,System.String,System.Int32)
+  commentId: M:ToSic.Cre8magic.Client.Logging.CodeRef.#ctor(System.String,System.String,System.Int32)
+  id: '#ctor(System.String,System.String,System.Int32)'
+  parent: ToSic.Cre8magic.Client.Logging.CodeRef
+  langs:
+  - csharp
+  - vb
+  name: CodeRef(string, string, int)
+  nameWithType: CodeRef.CodeRef(string, string, int)
+  fullName: ToSic.Cre8magic.Client.Logging.CodeRef.CodeRef(string, string, int)
+  type: Constructor
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Logging/CodeRef.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: .ctor
+    path: ../ToSic.Cre8magic.Client/Logging/CodeRef.cs
+    startLine: 29
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Logging
+  summary: Default constructor to set the values
+  example: []
+  syntax:
+    content: public CodeRef(string cPath, string cName, int cLine)
+    parameters:
+    - id: cPath
+      type: System.String
+    - id: cName
+      type: System.String
+    - id: cLine
+      type: System.Int32
+    content.vb: Public Sub New(cPath As String, cName As String, cLine As Integer)
+  overload: ToSic.Cre8magic.Client.Logging.CodeRef.#ctor*
+  nameWithType.vb: CodeRef.New(String, String, Integer)
+  fullName.vb: ToSic.Cre8magic.Client.Logging.CodeRef.New(String, String, Integer)
+  name.vb: New(String, String, Integer)
+- uid: ToSic.Cre8magic.Client.Logging.CodeRef.#ctor(System.Boolean,System.String,System.String,System.Int32)
+  commentId: M:ToSic.Cre8magic.Client.Logging.CodeRef.#ctor(System.Boolean,System.String,System.String,System.Int32)
+  id: '#ctor(System.Boolean,System.String,System.String,System.Int32)'
+  parent: ToSic.Cre8magic.Client.Logging.CodeRef
+  langs:
+  - csharp
+  - vb
+  name: CodeRef(bool, string, string, int)
+  nameWithType: CodeRef.CodeRef(bool, string, string, int)
+  fullName: ToSic.Cre8magic.Client.Logging.CodeRef.CodeRef(bool, string, string, int)
+  type: Constructor
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Logging/CodeRef.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: .ctor
+    path: ../ToSic.Cre8magic.Client/Logging/CodeRef.cs
+    startLine: 44
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Logging
+  summary: This constructor should be called without params, so that the compiler automatically injects all values.
+  example: []
+  syntax:
+    content: public CodeRef(bool autoPickup = true, string cPath = null, string cName = null, int cLine = 0)
+    parameters:
+    - id: autoPickup
+      type: System.Boolean
+      description: Dummy parameter just to have a different signature.
+    - id: cPath
+      type: System.String
+      description: auto pre filled by the compiler - the path to the code file
+    - id: cName
+      type: System.String
+      description: auto pre filled by the compiler - the method name
+    - id: cLine
+      type: System.Int32
+      description: auto pre filled by the compiler - the code line
+    content.vb: Public Sub New(autoPickup As Boolean = True, cPath As String = Nothing, cName As String = Nothing, cLine As Integer = 0)
+  overload: ToSic.Cre8magic.Client.Logging.CodeRef.#ctor*
+  nameWithType.vb: CodeRef.New(Boolean, String, String, Integer)
+  fullName.vb: ToSic.Cre8magic.Client.Logging.CodeRef.New(Boolean, String, String, Integer)
+  name.vb: New(Boolean, String, String, Integer)
+references:
+- uid: ToSic.Cre8magic.Client.Logging
+  commentId: N:ToSic.Cre8magic.Client.Logging
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Logging
+  nameWithType: ToSic.Cre8magic.Client.Logging
+  fullName: ToSic.Cre8magic.Client.Logging
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Logging
+    name: Logging
+    href: ToSic.Cre8magic.Client.Logging.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Logging
+    name: Logging
+    href: ToSic.Cre8magic.Client.Logging.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ToSic.Cre8magic.Client.Logging.CodeRef.#ctor*
+  commentId: Overload:ToSic.Cre8magic.Client.Logging.CodeRef.#ctor
+  href: ToSic.Cre8magic.Client.Logging.CodeRef.html#ToSic_Cre8magic_Client_Logging_CodeRef__ctor_System_String_System_String_System_Int32_
+  name: CodeRef
+  nameWithType: CodeRef.CodeRef
+  fullName: ToSic.Cre8magic.Client.Logging.CodeRef.CodeRef
+  nameWithType.vb: CodeRef.New
+  fullName.vb: ToSic.Cre8magic.Client.Logging.CodeRef.New
+  name.vb: New
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

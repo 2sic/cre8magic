@@ -1,0 +1,194 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Settings
+  commentId: N:ToSic.Cre8magic.Client.Settings
+  id: ToSic.Cre8magic.Client.Settings
+  children:
+  - ToSic.Cre8magic.Client.Settings.DesignSetting
+  - ToSic.Cre8magic.Client.Settings.DesignSettingsJsonConverter`1
+  - ToSic.Cre8magic.Client.Settings.IHasMagicSettings
+  - ToSic.Cre8magic.Client.Settings.IHasSettingsExceptions
+  - ToSic.Cre8magic.Client.Settings.MagicPackageSettings
+  - ToSic.Cre8magic.Client.Settings.MagicSettings
+  - ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  - ToSic.Cre8magic.Client.Settings.NamedSettings`1
+  - ToSic.Cre8magic.Client.Settings.PairOnOff
+  - ToSic.Cre8magic.Client.Settings.PairOnOffExtensions
+  - ToSic.Cre8magic.Client.Settings.PairOnOffJsonConverter
+  - ToSic.Cre8magic.Client.Settings.SettingsException
+  - ToSic.Cre8magic.Client.Settings.SettingsWithInherit
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Settings
+  nameWithType: ToSic.Cre8magic.Client.Settings
+  fullName: ToSic.Cre8magic.Client.Settings
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Settings.DesignSetting
+  commentId: T:ToSic.Cre8magic.Client.Settings.DesignSetting
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.DesignSetting.html
+  name: DesignSetting
+  nameWithType: DesignSetting
+  fullName: ToSic.Cre8magic.Client.Settings.DesignSetting
+- uid: ToSic.Cre8magic.Client.Settings.DesignSettingsJsonConverter`1
+  commentId: T:ToSic.Cre8magic.Client.Settings.DesignSettingsJsonConverter`1
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.DesignSettingsJsonConverter-1.html
+  name: DesignSettingsJsonConverter<T>
+  nameWithType: DesignSettingsJsonConverter<T>
+  fullName: ToSic.Cre8magic.Client.Settings.DesignSettingsJsonConverter<T>
+  nameWithType.vb: DesignSettingsJsonConverter(Of T)
+  fullName.vb: ToSic.Cre8magic.Client.Settings.DesignSettingsJsonConverter(Of T)
+  name.vb: DesignSettingsJsonConverter(Of T)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Settings.DesignSettingsJsonConverter`1
+    name: DesignSettingsJsonConverter
+    href: ToSic.Cre8magic.Client.Settings.DesignSettingsJsonConverter-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Settings.DesignSettingsJsonConverter`1
+    name: DesignSettingsJsonConverter
+    href: ToSic.Cre8magic.Client.Settings.DesignSettingsJsonConverter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ToSic.Cre8magic.Client.Settings.IHasMagicSettings
+  commentId: T:ToSic.Cre8magic.Client.Settings.IHasMagicSettings
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.IHasMagicSettings.html
+  name: IHasMagicSettings
+  nameWithType: IHasMagicSettings
+  fullName: ToSic.Cre8magic.Client.Settings.IHasMagicSettings
+- uid: ToSic.Cre8magic.Client.Settings.IHasSettingsExceptions
+  commentId: T:ToSic.Cre8magic.Client.Settings.IHasSettingsExceptions
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.IHasSettingsExceptions.html
+  name: IHasSettingsExceptions
+  nameWithType: IHasSettingsExceptions
+  fullName: ToSic.Cre8magic.Client.Settings.IHasSettingsExceptions
+- uid: ToSic.Cre8magic.Client.Settings.MagicPackageSettings
+  commentId: T:ToSic.Cre8magic.Client.Settings.MagicPackageSettings
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.MagicPackageSettings.html
+  name: MagicPackageSettings
+  nameWithType: MagicPackageSettings
+  fullName: ToSic.Cre8magic.Client.Settings.MagicPackageSettings
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettings
+  commentId: T:ToSic.Cre8magic.Client.Settings.MagicSettings
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.MagicSettings.html
+  name: MagicSettings
+  nameWithType: MagicSettings
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettings
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  commentId: T:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.html
+  name: MagicSettingsCatalog
+  nameWithType: MagicSettingsCatalog
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+- uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+  commentId: T:ToSic.Cre8magic.Client.Settings.NamedSettings`1
+  href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  name: NamedSettings<T>
+  nameWithType: NamedSettings<T>
+  fullName: ToSic.Cre8magic.Client.Settings.NamedSettings<T>
+  nameWithType.vb: NamedSettings(Of T)
+  fullName.vb: ToSic.Cre8magic.Client.Settings.NamedSettings(Of T)
+  name.vb: NamedSettings(Of T)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ToSic.Cre8magic.Client.Settings.PairOnOff
+  commentId: T:ToSic.Cre8magic.Client.Settings.PairOnOff
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.PairOnOff.html
+  name: PairOnOff
+  nameWithType: PairOnOff
+  fullName: ToSic.Cre8magic.Client.Settings.PairOnOff
+- uid: ToSic.Cre8magic.Client.Settings.PairOnOffExtensions
+  commentId: T:ToSic.Cre8magic.Client.Settings.PairOnOffExtensions
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.PairOnOffExtensions.html
+  name: PairOnOffExtensions
+  nameWithType: PairOnOffExtensions
+  fullName: ToSic.Cre8magic.Client.Settings.PairOnOffExtensions
+- uid: ToSic.Cre8magic.Client.Settings.PairOnOffJsonConverter
+  commentId: T:ToSic.Cre8magic.Client.Settings.PairOnOffJsonConverter
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.PairOnOffJsonConverter.html
+  name: PairOnOffJsonConverter
+  nameWithType: PairOnOffJsonConverter
+  fullName: ToSic.Cre8magic.Client.Settings.PairOnOffJsonConverter
+- uid: ToSic.Cre8magic.Client.Settings.SettingsException
+  commentId: T:ToSic.Cre8magic.Client.Settings.SettingsException
+  href: ToSic.Cre8magic.Client.Settings.SettingsException.html
+  name: SettingsException
+  nameWithType: SettingsException
+  fullName: ToSic.Cre8magic.Client.Settings.SettingsException
+- uid: ToSic.Cre8magic.Client.Settings.SettingsWithInherit
+  commentId: T:ToSic.Cre8magic.Client.Settings.SettingsWithInherit
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.SettingsWithInherit.html
+  name: SettingsWithInherit
+  nameWithType: SettingsWithInherit
+  fullName: ToSic.Cre8magic.Client.Settings.SettingsWithInherit
+- uid: ToSic.Cre8magic.Client.Settings
+  commentId: N:ToSic.Cre8magic.Client.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Settings
+  nameWithType: ToSic.Cre8magic.Client.Settings
+  fullName: ToSic.Cre8magic.Client.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html

@@ -1,0 +1,621 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner
+  commentId: T:ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner
+  id: MagicBreadcrumbDesigner
+  parent: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+  children:
+  - ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.#ctor(ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb,ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbSettings)
+  - ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Classes(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  - ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Value(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  langs:
+  - csharp
+  - vb
+  name: MagicBreadcrumbDesigner
+  nameWithType: MagicBreadcrumbDesigner
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner
+  type: Class
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Breadcrumbs/Settings/MagicBreadcrumbDesigner.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: MagicBreadcrumbDesigner
+    path: ../ToSic.Cre8magic.Client/Breadcrumbs/Settings/MagicBreadcrumbDesigner.cs
+    startLine: 7
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+  summary: Special helper to provide Css classes to menus
+  example: []
+  syntax:
+    content: 'public class MagicBreadcrumbDesigner : IBreadcrumbDesigner'
+    content.vb: Public Class MagicBreadcrumbDesigner Implements IBreadcrumbDesigner
+  inheritance:
+  - System.Object
+  implements:
+  - ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.#ctor(ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb,ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbSettings)
+  commentId: M:ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.#ctor(ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb,ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbSettings)
+  id: '#ctor(ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb,ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbSettings)'
+  parent: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner
+  langs:
+  - csharp
+  - vb
+  name: MagicBreadcrumbDesigner(MagicBreadcrumb, MagicBreadcrumbSettings)
+  nameWithType: MagicBreadcrumbDesigner.MagicBreadcrumbDesigner(MagicBreadcrumb, MagicBreadcrumbSettings)
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.MagicBreadcrumbDesigner(ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb, ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbSettings)
+  type: Constructor
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Breadcrumbs/Settings/MagicBreadcrumbDesigner.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: .ctor
+    path: ../ToSic.Cre8magic.Client/Breadcrumbs/Settings/MagicBreadcrumbDesigner.cs
+    startLine: 9
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+  syntax:
+    content: public MagicBreadcrumbDesigner(MagicBreadcrumb breadcrumb, MagicBreadcrumbSettings breadcrumbConfig)
+    parameters:
+    - id: breadcrumb
+      type: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb
+    - id: breadcrumbConfig
+      type: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbSettings
+    content.vb: Public Sub New(breadcrumb As MagicBreadcrumb, breadcrumbConfig As MagicBreadcrumbSettings)
+  overload: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.#ctor*
+  nameWithType.vb: MagicBreadcrumbDesigner.New(MagicBreadcrumb, MagicBreadcrumbSettings)
+  fullName.vb: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.New(ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb, ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbSettings)
+  name.vb: New(MagicBreadcrumb, MagicBreadcrumbSettings)
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Classes(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  commentId: M:ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Classes(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  id: Classes(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  parent: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner
+  langs:
+  - csharp
+  - vb
+  name: Classes(string, MagicBreadcrumbItem)
+  nameWithType: MagicBreadcrumbDesigner.Classes(string, MagicBreadcrumbItem)
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Classes(string, ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Breadcrumbs/Settings/MagicBreadcrumbDesigner.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Classes
+    path: ../ToSic.Cre8magic.Client/Breadcrumbs/Settings/MagicBreadcrumbDesigner.cs
+    startLine: 19
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+  example: []
+  syntax:
+    content: public string Classes(string tag, MagicBreadcrumbItem item)
+    parameters:
+    - id: tag
+      type: System.String
+    - id: item
+      type: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+    return:
+      type: System.String
+    content.vb: Public Function Classes(tag As String, item As MagicBreadcrumbItem) As String
+  overload: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Classes*
+  implements:
+  - ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Classes(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  nameWithType.vb: MagicBreadcrumbDesigner.Classes(String, MagicBreadcrumbItem)
+  fullName.vb: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Classes(String, ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  name.vb: Classes(String, MagicBreadcrumbItem)
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Value(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  commentId: M:ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Value(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  id: Value(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  parent: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner
+  langs:
+  - csharp
+  - vb
+  name: Value(string, MagicBreadcrumbItem)
+  nameWithType: MagicBreadcrumbDesigner.Value(string, MagicBreadcrumbItem)
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Value(string, ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Breadcrumbs/Settings/MagicBreadcrumbDesigner.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Value
+    path: ../ToSic.Cre8magic.Client/Breadcrumbs/Settings/MagicBreadcrumbDesigner.cs
+    startLine: 27
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+  example: []
+  syntax:
+    content: public string Value(string key, MagicBreadcrumbItem item)
+    parameters:
+    - id: key
+      type: System.String
+    - id: item
+      type: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+    return:
+      type: System.String
+    content.vb: Public Function Value(key As String, item As MagicBreadcrumbItem) As String
+  overload: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Value*
+  implements:
+  - ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Value(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  nameWithType.vb: MagicBreadcrumbDesigner.Value(String, MagicBreadcrumbItem)
+  fullName.vb: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Value(String, ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  name.vb: Value(String, MagicBreadcrumbItem)
+references:
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+  commentId: N:ToSic.Cre8magic.Client.Breadcrumbs.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+  nameWithType: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs
+    name: Breadcrumbs
+    href: ToSic.Cre8magic.Client.Breadcrumbs.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs
+    name: Breadcrumbs
+    href: ToSic.Cre8magic.Client.Breadcrumbs.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner
+  commentId: T:ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner
+  parent: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+  href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.html
+  name: IBreadcrumbDesigner
+  nameWithType: IBreadcrumbDesigner
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.#ctor*
+  commentId: Overload:ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.#ctor
+  href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.html#ToSic_Cre8magic_Client_Breadcrumbs_Settings_MagicBreadcrumbDesigner__ctor_ToSic_Cre8magic_Client_Breadcrumbs_MagicBreadcrumb_ToSic_Cre8magic_Client_Breadcrumbs_Settings_MagicBreadcrumbSettings_
+  name: MagicBreadcrumbDesigner
+  nameWithType: MagicBreadcrumbDesigner.MagicBreadcrumbDesigner
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.MagicBreadcrumbDesigner
+  nameWithType.vb: MagicBreadcrumbDesigner.New
+  fullName.vb: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.New
+  name.vb: New
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb
+  commentId: T:ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb
+  parent: ToSic.Cre8magic.Client.Breadcrumbs
+  href: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb.html
+  name: MagicBreadcrumb
+  nameWithType: MagicBreadcrumb
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbSettings
+  commentId: T:ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbSettings
+  parent: ToSic.Cre8magic.Client.Breadcrumbs.Settings
+  href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbSettings.html
+  name: MagicBreadcrumbSettings
+  nameWithType: MagicBreadcrumbSettings
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbSettings
+- uid: ToSic.Cre8magic.Client.Breadcrumbs
+  commentId: N:ToSic.Cre8magic.Client.Breadcrumbs
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Breadcrumbs
+  nameWithType: ToSic.Cre8magic.Client.Breadcrumbs
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs
+    name: Breadcrumbs
+    href: ToSic.Cre8magic.Client.Breadcrumbs.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs
+    name: Breadcrumbs
+    href: ToSic.Cre8magic.Client.Breadcrumbs.html
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Classes*
+  commentId: Overload:ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Classes
+  href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.html#ToSic_Cre8magic_Client_Breadcrumbs_Settings_MagicBreadcrumbDesigner_Classes_System_String_ToSic_Cre8magic_Client_Breadcrumbs_MagicBreadcrumbItem_
+  name: Classes
+  nameWithType: MagicBreadcrumbDesigner.Classes
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Classes
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Classes(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  commentId: M:ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Classes(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  parent: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner
+  isExternal: true
+  href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.html#ToSic_Cre8magic_Client_Breadcrumbs_Settings_IBreadcrumbDesigner_Classes_System_String_ToSic_Cre8magic_Client_Breadcrumbs_MagicBreadcrumbItem_
+  name: Classes(string, MagicBreadcrumbItem)
+  nameWithType: IBreadcrumbDesigner.Classes(string, MagicBreadcrumbItem)
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Classes(string, ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  nameWithType.vb: IBreadcrumbDesigner.Classes(String, MagicBreadcrumbItem)
+  fullName.vb: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Classes(String, ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  name.vb: Classes(String, MagicBreadcrumbItem)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Classes(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+    name: Classes
+    href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.html#ToSic_Cre8magic_Client_Breadcrumbs_Settings_IBreadcrumbDesigner_Classes_System_String_ToSic_Cre8magic_Client_Breadcrumbs_MagicBreadcrumbItem_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+    name: MagicBreadcrumbItem
+    href: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem.html
+  - name: )
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Classes(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+    name: Classes
+    href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.html#ToSic_Cre8magic_Client_Breadcrumbs_Settings_IBreadcrumbDesigner_Classes_System_String_ToSic_Cre8magic_Client_Breadcrumbs_MagicBreadcrumbItem_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+    name: MagicBreadcrumbItem
+    href: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem.html
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+  commentId: T:ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+  parent: ToSic.Cre8magic.Client.Breadcrumbs
+  href: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem.html
+  name: MagicBreadcrumbItem
+  nameWithType: MagicBreadcrumbItem
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Value*
+  commentId: Overload:ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Value
+  href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.html#ToSic_Cre8magic_Client_Breadcrumbs_Settings_MagicBreadcrumbDesigner_Value_System_String_ToSic_Cre8magic_Client_Breadcrumbs_MagicBreadcrumbItem_
+  name: Value
+  nameWithType: MagicBreadcrumbDesigner.Value
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.Settings.MagicBreadcrumbDesigner.Value
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Value(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  commentId: M:ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Value(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  parent: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner
+  isExternal: true
+  href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.html#ToSic_Cre8magic_Client_Breadcrumbs_Settings_IBreadcrumbDesigner_Value_System_String_ToSic_Cre8magic_Client_Breadcrumbs_MagicBreadcrumbItem_
+  name: Value(string, MagicBreadcrumbItem)
+  nameWithType: IBreadcrumbDesigner.Value(string, MagicBreadcrumbItem)
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Value(string, ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  nameWithType.vb: IBreadcrumbDesigner.Value(String, MagicBreadcrumbItem)
+  fullName.vb: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Value(String, ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+  name.vb: Value(String, MagicBreadcrumbItem)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Value(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+    name: Value
+    href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.html#ToSic_Cre8magic_Client_Breadcrumbs_Settings_IBreadcrumbDesigner_Value_System_String_ToSic_Cre8magic_Client_Breadcrumbs_MagicBreadcrumbItem_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+    name: MagicBreadcrumbItem
+    href: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem.html
+  - name: )
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.Value(System.String,ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem)
+    name: Value
+    href: ToSic.Cre8magic.Client.Breadcrumbs.Settings.IBreadcrumbDesigner.html#ToSic_Cre8magic_Client_Breadcrumbs_Settings_IBreadcrumbDesigner_Value_System_String_ToSic_Cre8magic_Client_Breadcrumbs_MagicBreadcrumbItem_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+    name: MagicBreadcrumbItem
+    href: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem.html
+  - name: )

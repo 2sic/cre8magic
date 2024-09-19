@@ -1,0 +1,224 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner
+  commentId: T:ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner
+  id: IMenuDesigner
+  parent: ToSic.Cre8magic.Client.Menus.Settings
+  children:
+  - ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Classes(System.String,ToSic.Cre8magic.Client.Menus.MagicMenuPage)
+  - ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Value(System.String,ToSic.Cre8magic.Client.Menus.MagicMenuPage)
+  langs:
+  - csharp
+  - vb
+  name: IMenuDesigner
+  nameWithType: IMenuDesigner
+  fullName: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner
+  type: Interface
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/Settings/IMenuDesigner.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: IMenuDesigner
+    path: ../ToSic.Cre8magic.Client/Menus/Settings/IMenuDesigner.cs
+    startLine: 2
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus.Settings
+  syntax:
+    content: public interface IMenuDesigner
+    content.vb: Public Interface IMenuDesigner
+- uid: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Classes(System.String,ToSic.Cre8magic.Client.Menus.MagicMenuPage)
+  commentId: M:ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Classes(System.String,ToSic.Cre8magic.Client.Menus.MagicMenuPage)
+  id: Classes(System.String,ToSic.Cre8magic.Client.Menus.MagicMenuPage)
+  parent: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner
+  langs:
+  - csharp
+  - vb
+  name: Classes(string, MagicMenuPage)
+  nameWithType: IMenuDesigner.Classes(string, MagicMenuPage)
+  fullName: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Classes(string, ToSic.Cre8magic.Client.Menus.MagicMenuPage)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/Settings/IMenuDesigner.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Classes
+    path: ../ToSic.Cre8magic.Client/Menus/Settings/IMenuDesigner.cs
+    startLine: 4
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus.Settings
+  syntax:
+    content: string Classes(string tag, MagicMenuPage page)
+    parameters:
+    - id: tag
+      type: System.String
+    - id: page
+      type: ToSic.Cre8magic.Client.Menus.MagicMenuPage
+    return:
+      type: System.String
+    content.vb: Function Classes(tag As String, page As MagicMenuPage) As String
+  overload: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Classes*
+  nameWithType.vb: IMenuDesigner.Classes(String, MagicMenuPage)
+  fullName.vb: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Classes(String, ToSic.Cre8magic.Client.Menus.MagicMenuPage)
+  name.vb: Classes(String, MagicMenuPage)
+- uid: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Value(System.String,ToSic.Cre8magic.Client.Menus.MagicMenuPage)
+  commentId: M:ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Value(System.String,ToSic.Cre8magic.Client.Menus.MagicMenuPage)
+  id: Value(System.String,ToSic.Cre8magic.Client.Menus.MagicMenuPage)
+  parent: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner
+  langs:
+  - csharp
+  - vb
+  name: Value(string, MagicMenuPage)
+  nameWithType: IMenuDesigner.Value(string, MagicMenuPage)
+  fullName: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Value(string, ToSic.Cre8magic.Client.Menus.MagicMenuPage)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/Settings/IMenuDesigner.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Value
+    path: ../ToSic.Cre8magic.Client/Menus/Settings/IMenuDesigner.cs
+    startLine: 5
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus.Settings
+  syntax:
+    content: string Value(string key, MagicMenuPage page)
+    parameters:
+    - id: key
+      type: System.String
+    - id: page
+      type: ToSic.Cre8magic.Client.Menus.MagicMenuPage
+    return:
+      type: System.String
+    content.vb: Function Value(key As String, page As MagicMenuPage) As String
+  overload: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Value*
+  nameWithType.vb: IMenuDesigner.Value(String, MagicMenuPage)
+  fullName.vb: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Value(String, ToSic.Cre8magic.Client.Menus.MagicMenuPage)
+  name.vb: Value(String, MagicMenuPage)
+references:
+- uid: ToSic.Cre8magic.Client.Menus.Settings
+  commentId: N:ToSic.Cre8magic.Client.Menus.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Menus.Settings
+  nameWithType: ToSic.Cre8magic.Client.Menus.Settings
+  fullName: ToSic.Cre8magic.Client.Menus.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Menus.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Menus.Settings.html
+- uid: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Classes*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Classes
+  href: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.html#ToSic_Cre8magic_Client_Menus_Settings_IMenuDesigner_Classes_System_String_ToSic_Cre8magic_Client_Menus_MagicMenuPage_
+  name: Classes
+  nameWithType: IMenuDesigner.Classes
+  fullName: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Classes
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuPage
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenuPage
+  parent: ToSic.Cre8magic.Client.Menus
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuPage.html
+  name: MagicMenuPage
+  nameWithType: MagicMenuPage
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuPage
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ToSic.Cre8magic.Client.Menus
+  commentId: N:ToSic.Cre8magic.Client.Menus
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Menus
+  nameWithType: ToSic.Cre8magic.Client.Menus
+  fullName: ToSic.Cre8magic.Client.Menus
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+- uid: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Value*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Value
+  href: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.html#ToSic_Cre8magic_Client_Menus_Settings_IMenuDesigner_Value_System_String_ToSic_Cre8magic_Client_Menus_MagicMenuPage_
+  name: Value
+  nameWithType: IMenuDesigner.Value
+  fullName: ToSic.Cre8magic.Client.Menus.Settings.IMenuDesigner.Value

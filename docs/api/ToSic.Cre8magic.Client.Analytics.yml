@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Analytics
+  commentId: N:ToSic.Cre8magic.Client.Analytics
+  id: ToSic.Cre8magic.Client.Analytics
+  children:
+  - ToSic.Cre8magic.Client.Analytics.MagicAnalyticsService
+  - ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Analytics
+  nameWithType: ToSic.Cre8magic.Client.Analytics
+  fullName: ToSic.Cre8magic.Client.Analytics
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsService
+  commentId: T:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsService
+  parent: ToSic.Cre8magic.Client.Analytics
+  href: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsService.html
+  name: MagicAnalyticsService
+  nameWithType: MagicAnalyticsService
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsService
+- uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+  commentId: T:ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+  parent: ToSic.Cre8magic.Client.Analytics
+  href: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.html
+  name: MagicAnalyticsSettings
+  nameWithType: MagicAnalyticsSettings
+  fullName: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+- uid: ToSic.Cre8magic.Client.Analytics
+  commentId: N:ToSic.Cre8magic.Client.Analytics
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Analytics
+  nameWithType: ToSic.Cre8magic.Client.Analytics
+  fullName: ToSic.Cre8magic.Client.Analytics
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Analytics
+    name: Analytics
+    href: ToSic.Cre8magic.Client.Analytics.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Analytics
+    name: Analytics
+    href: ToSic.Cre8magic.Client.Analytics.html

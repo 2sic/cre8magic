@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Services.IMagicThemeJsService
+  commentId: T:ToSic.Cre8magic.Client.Services.IMagicThemeJsService
+  id: IMagicThemeJsService
+  parent: ToSic.Cre8magic.Client.Services
+  children:
+  - ToSic.Cre8magic.Client.Services.IMagicThemeJsService.Log(System.Object[])
+  - ToSic.Cre8magic.Client.Services.IMagicThemeJsService.SetBodyClasses(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IMagicThemeJsService
+  nameWithType: IMagicThemeJsService
+  fullName: ToSic.Cre8magic.Client.Services.IMagicThemeJsService
+  type: Interface
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Services/IMagicThemeJsService.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: IMagicThemeJsService
+    path: ../ToSic.Cre8magic.Client/Services/IMagicThemeJsService.cs
+    startLine: 2
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Services
+  syntax:
+    content: public interface IMagicThemeJsService
+    content.vb: Public Interface IMagicThemeJsService
+- uid: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.Log(System.Object[])
+  commentId: M:ToSic.Cre8magic.Client.Services.IMagicThemeJsService.Log(System.Object[])
+  id: Log(System.Object[])
+  parent: ToSic.Cre8magic.Client.Services.IMagicThemeJsService
+  langs:
+  - csharp
+  - vb
+  name: Log(params object[])
+  nameWithType: IMagicThemeJsService.Log(params object[])
+  fullName: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.Log(params object[])
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Services/IMagicThemeJsService.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Log
+    path: ../ToSic.Cre8magic.Client/Services/IMagicThemeJsService.cs
+    startLine: 4
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Services
+  syntax:
+    content: Task Log(params object[] args)
+    parameters:
+    - id: args
+      type: System.Object[]
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function Log(ParamArray args As Object()) As Task
+  overload: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.Log*
+  nameWithType.vb: IMagicThemeJsService.Log(ParamArray Object())
+  fullName.vb: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.Log(ParamArray Object())
+  name.vb: Log(ParamArray Object())
+- uid: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.SetBodyClasses(System.String)
+  commentId: M:ToSic.Cre8magic.Client.Services.IMagicThemeJsService.SetBodyClasses(System.String)
+  id: SetBodyClasses(System.String)
+  parent: ToSic.Cre8magic.Client.Services.IMagicThemeJsService
+  langs:
+  - csharp
+  - vb
+  name: SetBodyClasses(string)
+  nameWithType: IMagicThemeJsService.SetBodyClasses(string)
+  fullName: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.SetBodyClasses(string)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Services/IMagicThemeJsService.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: SetBodyClasses
+    path: ../ToSic.Cre8magic.Client/Services/IMagicThemeJsService.cs
+    startLine: 11
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Services
+  summary: Set body classes (removes all previous classes in the process)
+  example: []
+  syntax:
+    content: Task SetBodyClasses(string classes)
+    parameters:
+    - id: classes
+      type: System.String
+      description: ''
+    return:
+      type: System.Threading.Tasks.Task
+      description: ''
+    content.vb: Function SetBodyClasses(classes As String) As Task
+  overload: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.SetBodyClasses*
+  nameWithType.vb: IMagicThemeJsService.SetBodyClasses(String)
+  fullName.vb: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.SetBodyClasses(String)
+  name.vb: SetBodyClasses(String)
+references:
+- uid: ToSic.Cre8magic.Client.Services
+  commentId: N:ToSic.Cre8magic.Client.Services
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Services
+  nameWithType: ToSic.Cre8magic.Client.Services
+  fullName: ToSic.Cre8magic.Client.Services
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Services
+    name: Services
+    href: ToSic.Cre8magic.Client.Services.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Services
+    name: Services
+    href: ToSic.Cre8magic.Client.Services.html
+- uid: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.Log*
+  commentId: Overload:ToSic.Cre8magic.Client.Services.IMagicThemeJsService.Log
+  href: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.html#ToSic_Cre8magic_Client_Services_IMagicThemeJsService_Log_System_Object___
+  name: Log
+  nameWithType: IMagicThemeJsService.Log
+  fullName: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.Log
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.SetBodyClasses*
+  commentId: Overload:ToSic.Cre8magic.Client.Services.IMagicThemeJsService.SetBodyClasses
+  href: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.html#ToSic_Cre8magic_Client_Services_IMagicThemeJsService_SetBodyClasses_System_String_
+  name: SetBodyClasses
+  nameWithType: IMagicThemeJsService.SetBodyClasses
+  fullName: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.SetBodyClasses
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

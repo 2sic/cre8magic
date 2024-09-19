@@ -1,0 +1,262 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings
+  commentId: T:ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings
+  id: IMagicControlWithSettings
+  parent: ToSic.Cre8magic.Client.Controls
+  children:
+  - ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings.Settings
+  langs:
+  - csharp
+  - vb
+  name: IMagicControlWithSettings
+  nameWithType: IMagicControlWithSettings
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings
+  type: Interface
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Controls/IMagicControlWithSettings.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: IMagicControlWithSettings
+    path: ../ToSic.Cre8magic.Client/Controls/IMagicControlWithSettings.cs
+    startLine: 4
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Controls
+  syntax:
+    content: 'public interface IMagicControlWithSettings : IHasMagicSettings, IMagicDesigner'
+    content.vb: Public Interface IMagicControlWithSettings Inherits IHasMagicSettings, IMagicDesigner
+  inheritedMembers:
+  - ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes(System.String)
+  - ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value(System.String)
+  - ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id(System.String)
+- uid: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings.Settings
+  commentId: P:ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings.Settings
+  id: Settings
+  parent: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings
+  langs:
+  - csharp
+  - vb
+  name: Settings
+  nameWithType: IMagicControlWithSettings.Settings
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings.Settings
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Controls/IMagicControlWithSettings.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Settings
+    path: ../ToSic.Cre8magic.Client/Controls/IMagicControlWithSettings.cs
+    startLine: 6
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Controls
+  syntax:
+    content: >-
+      [CascadingParameter]
+
+      MagicSettings Settings { get; set; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Settings.MagicSettings
+    content.vb: >-
+      <CascadingParameter>
+
+      Property Settings As MagicSettings
+  overload: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings.Settings*
+  attributes:
+  - type: Microsoft.AspNetCore.Components.CascadingParameterAttribute
+    ctor: Microsoft.AspNetCore.Components.CascadingParameterAttribute.#ctor
+    arguments: []
+references:
+- uid: ToSic.Cre8magic.Client.Controls
+  commentId: N:ToSic.Cre8magic.Client.Controls
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Controls
+  nameWithType: ToSic.Cre8magic.Client.Controls
+  fullName: ToSic.Cre8magic.Client.Controls
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Controls
+    name: Controls
+    href: ToSic.Cre8magic.Client.Controls.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Controls
+    name: Controls
+    href: ToSic.Cre8magic.Client.Controls.html
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes(System.String)
+  commentId: M:ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes(System.String)
+  parent: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  isExternal: true
+  href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html#ToSic_Cre8magic_Client_Controls_IMagicDesigner_Classes_System_String_
+  name: Classes(string)
+  nameWithType: IMagicDesigner.Classes(string)
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes(string)
+  nameWithType.vb: IMagicDesigner.Classes(String)
+  fullName.vb: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes(String)
+  name.vb: Classes(String)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes(System.String)
+    name: Classes
+    href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html#ToSic_Cre8magic_Client_Controls_IMagicDesigner_Classes_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes(System.String)
+    name: Classes
+    href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html#ToSic_Cre8magic_Client_Controls_IMagicDesigner_Classes_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value(System.String)
+  commentId: M:ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value(System.String)
+  parent: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  isExternal: true
+  href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html#ToSic_Cre8magic_Client_Controls_IMagicDesigner_Value_System_String_
+  name: Value(string)
+  nameWithType: IMagicDesigner.Value(string)
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value(string)
+  nameWithType.vb: IMagicDesigner.Value(String)
+  fullName.vb: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value(String)
+  name.vb: Value(String)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value(System.String)
+    name: Value
+    href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html#ToSic_Cre8magic_Client_Controls_IMagicDesigner_Value_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value(System.String)
+    name: Value
+    href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html#ToSic_Cre8magic_Client_Controls_IMagicDesigner_Value_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id(System.String)
+  commentId: M:ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id(System.String)
+  parent: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  isExternal: true
+  href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html#ToSic_Cre8magic_Client_Controls_IMagicDesigner_Id_System_String_
+  name: Id(string)
+  nameWithType: IMagicDesigner.Id(string)
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id(string)
+  nameWithType.vb: IMagicDesigner.Id(String)
+  fullName.vb: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id(String)
+  name.vb: Id(String)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id(System.String)
+    name: Id
+    href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html#ToSic_Cre8magic_Client_Controls_IMagicDesigner_Id_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id(System.String)
+    name: Id
+    href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html#ToSic_Cre8magic_Client_Controls_IMagicDesigner_Id_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  commentId: T:ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  parent: ToSic.Cre8magic.Client.Controls
+  href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html
+  name: IMagicDesigner
+  nameWithType: IMagicDesigner
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+- uid: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings.Settings*
+  commentId: Overload:ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings.Settings
+  href: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings.html#ToSic_Cre8magic_Client_Controls_IMagicControlWithSettings_Settings
+  name: Settings
+  nameWithType: IMagicControlWithSettings.Settings
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicControlWithSettings.Settings
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettings
+  commentId: T:ToSic.Cre8magic.Client.Settings.MagicSettings
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.MagicSettings.html
+  name: MagicSettings
+  nameWithType: MagicSettings
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettings
+- uid: ToSic.Cre8magic.Client.Settings
+  commentId: N:ToSic.Cre8magic.Client.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Settings
+  nameWithType: ToSic.Cre8magic.Client.Settings
+  fullName: ToSic.Cre8magic.Client.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html

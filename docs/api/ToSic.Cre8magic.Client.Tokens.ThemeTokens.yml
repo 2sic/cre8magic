@@ -1,0 +1,519 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Tokens.ThemeTokens
+  commentId: T:ToSic.Cre8magic.Client.Tokens.ThemeTokens
+  id: ThemeTokens
+  parent: ToSic.Cre8magic.Client.Tokens
+  children:
+  - ToSic.Cre8magic.Client.Tokens.ThemeTokens.#ctor(ToSic.Cre8magic.Client.Settings.MagicPackageSettings)
+  - ToSic.Cre8magic.Client.Tokens.ThemeTokens.NameId
+  - ToSic.Cre8magic.Client.Tokens.ThemeTokens.NameIdConstant
+  - ToSic.Cre8magic.Client.Tokens.ThemeTokens.Parse(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ThemeTokens
+  nameWithType: ThemeTokens
+  fullName: ToSic.Cre8magic.Client.Tokens.ThemeTokens
+  type: Class
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Tokens/ThemeTokens.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: ThemeTokens
+    path: ../ToSic.Cre8magic.Client/Tokens/ThemeTokens.cs
+    startLine: 2
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Tokens
+  syntax:
+    content: public class ThemeTokens
+    content.vb: Public Class ThemeTokens
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ToSic.Cre8magic.Client.Tokens.ThemeTokens.NameIdConstant
+  commentId: F:ToSic.Cre8magic.Client.Tokens.ThemeTokens.NameIdConstant
+  id: NameIdConstant
+  parent: ToSic.Cre8magic.Client.Tokens.ThemeTokens
+  langs:
+  - csharp
+  - vb
+  name: NameIdConstant
+  nameWithType: ThemeTokens.NameIdConstant
+  fullName: ToSic.Cre8magic.Client.Tokens.ThemeTokens.NameIdConstant
+  type: Field
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Tokens/ThemeTokens.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: NameIdConstant
+    path: ../ToSic.Cre8magic.Client/Tokens/ThemeTokens.cs
+    startLine: 4
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Tokens
+  syntax:
+    content: public const string NameIdConstant = "ThemeTokens"
+    return:
+      type: System.String
+    content.vb: Public Const NameIdConstant As String = "ThemeTokens"
+- uid: ToSic.Cre8magic.Client.Tokens.ThemeTokens.#ctor(ToSic.Cre8magic.Client.Settings.MagicPackageSettings)
+  commentId: M:ToSic.Cre8magic.Client.Tokens.ThemeTokens.#ctor(ToSic.Cre8magic.Client.Settings.MagicPackageSettings)
+  id: '#ctor(ToSic.Cre8magic.Client.Settings.MagicPackageSettings)'
+  parent: ToSic.Cre8magic.Client.Tokens.ThemeTokens
+  langs:
+  - csharp
+  - vb
+  name: ThemeTokens(MagicPackageSettings)
+  nameWithType: ThemeTokens.ThemeTokens(MagicPackageSettings)
+  fullName: ToSic.Cre8magic.Client.Tokens.ThemeTokens.ThemeTokens(ToSic.Cre8magic.Client.Settings.MagicPackageSettings)
+  type: Constructor
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Tokens/ThemeTokens.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: .ctor
+    path: ../ToSic.Cre8magic.Client/Tokens/ThemeTokens.cs
+    startLine: 6
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Tokens
+  syntax:
+    content: public ThemeTokens(MagicPackageSettings themeSettings)
+    parameters:
+    - id: themeSettings
+      type: ToSic.Cre8magic.Client.Settings.MagicPackageSettings
+    content.vb: Public Sub New(themeSettings As MagicPackageSettings)
+  overload: ToSic.Cre8magic.Client.Tokens.ThemeTokens.#ctor*
+  nameWithType.vb: ThemeTokens.New(MagicPackageSettings)
+  fullName.vb: ToSic.Cre8magic.Client.Tokens.ThemeTokens.New(ToSic.Cre8magic.Client.Settings.MagicPackageSettings)
+  name.vb: New(MagicPackageSettings)
+- uid: ToSic.Cre8magic.Client.Tokens.ThemeTokens.NameId
+  commentId: P:ToSic.Cre8magic.Client.Tokens.ThemeTokens.NameId
+  id: NameId
+  parent: ToSic.Cre8magic.Client.Tokens.ThemeTokens
+  langs:
+  - csharp
+  - vb
+  name: NameId
+  nameWithType: ThemeTokens.NameId
+  fullName: ToSic.Cre8magic.Client.Tokens.ThemeTokens.NameId
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Tokens/ThemeTokens.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: NameId
+    path: ../ToSic.Cre8magic.Client/Tokens/ThemeTokens.cs
+    startLine: 14
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Tokens
+  example: []
+  syntax:
+    content: public string NameId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property NameId As String
+  overload: ToSic.Cre8magic.Client.Tokens.ThemeTokens.NameId*
+- uid: ToSic.Cre8magic.Client.Tokens.ThemeTokens.Parse(System.String)
+  commentId: M:ToSic.Cre8magic.Client.Tokens.ThemeTokens.Parse(System.String)
+  id: Parse(System.String)
+  parent: ToSic.Cre8magic.Client.Tokens.ThemeTokens
+  langs:
+  - csharp
+  - vb
+  name: Parse(string)
+  nameWithType: ThemeTokens.Parse(string)
+  fullName: ToSic.Cre8magic.Client.Tokens.ThemeTokens.Parse(string)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Tokens/ThemeTokens.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Parse
+    path: ../ToSic.Cre8magic.Client/Tokens/ThemeTokens.cs
+    startLine: 16
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Tokens
+  example: []
+  syntax:
+    content: public virtual string Parse(string value)
+    parameters:
+    - id: value
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Overridable Function Parse(value As String) As String
+  overload: ToSic.Cre8magic.Client.Tokens.ThemeTokens.Parse*
+  nameWithType.vb: ThemeTokens.Parse(String)
+  fullName.vb: ToSic.Cre8magic.Client.Tokens.ThemeTokens.Parse(String)
+  name.vb: Parse(String)
+references:
+- uid: ToSic.Cre8magic.Client.Tokens
+  commentId: N:ToSic.Cre8magic.Client.Tokens
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Tokens
+  nameWithType: ToSic.Cre8magic.Client.Tokens
+  fullName: ToSic.Cre8magic.Client.Tokens
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Tokens
+    name: Tokens
+    href: ToSic.Cre8magic.Client.Tokens.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Tokens
+    name: Tokens
+    href: ToSic.Cre8magic.Client.Tokens.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ToSic.Cre8magic.Client.Tokens.ThemeTokens.#ctor*
+  commentId: Overload:ToSic.Cre8magic.Client.Tokens.ThemeTokens.#ctor
+  href: ToSic.Cre8magic.Client.Tokens.ThemeTokens.html#ToSic_Cre8magic_Client_Tokens_ThemeTokens__ctor_ToSic_Cre8magic_Client_Settings_MagicPackageSettings_
+  name: ThemeTokens
+  nameWithType: ThemeTokens.ThemeTokens
+  fullName: ToSic.Cre8magic.Client.Tokens.ThemeTokens.ThemeTokens
+  nameWithType.vb: ThemeTokens.New
+  fullName.vb: ToSic.Cre8magic.Client.Tokens.ThemeTokens.New
+  name.vb: New
+- uid: ToSic.Cre8magic.Client.Settings.MagicPackageSettings
+  commentId: T:ToSic.Cre8magic.Client.Settings.MagicPackageSettings
+  parent: ToSic.Cre8magic.Client.Settings
+  href: ToSic.Cre8magic.Client.Settings.MagicPackageSettings.html
+  name: MagicPackageSettings
+  nameWithType: MagicPackageSettings
+  fullName: ToSic.Cre8magic.Client.Settings.MagicPackageSettings
+- uid: ToSic.Cre8magic.Client.Settings
+  commentId: N:ToSic.Cre8magic.Client.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Settings
+  nameWithType: ToSic.Cre8magic.Client.Settings
+  fullName: ToSic.Cre8magic.Client.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+- uid: ToSic.Cre8magic.Client.Tokens.ThemeTokens.NameId*
+  commentId: Overload:ToSic.Cre8magic.Client.Tokens.ThemeTokens.NameId
+  href: ToSic.Cre8magic.Client.Tokens.ThemeTokens.html#ToSic_Cre8magic_Client_Tokens_ThemeTokens_NameId
+  name: NameId
+  nameWithType: ThemeTokens.NameId
+  fullName: ToSic.Cre8magic.Client.Tokens.ThemeTokens.NameId
+- uid: ToSic.Cre8magic.Client.Tokens.ThemeTokens.Parse*
+  commentId: Overload:ToSic.Cre8magic.Client.Tokens.ThemeTokens.Parse
+  href: ToSic.Cre8magic.Client.Tokens.ThemeTokens.html#ToSic_Cre8magic_Client_Tokens_ThemeTokens_Parse_System_String_
+  name: Parse
+  nameWithType: ThemeTokens.Parse
+  fullName: ToSic.Cre8magic.Client.Tokens.ThemeTokens.Parse

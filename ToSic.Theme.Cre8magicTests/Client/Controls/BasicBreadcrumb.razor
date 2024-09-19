@@ -1,10 +1,15 @@
 ﻿@namespace ToSic.Theme.Cre8magicTests
 @using ToSic.Cre8magic.Client.Breadcrumbs
+@using ToSic.Theme.Cre8magicTests.Client
 @inherits ThemeControlBase;
 
 @code {
-    [Parameter, EditorRequired]
+    [Parameter/* , EditorRequired */]
     public MagicBreadcrumb Breadcrumb { get; set; }
+}
+@{
+    // default
+    Breadcrumb ??= new MagicBreadcrumb(PageState).Designer(new BasicBreadcrumbDesigner());
 }
 <nav aria-label="breadcrumb">
     <ol class='@Breadcrumb.Classes("ol")'>
@@ -13,9 +18,9 @@
             <li class='@item.Classes("li")' aria-current='@item.Value("aria-current")'>
                 @if (item.IsActive)
                 {
-                    @item.Name
+                    <span class='@item.Classes("span")'>@item.Name</span>
                 } else {
-                    <a href="@item.Link">@item.Name</a>
+                    <a href="@item.Link" class='@item.Classes("a")'>@item.Name</a>
                 }
             </li>
         }

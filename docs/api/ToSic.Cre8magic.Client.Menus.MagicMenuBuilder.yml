@@ -1,0 +1,783 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+  id: MagicMenuBuilder
+  parent: ToSic.Cre8magic.Client.Menus
+  children:
+  - ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.#ctor(Microsoft.Extensions.Logging.ILogger{ToSic.Cre8magic.Client.Menus.MagicMenuBuilder})
+  - ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.GetTree(ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings,System.Collections.Generic.List{ToSic.Cre8magic.Client.Models.MagicPage})
+  - ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.Logger
+  langs:
+  - csharp
+  - vb
+  name: MagicMenuBuilder
+  nameWithType: MagicMenuBuilder
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+  type: Class
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuBuilder.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: MagicMenuBuilder
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuBuilder.cs
+    startLine: 9
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  summary: Will create a MenuTree based on the current pages information and configuration
+  example: []
+  syntax:
+    content: 'public class MagicMenuBuilder : MagicServiceWithSettingsBase'
+    content.vb: Public Class MagicMenuBuilder Inherits MagicServiceWithSettingsBase
+  inheritance:
+  - System.Object
+  - ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  inheritedMembers:
+  - ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.InitSettings(ToSic.Cre8magic.Client.Settings.MagicSettings)
+  - ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.Settings
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.#ctor(Microsoft.Extensions.Logging.ILogger{ToSic.Cre8magic.Client.Menus.MagicMenuBuilder})
+  commentId: M:ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.#ctor(Microsoft.Extensions.Logging.ILogger{ToSic.Cre8magic.Client.Menus.MagicMenuBuilder})
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{ToSic.Cre8magic.Client.Menus.MagicMenuBuilder})'
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+  langs:
+  - csharp
+  - vb
+  name: MagicMenuBuilder(ILogger<MagicMenuBuilder>)
+  nameWithType: MagicMenuBuilder.MagicMenuBuilder(ILogger<MagicMenuBuilder>)
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.MagicMenuBuilder(Microsoft.Extensions.Logging.ILogger<ToSic.Cre8magic.Client.Menus.MagicMenuBuilder>)
+  type: Constructor
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuBuilder.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: .ctor
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuBuilder.cs
+    startLine: 9
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  summary: Will create a MenuTree based on the current pages information and configuration
+  example: []
+  syntax:
+    content: public MagicMenuBuilder(ILogger<MagicMenuBuilder> logger)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{ToSic.Cre8magic.Client.Menus.MagicMenuBuilder}
+    content.vb: Public Sub New(logger As ILogger(Of MagicMenuBuilder))
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.#ctor*
+  nameWithType.vb: MagicMenuBuilder.New(ILogger(Of MagicMenuBuilder))
+  fullName.vb: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.New(Microsoft.Extensions.Logging.ILogger(Of ToSic.Cre8magic.Client.Menus.MagicMenuBuilder))
+  name.vb: New(ILogger(Of MagicMenuBuilder))
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.Logger
+  commentId: P:ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.Logger
+  id: Logger
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+  langs:
+  - csharp
+  - vb
+  name: Logger
+  nameWithType: MagicMenuBuilder.Logger
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.Logger
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuBuilder.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Logger
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuBuilder.cs
+    startLine: 11
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: public ILogger Logger { get; }
+    parameters: []
+    return:
+      type: Microsoft.Extensions.Logging.ILogger
+    content.vb: Public ReadOnly Property Logger As ILogger
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.Logger*
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.GetTree(ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings,System.Collections.Generic.List{ToSic.Cre8magic.Client.Models.MagicPage})
+  commentId: M:ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.GetTree(ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings,System.Collections.Generic.List{ToSic.Cre8magic.Client.Models.MagicPage})
+  id: GetTree(ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings,System.Collections.Generic.List{ToSic.Cre8magic.Client.Models.MagicPage})
+  parent: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+  langs:
+  - csharp
+  - vb
+  name: GetTree(MagicMenuSettings, List<MagicPage>)
+  nameWithType: MagicMenuBuilder.GetTree(MagicMenuSettings, List<MagicPage>)
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.GetTree(ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings, System.Collections.Generic.List<ToSic.Cre8magic.Client.Models.MagicPage>)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Menus/MagicMenuBuilder.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: GetTree
+    path: ../ToSic.Cre8magic.Client/Menus/MagicMenuBuilder.cs
+    startLine: 15
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Menus
+  syntax:
+    content: public MagicMenuTree GetTree(MagicMenuSettings config, List<MagicPage> menuPages)
+    parameters:
+    - id: config
+      type: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings
+    - id: menuPages
+      type: System.Collections.Generic.List{ToSic.Cre8magic.Client.Models.MagicPage}
+    return:
+      type: ToSic.Cre8magic.Client.Menus.MagicMenuTree
+    content.vb: Public Function GetTree(config As MagicMenuSettings, menuPages As List(Of MagicPage)) As MagicMenuTree
+  overload: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.GetTree*
+  nameWithType.vb: MagicMenuBuilder.GetTree(MagicMenuSettings, List(Of MagicPage))
+  fullName.vb: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.GetTree(ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings, System.Collections.Generic.List(Of ToSic.Cre8magic.Client.Models.MagicPage))
+  name.vb: GetTree(MagicMenuSettings, List(Of MagicPage))
+references:
+- uid: ToSic.Cre8magic.Client.Menus
+  commentId: N:ToSic.Cre8magic.Client.Menus
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Menus
+  nameWithType: ToSic.Cre8magic.Client.Menus
+  fullName: ToSic.Cre8magic.Client.Menus
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  commentId: T:ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  parent: ToSic.Cre8magic.Client.Services
+  href: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.html
+  name: MagicServiceWithSettingsBase
+  nameWithType: MagicServiceWithSettingsBase
+  fullName: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+- uid: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.InitSettings(ToSic.Cre8magic.Client.Settings.MagicSettings)
+  commentId: M:ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.InitSettings(ToSic.Cre8magic.Client.Settings.MagicSettings)
+  parent: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  href: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.html#ToSic_Cre8magic_Client_Services_MagicServiceWithSettingsBase_InitSettings_ToSic_Cre8magic_Client_Settings_MagicSettings_
+  name: InitSettings(MagicSettings)
+  nameWithType: MagicServiceWithSettingsBase.InitSettings(MagicSettings)
+  fullName: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.InitSettings(ToSic.Cre8magic.Client.Settings.MagicSettings)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.InitSettings(ToSic.Cre8magic.Client.Settings.MagicSettings)
+    name: InitSettings
+    href: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.html#ToSic_Cre8magic_Client_Services_MagicServiceWithSettingsBase_InitSettings_ToSic_Cre8magic_Client_Settings_MagicSettings_
+  - name: (
+  - uid: ToSic.Cre8magic.Client.Settings.MagicSettings
+    name: MagicSettings
+    href: ToSic.Cre8magic.Client.Settings.MagicSettings.html
+  - name: )
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.InitSettings(ToSic.Cre8magic.Client.Settings.MagicSettings)
+    name: InitSettings
+    href: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.html#ToSic_Cre8magic_Client_Services_MagicServiceWithSettingsBase_InitSettings_ToSic_Cre8magic_Client_Settings_MagicSettings_
+  - name: (
+  - uid: ToSic.Cre8magic.Client.Settings.MagicSettings
+    name: MagicSettings
+    href: ToSic.Cre8magic.Client.Settings.MagicSettings.html
+  - name: )
+- uid: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.Settings
+  commentId: P:ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.Settings
+  parent: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  href: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.html#ToSic_Cre8magic_Client_Services_MagicServiceWithSettingsBase_Settings
+  name: Settings
+  nameWithType: MagicServiceWithSettingsBase.Settings
+  fullName: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.Settings
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ToSic.Cre8magic.Client.Services
+  commentId: N:ToSic.Cre8magic.Client.Services
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Services
+  nameWithType: ToSic.Cre8magic.Client.Services
+  fullName: ToSic.Cre8magic.Client.Services
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Services
+    name: Services
+    href: ToSic.Cre8magic.Client.Services.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Services
+    name: Services
+    href: ToSic.Cre8magic.Client.Services.html
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.#ctor*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.#ctor
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.html#ToSic_Cre8magic_Client_Menus_MagicMenuBuilder__ctor_Microsoft_Extensions_Logging_ILogger_ToSic_Cre8magic_Client_Menus_MagicMenuBuilder__
+  name: MagicMenuBuilder
+  nameWithType: MagicMenuBuilder.MagicMenuBuilder
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.MagicMenuBuilder
+  nameWithType.vb: MagicMenuBuilder.New
+  fullName.vb: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{ToSic.Cre8magic.Client.Menus.MagicMenuBuilder}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{ToSic.Cre8magic.Client.Menus.MagicMenuBuilder}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<MagicMenuBuilder>
+  nameWithType: ILogger<MagicMenuBuilder>
+  fullName: Microsoft.Extensions.Logging.ILogger<ToSic.Cre8magic.Client.Menus.MagicMenuBuilder>
+  nameWithType.vb: ILogger(Of MagicMenuBuilder)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of ToSic.Cre8magic.Client.Menus.MagicMenuBuilder)
+  name.vb: ILogger(Of MagicMenuBuilder)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+    name: MagicMenuBuilder
+    href: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+    name: MagicMenuBuilder
+    href: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.html
+  - name: )
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.Logger*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.Logger
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.html#ToSic_Cre8magic_Client_Menus_MagicMenuBuilder_Logger
+  name: Logger
+  nameWithType: MagicMenuBuilder.Logger
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.Logger
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.GetTree*
+  commentId: Overload:ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.GetTree
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.html#ToSic_Cre8magic_Client_Menus_MagicMenuBuilder_GetTree_ToSic_Cre8magic_Client_Menus_Settings_MagicMenuSettings_System_Collections_Generic_List_ToSic_Cre8magic_Client_Models_MagicPage__
+  name: GetTree
+  nameWithType: MagicMenuBuilder.GetTree
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.GetTree
+- uid: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings
+  commentId: T:ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings
+  parent: ToSic.Cre8magic.Client.Menus.Settings
+  href: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings.html
+  name: MagicMenuSettings
+  nameWithType: MagicMenuSettings
+  fullName: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings
+- uid: System.Collections.Generic.List{ToSic.Cre8magic.Client.Models.MagicPage}
+  commentId: T:System.Collections.Generic.List{ToSic.Cre8magic.Client.Models.MagicPage}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<MagicPage>
+  nameWithType: List<MagicPage>
+  fullName: System.Collections.Generic.List<ToSic.Cre8magic.Client.Models.MagicPage>
+  nameWithType.vb: List(Of MagicPage)
+  fullName.vb: System.Collections.Generic.List(Of ToSic.Cre8magic.Client.Models.MagicPage)
+  name.vb: List(Of MagicPage)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ToSic.Cre8magic.Client.Models.MagicPage
+    name: MagicPage
+    href: ToSic.Cre8magic.Client.Models.MagicPage.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Models.MagicPage
+    name: MagicPage
+    href: ToSic.Cre8magic.Client.Models.MagicPage.html
+  - name: )
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuTree
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenuTree
+  parent: ToSic.Cre8magic.Client.Menus
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuTree.html
+  name: MagicMenuTree
+  nameWithType: MagicMenuTree
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuTree
+- uid: ToSic.Cre8magic.Client.Menus.Settings
+  commentId: N:ToSic.Cre8magic.Client.Menus.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Menus.Settings
+  nameWithType: ToSic.Cre8magic.Client.Menus.Settings
+  fullName: ToSic.Cre8magic.Client.Menus.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Menus.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Menus.Settings.html
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Settings.Json
+  commentId: N:ToSic.Cre8magic.Client.Settings.Json
+  id: ToSic.Cre8magic.Client.Settings.Json
+  children:
+  - ToSic.Cre8magic.Client.Settings.Json.JsonConverterBase`1
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Settings.Json
+  nameWithType: ToSic.Cre8magic.Client.Settings.Json
+  fullName: ToSic.Cre8magic.Client.Settings.Json
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Settings.Json.JsonConverterBase`1
+  commentId: T:ToSic.Cre8magic.Client.Settings.Json.JsonConverterBase`1
+  href: ToSic.Cre8magic.Client.Settings.Json.JsonConverterBase-1.html
+  name: JsonConverterBase<T>
+  nameWithType: JsonConverterBase<T>
+  fullName: ToSic.Cre8magic.Client.Settings.Json.JsonConverterBase<T>
+  nameWithType.vb: JsonConverterBase(Of T)
+  fullName.vb: ToSic.Cre8magic.Client.Settings.Json.JsonConverterBase(Of T)
+  name.vb: JsonConverterBase(Of T)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Settings.Json.JsonConverterBase`1
+    name: JsonConverterBase
+    href: ToSic.Cre8magic.Client.Settings.Json.JsonConverterBase-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Settings.Json.JsonConverterBase`1
+    name: JsonConverterBase
+    href: ToSic.Cre8magic.Client.Settings.Json.JsonConverterBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

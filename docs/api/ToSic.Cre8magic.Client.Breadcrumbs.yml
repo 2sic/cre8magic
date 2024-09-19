@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Breadcrumbs
+  commentId: N:ToSic.Cre8magic.Client.Breadcrumbs
+  id: ToSic.Cre8magic.Client.Breadcrumbs
+  children:
+  - ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb
+  - ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+  - ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbs
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Breadcrumbs
+  nameWithType: ToSic.Cre8magic.Client.Breadcrumbs
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb
+  commentId: T:ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb
+  parent: ToSic.Cre8magic.Client.Breadcrumbs
+  href: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb.html
+  name: MagicBreadcrumb
+  nameWithType: MagicBreadcrumb
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumb
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+  commentId: T:ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+  parent: ToSic.Cre8magic.Client.Breadcrumbs
+  href: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem.html
+  name: MagicBreadcrumbItem
+  nameWithType: MagicBreadcrumbItem
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbItem
+- uid: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbs
+  commentId: T:ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbs
+  href: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbs.html
+  name: MagicBreadcrumbs
+  nameWithType: MagicBreadcrumbs
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs.MagicBreadcrumbs
+- uid: ToSic.Cre8magic.Client.Breadcrumbs
+  commentId: N:ToSic.Cre8magic.Client.Breadcrumbs
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Breadcrumbs
+  nameWithType: ToSic.Cre8magic.Client.Breadcrumbs
+  fullName: ToSic.Cre8magic.Client.Breadcrumbs
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs
+    name: Breadcrumbs
+    href: ToSic.Cre8magic.Client.Breadcrumbs.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Breadcrumbs
+    name: Breadcrumbs
+    href: ToSic.Cre8magic.Client.Breadcrumbs.html

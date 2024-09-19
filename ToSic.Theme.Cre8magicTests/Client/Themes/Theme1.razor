@@ -27,22 +27,32 @@
         </div>
     </nav>
 
-    <h1>Breadcrumb</h1>
+    <h1>MagicBreadcrumbs</h1>
+    <h2>No Data</h2>
+    <h3>just MagicBreadcrumbs</h3>
+
+    <Breadcrumbs></Breadcrumbs>
+
+    <h1>BasicBreadcrumb</h1>
+
+    <h2>No Data</h2>
+    <h3>just BasicBreadcrumb</h3>
+    <BasicBreadcrumb></BasicBreadcrumb>
 
     <h2>No Settings</h2>
-    <h3>Basic Breadcrumb without Setting</h3>
+    <h3>BasicBreadcrumb without Settings</h3>
     <BasicBreadcrumb Breadcrumb="new MagicBreadcrumb(PageState)"></BasicBreadcrumb>
 
     <hr/>
 
     <h2>Designer</h2>
-    <h3>Basic Breadcrumb with Designer</h3>
-    <BasicBreadcrumb Breadcrumb="new MagicBreadcrumb(PageState).Designer(new BasicBreadcrumbDesigner())"></BasicBreadcrumb>
+    <h3>BasicBreadcrumb with CustomBreadcrumbDesigner</h3>
+    <BasicBreadcrumb Breadcrumb="new MagicBreadcrumb(PageState).Designer(new CustomBreadcrumbDesigner())"></BasicBreadcrumb>
 
     <hr />
 
     <h2>Settings</h2>
-    <h3>Basic Breadcrumb with Settings, PageId of page with deep breadcrumb</h3>
+    <h3>BasicBreadcrumb with Settings { Start = PageWithDeepBreadcrumb }</h3>
     <BasicBreadcrumb Breadcrumb="new MagicBreadcrumb(PageState).Setup(new() { Start = PageWithDeepBreadcrumb }).Designer(new BasicBreadcrumbDesigner())"></BasicBreadcrumb>
 
     <hr/>

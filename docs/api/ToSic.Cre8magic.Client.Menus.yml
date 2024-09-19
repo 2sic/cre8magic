@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Menus
+  commentId: N:ToSic.Cre8magic.Client.Menus
+  id: ToSic.Cre8magic.Client.Menus
+  children:
+  - ToSic.Cre8magic.Client.Menus.MagicMenu
+  - ToSic.Cre8magic.Client.Menus.MagicMenuBase
+  - ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+  - ToSic.Cre8magic.Client.Menus.MagicMenuPage
+  - ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  - ToSic.Cre8magic.Client.Menus.MagicMenuTree
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Menus
+  nameWithType: ToSic.Cre8magic.Client.Menus
+  fullName: ToSic.Cre8magic.Client.Menus
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenu
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenu
+  href: ToSic.Cre8magic.Client.Menus.MagicMenu.html
+  name: MagicMenu
+  nameWithType: MagicMenu
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenu
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBase
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenuBase
+  parent: ToSic.Cre8magic.Client.Menus
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuBase.html
+  name: MagicMenuBase
+  nameWithType: MagicMenuBase
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBase
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+  parent: ToSic.Cre8magic.Client.Menus
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder.html
+  name: MagicMenuBuilder
+  nameWithType: MagicMenuBuilder
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuBuilder
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuPage
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenuPage
+  parent: ToSic.Cre8magic.Client.Menus
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuPage.html
+  name: MagicMenuPage
+  nameWithType: MagicMenuPage
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuPage
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuRoot.html
+  name: MagicMenuRoot
+  nameWithType: MagicMenuRoot
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuRoot
+- uid: ToSic.Cre8magic.Client.Menus.MagicMenuTree
+  commentId: T:ToSic.Cre8magic.Client.Menus.MagicMenuTree
+  parent: ToSic.Cre8magic.Client.Menus
+  href: ToSic.Cre8magic.Client.Menus.MagicMenuTree.html
+  name: MagicMenuTree
+  nameWithType: MagicMenuTree
+  fullName: ToSic.Cre8magic.Client.Menus.MagicMenuTree
+- uid: ToSic.Cre8magic.Client.Menus
+  commentId: N:ToSic.Cre8magic.Client.Menus
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Menus
+  nameWithType: ToSic.Cre8magic.Client.Menus
+  fullName: ToSic.Cre8magic.Client.Menus
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Menus
+    name: Menus
+    href: ToSic.Cre8magic.Client.Menus.html

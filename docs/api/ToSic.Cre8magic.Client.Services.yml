@@ -1,0 +1,115 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Services
+  commentId: N:ToSic.Cre8magic.Client.Services
+  id: ToSic.Cre8magic.Client.Services
+  children:
+  - ToSic.Cre8magic.Client.Services.IMagicThemeJsService
+  - ToSic.Cre8magic.Client.Services.LanguageService
+  - ToSic.Cre8magic.Client.Services.MagicPageEditService
+  - ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  - ToSic.Cre8magic.Client.Services.MagicSettingsJsonService
+  - ToSic.Cre8magic.Client.Services.MagicSettingsService
+  - ToSic.Cre8magic.Client.Services.MagicThemeJsServiceTest
+  - ToSic.Cre8magic.Client.Services.Startup
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Services
+  nameWithType: ToSic.Cre8magic.Client.Services
+  fullName: ToSic.Cre8magic.Client.Services
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Services.IMagicThemeJsService
+  commentId: T:ToSic.Cre8magic.Client.Services.IMagicThemeJsService
+  parent: ToSic.Cre8magic.Client.Services
+  href: ToSic.Cre8magic.Client.Services.IMagicThemeJsService.html
+  name: IMagicThemeJsService
+  nameWithType: IMagicThemeJsService
+  fullName: ToSic.Cre8magic.Client.Services.IMagicThemeJsService
+- uid: ToSic.Cre8magic.Client.Services.LanguageService
+  commentId: T:ToSic.Cre8magic.Client.Services.LanguageService
+  parent: ToSic.Cre8magic.Client.Services
+  href: ToSic.Cre8magic.Client.Services.LanguageService.html
+  name: LanguageService
+  nameWithType: LanguageService
+  fullName: ToSic.Cre8magic.Client.Services.LanguageService
+- uid: ToSic.Cre8magic.Client.Services.MagicPageEditService
+  commentId: T:ToSic.Cre8magic.Client.Services.MagicPageEditService
+  href: ToSic.Cre8magic.Client.Services.MagicPageEditService.html
+  name: MagicPageEditService
+  nameWithType: MagicPageEditService
+  fullName: ToSic.Cre8magic.Client.Services.MagicPageEditService
+- uid: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  commentId: T:ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+  parent: ToSic.Cre8magic.Client.Services
+  href: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase.html
+  name: MagicServiceWithSettingsBase
+  nameWithType: MagicServiceWithSettingsBase
+  fullName: ToSic.Cre8magic.Client.Services.MagicServiceWithSettingsBase
+- uid: ToSic.Cre8magic.Client.Services.MagicSettingsJsonService
+  commentId: T:ToSic.Cre8magic.Client.Services.MagicSettingsJsonService
+  parent: ToSic.Cre8magic.Client.Services
+  href: ToSic.Cre8magic.Client.Services.MagicSettingsJsonService.html
+  name: MagicSettingsJsonService
+  nameWithType: MagicSettingsJsonService
+  fullName: ToSic.Cre8magic.Client.Services.MagicSettingsJsonService
+- uid: ToSic.Cre8magic.Client.Services.MagicSettingsService
+  commentId: T:ToSic.Cre8magic.Client.Services.MagicSettingsService
+  parent: ToSic.Cre8magic.Client.Services
+  href: ToSic.Cre8magic.Client.Services.MagicSettingsService.html
+  name: MagicSettingsService
+  nameWithType: MagicSettingsService
+  fullName: ToSic.Cre8magic.Client.Services.MagicSettingsService
+- uid: ToSic.Cre8magic.Client.Services.MagicThemeJsServiceTest
+  commentId: T:ToSic.Cre8magic.Client.Services.MagicThemeJsServiceTest
+  href: ToSic.Cre8magic.Client.Services.MagicThemeJsServiceTest.html
+  name: MagicThemeJsServiceTest
+  nameWithType: MagicThemeJsServiceTest
+  fullName: ToSic.Cre8magic.Client.Services.MagicThemeJsServiceTest
+- uid: ToSic.Cre8magic.Client.Services.Startup
+  commentId: T:ToSic.Cre8magic.Client.Services.Startup
+  href: ToSic.Cre8magic.Client.Services.Startup.html
+  name: Startup
+  nameWithType: Startup
+  fullName: ToSic.Cre8magic.Client.Services.Startup
+- uid: ToSic.Cre8magic.Client.Services
+  commentId: N:ToSic.Cre8magic.Client.Services
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Services
+  nameWithType: ToSic.Cre8magic.Client.Services
+  fullName: ToSic.Cre8magic.Client.Services
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Services
+    name: Services
+    href: ToSic.Cre8magic.Client.Services.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Services
+    name: Services
+    href: ToSic.Cre8magic.Client.Services.html

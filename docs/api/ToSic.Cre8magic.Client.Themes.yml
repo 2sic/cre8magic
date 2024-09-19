@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Themes
+  commentId: N:ToSic.Cre8magic.Client.Themes
+  id: ToSic.Cre8magic.Client.Themes
+  children:
+  - ToSic.Cre8magic.Client.Themes.MagicTheme
+  langs:
+  - csharp
+  - vb
+  name: ToSic.Cre8magic.Client.Themes
+  nameWithType: ToSic.Cre8magic.Client.Themes
+  fullName: ToSic.Cre8magic.Client.Themes
+  type: Namespace
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+references:
+- uid: ToSic.Cre8magic.Client.Themes.MagicTheme
+  commentId: T:ToSic.Cre8magic.Client.Themes.MagicTheme
+  href: ToSic.Cre8magic.Client.Themes.MagicTheme.html
+  name: MagicTheme
+  nameWithType: MagicTheme
+  fullName: ToSic.Cre8magic.Client.Themes.MagicTheme

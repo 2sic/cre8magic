@@ -1,0 +1,1046 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  commentId: T:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  id: MagicSettingsCatalog
+  parent: ToSic.Cre8magic.Client.Settings
+  children:
+  - ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Analytics
+  - ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Containers
+  - ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Debug
+  - ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Languages
+  - ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.MenuDesigns
+  - ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Menus
+  - ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Source
+  - ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.SourceDefault
+  - ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.ThemeDesigns
+  - ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Themes
+  - ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Version
+  langs:
+  - csharp
+  - vb
+  name: MagicSettingsCatalog
+  nameWithType: MagicSettingsCatalog
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  type: Class
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: MagicSettingsCatalog
+    path: ../ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+    startLine: 9
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  summary: >-
+    This is a catalog of all kinds of configurations.
+
+    It serves as a kind of database to manage all configurations, which will usually be retrieved using a name.
+  example: []
+  syntax:
+    content: public class MagicSettingsCatalog
+    content.vb: Public Class MagicSettingsCatalog
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.SourceDefault
+  commentId: F:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.SourceDefault
+  id: SourceDefault
+  parent: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  langs:
+  - csharp
+  - vb
+  name: SourceDefault
+  nameWithType: MagicSettingsCatalog.SourceDefault
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.SourceDefault
+  type: Field
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: SourceDefault
+    path: ../ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+    startLine: 11
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  syntax:
+    content: public const string SourceDefault = "Unknown"
+    return:
+      type: System.String
+    content.vb: Public Const SourceDefault As String = "Unknown"
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Version
+  commentId: P:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Version
+  id: Version
+  parent: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: MagicSettingsCatalog.Version
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Version
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Version
+    path: ../ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+    startLine: 15
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  summary: Version number when loading from JSON to verify it's what we expect
+  example: []
+  syntax:
+    content: public float Version { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Version As Single
+  overload: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Version*
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Debug
+  commentId: P:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Debug
+  id: Debug
+  parent: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  langs:
+  - csharp
+  - vb
+  name: Debug
+  nameWithType: MagicSettingsCatalog.Debug
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Debug
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Debug
+    path: ../ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+    startLine: 20
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  summary: Master debug settings - would override other debugs
+  example: []
+  syntax:
+    content: public MagicDebugSettings? Debug { get; set; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Settings.Debug.MagicDebugSettings
+    content.vb: Public Property Debug As MagicDebugSettings
+  overload: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Debug*
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Source
+  commentId: P:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Source
+  id: Source
+  parent: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  langs:
+  - csharp
+  - vb
+  name: Source
+  nameWithType: MagicSettingsCatalog.Source
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Source
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Source
+    path: ../ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+    startLine: 25
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  summary: Source of these settings / where they came from, to ensure that we can see in debug where a value was picked up from
+  example: []
+  syntax:
+    content: public string Source { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Source As String
+  overload: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Source*
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Analytics
+  commentId: P:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Analytics
+  id: Analytics
+  parent: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  langs:
+  - csharp
+  - vb
+  name: Analytics
+  nameWithType: MagicSettingsCatalog.Analytics
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Analytics
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Analytics
+    path: ../ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+    startLine: 27
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  syntax:
+    content: public NamedSettings<MagicAnalyticsSettings> Analytics { get; set; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings}
+    content.vb: Public Property Analytics As NamedSettings(Of MagicAnalyticsSettings)
+  overload: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Analytics*
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Themes
+  commentId: P:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Themes
+  id: Themes
+  parent: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  langs:
+  - csharp
+  - vb
+  name: Themes
+  nameWithType: MagicSettingsCatalog.Themes
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Themes
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Themes
+    path: ../ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+    startLine: 29
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  syntax:
+    content: public NamedSettings<MagicThemeSettings> Themes { get; set; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings}
+    content.vb: Public Property Themes As NamedSettings(Of MagicThemeSettings)
+  overload: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Themes*
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.ThemeDesigns
+  commentId: P:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.ThemeDesigns
+  id: ThemeDesigns
+  parent: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  langs:
+  - csharp
+  - vb
+  name: ThemeDesigns
+  nameWithType: MagicSettingsCatalog.ThemeDesigns
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.ThemeDesigns
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: ThemeDesigns
+    path: ../ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+    startLine: 31
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  syntax:
+    content: public NamedSettings<MagicThemeDesignSettings> ThemeDesigns { get; set; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings}
+    content.vb: Public Property ThemeDesigns As NamedSettings(Of MagicThemeDesignSettings)
+  overload: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.ThemeDesigns*
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Containers
+  commentId: P:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Containers
+  id: Containers
+  parent: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  langs:
+  - csharp
+  - vb
+  name: Containers
+  nameWithType: MagicSettingsCatalog.Containers
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Containers
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Containers
+    path: ../ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+    startLine: 33
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  syntax:
+    content: public NamedSettings<MagicContainerSettings> Containers { get; set; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings}
+    content.vb: Public Property Containers As NamedSettings(Of MagicContainerSettings)
+  overload: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Containers*
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Languages
+  commentId: P:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Languages
+  id: Languages
+  parent: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  langs:
+  - csharp
+  - vb
+  name: Languages
+  nameWithType: MagicSettingsCatalog.Languages
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Languages
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Languages
+    path: ../ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+    startLine: 35
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  syntax:
+    content: public NamedSettings<MagicLanguagesSettings> Languages { get; set; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings}
+    content.vb: Public Property Languages As NamedSettings(Of MagicLanguagesSettings)
+  overload: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Languages*
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Menus
+  commentId: P:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Menus
+  id: Menus
+  parent: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  langs:
+  - csharp
+  - vb
+  name: Menus
+  nameWithType: MagicSettingsCatalog.Menus
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Menus
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Menus
+    path: ../ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+    startLine: 40
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  summary: The menu definitions
+  example: []
+  syntax:
+    content: public NamedSettings<MagicMenuSettings> Menus { get; set; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings}
+    content.vb: Public Property Menus As NamedSettings(Of MagicMenuSettings)
+  overload: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Menus*
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.MenuDesigns
+  commentId: P:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.MenuDesigns
+  id: MenuDesigns
+  parent: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog
+  langs:
+  - csharp
+  - vb
+  name: MenuDesigns
+  nameWithType: MagicSettingsCatalog.MenuDesigns
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.MenuDesigns
+  type: Property
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: MenuDesigns
+    path: ../ToSic.Cre8magic.Client/Settings/MagicSettingsCatalog.cs
+    startLine: 45
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Settings
+  summary: Design definitions of the menu
+  example: []
+  syntax:
+    content: public NamedSettings<NamedSettings<MagicMenuDesign>> MenuDesigns { get; set; }
+    parameters: []
+    return:
+      type: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Menus.Settings.MagicMenuDesign}}
+    content.vb: Public Property MenuDesigns As NamedSettings(Of NamedSettings(Of MagicMenuDesign))
+  overload: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.MenuDesigns*
+references:
+- uid: ToSic.Cre8magic.Client.Settings
+  commentId: N:ToSic.Cre8magic.Client.Settings
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Settings
+  nameWithType: ToSic.Cre8magic.Client.Settings
+  fullName: ToSic.Cre8magic.Client.Settings
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Version*
+  commentId: Overload:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Version
+  href: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.html#ToSic_Cre8magic_Client_Settings_MagicSettingsCatalog_Version
+  name: Version
+  nameWithType: MagicSettingsCatalog.Version
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Version
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Debug*
+  commentId: Overload:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Debug
+  href: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.html#ToSic_Cre8magic_Client_Settings_MagicSettingsCatalog_Debug
+  name: Debug
+  nameWithType: MagicSettingsCatalog.Debug
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Debug
+- uid: ToSic.Cre8magic.Client.Settings.Debug.MagicDebugSettings
+  commentId: T:ToSic.Cre8magic.Client.Settings.Debug.MagicDebugSettings
+  parent: ToSic.Cre8magic.Client.Settings.Debug
+  href: ToSic.Cre8magic.Client.Settings.Debug.MagicDebugSettings.html
+  name: MagicDebugSettings
+  nameWithType: MagicDebugSettings
+  fullName: ToSic.Cre8magic.Client.Settings.Debug.MagicDebugSettings
+- uid: ToSic.Cre8magic.Client.Settings.Debug
+  commentId: N:ToSic.Cre8magic.Client.Settings.Debug
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Settings.Debug
+  nameWithType: ToSic.Cre8magic.Client.Settings.Debug
+  fullName: ToSic.Cre8magic.Client.Settings.Debug
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings.Debug
+    name: Debug
+    href: ToSic.Cre8magic.Client.Settings.Debug.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings
+    name: Settings
+    href: ToSic.Cre8magic.Client.Settings.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Settings.Debug
+    name: Debug
+    href: ToSic.Cre8magic.Client.Settings.Debug.html
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Source*
+  commentId: Overload:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Source
+  href: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.html#ToSic_Cre8magic_Client_Settings_MagicSettingsCatalog_Source
+  name: Source
+  nameWithType: MagicSettingsCatalog.Source
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Source
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Analytics*
+  commentId: Overload:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Analytics
+  href: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.html#ToSic_Cre8magic_Client_Settings_MagicSettingsCatalog_Analytics
+  name: Analytics
+  nameWithType: MagicSettingsCatalog.Analytics
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Analytics
+- uid: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings}
+  commentId: T:ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings}
+  parent: ToSic.Cre8magic.Client.Settings
+  definition: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+  href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  name: NamedSettings<MagicAnalyticsSettings>
+  nameWithType: NamedSettings<MagicAnalyticsSettings>
+  fullName: ToSic.Cre8magic.Client.Settings.NamedSettings<ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings>
+  nameWithType.vb: NamedSettings(Of MagicAnalyticsSettings)
+  fullName.vb: ToSic.Cre8magic.Client.Settings.NamedSettings(Of ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings)
+  name.vb: NamedSettings(Of MagicAnalyticsSettings)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: <
+  - uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+    name: MagicAnalyticsSettings
+    href: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings
+    name: MagicAnalyticsSettings
+    href: ToSic.Cre8magic.Client.Analytics.MagicAnalyticsSettings.html
+  - name: )
+- uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+  commentId: T:ToSic.Cre8magic.Client.Settings.NamedSettings`1
+  href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  name: NamedSettings<T>
+  nameWithType: NamedSettings<T>
+  fullName: ToSic.Cre8magic.Client.Settings.NamedSettings<T>
+  nameWithType.vb: NamedSettings(Of T)
+  fullName.vb: ToSic.Cre8magic.Client.Settings.NamedSettings(Of T)
+  name.vb: NamedSettings(Of T)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Themes*
+  commentId: Overload:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Themes
+  href: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.html#ToSic_Cre8magic_Client_Settings_MagicSettingsCatalog_Themes
+  name: Themes
+  nameWithType: MagicSettingsCatalog.Themes
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Themes
+- uid: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings}
+  commentId: T:ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings}
+  parent: ToSic.Cre8magic.Client.Settings
+  definition: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+  href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  name: NamedSettings<MagicThemeSettings>
+  nameWithType: NamedSettings<MagicThemeSettings>
+  fullName: ToSic.Cre8magic.Client.Settings.NamedSettings<ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings>
+  nameWithType.vb: NamedSettings(Of MagicThemeSettings)
+  fullName.vb: ToSic.Cre8magic.Client.Settings.NamedSettings(Of ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings)
+  name.vb: NamedSettings(Of MagicThemeSettings)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: <
+  - uid: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings
+    name: MagicThemeSettings
+    href: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings
+    name: MagicThemeSettings
+    href: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeSettings.html
+  - name: )
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.ThemeDesigns*
+  commentId: Overload:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.ThemeDesigns
+  href: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.html#ToSic_Cre8magic_Client_Settings_MagicSettingsCatalog_ThemeDesigns
+  name: ThemeDesigns
+  nameWithType: MagicSettingsCatalog.ThemeDesigns
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.ThemeDesigns
+- uid: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings}
+  commentId: T:ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings}
+  parent: ToSic.Cre8magic.Client.Settings
+  definition: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+  href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  name: NamedSettings<MagicThemeDesignSettings>
+  nameWithType: NamedSettings<MagicThemeDesignSettings>
+  fullName: ToSic.Cre8magic.Client.Settings.NamedSettings<ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings>
+  nameWithType.vb: NamedSettings(Of MagicThemeDesignSettings)
+  fullName.vb: ToSic.Cre8magic.Client.Settings.NamedSettings(Of ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings)
+  name.vb: NamedSettings(Of MagicThemeDesignSettings)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: <
+  - uid: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings
+    name: MagicThemeDesignSettings
+    href: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings
+    name: MagicThemeDesignSettings
+    href: ToSic.Cre8magic.Client.Themes.Settings.MagicThemeDesignSettings.html
+  - name: )
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Containers*
+  commentId: Overload:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Containers
+  href: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.html#ToSic_Cre8magic_Client_Settings_MagicSettingsCatalog_Containers
+  name: Containers
+  nameWithType: MagicSettingsCatalog.Containers
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Containers
+- uid: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings}
+  commentId: T:ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings}
+  parent: ToSic.Cre8magic.Client.Settings
+  definition: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+  href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  name: NamedSettings<MagicContainerSettings>
+  nameWithType: NamedSettings<MagicContainerSettings>
+  fullName: ToSic.Cre8magic.Client.Settings.NamedSettings<ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings>
+  nameWithType.vb: NamedSettings(Of MagicContainerSettings)
+  fullName.vb: ToSic.Cre8magic.Client.Settings.NamedSettings(Of ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings)
+  name.vb: NamedSettings(Of MagicContainerSettings)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: <
+  - uid: ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings
+    name: MagicContainerSettings
+    href: ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings
+    name: MagicContainerSettings
+    href: ToSic.Cre8magic.Client.Containers.Settings.MagicContainerSettings.html
+  - name: )
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Languages*
+  commentId: Overload:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Languages
+  href: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.html#ToSic_Cre8magic_Client_Settings_MagicSettingsCatalog_Languages
+  name: Languages
+  nameWithType: MagicSettingsCatalog.Languages
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Languages
+- uid: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings}
+  commentId: T:ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings}
+  parent: ToSic.Cre8magic.Client.Settings
+  definition: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+  href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  name: NamedSettings<MagicLanguagesSettings>
+  nameWithType: NamedSettings<MagicLanguagesSettings>
+  fullName: ToSic.Cre8magic.Client.Settings.NamedSettings<ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings>
+  nameWithType.vb: NamedSettings(Of MagicLanguagesSettings)
+  fullName.vb: ToSic.Cre8magic.Client.Settings.NamedSettings(Of ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings)
+  name.vb: NamedSettings(Of MagicLanguagesSettings)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: <
+  - uid: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings
+    name: MagicLanguagesSettings
+    href: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings
+    name: MagicLanguagesSettings
+    href: ToSic.Cre8magic.Client.Languages.Settings.MagicLanguagesSettings.html
+  - name: )
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Menus*
+  commentId: Overload:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Menus
+  href: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.html#ToSic_Cre8magic_Client_Settings_MagicSettingsCatalog_Menus
+  name: Menus
+  nameWithType: MagicSettingsCatalog.Menus
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.Menus
+- uid: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings}
+  commentId: T:ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings}
+  parent: ToSic.Cre8magic.Client.Settings
+  definition: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+  href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  name: NamedSettings<MagicMenuSettings>
+  nameWithType: NamedSettings<MagicMenuSettings>
+  fullName: ToSic.Cre8magic.Client.Settings.NamedSettings<ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings>
+  nameWithType.vb: NamedSettings(Of MagicMenuSettings)
+  fullName.vb: ToSic.Cre8magic.Client.Settings.NamedSettings(Of ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings)
+  name.vb: NamedSettings(Of MagicMenuSettings)
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: <
+  - uid: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings
+    name: MagicMenuSettings
+    href: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings
+    name: MagicMenuSettings
+    href: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuSettings.html
+  - name: )
+- uid: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.MenuDesigns*
+  commentId: Overload:ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.MenuDesigns
+  href: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.html#ToSic_Cre8magic_Client_Settings_MagicSettingsCatalog_MenuDesigns
+  name: MenuDesigns
+  nameWithType: MagicSettingsCatalog.MenuDesigns
+  fullName: ToSic.Cre8magic.Client.Settings.MagicSettingsCatalog.MenuDesigns
+- uid: ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Menus.Settings.MagicMenuDesign}}
+  commentId: T:ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Settings.NamedSettings{ToSic.Cre8magic.Client.Menus.Settings.MagicMenuDesign}}
+  parent: ToSic.Cre8magic.Client.Settings
+  definition: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+  href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  name: NamedSettings<NamedSettings<MagicMenuDesign>>
+  nameWithType: NamedSettings<NamedSettings<MagicMenuDesign>>
+  fullName: ToSic.Cre8magic.Client.Settings.NamedSettings<ToSic.Cre8magic.Client.Settings.NamedSettings<ToSic.Cre8magic.Client.Menus.Settings.MagicMenuDesign>>
+  nameWithType.vb: NamedSettings(Of NamedSettings(Of MagicMenuDesign))
+  fullName.vb: ToSic.Cre8magic.Client.Settings.NamedSettings(Of ToSic.Cre8magic.Client.Settings.NamedSettings(Of ToSic.Cre8magic.Client.Menus.Settings.MagicMenuDesign))
+  name.vb: NamedSettings(Of NamedSettings(Of MagicMenuDesign))
+  spec.csharp:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: <
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: <
+  - uid: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuDesign
+    name: MagicMenuDesign
+    href: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuDesign.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Settings.NamedSettings`1
+    name: NamedSettings
+    href: ToSic.Cre8magic.Client.Settings.NamedSettings-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuDesign
+    name: MagicMenuDesign
+    href: ToSic.Cre8magic.Client.Menus.Settings.MagicMenuDesign.html
+  - name: )
+  - name: )

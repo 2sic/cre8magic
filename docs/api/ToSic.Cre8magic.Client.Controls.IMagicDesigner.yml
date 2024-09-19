@@ -1,0 +1,208 @@
+### YamlMime:ManagedReference
+items:
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  commentId: T:ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  id: IMagicDesigner
+  parent: ToSic.Cre8magic.Client.Controls
+  children:
+  - ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes(System.String)
+  - ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id(System.String)
+  - ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IMagicDesigner
+  nameWithType: IMagicDesigner
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  type: Interface
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Controls/IMagicDesigner.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: IMagicDesigner
+    path: ../ToSic.Cre8magic.Client/Controls/IMagicDesigner.cs
+    startLine: 2
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Controls
+  syntax:
+    content: public interface IMagicDesigner
+    content.vb: Public Interface IMagicDesigner
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes(System.String)
+  commentId: M:ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes(System.String)
+  id: Classes(System.String)
+  parent: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  langs:
+  - csharp
+  - vb
+  name: Classes(string)
+  nameWithType: IMagicDesigner.Classes(string)
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes(string)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Controls/IMagicDesigner.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Classes
+    path: ../ToSic.Cre8magic.Client/Controls/IMagicDesigner.cs
+    startLine: 4
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Controls
+  syntax:
+    content: string? Classes(string target)
+    parameters:
+    - id: target
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Function Classes(target As String) As String
+  overload: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes*
+  nameWithType.vb: IMagicDesigner.Classes(String)
+  fullName.vb: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes(String)
+  name.vb: Classes(String)
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value(System.String)
+  commentId: M:ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value(System.String)
+  id: Value(System.String)
+  parent: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  langs:
+  - csharp
+  - vb
+  name: Value(string)
+  nameWithType: IMagicDesigner.Value(string)
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value(string)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Controls/IMagicDesigner.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Value
+    path: ../ToSic.Cre8magic.Client/Controls/IMagicDesigner.cs
+    startLine: 6
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Controls
+  syntax:
+    content: string? Value(string target)
+    parameters:
+    - id: target
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Function Value(target As String) As String
+  overload: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value*
+  nameWithType.vb: IMagicDesigner.Value(String)
+  fullName.vb: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value(String)
+  name.vb: Value(String)
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id(System.String)
+  commentId: M:ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id(System.String)
+  id: Id(System.String)
+  parent: ToSic.Cre8magic.Client.Controls.IMagicDesigner
+  langs:
+  - csharp
+  - vb
+  name: Id(string)
+  nameWithType: IMagicDesigner.Id(string)
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id(string)
+  type: Method
+  source:
+    remote:
+      path: ToSic.Cre8magic.Client/Controls/IMagicDesigner.cs
+      branch: feature/cre8magic-tests
+      repo: https://github.com/2sic/cre8magic.git
+    id: Id
+    path: ../ToSic.Cre8magic.Client/Controls/IMagicDesigner.cs
+    startLine: 8
+  assemblies:
+  - ToSic.Cre8Magic.Client.Oqtane
+  namespace: ToSic.Cre8magic.Client.Controls
+  syntax:
+    content: string? Id(string target)
+    parameters:
+    - id: target
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Function Id(target As String) As String
+  overload: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id*
+  nameWithType.vb: IMagicDesigner.Id(String)
+  fullName.vb: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id(String)
+  name.vb: Id(String)
+references:
+- uid: ToSic.Cre8magic.Client.Controls
+  commentId: N:ToSic.Cre8magic.Client.Controls
+  href: ToSic.html
+  name: ToSic.Cre8magic.Client.Controls
+  nameWithType: ToSic.Cre8magic.Client.Controls
+  fullName: ToSic.Cre8magic.Client.Controls
+  spec.csharp:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Controls
+    name: Controls
+    href: ToSic.Cre8magic.Client.Controls.html
+  spec.vb:
+  - uid: ToSic
+    name: ToSic
+    href: ToSic.html
+  - name: .
+  - uid: ToSic.Cre8magic
+    name: Cre8magic
+    href: ToSic.Cre8magic.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client
+    name: Client
+    href: ToSic.Cre8magic.Client.html
+  - name: .
+  - uid: ToSic.Cre8magic.Client.Controls
+    name: Controls
+    href: ToSic.Cre8magic.Client.Controls.html
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes*
+  commentId: Overload:ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes
+  href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html#ToSic_Cre8magic_Client_Controls_IMagicDesigner_Classes_System_String_
+  name: Classes
+  nameWithType: IMagicDesigner.Classes
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Classes
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value*
+  commentId: Overload:ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value
+  href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html#ToSic_Cre8magic_Client_Controls_IMagicDesigner_Value_System_String_
+  name: Value
+  nameWithType: IMagicDesigner.Value
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Value
+- uid: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id*
+  commentId: Overload:ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id
+  href: ToSic.Cre8magic.Client.Controls.IMagicDesigner.html#ToSic_Cre8magic_Client_Controls_IMagicDesigner_Id_System_String_
+  name: Id
+  nameWithType: IMagicDesigner.Id
+  fullName: ToSic.Cre8magic.Client.Controls.IMagicDesigner.Id
