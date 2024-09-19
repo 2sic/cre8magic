@@ -9,7 +9,15 @@
           ]
         }
       ],
-      "dest": "api"
+      "dest": "api",
+      "disableGitFeatures": false,
+      "force": true, // Re-build all the documentation
+      // "properties": {
+      //   "TargetFramework": "net8.0",
+      //   "GenerateDocumentationFile": true,
+      //   "ProduceReferenceAssembly": true
+      // },
+      // "namespaceLayout": "nested",
     }
   ],
   "build": {
@@ -21,7 +29,8 @@
         "exclude": [
           "_site/**"
         ]
-      }
+      },
+      { "files": [ "api/**" ] }
     ],
     "resource": [
       {
@@ -29,7 +38,8 @@
           "images/**",
           "assets/**"
         ]
-      }
+      },
+      { "files": ["schemas/**"] }
     ],
     "output": "_site",
     "template": [
@@ -37,10 +47,18 @@
       "modern"
     ],
     "globalMetadata": {
-      "_appName": "cre8magic",
+      // "_appName": "cre8magic",
       "_appTitle": "cre8magic",
+      "_appLogoPath": "assets/cre8magic-logo50.svg",
+      // "_appLogoPath": "assets/icon50.png",
+      "_appFaviconPath": "assets/favicon.ico",
+      "_enableNewTab": true,
       "_enableSearch": true,
-      "pdf": true
-    }
+      "pdf": false,
+      "_gitUrlPattern": "github",
+      "_disableContribution": false, // Disabling the "View Source" and "Improve this Doc" buttons.
+    },
+    // "xrefService": ["https://xref.learn.microsoft.com/query?uid={uid}"],
+    // "postProcessors": ["ExtractSearchIndex"]
   }
 }

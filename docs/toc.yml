@@ -1,4 +1,30 @@
-- name: Introduction
-  href: introduction.md
 - name: Getting Started
-  href: getting-started.md
+  href: get-started.md
+- name: Magic Box
+  items:
+  - name: Magic Settings
+    href: magic-settings.md
+  - name: Settings JSON File
+    href: theme-json.md
+  - name: Magic Context
+    href: magic-context.md
+  - name: Magic Values & Classes
+    href: magic-values.md
+  - name: Magic Tokens
+    href: magic-tokens.md
+  - name: Magic Languages
+    href: magic-languages.md
+- name: Magic Controls
+  items:
+  - name: Magic Menu
+    href: magic-menu.md
+  - name: Magic Breadcrumb
+    href: magic-breadcrumb.md
+- name: API Reference
+  href: api/
+- name: Additional Resources
+  items:
+  - name: Documentation Development
+    href: gh-pages.md
+  - name: Change Log
+    href: changelog.md

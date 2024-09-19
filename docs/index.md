@@ -1,4 +1,4 @@
-_layout: landing
+---
 title: Home
 icon: fa-home
 order: 0
@@ -123,16 +123,3 @@ Try the ToShine Theme Template, it will make things much easier to understand.
         1. `MagicMenuDebug` a debug helper to see what configuration a menu has and why
         1. `MagicLanguagesDebug` a debug helper to see what configuration the laguages have
         1. `MagicThemeDebug` debug helper to see all the current settings on this theme
-
-
----
-
-### Documentation is hosted with GitHub Pages
-
-- [How to build jekyll locally?](./gh-pages.md)
-
----
-
-## History
-
-⌛ See [change log](./changelog.md)

@@ -16,15 +16,15 @@ items:
   assemblies:
   - ToSic.Cre8Magic.Client.Oqtane
 references:
-- uid: ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings
-  commentId: T:ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings
-  href: ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings.html
-  name: MagicContextAndSettings
-  nameWithType: MagicContextAndSettings
-  fullName: ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings
 - uid: ToSic.Cre8Magic.Client.Themes.MagicThemeDebug
   commentId: T:ToSic.Cre8Magic.Client.Themes.MagicThemeDebug
   href: ToSic.Cre8Magic.Client.Themes.MagicThemeDebug.html
   name: MagicThemeDebug
   nameWithType: MagicThemeDebug
   fullName: ToSic.Cre8Magic.Client.Themes.MagicThemeDebug
+- uid: ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings
+  commentId: T:ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings
+  href: ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings.html
+  name: MagicContextAndSettings
+  nameWithType: MagicContextAndSettings
+  fullName: ToSic.Cre8Magic.Client.Themes.MagicContextAndSettings
